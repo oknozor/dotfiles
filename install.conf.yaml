@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/polybar: polybar
+    ~/.config/i3: i3
+    ~/.zshrc: zshrc     
+    ~/.config/archey3.cfg : archey
+    ~/.config/termite: termite
+    ~/.config/compton.conf: compton/compton.conf
+    ~/.i3scripts: scripts
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
