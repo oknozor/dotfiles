@@ -12,6 +12,5 @@
     ~/.config/termite: termite
     ~/.config/compton.conf: compton/compton.conf
     ~/.i3scripts: scripts
-    ~/usr/share/X11/xkb/symbols/fr: xkblayout: 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
