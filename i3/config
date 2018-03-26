@@ -14,7 +14,10 @@
 
 exec_always --no-startup-id "killall polybar;$HOME/.config/polybar/launch.sh -r panel"
 exec_always --no-startup-id "compton --config $HOME/.config/compton.conf -b"
-exec_always --no-startup-id "bash $HOME/.i3scripts/auto-change-background.sh"
+exec "feh --bg-scale ~/.dotfiles/lockscreens/giraud3.jpg "
+#
+#Got 2 fix this for multiple screens 
+#exec --no-startup-id "bash $HOME/.i3scripts/auto-change-background.sh"
 
 set $mod Mod4
 
@@ -101,6 +104,20 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+#______________________________________________________#
+#|______________________ WORKSPACE ___________________|#
+
+#workspace $ws1 output DP1 
+#workspace $ws2 output DP1 
+#workspace $ws3 output DP1 
+#workspace $ws4 output DP1 
+#workspace $ws5 output DP1 
+#workspace $ws6 output DP1 
+#workspace $ws7 output DP1 
+#workspace $ws8 output DP1 
+#workspace $ws9 output DP1 
+#workspace $ws10 output eDP1 
+
 # switch to workspace
 bindsym $mod+ampersand workspace $ws1
 bindsym $mod+eacute workspace $ws2
@@ -163,6 +180,10 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+x exec betterlockscreen --lock
 
 
+#____________________________________________________#
+#|______________________ I3 Conf ___________________|#
+
+focus_follows_mouse no
 
 #____________________________________________________#
 #|______________________ FN KEYS ___________________|#
@@ -171,7 +192,7 @@ bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86MonBrightnessUp exec xbacklight +5
 bindsym XF86MonBrightnessDown exec xbacklight -5
-
+bindsym Scroll_Lock exec "xrandr --output eDP1 --primary --auto --right-of DP1 && feh --bg-scale ~/.dotfiles/lockscreens/giraud1.jpg ~/.dotfiles/lockscreens/giraud3.jpg" 
 #_______________________________________________________#
 #|______________________ SoftBinding ___________________|#
 bindsym $mod+G exec rofi -show run 
@@ -185,6 +206,5 @@ gaps inner 15
 
 smart_borders on
 smart_gaps on
-
 
 

@@ -47,6 +47,7 @@ alias ll='ls -larth'
 alias ls='ls --color=auto'
 alias danette='yaourt -Suy --aur && yaourt -Qdt' 
 alias insult='echo Fuck you windows user!'
+alias evil='emacs -nw'
 eval $(thefuck --alias)
 
 #Intellij Android emu fix 
