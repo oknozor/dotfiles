@@ -12,9 +12,10 @@
 #______________________________________________________#
 #_____________________ STARTUP ________________________#
 
+exec --no-startup-id setxkbmap fr azerty
 exec_always --no-startup-id "killall polybar;$HOME/.config/polybar/launch.sh -r panel"
 exec_always --no-startup-id "compton --config $HOME/.config/compton.conf -b"
-exec "feh --bg-scale ~/.dotfiles/lockscreens/giraud3.jpg "
+exec "feh --bg-scale ~/.dotfiles/lockscreens/wallpaper.jpg "
 #
 #Got 2 fix this for multiple screens 
 #exec --no-startup-id "bash $HOME/.i3scripts/auto-change-background.sh"
@@ -192,10 +193,10 @@ bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86MonBrightnessUp exec xbacklight +5
 bindsym XF86MonBrightnessDown exec xbacklight -5
-bindsym Scroll_Lock exec "xrandr --output eDP1 --primary --auto --right-of DP1 && feh --bg-scale ~/.dotfiles/lockscreens/giraud1.jpg ~/.dotfiles/lockscreens/giraud3.jpg" 
+bindsym Scroll_Lock exec "xrandr --output HDMI1 --primary --auto --left-of eDP1 && feh --bg-scale ~/.dotfiles/lockscreens/giraud1.jpg ~/.dotfiles/lockscreens/giraud3.jpg" 
 #_______________________________________________________#
 #|______________________ SoftBinding ___________________|#
-bindsym $mod+G exec rofi -show run 
+bindsym $mod+G exec rofi -theme lb -font "Monospace 10" -show run 
 bindsym $mod+W exec bash "$HOME/.i3scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
 
 #________________________________________________#
