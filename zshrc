@@ -61,5 +61,5 @@ alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
 PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
-archey3 -c cyan
+#archey3 -c cyan
 
