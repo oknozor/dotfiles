@@ -14,3 +14,5 @@ XOFF=0
 
 #fields to be displayed
 FIELDS=SSID,SECURITY,BARS
+
+show-icons=true
