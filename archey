@@ -1,5 +1,0 @@
-[core]
-align = top
-color = blue
-display_modules = distro(), uname(n), uname(r), uptime(), wm(), de(), packages(), ram(), cpu(), env(editor), fs(/), mpd(albums)
-

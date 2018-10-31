@@ -6,14 +6,15 @@
 
 - link:
     ~/.config/polybar: polybar
-    ~/.config/i3: i3
+    # ~/.config/i3: i3
     ~/.zshrc: zshrc     
-    ~/.config/archey3.cfg : archey
+    ~/.vimrc: vimrc      
     ~/.config/termite: termite
-    ~/.config/compton.conf: compton/compton.conf
-    ~/.config/keepmenu: keepmenu 
-    ~/.i3scripts: scripts
-    ~/.config/rofi/config.rasi: rofi/rofi.conf
-    ~/.config/rofi/my_theme.rasi: rofi/my_theme.rasi
+    ~/.config/beets/config.yaml: beets/config.yaml
+    # ~/.config/compton.conf: compton/compton.conf
+    # ~/.config/keepmenu: keepmenu 
+    # ~/.i3scripts: scripts
+    # ~/.config/rofi/config.rasi: rofi/rofi.conf
+    # ~/.config/rofi/my_theme.rasi: rofi/my_theme.rasi
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

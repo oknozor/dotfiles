@@ -1,4 +1,4 @@
-# he following lines were added by compinstall
+# The following lines were added by compinstall
 
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=long
@@ -9,6 +9,7 @@ autoload -Uz compinit promptinit
 
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -42,14 +43,27 @@ export VISUAL="vim"
 [[ $- != *i* ]] && return
 
 # ______________________________________#
+# _______________ Tilix _______________#
+if [[ $TILIX_ID ]]; then
+        source /etc/profile.d/vte.sh
+fi
+
+# ______________________________________#
 # _______________ Aliases_______________#
+
 alias ll='ls -larth'
 alias ls='ls --color=auto'
 alias danette='yaourt -Suy --aur && yaourt -Qdt' 
 alias insult='echo Fuck you windows user!'
 alias evil='emacs -nw'
 alias nextcal='calcurse-caldav && calcurse' 
-eval $(thefuck --alias)
+alias start='sudo systemctl start'
+alias stop= 'sudo systemclt stop'
+alias status='systemctl status'
+alias restart='sudo systemctl restart'
+alias jof='journalctl -u'
+alias fjof='journalctl -fu'
+
 
 #Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij
