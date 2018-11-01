@@ -1,4 +1,4 @@
-# The following lines were added by compinstall
+# Zsh 
 
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=long
@@ -7,56 +7,36 @@ zstyle ':completion:*' use-compctl true
 zstyle :compinstall filename '/home/okno/.zshrc'
 autoload -Uz compinit promptinit
 
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
-#______________________________________________#
-# ___________________ ANTIGEN _________________#  
-
+# Antigen 
 source /usr/share/zsh/share/antigen.zsh 
 
-#Load the oh-my-zsh's library.
 antigen use oh-my-zsh
-
-#Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-
-#Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
-
-#antigen bundle rimraf/k
 antigen bundle tarruda/zsh-autosuggestions
-
-#Tell antigen that you're done.
 antigen apply
 
-
-#Editor
+# Editor
 export VISUAL="vim"
-
-#If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# ______________________________________#
-# _______________ Tilix _______________#
+# Tilix
 if [[ $TILIX_ID ]]; then
         source /etc/profile.d/vte.sh
 fi
 
-# ______________________________________#
-# _______________ Aliases_______________#
-
+# Aliases
 alias ll='ls -larth'
 alias ls='ls --color=auto'
 alias danette='yaourt -Suy --aur && yaourt -Qdt' 
-alias insult='echo Fuck you windows user!'
-alias evil='emacs -nw'
 alias nextcal='calcurse-caldav && calcurse' 
+
+## Systemctl 
 alias start='sudo systemctl start'
 alias stop= 'sudo systemclt stop'
 alias status='systemctl status'
@@ -64,8 +44,10 @@ alias restart='sudo systemctl restart'
 alias jof='journalctl -u'
 alias fjof='journalctl -fu'
 
+## Multimedia 
+alias music='ncmpcpp'
 
-#Intellij Android emu fix 
+# Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
@@ -75,5 +57,4 @@ alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
 PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
-#archey3 -c cyan
-
+neofetch

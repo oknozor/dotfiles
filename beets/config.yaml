@@ -1,5 +1,10 @@
 directory: ~/Music
 library: ~/.config/beets/library.db
+plugins: fetchart lyrics lastgenre
 import: 
-    copy: no 
-    write: yes
+    move: yes
+
+paths:
+    default: $albumartist/$album%aunique{}/$track $title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$album%aunique{}/$track $title

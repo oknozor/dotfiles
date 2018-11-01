@@ -11,6 +11,8 @@
     ~/.vimrc: vimrc      
     ~/.config/termite: termite
     ~/.config/beets/config.yaml: beets/config.yaml
+    ~/.config/mpd/mpd.conf: mpd/config
+    ~/.ncmpcpp/config: ncmpcpp/config
     # ~/.config/compton.conf: compton/compton.conf
     # ~/.config/keepmenu: keepmenu 
     # ~/.i3scripts: scripts
