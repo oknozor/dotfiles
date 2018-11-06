@@ -13,8 +13,8 @@
 #_____________________ STARTUP ________________________#
 
 exec --no-startup-id setxkbmap fr azerty
-exec_always --no-startup-id "killall polybar;$HOME/.config/polybar/launch.sh -r panel"
 exec_always --no-startup-id "compton --config $HOME/.config/compton.conf -b"
+exec_always --no-startup-id "killall polybar;$HOME/.config/polybar/launch.sh -r panel"
 exec "feh --bg-scale ~/.dotfiles/lockscreens/wallpaper.jpg "
 #
 #Got 2 fix this for multiple screens 
@@ -48,26 +48,26 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+m focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+M move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+d split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -161,7 +161,7 @@ mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
-        bindsym m resize grow width 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -200,13 +200,24 @@ bindsym Scroll_Lock exec "xrandr --output HDMI1 --primary --auto --left-of eDP1 
 bindsym $mod+G exec rofi -show drun 
 bindsym $mod+W exec bash "$HOME/.i3scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
 
-#________________________________________________#
-#|______________________ GAPS ___________________|#
+# Gaps 
 
 for_window [class="^.*"] border pixel 0
-gaps inner 15
 
-smart_borders on
 smart_gaps on
+gaps inner 15
+smart_borders on
 
+#workspace 1 gaps inner 40
+#workspace 1 gaps outer 40
+
+# Base Layout 
+
+#exec_always i3-msg "workspace 1;append_layout ~/.config/i3/workspace-1.json"
+#for_window [instance="neoterm"] floating enable
+#for_window [instance="musicterm"] floating enable
+#for_window [instance="rangerterm"] floating enable
+#exec_always i3-msg 'workspace 1; exec termite --name neoterm' 
+#exec_always i3-msg 'workspace 1; exec termite --name musicterm' 
+#exec_always i3-msg 'workspace 1; exec termite --name rangerterm' 
 

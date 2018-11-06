@@ -46,6 +46,7 @@ alias fjof='journalctl -fu'
 
 ## Multimedia 
 alias music='ncmpcpp'
+alias impmus='beet import ~/Downloads/Soulseek'
 
 # Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij
@@ -57,4 +58,4 @@ alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
 PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
-neofetch
+neofetch 

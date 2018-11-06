@@ -31,10 +31,10 @@ violet = #B48EAD
 cyan = #88C0D0 
 lightgreen = #8FBCBB 
 
-background =   #E5E9F0
 background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
+foreground-alt = #000000
+background = #93938b
+foreground = #eee
 
 primary = #ffb52a
 secondary = #e60053
@@ -49,7 +49,7 @@ margin-bottom = 0
 
 [bar/topbar]
 width = 100%
-height = 27
+height = 30
 bottom = false
 ;offset-x = 1%
 ;offset-y = 1%
@@ -58,8 +58,8 @@ fixed-center = false
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-background = ${colors.darkgrey}
-foreground = ${colors.lightgrey}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 line-size = 3
 line-color = ${colors.blue}
