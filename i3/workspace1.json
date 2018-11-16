@@ -1,0 +1,46 @@
+{
+    "percent": 1, 
+    "nodes" : [
+        {
+            "percent": 0.6,
+            "swallows": [
+               {
+                "class": "^Termite$",
+                "instance": "^mainterm$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "layout": "splitv",
+            "percent": 0.6,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "layout": "stacked",
+                    "percent": 0.3,
+                    "swallows": [
+                       {
+                        "class": "^Termite$",
+                        "instance": "^neoterm$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "percent": 0.7,
+                    "swallows": [
+                       {
+                        "class": "^Termite$",
+                        "instance": "^musicterm$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}

@@ -55,7 +55,7 @@ fi
 
 
 
-CHENTRY=$(echo -e "$TOGGLE\nmanual\n$LIST" | uniq -u | rofi -theme lb font "monospace 10" -dmenu -p "Wi-Fi SSID: " -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "Monospace 8" -width -"$RWIDTH")
+CHENTRY=$(echo -e "$TOGGLE\nmanual\n$LIST" | uniq -u | rofi -dmenu -p "Wi-Fi SSID: " -lines "$LINENUM" -a "$HIGHLINE" -location "$POSITION" -yoffset "$YOFF" -xoffset "$XOFF" -font "Monospace 8" -width -"$RWIDTH")
 #echo "$CHENTRY"
 CHSSID=$(echo "$CHENTRY" | sed  's/\s\{2,\}/\|/g' | awk -F "|" '{print $1}')
 #echo "$CHSSID"

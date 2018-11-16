@@ -1,4 +1,3 @@
-syntax on
 set relativenumber 
 set number
 set nocompatible              " be iMproved, required
@@ -18,6 +17,20 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Indent guide
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Provides insert mode auto-completion for quotes, parens, brackets, etc
+Plugin 'Raimondi/delimitMate'
+let delimitMate_expand_cr = 1
+
+
+let g:indent_guides_enable_on_vim_startup = 1
+
+set ts=4 sw=4 et 
+let g:indent_guides_guide_size = 1 
+let g:indent_guides_guide_level = 2 
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -48,21 +61,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
-"
+Plugin 'jacoborus/tender.vim'
 "__________NERD_TREE___________" 
-
 Plugin 'scrooloose/nerdtree'
 
 "open with NT if no file specified
@@ -75,3 +75,19 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 "ctrl-n shorthcut
 map <C-n> :NERDTreeToggle<CR>
+
+
+" Cursor highlight
+Plugin 'RRethy/vim-illuminate'
+let g:Illuminate_ftblacklist = ['nerdtree']
+" Colors 
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Language support 
+Plugin 'posva/vim-vue'
+" Theme
+syntax enable
+colorscheme tender
+let g:airline_theme = 'tender'

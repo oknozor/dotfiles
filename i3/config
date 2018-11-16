@@ -13,46 +13,17 @@
 #_____________________ STARTUP ________________________#
 
 exec --no-startup-id setxkbmap fr azerty
-exec_always --no-startup-id "compton --config $HOME/.config/compton.conf -b"
+exec_always "compton --config $HOME/.config/compton.conf -b"
 exec_always --no-startup-id "killall polybar;$HOME/.config/polybar/launch.sh -r panel"
-exec "feh --bg-scale ~/.dotfiles/lockscreens/wallpaper.jpg "
-#
-#Got 2 fix this for multiple screens 
-#exec --no-startup-id "bash $HOME/.i3scripts/auto-change-background.sh"
+exec_always "betterlockscreen -u  Pictures/Wallpapers/darkforest.jpg"
+exec_always "betterlockscreen -w"
 
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
 font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-## font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-# start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec termite
-
-# kill focused window
 bindsym $mod+Shift+A kill
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -94,16 +65,22 @@ bindsym $mod+q focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws1 "welcome"
+set $ws2 "firefox"
+set $ws3 "intellij"
+set $ws4 "boostnote"
+set $ws5 "evolution"
+set $ws6 "steam"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+assign [class="Firefox Developer Edition"]firefox
+assign [class="jetbrains-idea"]intellij
+assign [class="Evolution"]evolution
+assign [class="Boostnote"]boostnote
+assign [class="Steam"]steam
 
 #______________________________________________________#
 #|______________________ WORKSPACE ___________________|#
@@ -133,15 +110,15 @@ bindsym $mod+agrave workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+eacute move container to workspace $ws2
+bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+egrave move container to workspace $ws7
+bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+ccedilla move container to workspace $ws9
-bindsym $mod+Shift+agrave move container to workspace $ws10
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -158,10 +135,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym h resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -178,27 +155,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # custom keybinding to lockscreen, use --lock dim or --lock blur below for different backgrounds
-bindsym $mod+shift+x exec betterlockscreen --lock
-
-
-#____________________________________________________#
-#|______________________ I3 Conf ___________________|#
+bindsym $mod+shift+x exec betterlockscreen --lock dim
 
 focus_follows_mouse no
 
-#____________________________________________________#
-#|______________________ FN KEYS ___________________|#
+# FN KEYS
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86MonBrightnessUp exec xbacklight +5
 bindsym XF86MonBrightnessDown exec xbacklight -5
 bindsym Scroll_Lock exec "xrandr --output HDMI1 --primary --auto --left-of eDP1 && feh --bg-scale ~/.dotfiles/lockscreens/giraud1.jpg ~/.dotfiles/lockscreens/giraud3.jpg" 
-#_______________________________________________________#
-#|______________________ SoftBinding ___________________|#
+
 #bindsym $mod+G exec rofi -theme lb -font "Monospace 10" -show drun -show-icons true
 bindsym $mod+G exec rofi -show drun 
-bindsym $mod+W exec bash "$HOME/.i3scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
+bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
 
 # Gaps 
 
@@ -213,11 +184,8 @@ smart_borders on
 
 # Base Layout 
 
-#exec_always i3-msg "workspace 1;append_layout ~/.config/i3/workspace-1.json"
-#for_window [instance="neoterm"] floating enable
-#for_window [instance="musicterm"] floating enable
-#for_window [instance="rangerterm"] floating enable
-#exec_always i3-msg 'workspace 1; exec termite --name neoterm' 
-#exec_always i3-msg 'workspace 1; exec termite --name musicterm' 
-#exec_always i3-msg 'workspace 1; exec termite --name rangerterm' 
+exec_always i3-msg "workspace welcome; append_layout ~/.config/i3/workspace1.json"
+exec_always i3-msg 'workspace welcome; exec termite --name mainterm' 
+exec_always i3-msg "workspace welcome; exec termite --name neoterm --exec 'neofetch --w3m Pictures/blacksad.jpg --loop'"
+exec_always i3-msg "workspace welcome; exec termite --name musicterm --exec 'ncmpcpp -s media_library'" 
 

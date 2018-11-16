@@ -15,7 +15,7 @@
     ~/.ncmpcpp/config: ncmpcpp/config
     ~/.config/compton.conf: compton/compton.conf
     ~/.config/keepmenu: keepmenu 
-    ~/.i3scripts: scripts
+    ~/.config/rofi_wifi: rofi/rofi-wifi
     ~/.config/rofi/config.rasi: rofi/rofi.conf
     ~/.config/rofi/my_theme.rasi: rofi/my_theme.rasi
 - shell:

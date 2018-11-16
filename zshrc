@@ -17,6 +17,7 @@ source /usr/share/zsh/share/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle git
+antigen bundle colored-man-pages
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle tarruda/zsh-autosuggestions
 antigen apply
@@ -33,6 +34,7 @@ fi
 # Aliases
 alias ll='ls -larth'
 alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 alias danette='yaourt -Suy --aur && yaourt -Qdt' 
 alias nextcal='calcurse-caldav && calcurse' 
 
@@ -43,6 +45,10 @@ alias status='systemctl status'
 alias restart='sudo systemctl restart'
 alias jof='journalctl -u'
 alias fjof='journalctl -fu'
+
+#nmcli
+alias vpnfacup='nmcli connection up ulille_vpn_etu_udp_v1 --ask'
+alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1i'
 
 ## Multimedia 
 alias music='ncmpcpp'
@@ -56,6 +62,5 @@ LD_PRELOAD=`/usr/lib/libstdc++.so.6 /usr/lib/libgcc_s.so.1 /usr/lib/libxcb.so.1 
 export PATH=$PATH:/opt/i3scripts
 alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
-PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
-neofetch 
+PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
