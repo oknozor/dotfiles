@@ -52,6 +52,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jacoborus/tender.vim'
 Plugin 'RRethy/vim-illuminate'
 Plugin 'vim-syntastic/syntastic.git'
+" see https://github.com/pearofducks/ansible-vim for filetype matching.
 Plugin 'pearofducks/ansible-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
