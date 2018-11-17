@@ -13,6 +13,7 @@ set wildmenu
 set undofile
 set nobackup
 set updatetime=250
+set autowriteall
 let mapleader="," 
 
 " Cursor color 
@@ -50,7 +51,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jacoborus/tender.vim'
 Plugin 'RRethy/vim-illuminate'
-Plugin 'Syntastic'
+Plugin 'vim-syntastic/syntastic.git'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'Tagbar'
@@ -119,6 +120,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_ansible_ansible_lint_exec = '/usr/bin/ansible-lint'
+let g:syntastic_ansible_checkers = ['ansible_lint']
+let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_yaml_yaml_lint_exec = '/usr/bin/yamllint'
 let g:rustfmt_autosave = 1
 
 " Rust autocompletion with racer
