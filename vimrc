@@ -52,6 +52,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jacoborus/tender.vim'
 Plugin 'RRethy/vim-illuminate'
 Plugin 'vim-syntastic/syntastic.git'
+Plugin 'pearofducks/ansible-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'Tagbar'
@@ -119,6 +120,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Syntax checkers  
 let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_ansible_ansible_lint_exec = '/usr/bin/ansible-lint'
 let g:syntastic_ansible_checkers = ['ansible_lint']
