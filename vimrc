@@ -49,7 +49,7 @@ vnoremap <Up>    <nop>
 vnoremap <Down>  <nop>
 vnoremap <esc>   <nop>
 
-" Fix arrow and scroll remaping, might need to change those on other OSes
+" Fix arrow and scroll remaping 
 noremap OA <esc>
 noremap OB <esc>
 noremap OC <esc>
@@ -67,9 +67,13 @@ inoremap <leader>t  <esc>:tabnew<CR>
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
 
-" Quick edit and source .vimrc
-nnoremap <leader>ev :tabnew $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+" Quick edit and source 
+    " .vimrc
+    nnoremap <leader>ev :tabnew $MYVIMRC<CR>
+    nnoremap <leader>sv :source $MYVIMRC<CR>
+    " .zshrc
+    nnoremap <leader>ez :tabnew $MY_ZSHRC<CR>
+    nnoremap <leader>sz :!source $MY_ZSHRC<CR>
 
 " Normal mode remap
 inoremap jk <esc>
@@ -92,6 +96,7 @@ inoremap <leader>m <esc>@e
 " Abreviations
 ab @@ paul.defosse@protonmail.com
 
+" Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -111,25 +116,6 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'Tagbar'
 Plugin 'Raimondi/delimitMate'
     let delimitMate_expand_cr = 1
-
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plugin 'junegunn/fzf.vim'
-  let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-  let g:fzf_colors =
-        \ { 'fg':      ['fg', 'Normal'],
-        \ 'bg':      ['bg', 'Normal'],
-        \ 'hl':      ['fg', 'Comment'],
-        \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-        \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-        \ 'hl+':     ['fg', 'Statement'],
-        \ 'info':    ['fg', 'PreProc'],
-        \ 'border':  ['fg', 'Ignore'],
-        \ 'prompt':  ['fg', 'Conditional'],
-        \ 'pointer': ['fg', 'Exception'],
-        \ 'marker':  ['fg', 'Keyword'],
-        \ 'spinner': ['fg', 'Label'],
-\ 'header': ['fg', 'Comment'] }
-
 
 call vundle#end()          
 
@@ -183,7 +169,7 @@ let g:syntastic_html_checkers = ['eslint']
 let g:syntastic_yaml_yaml_lint_exec = '/usr/bin/yamllint'
 let g:rustfmt_autosave = 1
 
-" Rust autocompletion with racer
+" Rust autocompletion
 set hidden
 let g:racer_cmd = "$HOME/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
