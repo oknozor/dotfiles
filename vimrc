@@ -68,7 +68,7 @@ nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
 
 " Quick edit and source .vimrc
-nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>ev :tabnew $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Normal mode remap
@@ -83,7 +83,7 @@ noremap <leader>u viwU<esc>
 noremap <leader>l viwu<esc> 
 
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-vnoremap <leader>" <esc>a"<esc>'<i"<esc>lel
+vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 
 " Macros 
 nnoremap <leader>m @e 
