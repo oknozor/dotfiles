@@ -48,7 +48,7 @@ alias fjof='journalctl -fu'
 
 #nmcli
 alias vpnfacup='nmcli connection up ulille_vpn_etu_udp_v1 --ask'
-alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1i'
+alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1'
 
 ## Multimedia 
 alias music='ncmpcpp'

@@ -1,8 +1,8 @@
 syntax on
 set relativenumber
 set number
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 set tabstop=4 
 set expandtab    
 set shiftwidth=4
@@ -14,7 +14,9 @@ set undofile
 set nobackup
 set updatetime=250
 set autowriteall
+
 let mapleader="," 
+let maplocalleader="!"
 
 " Cursor color 
 if &term =~ "termite"
@@ -24,18 +26,63 @@ if &term =~ "termite"
   autocmd VimLeave * silent !echo -ne "\033]112\007"
 endif
 
+" No pain no gain   
+imap <esc> <nop>
+vmap <esc> <nop>
+map <ScrollWheelUp> <nop>
+map <ScrollWheelUp> <nop>
+map <ScrollWheelDown> <nop>
+map <ScrollWheelDown> <nop>
+
+inoremap <Left>  <nop>
+inoremap <Right> <nop>
+inoremap <Up>    <nop> 
+inoremap <Down>  <nop>
+
+nnoremap <Right> <nop>
+nnoremap <Up>    <nop> 
+nnoremap <Down>  <nop>
+nnoremap <esc>   <nop>
+
+vnoremap <Right> <nop>
+vnoremap <Up>    <nop> 
+vnoremap <Down>  <nop>
+vnoremap <esc>   <nop>
+
+" Fix arrow and scroll remaping, might need to change those on other OSes
+noremap OA <esc>
+noremap OB <esc>
+noremap OC <esc>
+noremap OD <esc>
+
 " Tab navigation
 nnoremap <leader>h  :tabprevious<CR>
 nnoremap <leader>l  :tabnext<CR>
 nnoremap <leader>t  :tabnew<CR>
+
 inoremap <leader>h  :tabprevious<CR>
 inoremap <leader>l  :tabnext<CR>
 inoremap <leader>t   <Esc>:tabnew<CR>
 
-" Macros 
-nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
+
+" Edit and source .vimrc
+nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Normal mode remap
+inoremap jk <esc>
+vnoremap jk <esc>
+
+" Edition 
+nnoremap + ddp
+nnoremap - ddkkp
+noremap <leader>u viwU<esc> 
+noremap <leader>l viwu<esc> 
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+
+" Macros 
 nnoremap <leader>m @e 
 inoremap <leader>m <esc>@e
 
@@ -123,10 +170,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Syntax checkers  
-let g:syntastic_rust_checkers = ['rustc']
-let g:syntastic_ansible_ansible_lint_exec = '/usr/bin/ansible-lint'
+let g:syntastic_rust_checkers = ['cargo']
+let g:syntastic_ansible_ansible_lint_exec = ['/usr/bin/ansible-lint']
 let g:syntastic_ansible_checkers = ['ansible_lint']
 let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_html_checkers = ['eslint']
 let g:syntastic_yaml_yaml_lint_exec = '/usr/bin/yamllint'
 let g:rustfmt_autosave = 1
 
@@ -141,4 +189,4 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Tagbar 
-nmap <F8> :TagbarToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
