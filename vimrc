@@ -26,7 +26,7 @@ if &term =~ "termite"
   autocmd VimLeave * silent !echo -ne "\033]112\007"
 endif
 
-" No pain no gain   
+" Disable arrow keys and mouse scroll
 imap <esc> <nop>
 vmap <esc> <nop>
 map <ScrollWheelUp> <nop>
@@ -56,18 +56,18 @@ noremap OC <esc>
 noremap OD <esc>
 
 " Tab navigation
-nnoremap <leader>h  :tabprevious<CR>
-nnoremap <leader>l  :tabnext<CR>
+nnoremap <leader>k  :tabprevious<CR>
+nnoremap <leader>j  :tabnext<CR>
 nnoremap <leader>t  :tabnew<CR>
 
-inoremap <leader>h  :tabprevious<CR>
-inoremap <leader>l  :tabnext<CR>
-inoremap <leader>t   <Esc>:tabnew<CR>
+inoremap <leader>k  <esc>:tabprevious<CR>
+inoremap <leader>j  <esc>:tabnext<CR>
+inoremap <leader>t  <esc>:tabnew<CR>
 
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
 
-" Edit and source .vimrc
+" Quick edit and source .vimrc
 nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
@@ -78,13 +78,19 @@ vnoremap jk <esc>
 " Edition 
 nnoremap + ddp
 nnoremap - ddkkp
+
 noremap <leader>u viwU<esc> 
 noremap <leader>l viwu<esc> 
+
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+vnoremap <leader>" <esc>a"<esc>'<i"<esc>lel
 
 " Macros 
 nnoremap <leader>m @e 
 inoremap <leader>m <esc>@e
+
+" Abreviations
+ab @@ paul.defosse@protonmail.com
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -98,8 +104,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jacoborus/tender.vim'
 Plugin 'RRethy/vim-illuminate'
-Plugin 'vim-syntastic/syntastic.git'
-" see https://github.com/pearofducks/ansible-vim for filetype matching.
+Plugin 'vim-syntastic/syntastic.git' " see https://github.com/pearofducks/ansible-vim for filetype matching.
 Plugin 'pearofducks/ansible-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
@@ -189,4 +194,4 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Tagbar 
-nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <leader>b :TagbarToggle<CR>
