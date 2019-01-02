@@ -34,11 +34,6 @@ map <ScrollWheelUp> <nop>
 map <ScrollWheelDown> <nop>
 map <ScrollWheelDown> <nop>
 
-inoremap <Left>  <nop>
-inoremap <Right> <nop>
-inoremap <Up>    <nop> 
-inoremap <Down>  <nop>
-
 nnoremap <Right> <nop>
 nnoremap <Up>    <nop> 
 nnoremap <Down>  <nop>
@@ -93,8 +88,9 @@ vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 nnoremap <leader>m @e 
 inoremap <leader>m <esc>@e
 
-" Abreviations
+" Abbreviations
 ab @@ paul.defosse@protonmail.com
+autocmd FileType c iabbrev <buffer> iff if(x)<Left><Backspace>
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -161,7 +157,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Syntax checkers  
-let g:syntastic_rust_checkers = ['cargo']
+let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_ansible_ansible_lint_exec = ['/usr/bin/ansible-lint']
 let g:syntastic_ansible_checkers = ['ansible_lint']
 let g:syntastic_yaml_checkers = ['yamllint']
@@ -181,3 +177,4 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Tagbar 
 nnoremap <leader>b :TagbarToggle<CR>
+
