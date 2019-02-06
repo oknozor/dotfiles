@@ -41,7 +41,7 @@ alias rvim='~/dotfiles/bash/./rvim.sh'
 
 ## Systemctl 
 alias start='sudo systemctl start'
-alias stop= 'sudo systemclt stop'
+alias stop= 'sudo systemctl stop'
 alias status='systemctl status'
 alias restart='sudo systemctl restart'
 alias jof='journalctl -u'
@@ -54,14 +54,16 @@ alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1'
 ## Multimedia 
 alias music='ncmpcpp'
 alias impmus='beet import ~/Downloads/Soulseek'
+alias oldvim="vim"
 alias vim="nvim"
-
 # Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 LD_PRELOAD=`/usr/lib/libstdc++.so.6 /usr/lib/libgcc_s.so.1 /usr/lib/libxcb.so.1 /usr/lib/libgpg-error.so` export PATH=$PATH:/opt/i3scripts
 alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
+
+export PATH=$PATH:/usr/node_modules/.bin
 
 export MY_ZSHRC=~/.zshrc
 

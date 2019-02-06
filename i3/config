@@ -121,6 +121,7 @@ bindsym Scroll_Lock exec "xrandr --output HDMI1 --primary --auto --left-of eDP1 
 
 # rofi
 bindsym $mod+G exec rofi -show drun 
+bindsym $mod+N exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
 bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
 
 # gaps 

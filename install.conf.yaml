@@ -11,6 +11,7 @@
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.config/nvim/nvim.init: vimrc
+    ~/.config/nvim/vim.init: vimrc
     ~/.config/termite: termite
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd/mpd.conf: mpd/config

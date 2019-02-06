@@ -85,8 +85,6 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 
 " Macros 
-nnoremap <leader>m @e 
-inoremap <leader>m <esc>@e
 
 " Abbreviations
 ab @@ paul.defosse@protonmail.com
@@ -111,6 +109,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'Tagbar'
 Plugin 'Raimondi/delimitMate'
+Plugin 'neomake/neomake'
     let delimitMate_expand_cr = 1
 
 call vundle#end()          
