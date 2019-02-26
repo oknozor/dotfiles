@@ -64,7 +64,6 @@ LD_PRELOAD=`/usr/lib/libstdc++.so.6 /usr/lib/libgcc_s.so.1 /usr/lib/libxcb.so.1 
 alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
 export PATH=$PATH:/usr/node_modules/.bin
-
 export MY_ZSHRC=~/.zshrc
 
 
@@ -72,4 +71,6 @@ PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
 #Dirty LM
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/jvm/java-8-openjdk/lib"
+export XKB_DEFAULT_LAYOUT=fr
+export _JAVA_AWT_WM_NONREPARENTING=1
 

@@ -5,7 +5,7 @@
 # Repository: https://github.com/arcticicestudio/nord-termite
 # License:    MIT
 [options]
-font = Monospace 18 
+font = Monospace 15 
 [colors]
 foreground = #D8DEE9
 background = #2E3440

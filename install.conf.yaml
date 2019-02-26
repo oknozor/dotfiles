@@ -6,20 +6,13 @@
 - clean: ['~']
 
 - link:
-    ~/.config/polybar: polybar
-    ~/.config/i3: i3
+    ~/.config/sway/config: sway/config
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
-    ~/.config/nvim/nvim.init: vimrc
     ~/.config/nvim/vim.init: vimrc
     ~/.config/termite: termite
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd/mpd.conf: mpd/config
     ~/.ncmpcpp/config: ncmpcpp/config
-    ~/.config/compton.conf: compton/compton.conf
-    ~/.config/keepmenu: keepmenu
-    ~/.config/rofi_wifi: rofi/rofi-wifi
-    ~/.config/rofi/config.rasi: rofi/rofi.conf
-    ~/.config/rofi/my_theme.rasi: rofi/my_theme.rasi
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
