@@ -18,6 +18,9 @@ set autowriteall
 let mapleader="," 
 let maplocalleader="!"
 
+" Fyle types
+au BufRead,BufNewFile ~/.config/sway/config setfiletype sway
+
 " Cursor color 
 if &term =~ "termite"
   let &t_SI = "\<Esc>]12;red\x7"
@@ -29,10 +32,10 @@ endif
 " Disable arrow keys and mouse scroll
 imap <esc> <nop>
 vmap <esc> <nop>
-map <ScrollWheelUp> <nop>
-map <ScrollWheelUp> <nop>
-map <ScrollWheelDown> <nop>
-map <ScrollWheelDown> <nop>
+"map <ScrollWheelUp> <nop>
+"map <ScrollWheelUp> <nop>
+"map <ScrollWheelDown> <nop>
+"map <ScrollWheelDown> <nop>
 
 nnoremap <Right> <nop>
 nnoremap <Up>    <nop> 
@@ -45,14 +48,18 @@ vnoremap <Down>  <nop>
 vnoremap <esc>   <nop>
 
 " Fix arrow and scroll remaping 
-noremap OA <esc>
-noremap OB <esc>
-noremap OC <esc>
-noremap OD <esc>
+"noremap OA <esc>
+"noremap OB <esc>
+"noremap OC <esc>
+"noremap OD <esc>
+
+" Toggle hl
+noremap <F2> :set hlsearch! hlsearch?<CR>
+
 
 " Tab navigation
-nnoremap <leader>k  :tabprevious<CR>
-nnoremap <leader>j  :tabnext<CR>
+nnoremap <left>     :tabprevious<CR>
+nnoremap <right>    :tabnext<CR>
 nnoremap <leader>t  :tabnew<CR>
 
 inoremap <leader>k  <esc>:tabprevious<CR>
@@ -62,7 +69,13 @@ inoremap <leader>t  <esc>:tabnew<CR>
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
 
-" Quick edit and source 
+nnoremap <C-j>  <C-w><C-j>
+nnoremap <C-k>  <C-w><C-k>
+nnoremap <C-h>  <C-w><C-h>
+nnoremap <C-l>  <C-w><C-l>
+
+" Quick edit and sou>rce 
+
     " .vimrc
     nnoremap <leader>ev :tabnew $MYVIMRC<CR>
     nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -84,7 +97,14 @@ noremap <leader>l viwu<esc>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 
+" Terminal
+noremap <leader>x :split<esc><CR><C-W>J :res 10<esc><CR> :terminal<CR>
+tnoremap <Esc> <C-\><C-n>
+
+
 " Macros 
+"nnoremap <leader>m @e 
+"inoremap <leader>m <esc>@e
 
 " Abbreviations
 ab @@ paul.defosse@protonmail.com
@@ -109,7 +129,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'Tagbar'
 Plugin 'Raimondi/delimitMate'
-Plugin 'neomake/neomake'
+Plugin 'Valloric/YouCompleteMe'
     let delimitMate_expand_cr = 1
 
 call vundle#end()          
@@ -156,8 +176,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Syntax checkers  
-let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_ansible_ansible_lint_exec = ['/usr/bin/ansible-lint']
+let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.20.0/src'
 let g:syntastic_ansible_checkers = ['ansible_lint']
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:syntastic_html_checkers = ['eslint']

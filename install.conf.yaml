@@ -8,8 +8,8 @@
 - link:
     ~/.config/sway/config: sway/config
     ~/.zshrc: zshrc
-    ~/.vimrc: vimrc
-    ~/.config/nvim/vim.init: vimrc
+    ~/.vimrc: init.vim
+    ~/.config/nvim/init.vim: init.vim
     ~/.config/termite: termite
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd/mpd.conf: mpd/config
