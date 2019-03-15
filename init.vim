@@ -62,9 +62,9 @@ nnoremap <left>     :tabprevious<CR>
 nnoremap <right>    :tabnext<CR>
 nnoremap <leader>t  :tabnew<CR>
 
-inoremap <leader>k  <esc>:tabprevious<CR>
-inoremap <leader>j  <esc>:tabnext<CR>
-inoremap <leader>t  <esc>:tabnew<CR>
+nnoremap <leader>k  <esc>:tabprevious<CR>
+nnoremap <leader>j  <esc>:tabnext<CR>
+nnoremap <leader>t  <esc>:tabnew<CR>
 
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
@@ -98,7 +98,7 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 
 " Terminal
-noremap <leader>x :split<esc><CR><C-W>J :res 10<esc><CR> :terminal<CR>
+noremap <leader>x :split<esc><CR><C-W>J :res 10<CR> :terminal<CR>
 tnoremap <Esc> <C-\><C-n>
 
 

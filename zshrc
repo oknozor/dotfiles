@@ -52,10 +52,11 @@ alias vpnfacup='nmcli connection up ulille_vpn_etu_udp_v1 --ask'
 alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1'
 
 ## Multimedia 
-alias music='ncmpcpp'
+alias music='ncmpcpp -s media_library'
 alias impmus='beet import ~/Downloads/Soulseek'
 alias oldvim="vim"
 alias vim="nvim"
+alias cat="bat"
 # Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -73,4 +74,3 @@ PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/jvm/java-8-openjdk/lib"
 export XKB_DEFAULT_LAYOUT=fr
 export _JAVA_AWT_WM_NONREPARENTING=1
-

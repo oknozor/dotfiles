@@ -7,7 +7,6 @@ set $down j
 set $up k
 set $right l
 set $term termite
-set $menu bemenu
 
 # workspace naming 
 set $ws1 "www"
@@ -23,6 +22,7 @@ set $ws10 "10"
 
 ### Output configuration
 output * bg ~/Pictures/Wallpapers/castle_in_the_sky.jpg fill
+output eDP-1 resolution 1920x1080 position 0,1081
 
 ### Gaps and egdes
 smart_gaps on
@@ -55,17 +55,7 @@ set $white    #EEEEEC
   client.unfocused        $black    $black     $gray   $black     $magenta
   client.urgent           $lgreen   $black     $gray   $lgreen    $lmagenta
 
-for_window [id="nautilus"] border none
-### Special window classes
-for_window [title="fuzzy-launcher"] floating enable 
-bindsym $mod+b move absolute position center
-bindsym $mod+g exec termite -e fuzzy-launcher
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+for_window [class="nautilus"] border none
 
 ### Input configuration
 #
@@ -82,15 +72,14 @@ bindsym $mod+g exec termite -e fuzzy-launcher
 # Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
-# Basics:
-# start a terminal
+# Quick launchers
 bindsym $mod+Return exec $term
+bindsym $mod+G exec rofi -show drun 
+bindsym $mod+p exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
+bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
 
-# kill focused window
+# Kill focused window
 bindsym $mod+Shift+a kill
-
-# start your launcher
-bindsym $mod+d exec $menu
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -190,41 +179,36 @@ bindsym $mod+space focus mode_toggle
 
 # move focus to the parent container
 bindsym $mod+a focus parent
-#
+
 # Scratchpad:
-#
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
+## Move the currently focused window to the scratchpad
+bindsym $mod+Shift+Tab move scratchpad
 
-# Move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+## If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+Tab scratchpad show
 
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
-#
 # Resizing containers:
-#
 mode "resize" {
-# left will shrink the containers width
-# right will grow the containers width
-# up will shrink the containers height
-# down will grow the containers height
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
     bindsym $left resize shrink width 10 px or 10 ppt
-        bindsym $down resize grow height 10 px or 10 ppt
-        bindsym $up resize shrink height 10 px or 10 ppt
-        bindsym $right resize grow width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
 
-# ditto, with arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # ditto, with arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-# return to default mode
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
 #
@@ -232,20 +216,20 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.r {
 bar {
-    position top
+position top
 #        status_command polybar
 
-        separator_symbol >
+    separator_symbol >
 
-        strip_workspace_numbers yes
+    strip_workspace_numbers yes
 
-        colors {
-            statusline #f9f9f9
-                background #080808
-                focused_workspace  #080808 #080808 #AD7FA8
-                inactive_workspace #080808 #080808 #75507B
-        }
-    font pango:Siji, Terminus 8
+    colors {
+        statusline #f9f9f9
+            background #080808
+            focused_workspace  #080808 #080808 #AD7FA8
+            inactive_workspace #080808 #080808 #75507B
+    }
+font pango:Siji, Terminus 8
 
 
 }
