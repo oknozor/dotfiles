@@ -23,6 +23,7 @@ set $ws10 "10"
 ### Output configuration
 output * bg ~/Pictures/Wallpapers/castle_in_the_sky.jpg fill
 output eDP-1 resolution 1920x1080 position 0,1081
+output DP-2  resolution 1920x1080 position 0,0
 
 ### Gaps and egdes
 smart_gaps on
@@ -77,6 +78,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+G exec rofi -show drun 
 bindsym $mod+p exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
 bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
+bindsym $mod+x exec swaylock
 
 # Kill focused window
 bindsym $mod+Shift+a kill
@@ -184,7 +186,7 @@ bindsym $mod+a focus parent
 ## Move the currently focused window to the scratchpad
 bindsym $mod+Shift+Tab move scratchpad
 
-## If there are multiple scratchpad windows, this command cycles through them.
+## If there are muljiple scratchpad windows, this command cycles through them.
 bindsym $mod+Tab scratchpad show
 
 # Resizing containers:
@@ -217,21 +219,19 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.r {
 bar {
 position top
-#        status_command polybar
-
+    status_command while .config/sway/status.sh; do sleep 1; done
     separator_symbol >
-
     strip_workspace_numbers yes
+    height 30
 
     colors {
         statusline #f9f9f9
-            background #080808
-            focused_workspace  #080808 #080808 #AD7FA8
-            inactive_workspace #080808 #080808 #75507B
+        background #080808
+        focused_workspace  #080808 #080808 #AD7FA8
+        inactive_workspace #080808 #080808 #75507B
     }
-font pango:Siji, Terminus 8
-
-
+    
+    font pango:Siji, Terminus 8
 }
 
 include /etc/sway/config.d/*
