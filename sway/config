@@ -34,31 +34,23 @@ focus_follows_mouse no
 
 
 ### Palette
-set $black    #080808
-set $red      #F51024
-set $green    #4E9A06
-set $yellow   #C4A000
-set $blue     #254775
-set $magenta  #75507B
-set $cyan     #06989A
-set $gray     #A5A5A5
-set $darkgray #555753
-set $lred     #FF4444
-set $lgreen    #74FF00
-set $lyellow  #FCE94F
-set $lblue    #4A84D8
-set $lmagenta #AD7FA8
-set $lcyan    #34E2E2
-set $white    #EEEEEC
+set $black    #343434ff
+set $gray     #06989aff
+set $lred     #eeeeecff
+set $blue     #254775ff
+set $lblue    #8ac4d3ff
+set $white    #eeeeecff
 
 # Color                   border    background text    indicator  child_border
-  client.focused          $lmagenta $black     $gray   $lmagenta  $lmagenta
+  client.focused          $lblue    $black     $gray   $lblue     $lblue
   client.focused_inactive $gray     $black     $gray   $gray      $gray
-  client.unfocused        $black    $black     $gray   $black     $magenta
-  client.urgent           $lgreen   $black     $gray   $lgreen    $lmagenta
+  client.unfocused        $black    $black     $gray   $black     $blue
+  client.urgent           $lred     $black     $gray   $lred      $lblue
 
-for_window [app_id="quickfile"] border none 
 for_window [app_id="quickfile"] floating enable
+for_window [app_id="quickfile"] border none 
+for_window [class="jetbrains-idea"] border none 
+for_window [class="Inkscape"] border none 
 
 ### Input configuration
 #
@@ -225,6 +217,7 @@ bar {
     icon_theme forkawesome
     font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
     position top
+    height 25
     pango_markup enabled
     status_command i3status-rs .config/sway/status.toml 
     colors {
