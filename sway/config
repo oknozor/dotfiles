@@ -57,7 +57,8 @@ set $white    #EEEEEC
   client.unfocused        $black    $black     $gray   $black     $magenta
   client.urgent           $lgreen   $black     $gray   $lgreen    $lmagenta
 
-for_window [class="nautilus"] border none
+for_window [app_id="quickfile"] border none 
+for_window [app_id="quickfile"] floating enable
 
 ### Input configuration
 #
