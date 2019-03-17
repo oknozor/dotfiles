@@ -7,15 +7,16 @@ set $down j
 set $up k
 set $right l
 set $term termite
+set $scripts ~/dotfiles/scripts
 
 # workspace naming 
-set $ws1 "www"
-set $ws2 "shell"
-set $ws3 "code"
-set $ws4 "notes"
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
+set $ws4 "www"
 set $ws5 "mail"
 set $ws6 "steam"
-set $ws7 "7"
+set $ws7 ""
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -28,7 +29,7 @@ output DP-2  resolution 1920x1080 position 0,0
 ### Gaps and egdes
 smart_gaps on
 gaps inner 10
-default_border pixel 3 
+default_border pixel 2 
 focus_follows_mouse no
 
 
@@ -145,9 +146,7 @@ bindsym $mod+Shift+egrave move container to workspace $ws7
 bindsym $mod+Shift+underscore move container to workspace $ws8
 bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
-#
+
 # Fn key 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pkill -SIGRTMIN+15 i3blocks
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pkill -SIGRTMIN+15 i3blocks
@@ -156,7 +155,11 @@ bindsym XF86AudioPlay exec mpc toggle
 #   bindsym XF86AudioNext exec mpc next
 #   bindsym XF86AudioPrev exec mpc prev
 #   bindsym XF86AudioStop exec mpc pause
-#        
+
+# Custom commands
+## Screenshots
+bindsym Print exec $scripts/screenshot.sh
+bindsym Shift+Print exec $scripts/fullscreenshot.sh
 # Layout stuff:
 #
 # You can "split" the current object of your focus with
@@ -186,7 +189,7 @@ bindsym $mod+a focus parent
 ## Move the currently focused window to the scratchpad
 bindsym $mod+Shift+Tab move scratchpad
 
-## If there are muljiple scratchpad windows, this command cycles through them.
+## If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Tab scratchpad show
 
 # Resizing containers:
@@ -218,20 +221,19 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.r {
 bar {
-position top
-    status_command while .config/sway/status.sh; do sleep 1; done
-    separator_symbol >
-    strip_workspace_numbers yes
-    height 30
-
+    icon_theme forkawesome
+    font pango:DejaVu Sans Mono, forkawesome 12, FontAwesome 12
+    position top
+    status_command i3status-rs .config/sway/status.toml 
     colors {
-        statusline #f9f9f9
-        background #080808
-        focused_workspace  #080808 #080808 #AD7FA8
-        inactive_workspace #080808 #080808 #75507B
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
     }
-    
-    font pango:Siji, Terminus 8
 }
 
 include /etc/sway/config.d/*

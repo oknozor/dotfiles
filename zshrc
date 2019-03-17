@@ -17,7 +17,6 @@ source /usr/share/zsh/share/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle git
-antigen bundle colored-man-pages
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle tarruda/zsh-autosuggestions
 antigen apply
@@ -57,6 +56,7 @@ alias impmus='beet import ~/Downloads/Soulseek'
 alias oldvim="vim"
 alias vim="nvim"
 alias cat="bat"
+
 # Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -66,7 +66,6 @@ alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
 export PATH=$PATH:/usr/node_modules/.bin
 export MY_ZSHRC=~/.zshrc
-
 
 PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
