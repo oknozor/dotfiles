@@ -10,16 +10,16 @@ set $term termite
 set $scripts ~/dotfiles/scripts
 
 # workspace naming 
-set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 "www"
-set $ws5 "mail"
-set $ws6 "steam"
-set $ws7 ""
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "  "
+set $ws2 "  "
+set $ws3 "  "
+set $ws4 "  "
+set $ws5 "  "
+set $ws6 "  "
+set $ws7 "  "
+set $ws8 "  "
+set $ws9 "  "
+set $ws10 "  "
 
 ### Output configuration
 output * bg ~/Pictures/Wallpapers/castle_in_the_sky.jpg fill
@@ -222,8 +222,9 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.r {
 bar {
     icon_theme forkawesome
-    font pango:DejaVu Sans Mono, forkawesome 12, FontAwesome 12
+    font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
     position top
+    pango_markup enabled
     status_command i3status-rs .config/sway/status.toml 
     colors {
         separator #666666
