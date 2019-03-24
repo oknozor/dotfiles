@@ -1,5 +1,4 @@
 # Zsh 
-
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
@@ -12,15 +11,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
-# Antigen 
-source /usr/share/zsh/share/antigen.zsh 
-
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle tarruda/zsh-autosuggestions
-antigen apply
-
 # Editor
 export VISUAL="vim"
 [[ $- != *i* ]] && return
@@ -29,6 +19,16 @@ export VISUAL="vim"
 if [[ $TILIX_ID ]]; then
         source /etc/profile.d/vte.sh
 fi
+
+# Antigen 
+source /usr/share/zsh/share/antigen.zsh 
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle tarruda/zsh-autosuggestions
+antigen bundle denysdovhan/spaceship-prompt
+antigen apply
+
 
 # Aliases
 alias ll='ls -larth'
@@ -56,6 +56,9 @@ alias impmus='beet import ~/Downloads/Soulseek'
 alias oldvim="vim"
 alias vim="nvim"
 alias cat="bat"
+
+# Alias
+alias work="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
 
 # Intellij Android emu fix 
 export ANDROID_HOME=$HOME/android-intellij

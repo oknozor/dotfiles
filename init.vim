@@ -82,6 +82,9 @@ nnoremap <C-l>  <C-w><C-l>
     " .zshrc
     nnoremap <leader>ez :tabnew $MY_ZSHRC<CR>
     nnoremap <leader>sz :!source $MY_ZSHRC<CR>
+    " sway
+    nnoremap <leader>es :tabnew ~/.config/sway/config<CR>
+    nnoremap <leader>ss :tabnew ~/.config/sway/status.toml<CR>
 
 " Normal mode remap
 inoremap jk <esc>

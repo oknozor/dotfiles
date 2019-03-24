@@ -28,8 +28,9 @@ output DP-2  resolution 1920x1080 position 0,0
 
 ### Gaps and egdes
 smart_gaps on
+smart_borders on
 gaps inner 10
-default_border pixel 2 
+default_border pixel 1 
 focus_follows_mouse no
 
 
@@ -50,7 +51,10 @@ set $white    #eeeeecff
 for_window [app_id="quickfile"] floating enable
 for_window [app_id="quickfile"] border none 
 for_window [class="jetbrains-idea"] border none 
+for_window [class="jetbrains-idea"] floating enable
+for_window [class="jetbrains-clion"] border none 
 for_window [class="Inkscape"] border none 
+for_window [class="Nautilus"] border csd 
 
 ### Input configuration
 #

@@ -6,7 +6,7 @@
 - clean: ['~']
 
 - link:
-    ~/.config/sway/config: sway/config
+    ~/.config/sway: sway
     ~/.zshrc: zshrc
     ~/.vimrc: init.vim
     ~/.config/nvim/init.vim: init.vim
