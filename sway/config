@@ -52,6 +52,13 @@ set $white    #eeeeecff
   client.unfocused        $black    $black     $gray   $black     $blue
   client.urgent           $lred     $black     $gray   $lred      $lblue
 
+### Assignment
+assign [class="jetbrains-ideas"] → $ws3
+assign [class="jetbrains-clion"] → $ws3
+assign [instance="Navigator"] → $ws2
+assign [class="Riot"] → $ws4
+assign [class="Slack"] → $ws4
+
 for_window [app_id="quickfile"] floating enable
 for_window [app_id="quickfile"] border none 
 for_window [class="jetbrains-idea"] border none 

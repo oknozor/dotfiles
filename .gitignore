@@ -1,3 +1,4 @@
+scripts/bleep/bleep_state
 beets/library.db
 beets/state.pickle
 TODO.md
