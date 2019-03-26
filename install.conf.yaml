@@ -9,6 +9,7 @@
     ~/.config/sway: sway
     ~/.zshrc: zshrc
     ~/.vimrc: init.vim
+    ~/.gitconfig: gitconfig
     ~/.config/nvim/init.vim: init.vim
     ~/.config/termite: termite
     ~/.config/beets/config.yaml: beets/config.yaml
