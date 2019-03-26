@@ -22,9 +22,13 @@ set $ws9 "  "
 set $ws10 "  "
 
 ### Output configuration
+set $dsp1 "eDP-1"
+set $dsp2 "DP-2"
 output * bg ~/Pictures/Wallpapers/castle_in_the_sky.jpg fill
-output eDP-1 resolution 1920x1080 position 0,1081
-output DP-2  resolution 1920x1080 position 0,0
+output $dsp1 resolution 1920x1080 position 0,1081
+output $dsp2 resolution 1920x1080 position 0,0
+
+workspace $ws1 output eDP
 
 ### Gaps and egdes
 smart_gaps on
@@ -145,8 +149,8 @@ bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Fn key 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% && pkill -SIGRTMIN+15 i3blocks
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && pkill -SIGRTMIN+15 i3blocks
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && $scripts/sound_up.sh
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && $scripts/sound_down.sh
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -SIGRTMIN+15 i3blocks
 bindsym XF86AudioPlay exec mpc toggle
 #   bindsym XF86AudioNext exec mpc next

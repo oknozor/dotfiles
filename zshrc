@@ -55,6 +55,7 @@ alias music='ncmpcpp -s media_library'
 alias impmus='beet import ~/Downloads/Soulseek'
 alias oldvim="vim"
 alias vim="nvim"
+alias ocat="/usr/bin/cat"
 alias cat="bat"
 
 # Alias
