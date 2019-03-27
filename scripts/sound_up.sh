@@ -6,7 +6,7 @@ SOUND_BEEP=`cat $STATE`
 echo $SOUND_BEEP
 
 if [ $SOUND_BEEP -gt "4" ]; then
-    echo 0 > $STATE 
+    echo 1 > $STATE 
 else
     ((SOUND_BEEP++)) 
     echo $SOUND_BEEP > $STATE

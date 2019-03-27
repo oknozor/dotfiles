@@ -156,8 +156,8 @@ bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Fn key 
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5% && $scripts/sound_up.sh
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% && $scripts/sound_down.sh
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -SIGRTMIN+15 i3blocks
 bindsym XF86AudioPlay exec mpc toggle
 #   bindsym XF86AudioNext exec mpc next

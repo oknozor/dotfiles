@@ -33,6 +33,7 @@ antigen apply
 # Aliases
 alias ll='ls -larth'
 alias ls='ls --color=auto'
+alias lg='ls |grep' 
 alias grep='grep --color=auto'
 alias danette='yaourt -Suy --aur && yaourt -Qdt' 
 alias nextcal='calcurse-caldav && calcurse' 
