@@ -62,7 +62,7 @@ set $white    #eeeeecff
   client.urgent           $lred     $black     $gray   $lred      $lblue
 
 ### Assignment
-assign [class="jetbrains-ideas"] → $ws3
+assign [class="jetbrains-idea"] → $ws3
 assign [class="jetbrains-clion"] → $ws3
 assign [instance="Navigator"] → $ws2
 assign [class="Riot"] → $ws4
