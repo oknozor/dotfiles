@@ -32,10 +32,10 @@ endif
 " Disable arrow keys and mouse scroll
 imap <esc> <nop>
 vmap <esc> <nop>
-"map <ScrollWheelUp> <nop>
-"map <ScrollWheelUp> <nop>
-"map <ScrollWheelDown> <nop>
-"map <ScrollWheelDown> <nop>
+map <ScrollWheelUp> <nop>
+map <ScrollWheelUp> <nop>
+map <ScrollWheelDown> <nop>
+map <ScrollWheelDown> <nop>
 
 nnoremap <Right> <nop>
 nnoremap <Up>    <nop> 
@@ -74,7 +74,7 @@ nnoremap <C-k>  <C-w><C-k>
 nnoremap <C-h>  <C-w><C-h>
 nnoremap <C-l>  <C-w><C-l>
 
-" Quick edit and sou>rce 
+" Quick edit and source 
 
     " .vimrc
     nnoremap <leader>ev :tabnew $MYVIMRC<CR>
@@ -104,38 +104,36 @@ vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 noremap <leader>x :split<esc><CR><C-W>J :res 10<CR> :terminal<CR>
 tnoremap <Esc> <C-\><C-n>
 
-
-" Macros 
-"nnoremap <leader>m @e 
-"inoremap <leader>m <esc>@e
-
 " Abbreviations
 ab @@ paul.defosse@protonmail.com
 autocmd FileType c iabbrev <buffer> iff if(x)<Left><Backspace>
 
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Plugin
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jacoborus/tender.vim'
-Plugin 'RRethy/vim-illuminate'
-Plugin 'vim-syntastic/syntastic.git' " see https://github.com/pearofducks/ansible-vim for filetype matching.
-Plugin 'pearofducks/ansible-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'Tagbar'
-Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
-    let delimitMate_expand_cr = 1
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'jacoborus/tender.vim'
+    Plug 'RRethy/vim-illuminate'
+    Plug 'pearofducks/ansible-vim'
+    Plug 'rust-lang/rust.vim'
+    Plug 'racer-rust/vim-racer'
+    Plug 'Raimondi/delimitMate'
+    Plug 'w0rp/ale'
+    Plug 'Valloric/YouCompleteMe'
+    Plug 'airblade/vim-gitgutter'
 
-call vundle#end()          
+call plug#end()
+
+" Ale Lint 
+nnoremap <leader>l :ALEDetail<Cr>
+
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_error = '-'
+let g:ale_sign_warning = '-' 
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline_powerline_fonts = 1
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -153,42 +151,23 @@ let g:Illuminate_ftHighlightGroups = {
       \ 'vim': ['vimVar', 'vimString', 'vimLineComment',
       \         'vimFuncName', 'vimFunction', 'vimUserFunc', 'vimFunc']
       \ }
+
 " Airline 
-let g:airline_theme='cool'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:lightline = { 'colorscheme': 'tender' }
+let g:airline_theme = 'tender'
 
 " Tender
 if (has("termguicolors"))
  set termguicolors
 endi
 
-let g:lightline = { 'colorscheme': 'tender' }
-let g:airline_theme = 'tender'
+" Delimite mate
+let delimitMate_expand_cr = 1
+
 colorscheme tender
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Syntax checkers  
-let g:syntastic_ansible_ansible_lint_exec = ['/usr/bin/ansible-lint']
-let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.20.0/src'
-let g:syntastic_ansible_checkers = ['ansible_lint']
-let g:syntastic_yaml_checkers = ['yamllint']
-let g:syntastic_xml_checkers = ['xmllint']
-let g:syntastic_html_checkers = ['eslint']
-let g:syntastic_shell_checkers = ['shellcheck']
-let g:syntastic_dockerfile_checkers= ['hadolint']
-let g:syntastic_yaml_yaml_lint_exec = ['/usr/bin/yamllint']
-let g:rustfmt_autosave = 1
 
 " Rust autocompletion
 set hidden
@@ -199,7 +178,4 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
-
-" Tagbar 
-nnoremap <leader>b :TagbarToggle<CR>
 

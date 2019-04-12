@@ -4,6 +4,14 @@
 
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    fixup = !sh -c 'SHA=$(git rev-parse $1) \
+      && git commit --fixup $SHA \
+      && git rebase -i --autosquash $SHA~' -
+    dammit = !BRANCH=$(git rev-parse --abbrev-ref HEAD) \
+     && git fetch origin $BRANCH \
+     && git reset --hard origin/$BRANCH
+    fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
+    pushf = push --force-with-lease
 
 [pull]
     rebase = preserve
