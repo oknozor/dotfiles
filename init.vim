@@ -127,7 +127,9 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Ale Lint 
-nnoremap <leader>l :ALEDetail<Cr>
+nnoremap <silent> <C-l> :ALEDetail<Cr>
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '-'
