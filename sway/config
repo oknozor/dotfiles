@@ -23,8 +23,8 @@ set $ws10 "  "
 
 ### Output configuration
 set $dsp1 eDP-1
-set $dsp2 DP-2
-output * bg ~/Pictures/Wallpapers/castle_in_the_sky.jpg fill
+set $dsp2 HDMI-A-2
+output * bg ~/Pictures/Wallpapers/totoro.jpg fill
 output $dsp1 resolution 1920x1080 position 0,1081
 output $dsp2 resolution 1920x1080 position 0,0
 
@@ -93,10 +93,10 @@ for_window [class="Nautilus"] border csd
 ### Key bindings
 # Quick launchers
 bindsym $mod+Return exec $term
-bindsym $mod+G exec rofi -show drun 
+bindsym $mod+G exec rofi -show drun -theme my_theme.rasi
 bindsym $mod+p exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
 bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
-bindsym $mod+x exec swaylock
+bindsym $mod+x exec "swaylock -c 000000"
 
 # Kill focused window
 bindsym $mod+Shift+a kill
@@ -167,7 +167,7 @@ bindsym $mod+Shift+agrave move container to workspace $ws10
 # Fn key 
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -SIGRTMIN+15 i3blocks
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 bindsym XF86AudioPlay exec mpc toggle
 #   bindsym XF86AudioNext exec mpc next
 #   bindsym XF86AudioPrev exec mpc prev

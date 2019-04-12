@@ -183,8 +183,11 @@ let g:syntastic_ansible_ansible_lint_exec = ['/usr/bin/ansible-lint']
 let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.20.0/src'
 let g:syntastic_ansible_checkers = ['ansible_lint']
 let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_xml_checkers = ['xmllint']
 let g:syntastic_html_checkers = ['eslint']
-let g:syntastic_yaml_yaml_lint_exec = '/usr/bin/yamllint'
+let g:syntastic_shell_checkers = ['shellcheck']
+let g:syntastic_dockerfile_checkers= ['hadolint']
+let g:syntastic_yaml_yaml_lint_exec = ['/usr/bin/yamllint']
 let g:rustfmt_autosave = 1
 
 " Rust autocompletion

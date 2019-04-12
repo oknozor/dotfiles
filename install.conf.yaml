@@ -15,5 +15,6 @@
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd/mpd.conf: mpd/config
     ~/.ncmpcpp/config: ncmpcpp/config
+    ~/.config/rofi: rofi
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
