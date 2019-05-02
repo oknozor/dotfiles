@@ -27,6 +27,7 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle tarruda/zsh-autosuggestions
 antigen bundle denysdovhan/spaceship-prompt
+antigen bundle zuxfoucault/colored-man-pages_mod
 antigen apply
 
 

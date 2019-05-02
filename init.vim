@@ -113,7 +113,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'scrooloose/nerdtree'
     Plug 'jacoborus/tender.vim'
     Plug 'RRethy/vim-illuminate'
     Plug 'pearofducks/ansible-vim'
@@ -123,19 +123,28 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'Valloric/YouCompleteMe'
     Plug 'airblade/vim-gitgutter'
+    Plug 'chr4/nginx.vim'
+    Plug 'aliou/bats.vim'
+    Plug 'hashivim/vim-vagrant'
 
 call plug#end()
 
 " Ale Lint 
-nnoremap <silent> <C-l> :ALEDetail<Cr>
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nnoremap <silent> <ALT-l> :ALEDetail<Cr>
+nmap <silent> <ALT-k> <Plug>(ale_previous_wrap)
+nmap <silent> <ALT-j> <Plug>(ale_next_wrap)
 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '-'
 let g:ale_sign_warning = '-' 
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline_powerline_fonts = 1
+
+" Linters 
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'bats': ['shellcheck'],
+\}
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
