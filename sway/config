@@ -1,3 +1,11 @@
+exec keeweb
+exec thunderbird
+exec firefox-developer-edition
+exec riot-desktop
+exec slack
+exec postman
+exec evince
+exec keeweb
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
@@ -16,10 +24,10 @@ set $ws3 "  "
 set $ws4 "  "
 set $ws5 "  "
 set $ws6 "  "
-set $ws7 "  "
-set $ws8 "  "
-set $ws9 "  "
-set $ws10 "  "
+set $ws7 "  "
+set $ws8 "  "
+set $ws9 "  "
+set $ws10 "  "
 
 ### Output configuration
 set $dsp1 eDP-1
@@ -65,8 +73,12 @@ set $white    #eeeeecff
 assign [class="jetbrains-idea"] → $ws3
 assign [class="jetbrains-clion"] → $ws3
 assign [instance="Navigator"] → $ws2
-assign [class="Riot"] → $ws4
 assign [class="Slack"] → $ws4
+assign [class="Riot"] → $ws4
+assign [class="Postman"] → $ws6
+assign [class="Thunderbird"] → $ws7
+assign [app_id="evince"] → $ws9
+assign [class="KeeWeb"] → $ws10
 
 for_window [app_id="quickfile"] floating enable
 for_window [app_id="quickfile"] border none 
