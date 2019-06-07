@@ -1,0 +1,4 @@
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="target/debug:$PATH"
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules

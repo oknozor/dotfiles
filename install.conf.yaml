@@ -8,6 +8,7 @@
 - link:
     ~/.config/sway: sway
     ~/.zshrc: zshrc
+    ~/.profile: z_profile
     ~/.vimrc: init.vim
     ~/.gitconfig: gitconfig
     ~/.config/nvim/init.vim: init.vim

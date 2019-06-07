@@ -54,11 +54,14 @@ alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1'
 
 ## Multimedia 
 alias music='ncmpcpp -s media_library'
-alias impmus='beet import ~/Downloads/Soulseek'
-alias oldvim="vim"
+alias impmus='beet import ~/Downloads/SoulSeek'
+alias ovim="vim"
 alias vim="nvim"
 alias ocat="/usr/bin/cat"
 alias cat="bat"
+alias grep="rg"
+alias grep="rg"
+alias ogrep="grep"
 
 # Alias
 alias work="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
