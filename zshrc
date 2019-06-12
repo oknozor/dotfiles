@@ -67,7 +67,7 @@ alias ogrep="grep"
 alias work="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
 
 # Intellij Android emu fix 
-export ANDROID_HOME=$HOME/android-intellij
+export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 LD_PRELOAD=`/usr/lib/libstdc++.so.6 /usr/lib/libgcc_s.so.1 /usr/lib/libxcb.so.1 /usr/lib/libgpg-error.so` export PATH=$PATH:/opt/i3scripts
@@ -79,7 +79,9 @@ export MY_ZSHRC=~/.zshrc
 PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
 #Dirty LM
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/jvm/java-8-openjdk/lib"
+
+#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/jvm/java-8-openjdk/lib"
 export XKB_DEFAULT_LAYOUT=fr
 export _JAVA_AWT_WM_NONREPARENTING=1
+export IDEA_JDK=/usr/lib/jvm/java-8-openjdk  # Substitute path to the official JDK
 source ~/.profile

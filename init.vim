@@ -111,28 +111,58 @@ autocmd FileType c iabbrev <buffer> iff if(x)<Left><Backspace>
 " Plugin
 call plug#begin('~/.vim/plugged')
 
+    " Ui 
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
     Plug 'jacoborus/tender.vim'
+    Plug 'Raimondi/delimitMate'
+    Plug 'airblade/vim-gitgutter'
+
+    " Tools 
     Plug 'RRethy/vim-illuminate'
+
+    " Linters 
     Plug 'pearofducks/ansible-vim'
     Plug 'rust-lang/rust.vim'
-    Plug 'racer-rust/vim-racer'
-    Plug 'Raimondi/delimitMate'
-    Plug 'w0rp/ale'
-    Plug 'Valloric/YouCompleteMe'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'chr4/nginx.vim'
     Plug 'aliou/bats.vim'
     Plug 'hashivim/vim-vagrant'
+    Plug 'chr4/nginx.vim'
+    Plug 'racer-rust/vim-racer'
+
+    " Language integration
+    Plug 'w0rp/ale'
+    Plug 'Shougo/deoplete.nvim', 
+    Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+    Plug 'junegunn/fzf'
 
 call plug#end()
+
+" Language client 
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ }
+
+call deoplete#custom#option('sources', {
+\ '_': ['ale'],
+\})
+"
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Ale Lint 
 nnoremap <silent> <ALT-l> :ALEDetail<Cr>
 nmap <silent> <ALT-k> <Plug>(ale_previous_wrap)
 nmap <silent> <ALT-j> <Plug>(ale_next_wrap)
+let g:ale_completion_enabled = 1
 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '-'
