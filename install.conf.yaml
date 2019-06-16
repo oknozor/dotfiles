@@ -13,6 +13,7 @@
     ~/.gitconfig: gitconfig
     ~/.config/nvim/init.vim: init.vim
     ~/.config/termite: termite
+    ~/.config/alacritty: alacritty
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd/mpd.conf: mpd/config
     ~/.ncmpcpp/config: ncmpcpp/config

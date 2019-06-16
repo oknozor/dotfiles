@@ -151,10 +151,6 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['/usr/local/bin/pyls'],
     \ }
 
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\})
-"
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 

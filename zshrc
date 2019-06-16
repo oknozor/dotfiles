@@ -30,6 +30,7 @@ antigen bundle denysdovhan/spaceship-prompt
 antigen bundle zuxfoucault/colored-man-pages_mod
 antigen apply
 
+export EDITOR=nvim
 
 # Aliases
 alias ll='ls -larth'
