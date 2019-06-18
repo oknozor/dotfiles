@@ -86,3 +86,4 @@ export XKB_DEFAULT_LAYOUT=fr
 export _JAVA_AWT_WM_NONREPARENTING=1
 export IDEA_JDK=/usr/lib/jvm/java-8-openjdk  # Substitute path to the official JDK
 source ~/.profile
+source  ~/.config/s_profile

@@ -132,27 +132,15 @@ call plug#begin('~/.vim/plugged')
 
     " Language integration
     Plug 'w0rp/ale'
-    Plug 'Shougo/deoplete.nvim', 
-    Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-
     Plug 'junegunn/fzf'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-" Language client 
-" Required for operations modifying multiple buffers like rename.
-set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'python': ['/usr/local/bin/pyls'],
-    \ }
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
+" COC 
+noremap <leader>g :CocList files<CR> 
+noremap <leader>G :CocList symbols<CR> 
+noremap <leader>f :CocList grep<CR> 
 
 " Ale Lint 
 nnoremap <silent> <ALT-l> :ALEDetail<Cr>
@@ -177,6 +165,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 map <C-n> :NERDTreeToggle<CR>
 
