@@ -16,4 +16,4 @@
     pushf = push --force-with-lease
 
 [pull]
-    rebase = preserve
+    rebase = merges
