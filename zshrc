@@ -65,7 +65,7 @@ alias grep="rg"
 alias ogrep="grep"
 
 # Alias
-alias work="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
+alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
 
 # Intellij Android emu fix 
 export ANDROID_HOME=/opt/android-sdk

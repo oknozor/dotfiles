@@ -1,3 +1,5 @@
+[core]
+    editor = nvim
 [user]
 	email = paul.delafosse@protonmail.com
 	name = okno

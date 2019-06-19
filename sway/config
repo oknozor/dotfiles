@@ -70,8 +70,6 @@ set $white    #eeeeecff
   client.urgent           $lred     $black     $gray   $lred      $lblue
 
 ### Assignment
-assign [class="jetbrains-idea"] → $ws3
-assign [class="jetbrains-clion"] → $ws3
 assign [instance="Navigator"] → $ws2
 assign [class="Slack"] → $ws4
 assign [class="Riot"] → $ws4
@@ -80,11 +78,33 @@ assign [class="Thunderbird"] → $ws7
 assign [app_id="evince"] → $ws9
 assign [class="KeeWeb"] → $ws10
 
-for_window [app_id="quickfile"] floating enable
-for_window [app_id="quickfile"] border none 
-for_window [class="jetbrains-idea"] border none 
-for_window [class="jetbrains-idea"] floating enable
+#### Intellij layout
+assign [class="jetbrains-idea" title="(.*)Default Changelist"] → $ws3
+for_window [class="jetbrains-idea"] border none
+
+# Git diff
+for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable 
+
+# Version Control
+assign [class="jetbrains-idea" title="Version Control"] → $ws5 
+for_window [class="jetbrains-idea" title="Version Control"] floating disable; move down
+
+# Project Explorer
+assign [class="jetbrains-idea" title="Project(.*)"] → $ws5 
+for_window [class="jetbrains-idea" title="Project(.*)"] floating disable; move left; move left; move left; move left; 
+
+# Message
+assign [class="jetbrains-idea" title="Messages(.*)"] → $ws5 
+for_window [class="jetbrains-idea" title="Messages(.*)"] floating disable; move  down
+
+# Main window
+assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
+
+# Clion ##TODO##
+assign [class="jetbrains-clion"] → $ws3
 for_window [class="jetbrains-clion"] border none 
+
+for_window [app_id="quickfile"] floating enable; border none 
 for_window [class="Inkscape"] border none 
 for_window [class="Nautilus"] border csd 
 
