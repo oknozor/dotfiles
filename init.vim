@@ -147,6 +147,7 @@ nnoremap <silent> <ALT-l> :ALEDetail<Cr>
 nmap <silent> <ALT-k> <Plug>(ale_previous_wrap)
 nmap <silent> <ALT-j> <Plug>(ale_next_wrap)
 let g:ale_completion_enabled = 1
+let g:ale_update_tagstack = 1
 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '-'
@@ -158,6 +159,7 @@ let g:airline_powerline_fonts = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'bats': ['shellcheck'],
+\   'rust': ['rust-vim'],
 \}
 
 " Nerdtree

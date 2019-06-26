@@ -51,7 +51,7 @@ workspace $ws10 output $dsp1
 smart_gaps on
 smart_borders on
 gaps inner 10
-default_border pixel 1 
+default_border pixel 3 
 focus_follows_mouse no
 
 
