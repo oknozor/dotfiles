@@ -80,7 +80,6 @@ assign [class="KeeWeb"] → $ws10
 
 #### Intellij layout
 assign [class="jetbrains-idea" title="(.*)Default Changelist"] → $ws3
-for_window [class="jetbrains-idea"] border none
 
 # Git diff
 for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable 
