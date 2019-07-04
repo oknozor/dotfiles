@@ -1,4 +1,4 @@
-music_directory		"~/Music"
+music_directory		"/mnt/data/Music/"
 playlist_directory		"~/.config/mpd/playlists"
 db_file			"~/.config/mpd/database"
 log_file			"syslog"

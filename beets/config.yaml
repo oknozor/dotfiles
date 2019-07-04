@@ -1,8 +1,9 @@
-directory: ~/Music
+---
+directory: /mnt/data/Music
 library: ~/.config/beets/library.db
 plugins: fetchart lyrics lastgenre
-import: 
-    move: yes
+import:
+    move: true
 
 paths:
     default: $albumartist/$album%aunique{}/$track $title
