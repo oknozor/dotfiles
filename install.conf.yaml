@@ -16,6 +16,7 @@
     ~/.config/alacritty: alacritty
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd/mpd.conf: mpd/config
+    ~/.config/mako: mako
     ~/.ncmpcpp/config: ncmpcpp/config
     ~/.ncmpcpp/bindings: ncmpcpp/bindings
     ~/.config/rofi: rofi

@@ -17,3 +17,5 @@
 
 [pull]
     rebase = merges
+[merge]
+	ff = only

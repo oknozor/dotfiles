@@ -1,3 +1,4 @@
+exec mako
 exec keeweb
 exec thunderbird
 exec firefox-developer-edition
@@ -106,6 +107,9 @@ for_window [class="jetbrains-clion"] border none
 for_window [app_id="quickfile"] floating enable; border none 
 for_window [class="Inkscape"] border none 
 for_window [class="Nautilus"] border csd 
+
+#### Godot Engine 
+for_window [instance="Godot_Engine"] floating enable
 
 ### Input configuration
 #
