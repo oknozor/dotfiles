@@ -47,12 +47,6 @@ vnoremap <Up>    <nop>
 vnoremap <Down>  <nop>
 vnoremap <esc>   <nop>
 
-" Fix arrow and scroll remaping 
-"noremap OA <esc>
-"noremap OB <esc>
-"noremap OC <esc>
-"noremap OD <esc>
-
 " Toggle hl
 noremap <F2> :set hlsearch! hlsearch?<CR>
 
@@ -132,7 +126,6 @@ call plug#begin('~/.vim/plugged')
 
     " Language integration
     Plug 'w0rp/ale'
-    Plug 'junegunn/fzf'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
@@ -196,14 +189,4 @@ endi
 let delimitMate_expand_cr = 1
 
 colorscheme tender
-
-" Rust autocompletion
-set hidden
-let g:racer_cmd = "$HOME/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
