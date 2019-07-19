@@ -206,6 +206,12 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:lightline = { 'colorscheme': 'tender' }
 let g:airline_theme = 'tender'
 
+" Gitgutter 
+
+let g:gitgutter_sign_added = ''
+let g:gitgutter_sign_removed = ''
+let g:gitgutter_sign_modified = ''
+
 " Tender
 if (has("termguicolors"))
  set termguicolors
