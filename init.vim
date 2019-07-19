@@ -63,10 +63,19 @@ nnoremap <leader>t  <esc>:tabnew<CR>
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
 
+" Scroll
+nnoremap <A-j> <C-f>
+nnoremap <A-k> <C-b>
+
+" Active window
 nnoremap <C-j>  <C-w><C-j>
 nnoremap <C-k>  <C-w><C-k>
 nnoremap <C-h>  <C-w><C-h>
 nnoremap <C-l>  <C-w><C-l>
+
+" Switch buffer
+nnoremap <A-h> :bp<Cr>
+nnoremap <A-l> :bn<Cr>
 
 " Quick edit and source 
 
