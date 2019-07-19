@@ -49,13 +49,15 @@ alias restart='sudo systemctl restart'
 alias jof='journalctl -u'
 alias fjof='journalctl -fu'
 
-#nmcli
+# Nmcli
 alias vpnfacup='nmcli connection up ulille_vpn_etu_udp_v1 --ask'
 alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1'
 
 ## Multimedia 
 alias music='ncmpcpp -s media_library'
 alias impmus='beet import ~/Downloads/SoulSeek'
+
+## Commons
 alias ovim="vim"
 alias vim="nvim"
 alias ocat="/usr/bin/cat"
@@ -63,6 +65,7 @@ alias cat="bat"
 alias grep="rg"
 alias grep="rg"
 alias ogrep="grep"
+alias record="wf-recorder -f ${filename}"
 
 # Alias
 alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
