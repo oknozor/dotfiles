@@ -144,10 +144,27 @@ noremap <leader>g :CocList files<CR>
 noremap <leader>G :CocList symbols<CR> 
 noremap <leader>f :CocList grep<CR> 
 
+"" Go to Actions 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"" Documentation
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 " Ale Lint 
-nnoremap <silent> <ALT-l> :ALEDetail<Cr>
-nmap <silent> <ALT-k> <Plug>(ale_previous_wrap)
-nmap <silent> <ALT-j> <Plug>(ale_next_wrap)
+nnoremap <silent> <A-n> :ALEDetail<Cr>
+nmap <silent> <C-UP> <Plug>(ale_previous_wrap)
+nmap <silent> <C-DOWN> <Plug>(ale_next_wrap)
 let g:ale_completion_enabled = 1
 let g:ale_update_tagstack = 1
 
