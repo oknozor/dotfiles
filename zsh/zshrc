@@ -12,13 +12,8 @@ SAVEHIST=1000
 bindkey -e
 
 # Editor
-export VISUAL="vim"
+export VISUAL="nvim"
 [[ $- != *i* ]] && return
-
-# Tilix
-if [[ $TILIX_ID ]]; then
-        source /etc/profile.d/vte.sh
-fi
 
 # Antigen 
 source /usr/share/zsh/share/antigen.zsh 
@@ -33,13 +28,6 @@ antigen apply
 export EDITOR=nvim
 
 # Aliases
-alias ll='ls -larth'
-alias ls='ls --color=auto'
-alias lg='ls |grep' 
-alias grep='grep --color=auto'
-alias danette='yaourt -Suy --aur && yaourt -Qdt' 
-alias nextcal='calcurse-caldav && calcurse' 
-alias rvim='~/dotfiles/bash/./rvim.sh'
 
 ## Systemctl 
 alias start='sudo systemctl start'
@@ -62,12 +50,13 @@ alias ovim="vim"
 alias vim="nvim"
 alias ocat="/usr/bin/cat"
 alias cat="bat"
-alias grep="rg"
-alias grep="rg"
-alias ogrep="grep"
 alias record="wf-recorder -f ${filename}"
+alias ll='ls -larth'
+alias ls='ls --color=auto'
+alias lg='ls |grep' 
+alias grep='grep --color=auto'
 
-# Alias
+# Work Alias
 alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
 
 # Intellij Android emu fix 
@@ -80,9 +69,7 @@ alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 export PATH=$PATH:/usr/node_modules/.bin
 export MY_ZSHRC=~/.zshrc
 
-PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
-
-#Dirty LM
+#PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
 
 #export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/jvm/java-8-openjdk/lib"
 export XKB_DEFAULT_LAYOUT=fr
