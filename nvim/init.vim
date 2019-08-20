@@ -139,27 +139,31 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" COC 
-noremap <leader>g :CocList files<CR> 
-noremap <leader>G :CocList symbols<CR> 
-noremap <leader>f :CocList grep<CR> 
+""" COC 
+    noremap <leader>g :CocList files<CR> 
+    noremap <leader>G :CocList symbols<CR> 
+    noremap <leader>f :CocList grep<CR> 
 
-"" Go to Actions 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+    "" Go to Actions 
+    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gy <Plug>(coc-type-definition)
+    nmap <silent> gi <Plug>(coc-implementation)
+    nmap <silent> gr <Plug>(coc-references)
 
-"" Documentation
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+    "" Hint
+    highlight link CocErrorSign GruvboxRed
 
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+    "" Documentation
+    nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+    function! s:show_documentation()
+      if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+      else
+        call CocAction('doHover')
+      endif
+    endfunction
+"""
 
 " Ale Lint 
 nnoremap <silent> <A-n> :ALEDetail<Cr>
@@ -178,7 +182,7 @@ let g:airline_powerline_fonts = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'bats': ['shellcheck'],
-\   'rust': ['rust-vim'],
+\   'rust': ['cargo clippy'],
 \}
 
 " Nerdtree
