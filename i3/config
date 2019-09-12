@@ -1,0 +1,281 @@
+exec mako
+exec keeweb
+exec thunderbird
+exec firefox-developer-edition
+exec riot-desktop
+exec slack
+exec postman
+exec evince
+exec keeweb
+# Read `man 5 sway` for a complete reference.
+
+### Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term alacritty
+set $scripts ~/dotfiles/scripts
+
+# workspace naming 
+set $ws1 "  "
+set $ws2 "  "
+set $ws3 "  "
+set $ws4 "  "
+set $ws5 "  "
+set $ws6 "  "
+set $ws7 "  "
+set $ws8 "  "
+set $ws9 "  "
+set $ws10 "  "
+
+### Output configuration
+
+workspace $ws3 output $dsp2
+workspace $ws1 output $dsp1
+workspace $ws2 output $dsp1
+workspace $ws4 output $dsp1
+workspace $ws5 output $dsp1
+workspace $ws6 output $dsp1
+workspace $ws7 output $dsp1
+workspace $ws8 output $dsp1
+workspace $ws9 output $dsp1
+workspace $ws10 output $dsp1
+
+### Gaps and egdes
+smart_gaps on
+smart_borders on
+gaps inner 10
+default_border pixel 3 
+focus_follows_mouse no
+
+
+### Palette
+set $black    #343434ff
+set $gray     #06989aff
+set $lred     #eeeeecff
+set $blue     #254775ff
+set $lblue    #8ac4d3ff
+set $white    #eeeeecff
+
+# Color                   border    background text    indicator  child_border
+  client.focused          $lblue    $black     $gray   $lblue     $lblue
+  client.focused_inactive $gray     $black     $gray   $gray      $gray
+  client.unfocused        $black    $black     $gray   $black     $blue
+  client.urgent           $lred     $black     $gray   $lred      $lblue
+
+### Assignment
+assign [instance="Navigator"] → $ws2
+assign [class="Slack"] → $ws4
+assign [class="Riot"] → $ws4
+assign [class="Postman"] → $ws6
+assign [class="Thunderbird"] → $ws7
+assign [class="evince"] → $ws9
+assign [class="KeeWeb"] → $ws10
+
+#### Intellij layout
+assign [class="jetbrains-idea" title="(.*)Default Changelist"] → $ws3
+
+# Git diff
+for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable 
+
+# Version Control
+assign [class="jetbrains-idea" title="Version Control"] → $ws5 
+for_window [class="jetbrains-idea" title="Version Control"] floating disable; move down
+
+# Project Explorer
+assign [class="jetbrains-idea" title="Project(.*)"] → $ws5 
+for_window [class="jetbrains-idea" title="Project(.*)"] floating disable; move left; move left; move left; move left; 
+
+# Message
+assign [class="jetbrains-idea" title="Messages(.*)"] → $ws5 
+for_window [class="jetbrains-idea" title="Messages(.*)"] floating disable; move  down
+
+# Main window
+assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
+
+# Clion ##TODO##
+assign [class="jetbrains-clion"] → $ws3
+for_window [class="jetbrains-clion"] border none 
+
+for_window [class="Inkscape"] border none 
+for_window [class="Nautilus"] border csd 
+
+#### Godot Engine 
+for_window [instance="Godot_Engine"] floating enable
+
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+### Key bindings
+# Quick launchers
+bindsym $mod+Return exec $term
+bindsym $mod+G exec rofi -show drun -theme my_theme.rasi
+bindsym $mod+p exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
+bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
+bindsym $mod+x exec "swaylock -c 000000"
+
+# Kill focused window
+bindsym $mod+Shift+a kill
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod
+
+# reload the configuration file
+bindsym $mod+Shift+r reload
+
+# exit sway (logs you out of your wayland session)
+bindsym $mod+Shift+e exit
+#
+# Moving around:
+#
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+# or use $mod+[up|down|left|right]
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# _move_ the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+# ditto, with arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+# switch to wbindsym $mod+ampersand workspace $ws1
+bindsym $mod+ampersand workspace $ws1
+bindsym $mod+eacute workspace $ws2
+bindsym $mod+quotedbl workspace $ws3
+bindsym $mod+apostrophe workspace $ws4
+bindsym $mod+parenleft workspace $ws5
+bindsym $mod+minus workspace $ws6
+bindsym $mod+egrave workspace $ws7
+bindsym $mod+underscore workspace $ws8
+bindsym $mod+ccedilla workspace $ws9
+bindsym $mod+agrave workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+ampersand move container to workspace $ws1
+bindsym $mod+Shift+eacute move container to workspace $ws2
+bindsym $mod+Shift+quotedbl move container to workspace $ws3
+bindsym $mod+Shift+apostrophe move container to workspace $ws4
+bindsym $mod+Shift+parenleft move container to workspace $ws5
+bindsym $mod+Shift+minus move container to workspace $ws6
+bindsym $mod+Shift+egrave move container to workspace $ws7
+bindsym $mod+Shift+underscore move container to workspace $ws8
+bindsym $mod+Shift+ccedilla move container to workspace $ws9
+bindsym $mod+Shift+agrave move container to workspace $ws10
+
+# Fn key 
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioPlay exec mpc toggle
+#   bindsym XF86AudioNext exec mpc next
+#   bindsym XF86AudioPrev exec mpc prev
+#   bindsym XF86AudioStop exec mpc pause
+
+# Custom commands
+## Screenshots
+bindsym Print exec $scripts/screenshot.sh
+bindsym Shift+Print exec $scripts/fullscreenshot.sh
+# Layout stuff:
+#
+# You can "split" the current object of your focus with
+# $mod+b or $mod+v, for horizontal and vertical splits
+# respectively.
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+n layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# move focus to the parent container
+bindsym $mod+a focus parent
+
+# Scratchpad:
+## Move the currently focused window to the scratchpad
+bindsym $mod+Shift+Tab move scratchpad
+
+## If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+Tab scratchpad show
+
+# Resizing containers:
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
+
+    # ditto, with arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Status Bar:
+bar {
+    font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
+    position top
+    height 25
+    status_command i3status-rs .config/sway/status.toml 
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
+}
+

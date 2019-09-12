@@ -6,7 +6,7 @@
 - clean: ['~']
 
 - link:
-    ~/.config/sway: sway
+    ~/.config/i3: i3
     ~/.zshrc: zsh/zshrc
     ~/.profile: zsh/z_profile
     ~/.vimrc: nvim/init.vim
@@ -16,7 +16,6 @@
     ~/.config/alacritty: alacritty
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd: mpd
-    ~/.config/mako: mako
     ~/.ncmpcpp: ncmpcpp
     ~/.config/rofi: rofi
 - shell:

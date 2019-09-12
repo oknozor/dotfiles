@@ -1,3 +1,4 @@
 beets/library.db
 beets/state.pickle
+mpd/database
 ncmpcpp/error.log
