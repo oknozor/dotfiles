@@ -1,11 +1,9 @@
-exec mako
 exec keeweb
 exec thunderbird
 exec firefox-developer-edition
 exec riot-desktop
 exec slack
 exec postman
-exec evince
 exec keeweb
 # Read `man 5 sway` for a complete reference.
 
@@ -32,16 +30,16 @@ set $ws10 "  "
 
 ### Output configuration
 
-workspace $ws3 output $dsp2
-workspace $ws1 output $dsp1
-workspace $ws2 output $dsp1
-workspace $ws4 output $dsp1
-workspace $ws5 output $dsp1
-workspace $ws6 output $dsp1
-workspace $ws7 output $dsp1
-workspace $ws8 output $dsp1
-workspace $ws9 output $dsp1
-workspace $ws10 output $dsp1
+workspace $ws3 output HDMI-2 primary
+workspace $ws1 output primary 
+workspace $ws2 output primary 
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output primary
+workspace $ws7 output primary
+workspace $ws8 output primary
+workspace $ws9 output primary
+workspace $ws10 output primary
 
 ### Gaps and egdes
 smart_gaps on
@@ -71,7 +69,6 @@ assign [class="Slack"] → $ws4
 assign [class="Riot"] → $ws4
 assign [class="Postman"] → $ws6
 assign [class="Thunderbird"] → $ws7
-assign [class="evince"] → $ws9
 assign [class="KeeWeb"] → $ws10
 
 #### Intellij layout
@@ -105,19 +102,6 @@ for_window [class="Nautilus"] border csd
 #### Godot Engine 
 for_window [instance="Godot_Engine"] floating enable
 
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
 # Quick launchers
@@ -125,7 +109,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+G exec rofi -show drun -theme my_theme.rasi
 bindsym $mod+p exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
 bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
-bindsym $mod+x exec "swaylock -c 000000"
+bindsym $mod+x exec "i3lock -c 000000"
 
 # Kill focused window
 bindsym $mod+Shift+a kill
@@ -142,7 +126,7 @@ bindsym $mod+Shift+r reload
 
 # exit sway (logs you out of your wayland session)
 bindsym $mod+Shift+e exit
-#
+
 # Moving around:
 #
 # Move your focus around
