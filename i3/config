@@ -107,8 +107,6 @@ for_window [instance="Godot_Engine"] floating enable
 # Quick launchers
 bindsym $mod+Return exec $term
 bindsym $mod+G exec rofi -show drun -theme my_theme.rasi
-bindsym $mod+p exec rofi  -show find -modi find:/usr/share/rofi/.config/rofi/finder.sh
-bindsym $mod+W exec bash "$HOME/.config/rofi_wifi/rofi-wifi-menu.sh"
 bindsym $mod+x exec "i3lock -c 000000"
 
 # Kill focused window
@@ -188,8 +186,9 @@ bindsym XF86AudioPlay exec mpc toggle
 
 # Custom commands
 ## Screenshots
-bindsym Print exec $scripts/screenshot.sh
-bindsym Shift+Print exec $scripts/fullscreenshot.sh
+bindsym --release Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/'
+bindsym --release Shift+Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/'
+
 # Layout stuff:
 #
 # You can "split" the current object of your focus with
