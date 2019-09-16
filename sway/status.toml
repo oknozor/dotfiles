@@ -5,10 +5,18 @@ cpu = ""
 update = ""
 
 [theme]
-name = "slick"
+name = "solarized-dark"
 [theme.overrides]
-idle_bg = "#43565e"
-idle_fg = "#abcdef"
+idle_bg = "#212121"
+idle_fg = "#EEFFFF"
+info_bg = "#89DDFF"
+info_fg = "#212121"
+good_bg = "#C3E88D"
+good_fg = "#212121"
+warning_bg = "#FFCB6B"
+warning_fg = "#212121"
+critical_bg = "#F07178"
+critical_fg = "#212121"
 
 [[block]]
 block = "pacman"
