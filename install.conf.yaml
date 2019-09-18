@@ -18,5 +18,6 @@
     ~/.config/mpd: mpd
     ~/.ncmpcpp: ncmpcpp
     ~/.config/rofi: rofi
+    ~/.config/starship.toml: zsh/starship.toml
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

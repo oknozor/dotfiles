@@ -124,6 +124,7 @@ call plug#begin('~/.vim/plugged')
 
     " Tools 
     Plug 'RRethy/vim-illuminate'
+    Plug 'airblade/vim-rooter'
 
     " Linters 
     Plug 'pearofducks/ansible-vim'
@@ -132,6 +133,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'hashivim/vim-vagrant'
     Plug 'chr4/nginx.vim'
     Plug 'racer-rust/vim-racer'
+    Plug 'cespare/vim-toml'
 
     " Language integration
     Plug 'w0rp/ale'
@@ -185,6 +187,9 @@ let g:ale_linters = {
 \   'rust': ['cargo clippy'],
 \}
 
+" Yank highlight
+nnoremap <leader>y  :<C-u>CocList -A --normal yank<cr>
+
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -225,4 +230,3 @@ endi
 let delimitMate_expand_cr = 1
 
 colorscheme tender
-

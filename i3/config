@@ -1,11 +1,12 @@
+# On start
 exec keeweb
-exec thunderbird
 exec firefox-developer-edition
-exec riot-desktop
-exec slack
-exec postman
-exec keeweb
-# Read `man 5 sway` for a complete reference.
+exec KeeWeb
+
+# exec thunderbird
+# exec riot-desktop
+# exec slack
+# exec postman
 
 ### Variables
 set $mod Mod4
@@ -16,7 +17,7 @@ set $right l
 set $term alacritty
 set $scripts ~/dotfiles/scripts
 
-# workspace naming 
+### workspace naming 
 set $ws1 "  "
 set $ws2 "  "
 set $ws3 "  "
@@ -65,10 +66,10 @@ set $white    #eeeeecff
 
 ### Assignment
 assign [instance="Navigator"] → $ws2
-assign [class="Slack"] → $ws4
-assign [class="Riot"] → $ws4
-assign [class="Postman"] → $ws6
-assign [class="Thunderbird"] → $ws7
+# assign [class="Slack"] → $ws4
+# assign [class="Riot"] → $ws4
+# assign [class="Postman"] → $ws6
+assign [class="Thunderbird"] → $ws6
 assign [class="KeeWeb"] → $ws10
 
 #### Intellij layout
@@ -119,10 +120,10 @@ bindsym $mod+Shift+a kill
 # mouse button for dragging.
 floating_modifier $mod
 
-# reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+r reload
 
-# exit sway (logs you out of your wayland session)
+# Exit sway/i3 
 bindsym $mod+Shift+e exit
 
 # Moving around:
@@ -138,7 +139,7 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# _move_ the focused window with the same, but add Shift
+# Move the focused window with the same, but add Shift
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
@@ -148,10 +149,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-#
-# Workspaces:
-#
+
+### Workspaces:
 # switch to wbindsym $mod+ampersand workspace $ws1
+
 bindsym $mod+ampersand workspace $ws1
 bindsym $mod+eacute workspace $ws2
 bindsym $mod+quotedbl workspace $ws3
