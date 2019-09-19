@@ -1,7 +1,7 @@
 # On start
 exec keeweb
 exec firefox-developer-edition
-exec "alacritty -e nvim ~/_WORKSHOP/Notes/ideas.md -c Render"
+exec "alacritty --class illnotes -e nvim ~/_WORKSHOP/Notes/ideas.md -c Render"
 
 # exec thunderbird
 # exec riot-desktop
@@ -65,10 +65,12 @@ set $white    #eeeeecff
   client.urgent           $lred     $black     $gray   $lred      $lblue
 
 ### Assignment
+ assign [class="Slack"] → $ws4
+ assign [class="Riot"] → $ws4
+ assign [class="Postman"] → $ws6
+
+assign [class="illnotes"] → $ws1
 assign [instance="Navigator"] → $ws2
-# assign [class="Slack"] → $ws4
-# assign [class="Riot"] → $ws4
-# assign [class="Postman"] → $ws6
 assign [class="Thunderbird"] → $ws6
 assign [class="KeeWeb"] → $ws10
 
