@@ -1,7 +1,6 @@
 # On start
 exec keeweb
 exec firefox-developer-edition
-exec KeeWeb
 
 # exec thunderbird
 # exec riot-desktop
@@ -251,7 +250,7 @@ bar {
     font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
     position top
     height 25
-    status_command i3status-rs .config/sway/status.toml 
+    status_command i3status-rs .config/i3/status.toml 
     colors {
         separator #666666
         background #222222
