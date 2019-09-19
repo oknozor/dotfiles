@@ -21,9 +21,10 @@ else
 
     if [ x"empty" = x"${SINK}" ]
     then
-        i3_empty_workspace.sh >/dev/null
+        sink.sh >/dev/null
     elif [ -n "${SINK}" ]
     then
-        i3-msg workspace "${SINK}" >/dev/null
+        echo $($SINK 
+        set CURRENT_SINK="${SINK}" | head -c 1 >/dev/null
     fi
 fi
