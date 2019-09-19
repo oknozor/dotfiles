@@ -1,6 +1,7 @@
 # On start
 exec keeweb
 exec firefox-developer-edition
+exec "alacritty -e nvim ~/_WORKSHOP/Notes/ideas.md -c Render"
 
 # exec thunderbird
 # exec riot-desktop
@@ -186,8 +187,8 @@ bindsym XF86AudioPlay exec mpc toggle
 
 # Custom commands
 ## Screenshots
-bindsym --release Print exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/'
-bindsym --release Shift+Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/'
+bindsym --release Print exec "$HOME/dotfiles/scripts/screenshot.sh"
+bindsym --release Shift+Print exec "$HOME/dotfiles/scripts/fullscreenshot.sh"
 
 # Layout stuff:
 #
