@@ -230,3 +230,4 @@ endi
 let delimitMate_expand_cr = 1
 
 colorscheme tender
+highlight Pmenu guibg=SlateGrey gui=bold
