@@ -74,26 +74,15 @@ assign [instance="Navigator"] → $ws2
 assign [class="Thunderbird"] → $ws6
 assign [class="KeeWeb"] → $ws10
 
-#### Intellij layout
-assign [class="jetbrains-idea" title="(.*)Default Changelist"] → $ws3
 
-# Git diff
-for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable 
-
-# Version Control
-assign [class="jetbrains-idea" title="Version Control"] → $ws5 
-for_window [class="jetbrains-idea" title="Version Control"] floating disable; move down
-
-# Project Explorer
-assign [class="jetbrains-idea" title="Project(.*)"] → $ws5 
-for_window [class="jetbrains-idea" title="Project(.*)"] floating disable; move left; move left; move left; move left; 
-
-# Message
-assign [class="jetbrains-idea" title="Messages(.*)"] → $ws5 
-for_window [class="jetbrains-idea" title="Messages(.*)"] floating disable; move  down
-
-# Main window
+# IntelliJ
 assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
+assign [class="sun-awt-X11-XFramePeer" class="jetbrains-idea"] → $ws3
+assign [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] → $ws3
+for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
+for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
+
+
 
 # Clion ##TODO##
 assign [class="jetbrains-clion"] → $ws3
@@ -109,7 +98,8 @@ for_window [instance="Godot_Engine"] floating enable
 ### Key bindings
 # Quick launchers
 bindsym $mod+Return exec $term
-bindsym $mod+G exec rofi -show drun -theme my_theme.rasi
+bindsym $mod+G exec rofi -show drun 
+bindsym $mod+P exec passmenu
 bindsym $mod+x exec "i3lock -c 000000"
 
 # Kill focused window
