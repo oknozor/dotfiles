@@ -1,5 +1,6 @@
 [core]
     editor = nvim
+
 [user]
 	email = paul.delafosse@protonmail.com
 	name = okno
@@ -17,5 +18,13 @@
 
 [pull]
     rebase = merges
+
 [merge]
 	ff = only
+
+[difftool]
+    prompt = true
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d "$LOCAL" "$REMOTE""
