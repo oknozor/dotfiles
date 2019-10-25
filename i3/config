@@ -176,6 +176,8 @@ bindsym XF86AudioPlay exec mpc toggle
 #   bindsym XF86AudioNext exec mpc next
 #   bindsym XF86AudioPrev exec mpc prev
 #   bindsym XF86AudioStop exec mpc pause
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 
 # Custom commands
 ## Screenshots
