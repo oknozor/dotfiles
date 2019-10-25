@@ -67,7 +67,7 @@ set $white    #eeeeecff
 ### Assignment
  assign [class="Slack"] → $ws4
  assign [class="Riot"] → $ws4
- assign [class="Postman"] → $ws6
+ assign [class="Postman"] → $ws7
 
 assign [class="illnotes"] → $ws1
 assign [instance="Navigator"] → $ws2
