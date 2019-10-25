@@ -20,7 +20,11 @@
     rebase = merges
 
 [merge]
+    tool = nvim
 	ff = only
+
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 
 [difftool]
     prompt = true
