@@ -8,5 +8,6 @@
             "filetypes": ["rust"],
             "rootPatterns": ["Cargo.toml"]
         }
-    }
+    },
+    "java.errors.incompleteClasspath.severity": "ignore"
 }
