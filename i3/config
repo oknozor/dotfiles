@@ -172,23 +172,14 @@ bindsym $mod+Shift+agrave move container to workspace $ws10
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5%"
 bindsym XF86AudioMute exec "pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle"
-bindsym XF86AudioPlay exec mpc toggle
-#   bindsym XF86AudioNext exec mpc next
-#   bindsym XF86AudioPrev exec mpc prev
-#   bindsym XF86AudioStop exec mpc pause
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 
-# Custom commands
 ## Screenshots
 bindsym --release Print exec "$HOME/dotfiles/scripts/screenshot.sh"
 bindsym --release Shift+Print exec "$HOME/dotfiles/scripts/fullscreenshot.sh"
 
 # Layout stuff:
-#
-# You can "split" the current object of your focus with
-# $mod+b or $mod+v, for horizontal and vertical splits
-# respectively.
 bindsym $mod+b splith
 bindsym $mod+v splitv
 
