@@ -9,7 +9,7 @@
     ~/.config/i3: i3
     ~/.xinitrc: xinitrc
     ~/.zshrc: zsh/zshrc
-    ~/.profile: zsh/z_profile
+    ~/.zprofile: zsh/zprofile
     ~/.vimrc: nvim/init.vim
     ~/.gitconfig: git/gitconfig
     ~/.config/nvim: nvim

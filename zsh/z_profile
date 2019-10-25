@@ -1,6 +1,0 @@
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
-export PATH="target/debug:$PATH"
-export PATH="$PATH:/flutter/bin"
-export PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
