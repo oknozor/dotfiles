@@ -1,7 +1,7 @@
 # On start
-exec no-startup-id keeweb
+exec dunst
 exec no-startup-id firefox-developer-edition
-exec no-startup-id "alacritty --class illnotes -e nvim ~/_WORKSHOP/Notes/ideas.md -c Render"
+# exec no-startup-id "alacritty --class illnotes -e nvim ~/_WORKSHOP/Notes/ideas.md -c Render"
 
 # exec thunderbird
 # exec riot-desktop
