@@ -125,6 +125,7 @@ call plug#begin('~/.vim/plugged')
     " Tools 
     Plug 'RRethy/vim-illuminate'
     Plug 'airblade/vim-rooter'
+    Plug 'tpope/vim-fugitive'
 
     " Linters 
     Plug 'pearofducks/ansible-vim'
