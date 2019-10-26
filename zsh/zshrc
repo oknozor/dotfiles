@@ -3,7 +3,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl true
-zstyle :compinstall filename '/home/okno/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit promptinit
 
 HISTFILE=~/.histfile
