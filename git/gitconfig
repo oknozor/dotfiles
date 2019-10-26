@@ -25,10 +25,13 @@
 
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+  keepBackup = false
 
 [difftool]
     prompt = true
+
 [diff]
+
     tool = nvimdiff
 [difftool "nvimdiff"]
     cmd = "nvim -d "$LOCAL" "$REMOTE""
