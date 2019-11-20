@@ -1,6 +1,6 @@
-syntax on 
-set relativenumber
+syntax on
 set number
+set relativenumber
 set nocompatible
 filetype off
 set tabstop=4 
@@ -60,8 +60,15 @@ nnoremap <leader>k  <esc>:tabprevious<CR>
 nnoremap <leader>j  <esc>:tabnext<CR>
 nnoremap <leader>t  <esc>:tabnew<CR>
 
+" Split window 
 nnoremap <leader>d :split<CR>
 nnoremap <leader>v :vsplit<CR>
+
+" Move window arround
+nnoremap <leader>J <C-W>J
+nnoremap <leader>K <C-W>K
+nnoremap <leader>H <C-W>H
+nnoremap <leader>L <C-W>L
 
 " Scroll
 nnoremap <A-j> <C-f>
@@ -116,6 +123,7 @@ call plug#begin('~/.vim/plugged')
 
     " Ui 
     Plug 'vim-airline/vim-airline'
+    Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
     Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
     Plug 'jacoborus/tender.vim'
@@ -186,6 +194,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'bats': ['shellcheck'],
 \   'rust': ['cargo clippy'],
+\   'python' : ['pylint'],
 \}
 
 " Yank highlight
