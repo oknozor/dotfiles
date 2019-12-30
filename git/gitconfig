@@ -6,6 +6,7 @@
 	name = Paul Delafosse
 
 [alias]
+    graph = log --graph --abbrev-commit --decorate --date=relative --all
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     fixup = !sh -c 'SHA=$(git rev-parse $1) \
       && git commit --fixup $SHA \
