@@ -60,6 +60,8 @@ alias grep='grep --color=auto'
 # Work Alias
 alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
 
+export PATH=$PATH:$HOME/.local/bin
+
 # Intellij Android emu fix 
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools
