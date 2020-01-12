@@ -20,11 +20,11 @@ To manage symlinks I use the excellent [dotbot](https://github.com/anishathalye/
 This list is not exhaustive, these are the tools I use on a daily basis and could do without.
 
 ### DE
-- Window manager : [i3-gaps](https://github.com/Airblader/i3)
-- Screen locker : [i3-lock](https://github.com/i3/i3lock)
+- Window manager : [sway](https://swaywm.org/)
+- Screen locker : [swaylock](https://github.com/swaywm/swaylock)
 - Status bar : [i3status-rust](https://github.com/greshake/i3status-rust)
-- App launcher : [rofi](https://github.com/davatorium/rofi)
-- Notification : [dunst](https://dunst-project.org/)
+- App launcher : [wofi](https://hg.sr.ht/~scoopta/wofi)
+- Notification : [mako](https://github.com/emersion/mako)
 
 ### Package manager
 - Aur helper : [yay](https://github.com/Jguer/yay)
@@ -40,9 +40,8 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 - Editor : [neovim](https://neovim.io/)
 - Plugin Manager : [plug](https://github.com/junegunn/vim-plug)
     - 'vim-airline/vim-airline'
-    - 'vim-airline/vim-airline-themes'
     - 'scrooloose/nerdtree'
-    - 'jacoborus/tender.vim'
+    - 'arcticicestudio/nord-vim'
     - 'Raimondi/delimitMate'
     - 'airblade/vim-gitgutter'
     - 'RRethy/vim-illuminate'
@@ -69,7 +68,7 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 ### Media
 - Media library management : [beets](http://beets.io/)
 - Music player : [ncmpcpp](https://github.com/arybczak/ncmpcpp)
-- Screenshot : [scrot](https://github.com/resurrecting-open-source-projects/scrot)
+- Screenshot : [grim](https://github.com/resurrecting-open-source-projects/scrot)
 
 ## Contributions 
 
