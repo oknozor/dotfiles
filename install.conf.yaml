@@ -6,20 +6,18 @@
 - clean: ['~']
 
 - link:
-    ~/.config/i3: i3
-    ~/.config/dunst: dunst
-    ~/.xinitrc: xinitrc
+    ~/.config/sway: sway
+    ~/.config/mako: mako
     ~/.zshrc: zsh/zshrc
     ~/.zprofile: zsh/zprofile
     ~/.vimrc: nvim/init.vim
     ~/.gitconfig: git/gitconfig
     ~/.config/nvim: nvim
-    ~/.config/termite: termite
     ~/.config/alacritty: alacritty
     ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/mpd: mpd
     ~/.ncmpcpp: ncmpcpp
-    ~/.config/rofi: rofi
+    ~/.config/wofi: wofi
     ~/.config/starship.toml: zsh/starship.toml
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

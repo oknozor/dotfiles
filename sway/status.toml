@@ -7,16 +7,16 @@ update = ""
 [theme]
 name = "solarized-dark"
 [theme.overrides]
-idle_bg = "#212121"
-idle_fg = "#EEFFFF"
-info_bg = "#89DDFF"
-info_fg = "#212121"
-good_bg = "#C3E88D"
-good_fg = "#212121"
-warning_bg = "#FFCB6B"
-warning_fg = "#212121"
-critical_bg = "#F07178"
-critical_fg = "#212121"
+idle_bg = "#81a1c1"
+idle_fg = "#4c566a"
+info_bg = "#7995a1"
+info_fg = "#4c566a"
+good_bg = "#a3be8c"
+good_fg = "#4c566a"
+warning_bg = "#ebcb8b"
+warning_fg = "#4c566a"
+critical_bg = "#bf616a"
+critical_fg = "#4c566a"
 
 [[block]]
 block = "pacman"
@@ -30,7 +30,7 @@ interval = 5
 
 [[block]]
 block = "disk_space"
-path = "/"
+path = "/home"
 alias = " "
 info_type = "available"
 unit = "GB"
@@ -41,7 +41,7 @@ alert = 10.0
 [[block]]
 block = "time"
 interval = 60
-format = "%a %R"
+format = "%a %d-%m | %R"
 
 [[block]]
 block = "sound"

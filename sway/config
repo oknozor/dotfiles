@@ -1,12 +1,6 @@
 # On start
-exec dunst
-exec no-startup-id firefox-developer-edition
-# exec no-startup-id "alacritty --class illnotes -e nvim ~/_WORKSHOP/Notes/ideas.md -c Render"
-
-# exec thunderbird
-# exec riot-desktop
-# exec slack
-# exec postman
+exec mako
+output * bg ~/dotfiles/wallpapers/wallpaper.jpg fill
 
 ### Variables
 set $mod Mod4
@@ -29,9 +23,15 @@ set $ws8 "  "
 set $ws9 "  "
 set $ws10 "  "
 
+#set $dsp1 eDP-1
+set $dsp1 eDP-1
+set $dsp2 HDMI-A-2
+output $dsp1 resolution 1920x1080 position 0,1081
+output $dsp2 resolution 1920x1080 position 0,0
+
 ### Output configuration
 
-workspace $ws3 output HDMI-2 primary
+workspace $ws3 output HDMI-A-2 primary
 workspace $ws1 output primary 
 workspace $ws2 output primary 
 workspace $ws4 output primary
@@ -42,38 +42,38 @@ workspace $ws8 output primary
 workspace $ws9 output primary
 workspace $ws10 output primary
 
+workspace "  "
+
 ### Gaps and egdes
 smart_gaps on
 smart_borders on
-gaps inner 10
-default_border pixel 3 
+gaps inner 8
+default_border pixel 2 
 focus_follows_mouse no
 
-
 ### Palette
-set $black    #343434ff
-set $gray     #06989aff
-set $lred     #eeeeecff
-set $blue     #254775ff
-set $lblue    #8ac4d3ff
-set $white    #eeeeecff
+set $black    #3b4252 
+set $gray     #d8dee9
+set $lred     #bf616a
+set $blue     #5e81ac
+set $lblue    #88c0d0
+set $white    #eceff4
 
 # Color                   border    background text    indicator  child_border
-  client.focused          $lblue    $black     $gray   $lblue     $lblue
-  client.focused_inactive $gray     $black     $gray   $gray      $gray
-  client.unfocused        $black    $black     $gray   $black     $blue
-  client.urgent           $lred     $black     $gray   $lred      $lblue
+client.focused          $white    $blue      $gray   $lblue     $lblue
+client.focused_inactive $white    $black     $gray   $gray      $gray
+client.unfocused        $black    $black     $gray   $black     $blue
+client.urgent           $lred     $black     $gray   $lred      $lblue
 
 ### Assignment
- assign [class="Slack"] → $ws4
- assign [class="Riot"] → $ws4
- assign [class="Postman"] → $ws7
+assign [class="Slack"] → $ws4
+assign [class="Riot"] → $ws4
+assign [class="Postman"] → $ws7
 
 assign [class="illnotes"] → $ws1
 assign [instance="Navigator"] → $ws2
 assign [class="Thunderbird"] → $ws6
 assign [class="KeeWeb"] → $ws10
-
 
 # IntelliJ
 assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
@@ -81,8 +81,6 @@ assign [class="sun-awt-X11-XFramePeer" class="jetbrains-idea"] → $ws3
 assign [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] → $ws3
 for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
 for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
-
-
 
 # Clion ##TODO##
 assign [class="jetbrains-clion"] → $ws3
@@ -98,18 +96,14 @@ for_window [instance="Godot_Engine"] floating enable
 ### Key bindings
 # Quick launchers
 bindsym $mod+Return exec $term
-bindsym $mod+G exec rofi -show drun 
-bindsym $mod+P exec passmenu
-bindsym $mod+x exec "i3lock -c 000000"
+bindsym $mod+G exec wofi --show drun 
+bindsym $mod+P exec "~/dotfiles/wofi/passwofi.sh"
+bindsym $mod+x exec "swaylock -c 000000"
 
 # Kill focused window
 bindsym $mod+Shift+a kill
 
-# Drag floating windows by holding down $mod and left mouse button.
-# Resize them with right mouse button + $mod.
-# Despite the name, also works for non-floating windows.
-# Change normal to inverse to use left mouse button for resizing and right
-# mouse button for dragging.
+# Drag modifier
 floating_modifier $mod
 
 # Reload the configuration file
@@ -209,22 +203,16 @@ bindsym $mod+Tab scratchpad show
 
 # Resizing containers:
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left resize shrink width 10 px or 10 ppt
-    bindsym $down resize grow height 10 px or 10 ppt
     bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
     bindsym $right resize grow width 10 px or 10 ppt
+    bindsym $left resize shrink width 10 px or 10 ppt
 
-    # ditto, with arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
     bindsym Up resize shrink height 10 px or 10 ppt
     bindsym Right resize grow width 10 px or 10 ppt
 
-    # return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -236,15 +224,22 @@ bar {
     font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
     position top
     height 25
-    status_command i3status-rs .config/i3/status.toml 
+    status_command i3status-rs .config/sway/status.toml 
     colors {
-        separator #666666
-        background #222222
-        statusline #dddddd
-        focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
-        urgent_workspace #2f343a #900000 #ffffff
+        separator #eceff4
+        background #3b4252
+        statusline #434c5e
+        focused_workspace #81a1c1 #81a1c1 #eceff4
+        active_workspace #8fbcbb #8fbcbb #eceff4
+        inactive_workspace #4c566a #4c566a  #eceff4
+        urgent_workspace #bf616a #bf616a #ffffff
     }
+}
+
+# Gtk theme
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Arc'
 }
 

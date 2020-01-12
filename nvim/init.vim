@@ -21,14 +21,6 @@ let maplocalleader="!"
 " Fyle types
 au BufRead,BufNewFile ~/.config/sway/config setfiletype sway
 
-" Cursor color 
-if &term =~ "termite"
-  let &t_SI = "\<Esc>]12;red\x7"
-  let &t_EI = "\<Esc>]12;blue\x7"
-  silent !echo -ne "\033]12;blue\007"
-  autocmd VimLeave * silent !echo -ne "\033]112\007"
-endif
-
 " Disable arrow keys and mouse scroll
 imap <esc> <nop>
 vmap <esc> <nop>
@@ -124,9 +116,8 @@ call plug#begin('~/.vim/plugged')
     " Ui 
     Plug 'vim-airline/vim-airline'
     Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'scrooloose/nerdtree'
-    Plug 'jacoborus/tender.vim'
+    Plug 'arcticicestudio/nord-vim'
     Plug 'Raimondi/delimitMate'
     Plug 'airblade/vim-gitgutter'
 
@@ -150,7 +141,7 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-""" COC 
+    """ COC 
     noremap <leader>g :CocList files<CR> 
     noremap <leader>G :CocList symbols<CR> 
     noremap <leader>f :CocList grep<CR> 
@@ -174,7 +165,7 @@ call plug#end()
         call CocAction('doHover')
       endif
     endfunction
-"""
+    """
 
 " Ale Lint 
 nnoremap <silent> <A-n> :ALEDetail<Cr>
@@ -222,8 +213,6 @@ let g:Illuminate_ftHighlightGroups = {
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:lightline = { 'colorscheme': 'tender' }
-let g:airline_theme = 'tender'
 
 " Gitgutter 
 
@@ -239,5 +228,5 @@ endi
 " Delimite mate
 let delimitMate_expand_cr = 1
 
-colorscheme tender
+colorscheme nord
 highlight Pmenu guibg=SlateGrey gui=bold
