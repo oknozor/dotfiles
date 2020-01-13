@@ -3,7 +3,11 @@
 These are my dotfiles I regularly update and tweak them.
 If you wan't to use them, feel free to fork, also you might need to adapt them. 
 
-![screenshot](screenshots/screenshot_01.png)
+![screenshot](screenshots/screenshot_02.png)
+![screenshot](screenshots/screenshot_03.png)
+![screenshot](screenshots/screenshot_04.png)
+![screenshot](screenshots/screenshot_05.png)
+![screenshot](screenshots/screenshot_06.png)
 
 ## Installation
 
@@ -69,6 +73,10 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 - Media library management : [beets](http://beets.io/)
 - Music player : [ncmpcpp](https://github.com/arybczak/ncmpcpp)
 - Screenshot : [grim](https://github.com/resurrecting-open-source-projects/scrot)
+
+## Wallpaper 
+
+[This wallpaper](https://wallhere.com/en/wallpaper/5782) was posted by @mattilius258 on [wallhere.com](https://wallhere.com) checkout his work it's, awesome.
 
 ## Contributions 
 
