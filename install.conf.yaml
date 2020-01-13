@@ -15,9 +15,13 @@
     ~/.config/nvim: nvim
     ~/.config/alacritty: alacritty
     ~/.config/beets/config.yaml: beets/config.yaml
+    ~/.config/illumination: illumination
     ~/.config/mpd: mpd
     ~/.ncmpcpp: ncmpcpp
     ~/.config/wofi: wofi
+    ~/.config/neofetch: neofetch
     ~/.config/starship.toml: zsh/starship.toml
+    ~/.themes: gtk-themes
+    ~/.icons: gtk-icons
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
