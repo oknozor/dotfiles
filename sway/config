@@ -42,6 +42,7 @@ workspace $ws8 output primary
 workspace $ws9 output primary
 workspace $ws10 output primary
 
+# Fix on start workspace
 workspace "  "
 
 ### Gaps and egdes
@@ -58,9 +59,10 @@ set $lred     #bf616a
 set $blue     #5e81ac
 set $lblue    #88c0d0
 set $white    #eceff4
+set $yellow   #ebcb8b
 
-# Color                   border    background text    indicator  child_border
-client.focused          $white    $blue      $gray   $lblue     $lblue
+# Color                 border    background text    indicator  child_border
+client.focused          $yellow   $blue      $gray   $yellow     $yellow
 client.focused_inactive $white    $black     $gray   $gray      $gray
 client.unfocused        $black    $black     $gray   $black     $blue
 client.urgent           $lred     $black     $gray   $lred      $lblue
@@ -87,7 +89,7 @@ assign [class="jetbrains-clion"] → $ws3
 for_window [class="jetbrains-clion"] border none 
 
 for_window [class="Inkscape"] border none 
-for_window [class="Nautilus"] border csd 
+for_window [app_id="org.gnome.Nautilus"] border csd 
 
 #### Godot Engine 
 for_window [instance="Godot_Engine"] floating enable
@@ -223,7 +225,7 @@ bindsym $mod+r mode "resize"
 bar {
     font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
     position top
-    height 25
+    height 26
     status_command i3status-rs .config/sway/status.toml 
     colors {
         separator #eceff4
@@ -240,6 +242,9 @@ bar {
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Arc'
+    gsettings set $gnome-schema gtk-theme 'Nordic'
+    gsettings set $gnome-schema icon-theme 'Nordic'
+    gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
+    gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
 }
 

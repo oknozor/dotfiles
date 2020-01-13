@@ -57,10 +57,4 @@ max_width = 13
 [[block]]
 block = "battery"
 interval = 10
-format = "{percentage}% {time}"
-
-[[block]]
-block = "custom"
-command = "echo  "
-on_click = "nautilus --name=quickfile"
-interval = 1
+format = "{percentage}%"
