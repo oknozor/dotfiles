@@ -22,17 +22,16 @@ tabspaces: 2
 
 # Font configuration (changes require restart)
 font:
-  # Normal (roman) font face
   normal:
-    family: monospace
-    style: Regular
+    family: 'Fira Code'
+    style: Medium
 
   bold:
-    family: monospace
+    family: 'Fira Code'
     style: Bold
 
   italic:
-    family: monospace
+    family: 'Fira Code'
     style: Italic
 
   size: 11.0
@@ -51,7 +50,7 @@ draw_bold_text_with_bright_colors: true
 
 colors:
   primary:
-    background: '0x2E3440'
+    background: '0x3b4252'
     foreground: '0xD8DEE9'
   cursor:
     text: '0x2E3440'
@@ -102,7 +101,7 @@ visual_bell:
   duration: 0
   color: '0xffffff'
 
-background_opacity: 0.97
+background_opacity: 0.95
 
 # Mouse bindings
 #
