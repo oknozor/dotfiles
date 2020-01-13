@@ -1,77 +1,72 @@
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "30" 
-visualizer_in_stereo = "yes"
-visualizer_type = "spectrum"
-visualizer_look = "+|"
-
- # Playlist
- playlist_disable_highlight_delay = "0"  
- playlist_display_mode = "columns"  
- playlist_show_remaining_time = "yes"
-
- browser_display_mode = "columns"  
- autocenter_mode = "yes"  
- fancy_scrolling = "yes"  
- follow_now_playing_lyrics = "yes"  
- display_screens_numbers_on_start = "yes"  
- ignore_leading_the = "yes"  
- lyrics_database = "1"  
- song_columns_list_format = "(10)[blue]{l} (30)[green]{a} (30)[magenta]{b} (50)[yellow]{t}"  
- colors_enabled = "yes"  
- main_window_color = "white"  
- main_window_highlight_color =  "blue"
- header_window_color = "cyan"  
- volume_color = "red"  
- progressbar_color = "cyan"  
- statusbar_color = "white"  
- active_column_color = "cyan"  
- active_window_border = "blue"
-
-alternative_header_first_line_format = "$0$aqqu$/a {$7%a - $9}{$5%t$9}|{$8%f$9} $0$atqq$/a$9"
-alternative_header_second_line_format = "{{$6%b$9}{ [$6%y$9]}}|{%D}"
-song_list_format = "{$3%n │ $9}{$7%a - $9}{$5%t$9}|{$8%f$9}$R{$6 │ %b$9}{$3 │ %l$9}"
+mpd_music_dir = "~/Music"
+#song_list_format = " $5%l $1║{$7 %a $1│$2 %t$1 $R $3%b$1 }|{$6 %f $1}"
+#tag_editor_album_format = "{$4(%y)$9 }$7%b$9"
+browser_playlist_prefix = "$8playlist$9"
+selected_item_prefix = "$0"
+selected_item_suffix = "$9"
 user_interface = "alternative"
-#user_interface =                    "classic"
-default_place_to_search_in = "database"
-
-## Navigation ##
-cyclic_scrolling = "yes"
-header_text_scrolling = "yes"
-jump_to_now_playing_song_at_start = "yes"
-lines_scrolled = "2"
-
-## Other ##
+mpd_host = "127.0.0.1"
+#mpd_port = "6600"
 system_encoding = "utf-8"
-regular_expressions = "extended"
 
+####visualizer settings####
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "visualizer"
+visualizer_sync_interval = "20"
+visualizer_type = "spectrum"
+#visualizer_color ="cyan"
+visualizer_look = "º#"
 
-## Selected tracks ##
-selected_item_prefix = "* "
-discard_colors_if_item_is_selected = "no"
+####songs####
+#([cyan,date],[cyan, length], [cyan,title] | [cyan,date],[blue,title],[cyan])
+song_list_format = "{$7%a $7%l $7%t}|{$7%a $5%t $7}"
+#([red,artist],[magenta],[red,length])
+song_status_format = "$2%a $7• $4%t $7• $3%b {}$7• $5%y$7"
+#([cyan,length],[blue,title],[end current color])
+song_library_format = "$7%l $5%t$9"
+#([magenta,blue,magenta]|[blue]
+now_playing_prefix = "$b$8»$2»$4»$3» "
+now_playing_suffix = "$/b"
+#([blue],[cyan,artist],[blue,title],[yellow,album],[magenta,length] 
+song_columns_list_format = "(4)[]{} (15)[cyan]{a} (30)[blue]{t} (46)[white]{b} (5)[magenta]{l}"
 
-## Seeking ##
-incremental_seeking = "yes"
-seek_time = "1"
-
-## Visivility ##
-header_visibility = "yes"
+####misc####
+playlist_separate_albums = "no"
+playlist_display_mode = "columns" (classic/columns)
+browser_display_mode = "columns"
+volume_change_step = "2"
+progressbar_look = "─╼─"
+#user_interface = "alternative"
+data_fetching_delay = "yes"
+media_library_primary_tag = "artist"
+default_find_mode = "wrapped"
+header_visibility = "no"
 statusbar_visibility = "yes"
-titles_visibility = "yes"
-
-progressbar_look =  "->"
-progressbar_boldness = "yes"
-progressbar_elapsed_color = "red"
-
-now_playing_prefix = "> "
-song_status_format = " $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
-autocenter_mode = "yes"
-centered_cursor = "yes"
-
-# Misc
+titles_visibility = "no"
+header_text_scrolling = "yes" 
+cyclic_scrolling = "yes"
+#startup_screen = "media_library"
+ask_before_clearing_playlists = "yes"
+clock_display_seconds = "yes"
+display_volume_level = "yes"
 display_bitrate = "yes"
-# enable_window_title = "no"
-follow_now_playing_lyrics = "yes"
-ignore_leading_the = "yes"
-empty_tag_marker = ""
+display_remaining_time = "yes"
+ignore_leading_the = "no"
+mouse_support = "yes"
+#use_console_editor = "yes"
+autocenter_mode = "yes"
 
+####colors####
+discard_colors_if_item_is_selected = "yes"
+header_window_color = "blue"
+volume_color = "cyan"
+state_line_color = "cyan"
+state_flags_color = "yellow"
+main_window_color = "white"
+color1 = "blue"
+color2 = "magenta"
+current_item_prefix = "$(red)$r"
+current_item_suffix = "$/r$(end)
+progressbar_color = "blue"
+statusbar_color = "red"
+current_item_inactive_column_prefix = "yellow"
