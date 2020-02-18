@@ -55,7 +55,10 @@ alias record="wf-recorder -f ${filename}"
 alias ll='ls -larth'
 alias ls='ls --color=auto'
 alias lg='ls |grep' 
+alias lt='ls -t' 
+alias lr='ls -rt' 
 alias grep='grep --color=auto'
+alias k='kubectl'
 
 # Work Alias
 alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
