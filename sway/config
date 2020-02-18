@@ -223,9 +223,9 @@ bindsym $mod+r mode "resize"
 
 # Status Bar:
 bar {
-    font pango:DejaVu Sans Mono, forkawesome, Font Awesome 5, 
+    font pango:DejaVu Sans Mono 16, forkawesome, Font Awesome 5, 
     position top
-    height 26
+    height 25
     status_command i3status-rs .config/sway/status.toml 
     colors {
         separator #eceff4
