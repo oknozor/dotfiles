@@ -14,6 +14,7 @@ set undofile
 set nobackup
 set updatetime=250
 set autowriteall
+set clipboard+=unnamedplus
 
 let mapleader="," 
 let maplocalleader="!"
