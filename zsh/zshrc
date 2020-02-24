@@ -32,7 +32,7 @@ eval "$(starship init zsh)"
 
 ## Systemctl 
 alias start='sudo systemctl start'
-alias stop= 'sudo systemctl stop'
+alias stop='sudo systemctl stop'
 alias status='systemctl status'
 alias restart='sudo systemctl restart'
 alias jof='journalctl -u'
