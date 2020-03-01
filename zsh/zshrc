@@ -59,6 +59,7 @@ alias lt='ls -t'
 alias lr='ls -rt' 
 alias grep='grep --color=auto'
 alias k='kubectl'
+alias du='dust'
 
 # Work Alias
 alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"

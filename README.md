@@ -66,6 +66,7 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 - Grep replacement : [ripgrep](https://github.com/BurntSushi/ripgrep)
 - Cat replacement : [bat](https://github.com/sharkdp/bat) 
 - Hexdump replacement : [hexyl](https://github.com/sharkdp/hexyl) 
+- du replacement : [dust](https://github.com/bootandy/dust) 
 - Quick file navigation : [autojump](https://github.com/wting/autojump)
 - Password managment : [pass](https://www.passwordstore.org/)
 
