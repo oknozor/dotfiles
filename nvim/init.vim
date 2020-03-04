@@ -140,6 +140,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Experimental
+    Plug 'norcalli/nvim-terminal.lua'
+
 call plug#end()
 
     """ COC 
