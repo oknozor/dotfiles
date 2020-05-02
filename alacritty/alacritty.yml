@@ -16,9 +16,6 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-  auto_scroll: true
-
-tabspaces: 2
 
 # Font configuration (changes require restart)
 font:
