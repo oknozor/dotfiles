@@ -1,0 +1,6 @@
+input "1739:0:Synaptics_TM3276-031" {
+    tap disabled
+    natural_scroll disabled
+    dwt disabled
+    middle_emulation disabled
+}

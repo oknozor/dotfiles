@@ -1,0 +1,43 @@
+# Workspace naming 
+
+set $ws1 "  "
+set $ws2 "  "
+set $ws3 "  "
+set $ws4 "  "
+set $ws5 "  "
+set $ws6 "  "
+set $ws7 "  "
+set $ws8 "  "
+set $ws9 "  "
+set $ws10 "  "
+
+# Output configuration
+
+set $dsp1 eDP-1
+set $dsp1 eDP-1
+set $dsp2 HDMI-A-2
+output $dsp1 resolution 1920x1080 position 0,1081
+output $dsp2 resolution 1920x1080 position 0,0
+
+workspace $ws3 output HDMI-A-2 primary
+workspace $ws1 output primary 
+workspace $ws2 output primary 
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output primary
+workspace $ws7 output primary
+workspace $ws8 output primary
+workspace $ws9 output primary
+workspace $ws10 output primary
+
+# Default workspace
+
+workspace "  "
+
+# Gaps and egdes
+
+smart_gaps on
+smart_borders on
+gaps inner 8
+default_border pixel 2 
+focus_follows_mouse no

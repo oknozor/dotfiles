@@ -1,0 +1,16 @@
+### Palette
+set $black    #3b4252 
+set $gray     #d8dee9
+set $lred     #bf616a
+set $blue     #5e81ac
+set $lblue    #88c0d0
+set $white    #eceff4
+set $yellow   #ebcb8b
+
+# Color                 border    background text    indicator  child_border
+client.focused          $yellow   $blue      $gray   $yellow     $yellow
+client.focused_inactive $white    $black     $gray   $gray      $gray
+client.unfocused        $black    $black     $gray   $black     $blue
+client.urgent           $lred     $black     $gray   $lred      $lblue
+
+
