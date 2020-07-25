@@ -17,6 +17,7 @@ set $lock "swaylock -c 000000"
 set $scripts ~/dotfiles/scripts
 
 include workspaces
+include color_vars
 include colors
 include window_placement
 include key_bindings
