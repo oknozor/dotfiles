@@ -21,7 +21,7 @@ background-color:  #434c5e;
 }
 
 #inner-box flowboxchild:focus {
-background-color: #5e81ac
+background-color: #5e81ac;
 }
 
 #outer-box {
@@ -34,6 +34,6 @@ background-color: #434c5e;
 
 #text {
 margin: 2px;
-background-color: rgba(0,0,0,0);
+background-color: #000000;
 color: #eceff4;
 } 
