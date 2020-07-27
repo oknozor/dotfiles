@@ -74,7 +74,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 LD_PRELOAD=`/usr/lib/libstdc++.so.6 /usr/lib/libgcc_s.so.1 /usr/lib/libxcb.so.1 /usr/lib/libgpg-error.so` export PATH=$PATH:/opt/i3scripts
 alias emu="$LD_PRELOAD $ANDROID_HOME/tools/emulator"
 
-export PATH=$PATH:/usr/node_modules/.bin
 export MY_ZSHRC=~/.zshrc
 
 #PROMPT='%F{214}%n%F{117}@%F{49}%m%f %F{229}%1~%F{207} $%f '
@@ -83,5 +82,3 @@ export MY_ZSHRC=~/.zshrc
 export XKB_DEFAULT_LAYOUT=fr
 export _JAVA_AWT_WM_NONREPARENTING=1
 export IDEA_JDK=/usr/lib/jvm/jetbrains-jre  # Substitute path to the official JDK
-source  ~/.config/s_profile
-source /usr/share/autojump/autojump.zsh

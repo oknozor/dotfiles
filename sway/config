@@ -1,5 +1,6 @@
 # On start
 exec mako
+exec kanshi
 output * bg ~/dotfiles/wallpapers/wallpaper.jpg fill
 
 ### Variables
