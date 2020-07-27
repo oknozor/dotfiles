@@ -1,0 +1,32 @@
+dotfiles_dir = "dotfiles"
+
+[theme]
+name = "argonaut.toml"
+
+  [theme.alacritty]
+  source = "alacritty/alacritty.yml"
+
+  [theme.sway]
+  source = "sway/color_vars"
+
+  [theme.wofi]
+  source = "wofi/style.css"
+
+
+[[dot]]
+source = "alacritty"
+target = ".config/alacritty"
+
+[[dot]]
+source = "wofi"
+target = ".config/wofi"
+
+[[dot]]
+source = "sway"
+target = ".config/sway"
+
+[[dot]]
+source = "kanshi"
+target = ".config/kanshi"
+
+
