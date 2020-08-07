@@ -1,0 +1,27 @@
+# On start
+exec_always mako
+exec_always kanshi
+output * bg ~/dotfiles/wallpapers/wallpaper.jpg fill
+
+### Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term alacritty
+set $bar waybar
+set $launcher "wofi --show drun"
+set $pass "~/dotfiles/wofi/passwofi.sh"
+set $lock "swaylock -c 000000"
+set $scripts ~/dotfiles/scripts
+
+include workspaces
+include color_vars
+include colors
+include window_placement
+include key_bindings
+include inputs
+include bar
+include gtk_config

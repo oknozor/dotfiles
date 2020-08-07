@@ -1,0 +1,38 @@
+[core]
+    editor = nvim
+
+[user]
+	email = paul.delafosse@protonmail.com
+	name = Paul Delafosse
+
+[alias]
+    graph = log --graph --abbrev-commit --decorate --date=relative --all
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    fixup = !sh -c 'SHA=$(git rev-parse $1) \
+      && git commit --fixup $SHA \
+      && git rebase -i --autosquash $SHA~' -
+    dammit = !BRANCH=$(git rev-parse --abbrev-ref HEAD) \
+     && git fetch origin $BRANCH \
+     && git reset --hard origin/$BRANCH
+    fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
+    pushf = push --force-with-lease
+
+[pull]
+    rebase = merges
+
+[merge]
+    tool = nvim
+	ff = only
+
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+  keepBackup = false
+
+[difftool]
+    prompt = true
+
+[diff]
+
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d "$LOCAL" "$REMOTE""

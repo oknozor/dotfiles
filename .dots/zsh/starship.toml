@@ -1,0 +1,5 @@
+[rust]
+symbol = "⚙️ "
+
+[battery]
+disabled = true

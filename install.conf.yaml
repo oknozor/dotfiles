@@ -7,7 +7,6 @@
 
 - link:
     ~/.config/sway: sway
-    ~/.config/mako: mako
     ~/.zshrc: zsh/zshrc
     ~/.zprofile: zsh/zprofile
     ~/.vimrc: nvim/init.vim

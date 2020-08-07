@@ -9,6 +9,7 @@ window:
     x: 5
     y: 5
   dynamic_padding: true
+  dynamic_title: true
   startup_mode: Maximized
 scrolling:
   history: 10000
@@ -35,30 +36,30 @@ debud.persistent_logging: false
 draw_bold_text_with_bright_colors: true
 colors:
   primary:
-    background: "#3b4252"
-    foreground: "#D8DEE9"
+    background: "__[background]__"
+    foreground: "__[foreground]__"
   cursor:
-    text: "#2E3440"
-    cursor: "#D8DEE9"
+    text: "__[text]__"
+    cursor: "__[cursor]__"
   normal:
-    black: "#3B4252"
-    red: "#BF616A"
-    green: "#A3BE8C"
-    yellow: "#EBCB8B"
-    blue: "#81A1C1"
-    magenta: "#B48EAD"
-    cyan: "#88C0D0"
-    white: "#E5E9F0"
+    black: "__[black]__"
+    red: "__[red]__"
+    green: "__[green]__"
+    yellow: "__[yellow]__"
+    blue: "__[blue]__"
+    magenta: "__[magenta]__"
+    cyan: "__[cyan]__"
+    white: "__[white]__"
   bright:
-    black: "#4C566A"
-    red: "#BF616A"
-    green: "#A3BE8C"
-    yellow: "#EBCB8B"
-    blue: "#81A1C1"
-    magenta: "#B48EAD"
-    cyan: "#8FBCBB"
-    white: "#ECEFF4"
-visual_bell:
+    black: "__[light_black]__"
+    red: "__[light_red]__"
+    green: "__[light_green]__"
+    yellow: "__[light_yellow]__"
+    blue: "__[light_blue]__"
+    magenta: "__[light_magenta]__"
+    cyan: "__[light_cyan]__"
+    white: "__[light_white]__"
+bell:
   animation: EaseOutExpo
   duration: 0
   color: "0xffffff"
@@ -77,7 +78,6 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: false
-dynamic_title: true
 cursor:
   style: Block
   unfocused_hollow: true

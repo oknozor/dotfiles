@@ -1,6 +1,6 @@
 # On start
-exec mako
-exec kanshi
+exec_always mako
+exec_always kanshi
 output * bg ~/dotfiles/wallpapers/wallpaper.jpg fill
 
 ### Variables
@@ -10,7 +10,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term __[terminal]__
 set $bar waybar
 set $launcher "wofi --show drun"
 set $pass "~/dotfiles/wofi/passwofi.sh"

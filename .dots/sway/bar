@@ -1,0 +1,7 @@
+
+bar {
+    font pango:DejaVu Sans Mono 16, Font Awesome 5, 
+    position top
+    height 25
+    swaybar_command $bar
+}
