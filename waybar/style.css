@@ -77,6 +77,12 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
+#taskbar
+#taskbar button
+#taskbar button.active
+#taskbar button.minimized
+#taskbar button.maximized
+#taskbar button.fullscreen
 #mpd {
     padding: 0 10px;
     margin: 0 4px;

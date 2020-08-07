@@ -1,0 +1,11 @@
+function wob_volume() {
+    volume=$(pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g')
+    if [ "$volume" -gt 100 ]; 
+    then    
+        volume=100
+    fi
+
+    echo "$volume __[wob_bg_color]__ __[wob_border_color]__ __[wob_bar_color]__"
+}
+
+

@@ -42,6 +42,14 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+    "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+    },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false

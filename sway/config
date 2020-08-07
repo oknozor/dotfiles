@@ -1,6 +1,9 @@
 # On start
 exec_always mako
 exec_always kanshi
+set $SWAYSOCK.wob "/tmp/wobpipe"
+exec_always tail -f $SWAYSOCK.wob | wob -a center -a bottom -H 45 -W 300 -M 50 -o 4
+exec mkfifo $SWAYSOCK.wob 
 output * bg ~/dotfiles/wallpapers/wallpaper.jpg fill
 
 ### Variables

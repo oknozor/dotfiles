@@ -5,7 +5,7 @@ command = "sway reload"
 
 # Color scheme
 [[var]]
-path = "bombadil/themes/argonaut.toml"
+path = "bombadil/themes/default.toml"
 
 # Other vars
 [[var]]
@@ -39,6 +39,10 @@ target = ".config/mako"
 [[dot]]
 source = "zsh/zshrc"
 target = ".zshrc"
+
+[[dot]]
+source = "zsh/zshenv"
+target = ".zshenv"
 
 [[dot]]
 source = "zsh/zprofile"

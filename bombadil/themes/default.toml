@@ -20,3 +20,7 @@ light_blue = "#1BA6FA"
 light_magenta = "#A578EA"
 light_cyan = "#73FBF1"
 light_white = "#FEFEF8"
+
+wob_bg_color = "#FF1BA6FA"
+wob_bar_color = "#FFA578EA"
+wob_border_color = "#FF6D7070"
