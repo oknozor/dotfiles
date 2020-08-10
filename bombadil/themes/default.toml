@@ -1,28 +1,68 @@
-# General (based on alacrity config)
-background = "#292C3E"
-foreground = "#EBEBEB"
+########################
+### ALACRITTY COLORS ### 
+########################
+alacritty_background = "#292C3E"
+alacritty_foreground = "#EBEBEB"
 
-text = "#FF261E"
-cursor = "#FF261E"
-black = "#0d0d0d"
-red = "#FF301B"
-green = "#A0E521"
-yellow = "#FFC620"
-blue = "#1BA6FA"
-magenta = "#8763B8"
-cyan = "#21DEEF"
-white = "#EBEBEB"
+alacritty_text = "text"
+alacritty_cursor = "cursor"
+alacritty_black = "black"
+alacritty_red = "red"
+alacritty_green = "green"
+alacritty_yellow = "yellow"
+alacritty_blue = "blue"
+alacritty_magenta = "magenta"
+alacritty_cyan = "cyan"
+alacritty_white = "white"
 
-light_black = "#6D7070"
-light_red = "#FF4352"
-light_green = "#B8E466"
-light_yellow = "#FFD750"
-light_blue = "#1BA6FA"
-light_magenta = "#A578EA"
-light_cyan = "#73FBF1"
-light_white = "#FEFEF8"
+alacritty_light_black = "light_black"
+alacritty_light_red = "light_red"
+alacritty_light_green = "light_green"
+alacritty_light_yellow = "light_yellow"
+alacritty_light_blue = "light_blue"
+alacritty_light_magenta = "light_magenta"
+alacritty_light_cyan = "light_cyan"
+alacritty_light_white = "light_white"
 
-# Bar 
+########################
+####  SWAY COLORS   ####
+########################
+
+client_focused_border = "yellow"    
+client_focused_background = "background"    
+client_focused_text = "text"    
+client_focused_indicator = "blue"     
+client_focused_child_border = "magenta"
+
+client_focused_inactive_border = "light_white"      
+client_focused_inactive_background = "background"
+client_focused_inactive_text = "text"   
+client_focused_inactive_indicator= "light_black"     
+client_focused_inactive_child_border = "light_white"
+
+client_unfocused_border = "light_white"     
+client_unfocused_background = "background"      
+client_unfocused_text = "text"    
+client_unfocused_indicator = "light_black"     
+client_unfocused_child_border = "light_white"
+
+client_urgent_border = "red"  
+client_urgent_background = "background"      
+client_urgent_text = "text"    
+client_urgent_indicator = "light_black"     
+client_urgent_child_border = "light_white"
+
+########################
+##### WOFI COLORS  #####
+########################
+
+wofi_bg = "magenta"
+wofi_input_bg = "magenta"
+
+
+########################
+#### WAYBAR COLORS  ####
+########################
 
 bar_urgent = "#FF4352"
 bar_clock_bg = "#64727D"
@@ -51,7 +91,10 @@ idle_inibitor_bg = "#2d3436"
 idle_inibitor_bg_activated = "#ecf0f1"
 
 
-# Wob
+########################
+##### WOB COLORS   #####
+########################
+
 wob_bg_color = "#FF1BA6FA"
 wob_bar_color = "#FFA578EA"
 wob_border_color = "#FF6D7070"

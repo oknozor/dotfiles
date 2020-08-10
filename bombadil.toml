@@ -3,7 +3,10 @@ dotfiles_dir = "dotfiles"
 [[hook]]
 command = "sway reload"
 
-# Color scheme
+
+[[meta]]
+path = "bombadil/themes/palette.toml"
+
 [[var]]
 path = "bombadil/themes/default.toml"
 

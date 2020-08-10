@@ -1,10 +1,10 @@
 .window {
 margin: 5px;
 padding: 5px;
-background-color: __[magenta]__;
+background-color: __[wofi_bg]__;
 }
 #input {
-background-color: __[magenta]__;
+background-color: __[wofi_input_bg]__;
 color: #EBEBEB;
 border: 0px solid #FEFEF8;
 }

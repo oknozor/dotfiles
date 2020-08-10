@@ -36,29 +36,29 @@ debud.persistent_logging: false
 draw_bold_text_with_bright_colors: true
 colors:
   primary:
-    background: "__[background]__"
-    foreground: "__[foreground]__"
+    background: "__[alacritty_background]__"
+    foreground: "__[alacritty_foreground]__"
   cursor:
-    text: "__[text]__"
-    cursor: "__[cursor]__"
+    text: "__[alacritty_text]__"
+    cursor: "__[alacritty_cursor]__"
   normal:
-    black: "__[black]__"
-    red: "__[red]__"
-    green: "__[green]__"
-    yellow: "__[yellow]__"
-    blue: "__[blue]__"
-    magenta: "__[magenta]__"
-    cyan: "__[cyan]__"
-    white: "__[white]__"
+    black: "__[alacritty_black]__"
+    red: "__[alacritty_red]__"
+    green: "__[alacritty_green]__"
+    yellow: "__[alacritty_yellow]__"
+    blue: "__[alacritty_blue]__"
+    magenta: "__[alacritty_magenta]__"
+    cyan: "__[alacritty_cyan]__"
+    white: "__[alacritty_white]__"
   bright:
-    black: "__[light_black]__"
-    red: "__[light_red]__"
-    green: "__[light_green]__"
-    yellow: "__[light_yellow]__"
-    blue: "__[light_blue]__"
-    magenta: "__[light_magenta]__"
-    cyan: "__[light_cyan]__"
-    white: "__[light_white]__"
+    black: "__[alacritty_light_black]__"
+    red: "__[alacritty_light_red]__"
+    green: "__[alacritty_light_green]__"
+    yellow: "__[alacritty_light_yellow]__"
+    blue: "__[alacritty_light_blue]__"
+    magenta: "__[alacritty_light_magenta]__"
+    cyan: "__[alacritty_light_cyan]__"
+    white: "__[alacritty_light_white]__"
 bell:
   animation: EaseOutExpo
   duration: 0
