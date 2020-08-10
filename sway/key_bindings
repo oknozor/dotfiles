@@ -73,8 +73,8 @@ bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
 bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
 
 ## Screenshots
-bindsym --release Print exec "$HOME/dotfiles/scripts/screenshot.sh"
-bindsym --release Shift+Print exec "$HOME/dotfiles/scripts/fullscreenshot.sh"
+bindsym --release Print exec zsh -c screenshot
+bindsym --release Shift+Print exec zsh -c fullscreenshot
 
 # Split mod
 bindsym $mod+b splith

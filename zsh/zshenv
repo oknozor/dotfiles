@@ -1,5 +1,15 @@
 #!/bin/sh
 
+fullscreenshot() {
+  date=$(date +%Y-%m-%dT%H:%M:%S%z)
+  grim "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
+}
+
+screenshot() {
+  date=$(date +%Y-%m-%dT%H:%M:%S%z)
+  grim -g "$(slurp)" "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
+}
+
 wob_volume() {
     volume=$(pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g')
     if [ "$volume" -gt 100 ]; 
