@@ -5,28 +5,28 @@ background-color: __[wofi_bg]__;
 }
 #input {
 background-color: __[wofi_input_bg]__;
-color: #EBEBEB;
-border: 0px solid #FEFEF8;
+color: __[wofi_input_color]__;
+border: 0px solid __[wofi_input_bg]__;
 }
 #input:focus {
-background-color: #1BA6FA;
-color: #1BA6FA;
-border: 0px solid #1BA6FA;
+background-color: __[wofi_input_focused_bg]__;
+color: __[wofi_input_focused_color]__;
+border: 0px solid __[wofi_input_focused_border]__;
 }
 #inner-box {
-background-color: #0d0d0d;
+background-color: __[wofi_inner_box_bg]__;
 }
 #inner-box flowboxchild:focus {
-background-color: #1BA6FA;
+background-color: __[wofi_inner_box_flowchild_focused_bg]__;
 }
 #outer-box {
-background-color: #6D7070;
+background-color: __[wofi_outer_box_bg]__;
 }
 #text {
 margin: 2px;
-background-color: #0d0d0d;
-color: #FF261E;
+background-color: __[wofi_text_bg]__;
+color: __[wofi_text]__;
 }
 #scroll {
-background-color: #1BA6FA;
+background-color: __[wofi_scroll]__;
 }

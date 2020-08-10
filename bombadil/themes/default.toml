@@ -58,6 +58,16 @@ client_urgent_child_border = "light_white"
 
 wofi_bg = "magenta"
 wofi_input_bg = "magenta"
+wofi_input_border = "#FEFEF8"
+wofi_input_color = "#EBEBEB"
+wofi_input_focused_bg = "#1BA6FA"
+wofi_input_focused_color = "#1BA6FA"
+wofi_input_focused_border = "#1BA6FA"
+wofi_inner_box_bg = "#0d0d0d"
+wofi_inner_box_flowchild_focused_bg = "#1BA6FA"
+wofi_outer_box_bg = "6D7070"
+wofi_text_bg = "#0d0d0d"
+wofi_text = "#FF261E"
 
 
 ########################
