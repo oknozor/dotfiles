@@ -1,9 +1,0 @@
-profile home {
-    output eDP-1 mode 1920x1080 position 0,1081
-    output HDMI-A-2 mode 1920x1080 position 0,0
-    exec swaymsg '[workspace="  "]', move workspace to output HDMI-A-2
-}
-
-profile default {
-    output eDP-1 mode 1920x1080 position 0,1081
-}

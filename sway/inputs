@@ -4,3 +4,8 @@ input "1739:0:Synaptics_TM3276-031" {
     dwt disabled
     middle_emulation disabled
 }
+
+input "type:keyboard" {          
+    xkb_layout fr,us
+    xkb_variant nodeadkeys,
+}

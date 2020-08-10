@@ -1,4 +1,6 @@
-function wob_volume() {
+#!/bin/sh
+
+wob_volume() {
     volume=$(pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g')
     if [ "$volume" -gt 100 ]; 
     then    
@@ -6,6 +8,33 @@ function wob_volume() {
     fi
 
     echo "$volume __[wob_bg_color]__ __[wob_border_color]__ __[wob_bar_color]__"
+}
+
+change_kbd() {
+swaymsg \
+  --type get_inputs | \
+  jq \
+    --raw-output \ '
+      [
+        .[] |
+          select(.type == "keyboard") |
+          .xkb_active_layout_name |
+          select(contains("English (US)") | not)
+      ] |
+        first // "English"
+    '
+
+swaymsg \
+  --raw \
+  '["input"]' | \
+  jq \
+    --raw-output \
+    --unbuffered \ '
+      select(.change == "xkb_layout") |
+        .input.xkb_active_layout_name |
+        sub(" \\(US\\)"; "")
+    '
+
 }
 
 

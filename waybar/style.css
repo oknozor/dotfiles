@@ -19,14 +19,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -57,7 +49,7 @@ window#waybar.chromium {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: __[bar_urgent]__;
 }
 
 #mode {
@@ -83,30 +75,25 @@ window#waybar.chromium {
 #taskbar button.minimized
 #taskbar button.maximized
 #taskbar button.fullscreen
-#mpd {
-    padding: 0 10px;
-    margin: 0 4px;
-    color: #ffffff;
-}
 
 #clock {
-    background-color: #64727D;
+    background-color: __[bar_clock_bg]__;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: __[battery_bg]__ 
+    color: __[battery_fg]__;
 }
 
 #battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: __[battery_charging_fg]__;
+    background-color: __[battery_charging_bg]__;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: __[blink_bg]__;
+        color: __[blink_fg]__;
     }
 }
 
@@ -199,7 +186,7 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#mpd.stopped {
+#mpd.stopped {__[blink]__
     background-color: #90b1b1;
 }
 

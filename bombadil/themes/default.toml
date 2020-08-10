@@ -1,3 +1,4 @@
+# General
 background = "#292C3E"
 foreground = "#EBEBEB"
 
@@ -21,6 +22,18 @@ light_magenta = "#A578EA"
 light_cyan = "#73FBF1"
 light_white = "#FEFEF8"
 
+# Bar 
+
+bar_urgent = "#FF4352"
+bar_clock_bg = "#64727D"
+battery_bg = "#ffffff"
+battery_fg = "#000000"
+battery__charging_fg = "#ffffff"
+battery__charging_bg = "#26A65B"
+blink_bg = "#ffffff"
+blink_fg = "#000000"
+
+# Wob
 wob_bg_color = "#FF1BA6FA"
 wob_bar_color = "#FFA578EA"
 wob_border_color = "#FF6D7070"
