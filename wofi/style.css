@@ -1,39 +1,32 @@
-window {
+.window {
 margin: 5px;
 padding: 5px;
-background-color:  #434c5e;
+background-color: __[wofi_bg]__;
 }
-
 #input {
-background-color:  #434c5e;
-color: #eceff4;
-border: 0px solid  #434c5e;
+background-color: __[wofi_input_bg]__;
+color: __[wofi_input_color]__;
+border: 0px solid __[wofi_input_bg]__;
 }
-
 #input:focus {
-background-color: #5e81ac;
-color: #eceff4;
-border: 0px solid   #434c5e;
+background-color: __[wofi_input_focused_bg]__;
+color: __[wofi_input_focused_color]__;
+border: 0px solid __[wofi_input_focused_border]__;
 }
-
 #inner-box {
-background-color:  #434c5e;
+background-color: __[wofi_inner_box_bg]__;
 }
-
 #inner-box flowboxchild:focus {
-background-color: #5e81ac
+background-color: __[wofi_inner_box_flowchild_focused_bg]__;
 }
-
 #outer-box {
-background-color:  #434c5e;
+background-color: __[wofi_outer_box_bg]__;
 }
-
-#scroll {
-background-color: #434c5e;
-}
-
 #text {
 margin: 2px;
-background-color: rgba(0,0,0,0);
-color: #eceff4;
-} 
+background-color: __[wofi_text_bg]__;
+color: __[wofi_text]__;
+}
+#scroll {
+background-color: __[wofi_scroll]__;
+}

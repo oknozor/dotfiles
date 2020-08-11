@@ -1,0 +1,50 @@
+#!/bin/sh
+
+fullscreenshot() {
+  date=$(date +%Y-%m-%dT%H:%M:%S%z)
+  grim "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
+}
+
+screenshot() {
+  date=$(date +%Y-%m-%dT%H:%M:%S%z)
+  grim -g "$(slurp)" "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
+}
+
+wob_volume() {
+    volume=$(pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g')
+    if [ "$volume" -gt 100 ]; 
+    then    
+        volume=100
+    fi
+
+    echo "$volume __[wob_bg_color]__ __[wob_border_color]__ __[wob_bar_color]__"
+}
+
+change_kbd() {
+swaymsg \
+  --type get_inputs | \
+  jq \
+    --raw-output \ '
+      [
+        .[] |
+          select(.type == "keyboard") |
+          .xkb_active_layout_name |
+          select(contains("English (US)") | not)
+      ] |
+        first // "English"
+    '
+
+swaymsg \
+  --raw \
+  '["input"]' | \
+  jq \
+    --raw-output \
+    --unbuffered \ '
+      select(.change == "xkb_layout") |
+        .input.xkb_active_layout_name |
+        sub(" \\(US\\)"; "")
+    '
+
+}
+
+

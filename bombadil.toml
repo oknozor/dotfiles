@@ -1,0 +1,97 @@
+dotfiles_dir = "dotfiles"
+
+[[hook]]
+command = "sway reload"
+
+
+[[meta]]
+path = "bombadil/themes/palette.toml"
+
+[[var]]
+path = "bombadil/themes/default.toml"
+
+# Other vars
+[[var]]
+path = "bombadil/vars.toml"
+
+# Dots 
+[[dot]]
+source = "alacritty"
+target = ".config/alacritty"
+
+[[dot]]
+source = "wofi"
+target = ".config/wofi"
+
+[[dot]]
+source = "sway"
+target = ".config/sway"
+
+[[dot]]
+source = "waybar"
+target = ".config/waybar"
+
+[[dot]]
+source = "kanshi"
+target = ".config/kanshi"
+
+[[dot]]
+source = "mako"
+target = ".config/mako"
+
+[[dot]]
+source = "zsh/zshrc"
+target = ".zshrc"
+
+[[dot]]
+source = "zsh/zshenv"
+target = ".zshenv"
+
+[[dot]]
+source = "zsh/zprofile"
+target = ".zprofile"
+
+[[dot]]
+source = "zsh/starship.toml"
+target = ".config/starhip.toml"
+
+[[dot]]
+source = "git/gitconfig"
+target = ".gitconfig"
+
+[[dot]]
+source = "nvim/init.vim"
+target = ".vimrc"
+
+[[dot]]
+source = "nvim"
+target = ".config/nvim"
+
+[[dot]]
+source = "illumination"
+target = ".config/illumination"
+
+[[dot]]
+source = "neofetch"
+target = ".config/neofetch"
+
+[[dot]]
+source = "beets/config.yaml"
+target = ".config/beets/config.yaml"
+
+[[dot]]
+source = "ncmpcpp"
+target = ".ncmpcpp"
+
+
+[[dot]]
+source = "mpd"
+target = ".config/mpd"
+
+[[dot]]
+source = "gtk/gtk-themes"
+target = ".themes"
+
+[[dot]]
+source = "gtk/gtk-icons"
+target = ".icons"
