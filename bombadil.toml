@@ -1,97 +1,30 @@
 dotfiles_dir = "dotfiles"
 
-[[hook]]
-command = "sway reload"
+[settings]
+hooks = [ "sway reload" ]
+vars = [
+    "bombadil/themes/default.toml",
+    "bombadil/vars.toml",
+    "bombadil/themes/palette.toml"
+]
 
+[settings.dots]
+alacritty = { source = "alacritty", target = ".config/alacritty" }
+wofi = { source = "wofi", target = ".config/wofi" }
+sway = { source = "sway", target = ".config/sway" }
+waybar = { source = "waybar", target = ".config/waybar" }
+kanshi = { source = "kanshi", target = ".config/kanshi" } 
+mako = { source = "mako", target = ".config/mako" } 
+zsh = { source = "zsh/zshrc", target = ".zshrc" }
+zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
+starship = { source = "zsh/starship.toml", target = ".config/starhip.toml" }
+git = { source = "git/gitconfig", target = ".gitconfig" }
+vim = { source = "nvim/init.vim", target = ".vimrc" }
+nvim = { source = "nvim", target = ".config/nvim" }
+illumination = { source = "illumination", target = ".config/illumination" } 
+neofetch = { source = "neofetch", target = ".config/neofetch" } 
+beets = { source = "beets", target = ".config/beets" } 
+ncmpcpp = { source = "ncmpcpp", target = ".ncmpcpp" } 
+mdp =  { source = "mpd", target = ".config/mpd" }
+test =  { source = "test", target = "test-permission" }
 
-[[meta]]
-path = "bombadil/themes/palette.toml"
-
-[[var]]
-path = "bombadil/themes/default.toml"
-
-# Other vars
-[[var]]
-path = "bombadil/vars.toml"
-
-# Dots 
-[[dot]]
-source = "alacritty"
-target = ".config/alacritty"
-
-[[dot]]
-source = "wofi"
-target = ".config/wofi"
-
-[[dot]]
-source = "sway"
-target = ".config/sway"
-
-[[dot]]
-source = "waybar"
-target = ".config/waybar"
-
-[[dot]]
-source = "kanshi"
-target = ".config/kanshi"
-
-[[dot]]
-source = "mako"
-target = ".config/mako"
-
-[[dot]]
-source = "zsh/zshrc"
-target = ".zshrc"
-
-[[dot]]
-source = "zsh/zshenv"
-target = ".zshenv"
-
-[[dot]]
-source = "zsh/zprofile"
-target = ".zprofile"
-
-[[dot]]
-source = "zsh/starship.toml"
-target = ".config/starhip.toml"
-
-[[dot]]
-source = "git/gitconfig"
-target = ".gitconfig"
-
-[[dot]]
-source = "nvim/init.vim"
-target = ".vimrc"
-
-[[dot]]
-source = "nvim"
-target = ".config/nvim"
-
-[[dot]]
-source = "illumination"
-target = ".config/illumination"
-
-[[dot]]
-source = "neofetch"
-target = ".config/neofetch"
-
-[[dot]]
-source = "beets/config.yaml"
-target = ".config/beets/config.yaml"
-
-[[dot]]
-source = "ncmpcpp"
-target = ".ncmpcpp"
-
-
-[[dot]]
-source = "mpd"
-target = ".config/mpd"
-
-[[dot]]
-source = "gtk/gtk-themes"
-target = ".themes"
-
-[[dot]]
-source = "gtk/gtk-icons"
-target = ".icons"

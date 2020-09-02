@@ -7,5 +7,4 @@ input "1739:0:Synaptics_TM3276-031" {
 
 input "type:keyboard" {          
     xkb_layout fr,us
-    xkb_variant nodeadkeys,
 }

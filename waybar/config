@@ -15,7 +15,6 @@
         "temperature", 
         "backlight", 
         "battery", 
-        "battery#bat2", 
         "clock",
         "custom/keyboard-layout", 
         "tray",

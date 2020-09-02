@@ -68,7 +68,6 @@ alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
 export PATH=$PATH:$HOME/.local/bin
 
 export MY_ZSHRC=~/.zshrc
-
 export XKB_DEFAULT_LAYOUT=fr
 export _JAVA_AWT_WM_NONREPARENTING=1
 source /usr/share/autojump/autojump.zsh

@@ -1,5 +1,9 @@
 #!/bin/sh
 
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/node_modules/.bin
+export BAT_STYLE=plain,snip,header
+
 fullscreenshot() {
   date=$(date +%Y-%m-%dT%H:%M:%S%z)
   grim "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
