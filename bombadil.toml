@@ -12,6 +12,7 @@ vars = [
 alacritty = { source = "alacritty", target = ".config/alacritty" }
 wofi = { source = "wofi", target = ".config/wofi" }
 sway = { source = "sway", target = ".config/sway" }
+sway_start = { source = "start.sh", target = "start.sh" }
 waybar = { source = "waybar", target = ".config/waybar" }
 kanshi = { source = "kanshi", target = ".config/kanshi" } 
 mako = { source = "mako", target = ".config/mako" } 
