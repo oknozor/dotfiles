@@ -26,5 +26,4 @@ neofetch = { source = "neofetch", target = ".config/neofetch" }
 beets = { source = "beets", target = ".config/beets" } 
 ncmpcpp = { source = "ncmpcpp", target = ".ncmpcpp" } 
 mdp =  { source = "mpd", target = ".config/mpd" }
-test =  { source = "test", target = "test-permission" }
 

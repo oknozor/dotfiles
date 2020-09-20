@@ -63,7 +63,7 @@ alias du='dust'
 alias copy='_copy() { ocat "$@" | wl-copy }; _copy'
 
 # Work Alias
-alias ps2="sudo systemctl start rabbitmq postgresql redis && sudo openfortivpn"
+alias decatvpn="sudo unshare -f -m -p --mount-proc sudo -u okno sh -c '/usr/local/pulse/pulseUi -S | /usr/local/bin/esets_daemon | /usr/local/bin/rtvscand'"
 
 export PATH=$PATH:$HOME/.local/bin
 
