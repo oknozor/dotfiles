@@ -16,7 +16,7 @@ set $right l
 set $term __[terminal]__
 set $bar waybar
 set $launcher "wofi --show drun"
-set $pass "~/dotfiles/wofi/passwofi.sh"
+set $pass wofipassmenu
 set $lock "swaylock -c 000000"
 
 include workspaces
