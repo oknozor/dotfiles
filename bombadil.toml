@@ -27,4 +27,5 @@ neofetch = { source = "neofetch", target = ".config/neofetch" }
 beets = { source = "beets", target = ".config/beets" } 
 ncmpcpp = { source = "ncmpcpp", target = ".ncmpcpp" } 
 mdp =  { source = "mpd", target = ".config/mpd" }
+gpg_agent =  { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
 
