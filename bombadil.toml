@@ -1,22 +1,22 @@
 dotfiles_dir = "dotfiles"
+gpg_user_id = "paul.delafosse@protonmail.com"
 
 [settings]
 hooks = [ "sway reload" ]
 vars = [
-    "bombadil/themes/default.toml",
-    "bombadil/vars.toml",
-    "bombadil/themes/palette.toml"
+"bombadil/themes/default.toml",
+"bombadil/vars.toml",
 ]
 
 [settings.dots]
-alacritty = { source = "alacritty", target = ".config/alacritty" }
-wofi = { source = "wofi", target = ".config/wofi" }
-sway = { source = "sway", target = ".config/sway" }
+alacritty = { source = "alacritty", target = ".config/alacritty", vars="vars.toml" }
+wofi = { source = "wofi", target = ".config/wofi", vars="vars.toml" }
+sway = { source = "sway", target = ".config/sway", vars="vars.toml" }
 sway_start = { source = "start.sh", target = "start.sh" }
-waybar = { source = "waybar", target = ".config/waybar" }
+waybar = { source = "waybar", target = ".config/waybar", vars="vars.toml" }
 kanshi = { source = "kanshi", target = ".config/kanshi" } 
 mako = { source = "mako", target = ".config/mako" } 
-zsh = { source = "zsh/zshrc", target = ".zshrc" }
+zsh = { source = "zsh/zshrc", target = ".zshrc", vars="vars.toml" }
 zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
 starship = { source = "zsh/starship.toml", target = ".config/starhip.toml" }
 git = { source = "git/gitconfig", target = ".gitconfig" }
@@ -28,4 +28,12 @@ beets = { source = "beets", target = ".config/beets" }
 ncmpcpp = { source = "ncmpcpp", target = ".ncmpcpp" } 
 mdp =  { source = "mpd", target = ".config/mpd" }
 gpg_agent =  { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
+maven = { source = "maven/settings.corporate.xml", target = ".m2/settings.xml" }
+xdg_dirs = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
 
+[profiles.solarized.dots]
+wofi = { vars = "solarized.toml" }
+
+# [profiles.corporate]
+# vars = [ "bombadil/corporate_vars.toml" ]
+# [profiles.corporate.dots]

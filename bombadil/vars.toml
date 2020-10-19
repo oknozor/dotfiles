@@ -1,2 +1,3 @@
-terminal = "alacritty"
+nexus_domain ="http://nexus.osiris.withoxylane.com"
 wallpaper = "$HOME/dotfiles/wallpapers/darkforest.jpeg"
+terminal = "alacritty"

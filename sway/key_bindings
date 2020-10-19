@@ -42,10 +42,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym Ctrl+Alt+H move workspace to output left
-bindsym Ctrl+Alt+J move workspace to output down
-bindsym Ctrl+Alt+K move workspace to output up
-bindsym Ctrl+Alt+L move workspace to output right
+bindsym Ctrl+Alt+Shift+H move workspace to output left
+bindsym Ctrl+Alt+Shift+J move workspace to output down
+bindsym Ctrl+Alt+Shift+K move workspace to output up
+bindsym Ctrl+Alt+Shift+L move workspace to output right
 
 # Workspaces:
 # switch to wbindsym $mod+ampersand workspace $ws1

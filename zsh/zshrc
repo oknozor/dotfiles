@@ -4,8 +4,13 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl true
 zstyle :compinstall filename '$HOME/.zshrc'
-autoload -Uz compinit promptinit
 
+# Completion
+fpath=(~/dotfiles/zsh/completions $fpath)
+autoload -Uz compinit promptinit
+compinit
+
+# History
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -25,10 +30,13 @@ antigen bundle zuxfoucault/colored-man-pages_mod
 antigen apply
 
 export EDITOR=nvim
+export PAGER=bat
 
 eval "$(starship init zsh)"
 
-# Aliases
+####################
+##### ALIASES ######
+####################
 
 ## Systemctl 
 alias start='sudo systemctl start'
@@ -65,9 +73,5 @@ alias copy='_copy() { ocat "$@" | wl-copy }; _copy'
 # Work Alias
 alias decatvpn="sudo unshare -f -m -p --mount-proc sudo -u okno sh -c '/usr/local/pulse/pulseUi -S | /usr/local/bin/esets_daemon | /usr/local/bin/rtvscand'"
 
-export PATH=$PATH:$HOME/.local/bin
 
-export MY_ZSHRC=~/.zshrc
-export XKB_DEFAULT_LAYOUT=fr
-export _JAVA_AWT_WM_NONREPARENTING=1
 source /usr/share/autojump/autojump.zsh
