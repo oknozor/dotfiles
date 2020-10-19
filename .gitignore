@@ -3,3 +3,4 @@ beets/state.pickle
 mpd/database
 ncmpcpp/error.log
 .dots
+.idea
