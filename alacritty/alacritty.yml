@@ -86,12 +86,6 @@ shell:
   program: /bin/zsh
 alt_send_esc: true
 key_bindings:
-  - key: Add
-    mods: Control
-    action: IncreaseFontSize
-  - key: Minus
-    mods: Control
-    action: DecreaseFontSize
   - key: Paste
     action: Paste
   - key: Copy

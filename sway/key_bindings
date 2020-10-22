@@ -1,5 +1,8 @@
 # Key bindings
 
+# Bombadil profile
+bindsym $mod+o exec zsh -c switch_bombadil_profile
+
 # Quick launchers
 bindsym $mod+Return exec $term
 bindsym $mod+G exec $launcher

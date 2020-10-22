@@ -27,3 +27,17 @@ include key_bindings
 include inputs
 include bar
 include gtk_config
+
+# Startup programs and workspaces
+
+exec slack
+exec discord
+exec element-desktop
+exec zulip
+exec firefox-developer-edition
+
+workspace "$ws4"
+exec swaymsg layout tabbed
+
+workspace "  "
+exec alacritty

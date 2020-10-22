@@ -1,13 +1,10 @@
 # Assignment
 
 assign [class="Slack"] → $ws4
-assign [class="Riot"] → $ws4
-assign [class="Postman"] → $ws7
-
-assign [class="illnotes"] → $ws1
-assign [instance="Navigator"] → $ws2
-assign [class="Thunderbird"] → $ws6
-assign [class="KeeWeb"] → $ws10
+assign [class="Zulip"] → $ws4
+assign [class="discord"] → $ws4
+assign [class="Element"] → $ws4
+assign [app_id="firefoxdeveloperedition"] → $ws2
 
 # IntelliJ
 
@@ -17,12 +14,6 @@ assign [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] → $ws3
 for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
 for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
 
-# Clion ##TODO##
-assign [class="jetbrains-clion"] → $ws3
-for_window [class="jetbrains-clion"] border none 
-
-for_window [class="Inkscape"] border none 
-for_window [app_id="org.gnome.Nautilus"] border csd 
 
 # Godot Engine 
 

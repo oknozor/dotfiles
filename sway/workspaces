@@ -24,10 +24,6 @@ workspace $ws8 output primary
 workspace $ws9 output primary
 workspace $ws10 output primary
 
-# Default workspace
-
-workspace "  "
-
 # Gaps and egdes
 
 smart_gaps on

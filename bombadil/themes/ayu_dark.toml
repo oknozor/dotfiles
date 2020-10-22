@@ -1,0 +1,23 @@
+light_black = "#686868"
+light_blue = "#59C2FF"
+light_cyan = "#95E6CB"
+light_green = "#C2D94C"
+light_magenta = "#FFEE99"
+light_red = "#F07178"
+light_white = "#FFFFFF"
+light_yellow = "#FFB454"
+
+black = "#01060E"
+blue = "#53BDFA"
+cyan = "#90E1C6"
+green = "#91B362"
+magenta = "#FAE994"
+red = "#EA6C73"
+white = "#C7C7C7"
+yellow = "#F9AF4F"
+
+cursor = "#FF261E"
+text = "#FF261E"
+background = "#0A0E14"
+foreground = "#B3B1AD"
+
