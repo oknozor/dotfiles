@@ -1,3 +1,4 @@
+
 background = "#e8f1f9"
 foreground = "#18405a"
 
@@ -25,7 +26,6 @@ light_green = "#94bc74"
 yellow = "#cea380"
 light_yellow = "#dcb571"
 
-brown = "#dfb36c"
-light_brown = "#c09247"
 cyan = "#61dcf5"
+light_cyan = "#61dcf5"
 
