@@ -1,50 +1,68 @@
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: "Fira Code Medium", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: transparent;
+    color: #feffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+#window, #workspaces {
+    background-color: rgba(100, 100, 100, 0.5);
+    margin-bottom: 7px;
+    margin-top: 7px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 
-window#waybar.termite {
-    background-color: #3F3F3F;
+#window {
+    border-radius: 0 400px 40px 0;
 }
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+#mode {
+    background-color: __[bar_urgent]__;
+    margin-left: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-radius: 40px 400px 40px 400px;
+}
+
+#mode button{
+    margin: 10px;
+    padding: 10px;
+}
+
+#workspaces {
+    border-radius: 40px 400px 40px 400px;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-    border-bottom: 3px solid transparent;
+    color: __[workspaces_fg]__;
+    background-color: __[worspace_bg]__;
+    margin-left: 5px;
+    padding: 6px;
+    border-radius: 100%;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    color: #18405a;
+    background: #fffc8b;
     box-shadow: inherit;
     border-bottom: 3px solid #ffffff;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
+    background-color: __[worspace_focused_bg]__;
     border-bottom: 3px solid #ffffff;
 }
 
@@ -52,46 +70,33 @@ window#waybar.chromium {
     background-color: __[bar_urgent]__;
 }
 
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
 #clock,
 #battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
 #network,
 #pulseaudio,
 #tray,
 #mode,
-#idle_inhibitor,
-#taskbar
-#taskbar button
-#taskbar button.active
-#taskbar button.minimized
-#taskbar button.maximized
-#taskbar button.fullscreen
+#idle_inhibitor {
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
 
 #clock {
-    background-color: __[bar_clock_bg]__;
+    background: rgba(100, 100, 100, 0.5);
     color: __[bar_clock_fg]__;
     padding-left: 16px;
     padding-right: 16px;
 }
 
 #battery {
-    background-color: __[battery_bg]__;
-    color: __[battery_fg]__;
+    background: rgba(100, 100, 100, 0.5);
     padding-left: 16px;
     padding-right: 16px;
 }
 
 #battery.charging {
-    color: __[battery_charging_fg]__;
-    background-color: __[battery_charging_bg]__;
+    color: #56d79f;
+    background: rgba(100, 100, 100, 0.5);
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -121,39 +126,21 @@ label:focus {
     padding-right: 16px;
 }
 
-#cpu {
-    background-color: __[cpu_bg]__;
-    color: __[cpu_fg]__;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-#memory {
-    background-color: __[mem_bg]__;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-#backlight {
-    background-color: __[backlight_bg]__;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
 #network {
-    background-color: __[network_bg]__;
+    color: #56d79f;
+    background-color: rgba(100, 100, 100, 0.5);
     padding-left: 16px;
     padding-right: 16px;
 }
 
 #network.disconnected {
-    background-color: __[network_disconnected]__;
+    color: __[bar_urgent]__;
     padding-left: 16px;
     padding-right: 16px;
 }
 
 #pulseaudio {
-    background-color: __[pulse_audio_bg]__;
+    background: rgba(100, 100, 100, 0.5);
     color: __[pulse_audio_fg]__;
     padding-left: 16px;
     padding-right: 16px;
@@ -166,33 +153,19 @@ label:focus {
     padding-right: 16px;
 }
 
-#temperature {
-    background-color: __[temperature_bg]__;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-#temperature.critical {
-    background-color: __[temperature_critical_bg]__;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
 #tray {
-    background-color: __[tray_bg]__;
+    background: rgba(100, 100, 100, 0.5);
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 24px;
 }
 
 #idle_inhibitor {
-    background-color: __[idle_inibitor_bg]__;
-    padding-left: 16px;
+    border-radius: 40px 0 0 400px;
+    background: rgba(100, 100, 100, 0.5);
+    padding-left: 24px;
     padding-right: 16px;
 }
 
 #idle_inhibitor.activated {
-    background-color: __[idle_inibitor_bg_activated]__;
-    color: #2d3436;
-    padding-left: 16px;
-    padding-right: 16px;
+    color:  #fffc8b;
 }

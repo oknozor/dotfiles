@@ -53,4 +53,3 @@ wob_volume() {
 
     echo "$volume __[red]__ __[black]__ __[green]__"
 }
-

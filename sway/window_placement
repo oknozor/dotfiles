@@ -1,20 +1,31 @@
 # Assignment
 
+assign [app_id="firefoxdeveloperedition"] → $ws2
+assign [class="sun-awt-X11-XFramePeer" class="jetbrains-idea"] → $ws3
+assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
+assign [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] → $ws3
 assign [class="Slack"] → $ws4
 assign [class="Zulip"] → $ws4
 assign [class="discord"] → $ws4
 assign [class="Element"] → $ws4
-assign [app_id="firefoxdeveloperedition"] → $ws2
+assign [app_id="Gimp(.*)"] → $ws5
+assign [class="Steam"] → $ws8
+assign [app_id="lutris"] → $ws8
 
-# IntelliJ
+# Borderless
+for_window [class="firefoxdeveloperedition"] border none
+for_window [app_id="pavucontrol"] border none
 
-assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
-assign [class="sun-awt-X11-XFramePeer" class="jetbrains-idea"] → $ws3
-assign [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] → $ws3
+# Floating
+for_window [app_id="zenity"] floating enable
+for_window [app_id="lutris"] floating enable
+for_window [class="vlc"] floating enable
+for_window [app_id="org.gnome(.*)"] floating enable
+for_window [app_id="evince"] floating enable
+for_window [app_id="gnome-todo"] floating enable
+for_window [app_id="eog"] floating enable
+for_window [app_id="pavucontrol"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
 for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
-
-
-# Godot Engine 
-
 for_window [instance="Godot_Engine"] floating enable
+

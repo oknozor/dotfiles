@@ -2,9 +2,7 @@
 exec mako
 exec kanshi
 set $SWAYSOCK.wob "/tmp/wobpipe"
-exec tail -f $SWAYSOCK.wob | wob -a center -a bottom -H 45 -W 300 -M 50 -o 4
-exec mkfifo $SWAYSOCK.wob 
-output * bg __[wallpaper]__ fill
+output * bg __[wallpaper]__ stretch
 
 ### Variables
 set $mod Mod4
@@ -14,8 +12,8 @@ set $up k
 set $right l
 
 set $term __[terminal]__
-set $bar waybar
-set $launcher "wofi --show drun"
+set $bar __[bar]__
+set $launcher __[launcher]__
 set $pass wofipassmenu
 set $lock "swaylock -c 000000"
 
@@ -27,7 +25,7 @@ include key_bindings
 include inputs
 include bar
 include gtk_config
-
+font "Fira Code 9"
 # Startup programs and workspaces
 
 exec slack
@@ -39,5 +37,5 @@ exec firefox-developer-edition
 workspace "$ws4"
 exec swaymsg layout tabbed
 
-workspace "  "
-exec alacritty
+workspace "1"
+exec __[terminal]__

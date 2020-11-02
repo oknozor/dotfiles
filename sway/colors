@@ -1,9 +1,9 @@
-# Color                 border                                background      text    indicator     child_border
-client.focused          __[client_focused_border]__  __[client_focused_background]__ __[client_focused_text]__  __[client_focused_indicator]__ __[client_focused_child_border]__
+# Color                 border                                background                                 text                               indicator                               child_border
+client.focused          __[client_focused_border]__           __[client_focused_background]__            __[client_focused_text]__          __[client_focused_indicator]__          __[client_focused_child_border]__
 
-client.focused_inactive __[client_focused_inactive_border]__ __[client_focused_inactive_background]__ __[client_focused_inactive_text]__ __[client_focused_inactive_indicator]__ __[client_focused_inactive_child_border]__
+client.focused_inactive __[client_focused_inactive_border]__  __[client_focused_inactive_background]__   __[client_focused_inactive_text]__ __[client_focused_inactive_indicator]__ __[client_focused_inactive_child_border]__
 
-client.unfocused        __[client_unfocused_border]__ __[client_unfocused_background]__ __[client_unfocused_text]__ __[client_unfocused_indicator]__ __[client_unfocused_child_border]__
+client.unfocused        __[client_unfocused_border]__         __[client_unfocused_background]__          __[client_unfocused_text]__        __[client_unfocused_indicator]__        __[client_unfocused_child_border]__
 
-client.urgent           __[client_urgent_border]__ __[client_urgent_background]__ __[client_urgent_text]__  __[client_urgent_indicator]__ __[client_urgent_child_border]__
+client.urgent           __[client_urgent_border]__            __[client_urgent_background]__             __[client_urgent_text]__           __[client_urgent_indicator]__           __[client_urgent_child_border]__
 

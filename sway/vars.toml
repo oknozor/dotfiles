@@ -1,8 +1,9 @@
-########################
-####  SWAY COLORS   ####
-########################
+bar = "waybar"
+# launcher = "nwggrid -o 0.9 -b 434c5e"
 
-client_focused_border = "%yellow"    
+launcher = "wofi --show drun"
+
+client_focused_border = "%yellow"
 client_focused_background = "%background"    
 client_focused_text = "%text"    
 client_focused_indicator = "%blue"     

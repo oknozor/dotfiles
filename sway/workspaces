@@ -1,15 +1,15 @@
 # Workspace naming 
 
-set $ws1 "  "
-set $ws2 "  "
-set $ws3 "  "
-set $ws4 "  "
-set $ws5 "  "
-set $ws6 "  "
-set $ws7 "  "
-set $ws8 "  "
-set $ws9 "  "
-set $ws10 "  "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # Output configuration
 
@@ -27,7 +27,6 @@ workspace $ws10 output primary
 # Gaps and egdes
 
 smart_gaps on
-smart_borders on
+default_border none
 gaps inner 8
-default_border pixel 2 
 focus_follows_mouse no

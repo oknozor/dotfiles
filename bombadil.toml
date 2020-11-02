@@ -4,13 +4,14 @@ gpg_user_id = "paul.delafosse@protonmail.com"
 [settings]
 hooks = ["sway reload"]
 vars = [
-    "bombadil/themes/default.toml",
+    "bombadil/themes/sweay.toml",
     "bombadil/vars.toml",
 ]
 
 [settings.dots]
 alacritty = { source = "alacritty", target = ".config/alacritty" }
 wofi = { source = "wofi", target = ".config/wofi" }
+nwg = { source = "nwg-launchers", target = ".config/nwg-launchers" }
 sway = { source = "sway", target = ".config/sway" }
 sway_start = { source = "start.sh", target = "start.sh" }
 waybar = { source = "waybar", target = ".config/waybar" }

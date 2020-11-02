@@ -31,6 +31,7 @@ antigen apply
 
 export EDITOR=nvim
 export PAGER=bat
+export BAT_THEME="Solarized (light)"
 
 eval "$(starship init zsh)"
 
