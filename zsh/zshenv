@@ -53,3 +53,11 @@ wob_volume() {
 
     echo "$volume __[red]__ __[black]__ __[green]__"
 }
+
+brightness_up() {
+    brightnessctl set +10%
+    BRIGHTNESS=$(brightnessctl g)
+    NOTI_ID=$(notify-send.py "Brightness" "$BRIGHTNESS/100" \
+                         --hint string:image-path:video-display boolean:transient:true \
+                         --replaces-process "brightness-popup")
+}

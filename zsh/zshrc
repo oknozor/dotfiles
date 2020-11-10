@@ -56,20 +56,26 @@ alias music='ncmpcpp -s media_library'
 alias impmus='beet import ~/Downloads/SoulSeek'
 
 ## Commons
-alias ovim="vim"
 alias vim="nvim"
-alias ocat="/usr/bin/cat"
-alias cat="bat"
 alias record="wf-recorder -f ${filename}"
 alias ll='ls -larth'
 alias ls='ls --color=auto'
 alias lg='ls |grep' 
 alias lt='ls -t' 
 alias lr='ls -rt' 
-alias grep='grep --color=auto'
+alias lr='ls -rt' 
+alias wa='watch --color -t' 
+
+# Muscle memory tricks
 alias k='kubectl'
+alias ovim="vim"
+alias cat="bat"
+alias ocat="/usr/bin/cat"
+alias grep='rg'
+alias ogrep='/usr/bin/grep'
+alias fzf='sk'
 alias du='dust'
-alias copy='_copy() { ocat "$@" | wl-copy }; _copy'
+alias copy='wl-copy'
 
 # Work Alias
 alias decatvpn="sudo unshare -f -m -p --mount-proc sudo -u okno sh -c '/usr/local/pulse/pulseUi -S | /usr/local/bin/esets_daemon | /usr/local/bin/rtvscand'"

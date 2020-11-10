@@ -1,10 +1,10 @@
 # Color scheme
 
 - akacritty
-- nvim 
+- nvim (WIP)
 - firefox
-- gtk 
-- QT
+- gtk (Arc bombadil
+- QT (Arc bombadil)
 - duck duck go
 - intelliJ
 - ncmpcpp

@@ -17,14 +17,14 @@ light_blue = "#63b4fb"
 magenta = "#8462e5"
 light_magenta = "#7f6bb9"
 
-red = "#da3939"
-light_red = "#56d79f"
+red = "#ff3300"
+light_red = "#ff704d"
 
-green = "#94b29c"
-light_green = "#94bc74"
+green = "#2eb82e"
+light_green = "#47d147"
 
-yellow = "#cea380"
-light_yellow = "#dcb571"
+yellow = "#ff9900"
+light_yellow = "#ffc266"
 
 cyan = "#61dcf5"
 light_cyan = "#61dcf5"

@@ -1,7 +1,7 @@
 # On start
-exec mako
+font "Fira Code 9"
+exec __[notification]__
 exec kanshi
-set $SWAYSOCK.wob "/tmp/wobpipe"
 output * bg __[wallpaper]__ stretch
 
 ### Variables
@@ -25,17 +25,14 @@ include key_bindings
 include inputs
 include bar
 include gtk_config
-font "Fira Code 9"
-# Startup programs and workspaces
 
+# Startup programs and workspaces
+workspace 4
 exec slack
+exec swaymsg layout tabbed
 exec discord
 exec element-desktop
 exec zulip
+exec "swaymsg workspace 4 && swaymsg layout tabbed"
+
 exec firefox-developer-edition
-
-workspace "$ws4"
-exec swaymsg layout tabbed
-
-workspace "1"
-exec __[terminal]__

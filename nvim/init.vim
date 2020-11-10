@@ -118,7 +118,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
     Plug 'scrooloose/nerdtree'
-    Plug 'arcticicestudio/nord-vim'
     Plug 'Raimondi/delimitMate'
     Plug 'airblade/vim-gitgutter'
 
@@ -224,13 +223,11 @@ let g:gitgutter_sign_added = ''
 let g:gitgutter_sign_removed = ''
 let g:gitgutter_sign_modified = ''
 
-" Tender
-if (has("termguicolors"))
- set termguicolors
-endi
 
 " Delimite mate
 let delimitMate_expand_cr = 1
 
-colorscheme nord
+colorscheme bombadil 
+set termguicolors
+
 highlight Pmenu guibg=SlateGrey gui=bold

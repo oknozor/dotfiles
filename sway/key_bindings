@@ -79,7 +79,7 @@ bindsym $mod+Shift+agrave move container to workspace $ws10
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5% ; zsh -c wob_volume > $SWAYSOCK.wob"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%; zsh -c wob_volume > $SWAYSOCK.wob"
 bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
+bindsym XF86MonBrightnessUp exec "exec zsh -c brightness_up"
 bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
 
 ## Screenshots
@@ -110,6 +110,9 @@ bindsym $mod+a focus parent
 # Scratchpad:
 ## Move the currently focused window to the scratchpad
 bindsym $mod+Shift+Tab move scratchpad
+
+# Notification center
+bindsym $mod+Shift+N exec "kill -s USR1 $(pidof deadd-notification-center)"
 
 ## If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Tab scratchpad show

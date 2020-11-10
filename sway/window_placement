@@ -15,6 +15,8 @@ assign [app_id="lutris"] → $ws8
 # Borderless
 for_window [class="firefoxdeveloperedition"] border none
 for_window [app_id="pavucontrol"] border none
+for_window [app_id="deadd-notification-center"] border none
+
 
 # Floating
 for_window [app_id="zenity"] floating enable
@@ -28,4 +30,5 @@ for_window [app_id="pavucontrol"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
 for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
 for_window [instance="Godot_Engine"] floating enable
+
 

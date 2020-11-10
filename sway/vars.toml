@@ -1,7 +1,11 @@
 bar = "waybar"
-# launcher = "nwggrid -o 0.9 -b 434c5e"
 
-launcher = "wofi --show drun"
+# notification = "deadd-notification-center"
+notification = "mako"
+
+# launcher = "nwggrid -o 0.9 -b 434c5e"
+# launcher = "wofi --show drun"
+launcher = "onagre"
 
 client_focused_border = "%yellow"
 client_focused_background = "%background"    
