@@ -2,7 +2,7 @@ set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
     gsettings set $gnome-schema gtk-theme '__[gtk]__'
-    gsettings set $gnome-schema icon-theme '__[gtk]__'
-    gsettings set $gnome-schema cursor-theme '__[gtk]__'
+    gsettings set $gnome-schema icon-theme '__[gtk_icons]__'
+    gsettings set $gnome-schema cursor-theme '__[gtk_icons]__'
 }
 
