@@ -1,5 +1,16 @@
 #!/bin/sh
 
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/node_modules/.bin
+export BAT_STYLE=plain,snip,header
+export PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export MY_ZSHRC=~/.zshrc
+export XKB_DEFAULT_LAYOUT=fr
+
+
 fullscreenshot() {
   date=$(date +%Y-%m-%dT%H:%M:%S%z)
   grim "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
@@ -10,6 +21,29 @@ screenshot() {
   grim -g "$(slurp)" "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
 }
 
+switch_bombadil_profile() {
+  # Allow switching profiles using the wofi launcher/menu program (https://hg.sr.ht/~scoopta/wofi).
+
+  if ! command -v bombadil &> /dev/null; then
+      echo "bombadil could not be found" >&2
+      exit 1
+  fi
+
+  if ! command -v wofi &> /dev/null; then
+      echo "wofi could not be found" >&2
+      exit 1
+  fi
+
+  SELECTED_PROFILE=$(bombadil get profiles | wofi -i -d -p "Switch Toml Bombadil Profile:")
+
+  if [ "$SELECTED_PROFILE" = "default" ]; then
+      bombadil link
+  else
+      bombadil link -p "$SELECTED_PROFILE"
+  fi
+
+}
+
 wob_volume() {
     volume=$(pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g')
     if [ "$volume" -gt 100 ]; 
@@ -17,34 +51,13 @@ wob_volume() {
         volume=100
     fi
 
-    echo "$volume __[wob_bg_color]__ __[wob_border_color]__ __[wob_bar_color]__"
+    echo "$volume __[red]__ __[black]__ __[green]__"
 }
 
-change_kbd() {
-swaymsg \
-  --type get_inputs | \
-  jq \
-    --raw-output \ '
-      [
-        .[] |
-          select(.type == "keyboard") |
-          .xkb_active_layout_name |
-          select(contains("English (US)") | not)
-      ] |
-        first // "English"
-    '
-
-swaymsg \
-  --raw \
-  '["input"]' | \
-  jq \
-    --raw-output \
-    --unbuffered \ '
-      select(.change == "xkb_layout") |
-        .input.xkb_active_layout_name |
-        sub(" \\(US\\)"; "")
-    '
-
+brightness_up() {
+    brightnessctl set +10%
+    BRIGHTNESS=$(brightnessctl g)
+    NOTI_ID=$(notify-send.py "Brightness" "$BRIGHTNESS/100" \
+                         --hint string:image-path:video-display boolean:transient:true \
+                         --replaces-process "brightness-popup")
 }
-
-

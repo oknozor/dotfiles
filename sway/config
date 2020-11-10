@@ -1,10 +1,8 @@
 # On start
-exec_always mako
-exec_always kanshi
-set $SWAYSOCK.wob "/tmp/wobpipe"
-exec_always tail -f $SWAYSOCK.wob | wob -a center -a bottom -H 45 -W 300 -M 50 -o 4
-exec mkfifo $SWAYSOCK.wob 
-output * bg __[wallpaper]__ fill
+font "Fira Code 9"
+exec __[notification]__
+exec kanshi
+output * bg __[wallpaper]__ stretch
 
 ### Variables
 set $mod Mod4
@@ -14,9 +12,9 @@ set $up k
 set $right l
 
 set $term __[terminal]__
-set $bar waybar
-set $launcher "wofi --show drun"
-set $pass "~/dotfiles/wofi/passwofi.sh"
+set $bar __[bar]__
+set $launcher __[launcher]__
+set $pass wofipassmenu
 set $lock "swaylock -c 000000"
 
 include workspaces

@@ -1,0 +1,33 @@
+bar = "waybar"
+
+# notification = "deadd-notification-center"
+notification = "mako"
+
+# launcher = "nwggrid -o 0.9 -b 434c5e"
+# launcher = "wofi --show drun"
+launcher = "onagre"
+
+client_focused_border = "%yellow"
+client_focused_background = "%background"    
+client_focused_text = "%text"    
+client_focused_indicator = "%blue"     
+client_focused_child_border = "%magenta"
+
+client_focused_inactive_border = "%light_white"      
+client_focused_inactive_background = "%background"
+client_focused_inactive_text = "%text"   
+client_focused_inactive_indicator= "%light_black"     
+client_focused_inactive_child_border = "%light_white"
+
+client_unfocused_border = "%light_white"     
+client_unfocused_background = "%background"      
+client_unfocused_text = "%text"    
+client_unfocused_indicator = "%light_black"     
+client_unfocused_child_border = "%light_white"
+
+client_urgent_border = "%red"  
+client_urgent_background = "%background"      
+client_urgent_text = "%text"    
+client_urgent_indicator = "%light_black"     
+client_urgent_child_border = "%light_white"
+

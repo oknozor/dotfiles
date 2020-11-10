@@ -118,7 +118,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
     Plug 'scrooloose/nerdtree'
-    Plug 'arcticicestudio/nord-vim'
     Plug 'Raimondi/delimitMate'
     Plug 'airblade/vim-gitgutter'
 
@@ -142,6 +141,7 @@ call plug#begin('~/.vim/plugged')
 
     " Experimental
     Plug 'norcalli/nvim-terminal.lua'
+    Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -204,7 +204,19 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 map <C-n> :NERDTreeToggle<CR>
 
+" True color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+
 filetype plugin indent on   
+
+set t_Co=256
+set cursorline
+colorscheme onehalflight
 
 "Illuminate 
 let g:Illuminate_ftblacklist = ['nerdtree']
@@ -214,6 +226,7 @@ let g:Illuminate_ftHighlightGroups = {
       \ }
 
 " Airline 
+let g:airline_theme='onehalflight'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -224,13 +237,8 @@ let g:gitgutter_sign_added = ''
 let g:gitgutter_sign_removed = ''
 let g:gitgutter_sign_modified = ''
 
-" Tender
-if (has("termguicolors"))
- set termguicolors
-endi
 
 " Delimite mate
 let delimitMate_expand_cr = 1
 
-colorscheme nord
 highlight Pmenu guibg=SlateGrey gui=bold

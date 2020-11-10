@@ -1,0 +1,102 @@
+background = "#e8f1f9cf"
+foreground = "#e8f1f9cf"
+border_color = "#00000000"
+border_radius = 10
+border_width = 0
+
+[rows]
+background = "#e8f1f9cf"
+text_color = "#ffffff"
+border_color = "#00ff00"
+border_radius = 0
+border_width = 0
+width = "fill"
+height = "shrink"
+padding = 0
+
+[rows.lines.default]
+background = "#00000000"
+text_color = "#18405a"
+border_color = "#ff0000"
+border_radius = 0
+border_width = 0
+width = "fill"
+height = "shrink"
+padding = 4
+
+[rows.lines.selected]
+background = "#63b4fbCf"
+text_color = "#0000ff"
+border_color = "#ff0000"
+border_radius = 5
+border_width = 0
+width = "fill"
+height = "shrink"
+padding = 5
+
+[scrollable]
+background = "#00000000"
+border_color = "#e8f1f9cf"
+border_radius = 0
+border_width = 0
+height = "fill"
+width = "fill"
+padding = 0
+scrollbar_width = 10
+scroller_width = 10
+
+[scrollable.scroller]
+color = "#314c84"
+border_color = "#314c84bf"
+border_radius = 4
+border_width = 1
+
+[search]
+background = "#00000000"
+text_color = "#0000ff00"
+width = 0
+height = 0
+padding = 0
+border_color = "#00ffff00"
+border_radius = 0
+border_width = 0
+
+[search.bar]
+background = "#e8f1f9cf"
+value_color = "#fcfbfb"
+placeholder_color = "#fcfbfb"
+border_color = "#e8f1f9cf"
+selection_color = "#fcfbfb"
+border_radius = 6
+border_width = 0
+text_width = "fill"
+
+[menu]
+background = "#00000000"
+text_color = "#ffffff"
+border_color = "#314c84"
+border_radius = 0
+border_width = 0
+width = "fill"
+height = 0
+padding = 0
+
+[menu.lines.default]
+background = "#"
+text_color = "#00000000"
+border_color = "#314c84"
+border_radius = 0
+border_width = 0
+width = "fill"
+height = 0
+padding = 0
+
+[menu.lines.selected]
+background = "#00000000"
+text_color = "#0000ff"
+border_color = "#314c84"
+border_radius = 0
+border_width = 0
+width = "fill"
+height = 0
+padding = 0

@@ -3,21 +3,16 @@
 These are my dotfiles I regularly update and tweak them.
 If you wan't to use them, feel free to fork, also you might need to adapt them. 
 
+![screenshot](screenshots/screenshot_01.png)
 ![screenshot](screenshots/screenshot_02.png)
 ![screenshot](screenshots/screenshot_03.png)
 ![screenshot](screenshots/screenshot_04.png)
 ![screenshot](screenshots/screenshot_05.png)
 ![screenshot](screenshots/screenshot_06.png)
 
-## Installation
+## Installation 
 
-To manage symlinks I use the excellent [dotbot](https://github.com/anishathalye/dotbot), all you need to do to get started is to fork this repo and :
-
-```
-❯ git clone --recurse-submodules git@github.com:oknozor/dotfiles.git
-❯ cd dotfiles
-❯ ./install
-```
+To manage symlinks I use [toml-bombadil](https://github.com/oknozor-toml-bombadil), take a look :). 
 
 ## A list of (cool) programs & tools I am currently using   
 
@@ -26,8 +21,8 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 ### DE
 - Window manager : [sway](https://swaywm.org/)
 - Screen locker : [swaylock](https://github.com/swaywm/swaylock)
-- Status bar : [i3status-rust](https://github.com/greshake/i3status-rust)
-- App launcher : [wofi](https://hg.sr.ht/~scoopta/wofi)
+- Status bar : [waybar](https://github.com/Alexays/Waybar)
+- App launcher : [onagre](https://github.com/oknozor/onagre) (not perfect yet but I am working on it!)
 - Notification : [mako](https://github.com/emersion/mako)
 
 ### Package manager
@@ -43,41 +38,43 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 ### Editor
 - Editor : [neovim](https://neovim.io/)
 - Plugin Manager : [plug](https://github.com/junegunn/vim-plug)
-    - 'vim-airline/vim-airline'
-    - 'scrooloose/nerdtree'
-    - 'arcticicestudio/nord-vim'
-    - 'Raimondi/delimitMate'
-    - 'airblade/vim-gitgutter'
-    - 'RRethy/vim-illuminate'
-    - 'airblade/vim-rooter'
-    - 'tpope/vim-fugitive'
-    - 'pearofducks/ansible-vim'
-    - 'rust-lang/rust.vim'
-    - 'aliou/bats.vim'
-    - 'hashivim/vim-vagrant'
-    - 'chr4/nginx.vim'
-    - 'racer-rust/vim-racer'
-    - 'cespare/vim-toml'
-    - 'w0rp/ale'
-    - 'neoclide/coc.nvim'
-- Markdown preview : [illumination](https://github.com/oknozor/illumination)
+    - 'vim-airline/vim-airline'(https://github.com/oknozor/illumination)
+    - [oknozor/illumination](https://github.com/oknozor/illumination)
+    - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
+    - [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
+    - [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+    - [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate)
+    - [airblade/vim-rooter](https://github.com/airblade/vim-rooter)
+    - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+    - [pearofducks/ansible-vim](https://github.com/pearofducks/ansible-vim)
+    - [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim)
+    - [aliou/bats.vim](https://github.com/aliou/bats.vim)
+    - [hashivim/vim-vagrant](https://github.com/hashivim/vim-vagrant)
+    - [chr4/nginx.vim](https://github.com/chr4/nginx.vim)
+    - [racer-rust/vim-racer](https://github.com/racer-rust/vim-racer)
+    - [cespare/vim-toml](https://github.com/cespare/vim-toml)
+    - [w0rp/ale](https://github.com/w0rp/ale)
+    - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
+    - [norcalli/nvim-terminal.lua](https://github.com/norcalli/nvim-terminal.lua)
+    - [norcalli/nvim-terminal.lua](https://github.com/norcalli/nvim-terminal.lua)
 
 ### Cli tools
 - Grep replacement : [ripgrep](https://github.com/BurntSushi/ripgrep)
+- Find replacement : [ripgrep](https://github.com/sharkdp/fd)
 - Cat replacement : [bat](https://github.com/sharkdp/bat) 
 - Hexdump replacement : [hexyl](https://github.com/sharkdp/hexyl) 
 - du replacement : [dust](https://github.com/bootandy/dust) 
-- Quick file navigation : [autojump](https://github.com/wting/autojump)
+- Quick file navigation : [autojump-rs](https://github.com/xen0n/autojump-rs)
 - Password managment : [pass](https://www.passwordstore.org/)
 
 ### Media
 - Media library management : [beets](http://beets.io/)
 - Music player : [ncmpcpp](https://github.com/arybczak/ncmpcpp)
-- Screenshot : [grim](https://github.com/resurrecting-open-source-projects/scrot)
+- Screenshot : [grim](https://github.com/resurrecting-open-source-projects/scrot) + [slurp](https://github.com/emersion/slurp)
 
 ## Wallpaper 
 
-[This wallpaper](https://wallhere.com/en/wallpaper/5782) was posted by @mattilius258 on [wallhere.com](https://wallhere.com) checkout his work it's, awesome.
+[This one](https://wallup.net/preview/?wallpaper=drawing-landscape-sea-beach-sand-sky-rock).
 
 ## Contributions 
 

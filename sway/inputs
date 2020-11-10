@@ -1,4 +1,4 @@
-input "1739:0:Synaptics_TM3276-031" {
+input "1160:4618:DELL08B8:00_0488:120A_Touchpad" {
     tap disabled
     natural_scroll disabled
     dwt disabled
@@ -7,5 +7,5 @@ input "1739:0:Synaptics_TM3276-031" {
 
 input "type:keyboard" {          
     xkb_layout fr,us
-    xkb_variant nodeadkeys,
 }
+
