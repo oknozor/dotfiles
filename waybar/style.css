@@ -51,7 +51,7 @@ window#waybar {
     background-color: __[worspace_bg]__;
     margin-left: 5px;
     padding: 6px;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 #workspaces button:hover {

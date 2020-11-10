@@ -25,7 +25,6 @@ git = { source = "git/gitconfig", target = ".gitconfig" }
 vim = { source = "nvim/init.vim", target = ".vimrc" }
 nvim = { source = "nvim", target = ".config/nvim" }
 illumination = { source = "illumination", target = ".config/illumination" }
-neofetch = { source = "neofetch", target = ".config/neofetch" }
 beets = { source = "beets", target = ".config/beets" }
 ncmpcpp = { source = "ncmpcpp", target = ".ncmpcpp" }
 mdp = { source = "mpd", target = ".config/mpd" }
@@ -33,7 +32,8 @@ gpg_agent = { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
 maven = { source = "maven/settings.corporate.xml", target = ".m2/settings.xml" }
 xdg_dirs = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
 gtk2 = { source = "gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
-gtk3 = { source = "gtk/gtk-3.0", target = ".config//gtk-3.0" }
+gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
+neofetch = { source = "neofetch", target = ".config/neofetch" }
 
 
 ## Work in progress 
