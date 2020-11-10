@@ -12,7 +12,7 @@ If you wan't to use them, feel free to fork, also you might need to adapt them.
 
 ## Installation 
 
-To manage symlinks I use [toml-bombadil](https://github.com/oknozor-toml-bombadil), take a look :). 
+To manage symlinks I use [toml-bombadil](https://github.com/oknozor/toml-bombadil), take a look :). 
 
 ## A list of (cool) programs & tools I am currently using   
 
