@@ -25,14 +25,3 @@ include key_bindings
 include inputs
 include bar
 include gtk_config
-
-# Startup programs and workspaces
-workspace 4
-exec slack
-exec swaymsg layout tabbed
-exec discord
-exec element-desktop
-exec zulip
-exec "swaymsg workspace 4 && swaymsg layout tabbed"
-
-exec firefox-developer-edition

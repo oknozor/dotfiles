@@ -3,13 +3,15 @@
 - akacritty
 - nvim (WIP)
 - firefox
+    - duck duck go
 - gtk (Arc bombadil
 - QT (Arc bombadil)
-- duck duck go
 - intelliJ
 - ncmpcpp
 - mako
 
+# Utils
+  - brighness && sound in zshenv
 
 # Wallpaper
  - https://wallup.net/preview/?wallpaper=drawing-landscape-sea-beach-sand-sky-rock

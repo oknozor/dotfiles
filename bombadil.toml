@@ -11,6 +11,7 @@ vars = [
 [settings.dots]
 alacritty = { source = "alacritty", target = ".config/alacritty" }
 wofi = { source = "wofi", target = ".config/wofi" }
+onagre = { source = "onagre", target = ".config/onagre" }
 nwg = { source = "nwg-launchers", target = ".config/nwg-launchers" }
 sway = { source = "sway", target = ".config/sway" }
 sway_start = { source = "start.sh", target = "start.sh" }
