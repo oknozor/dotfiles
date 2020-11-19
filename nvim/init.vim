@@ -3,26 +3,33 @@ set number
 set relativenumber
 set nocompatible
 filetype off
-set tabstop=4 
+set tabstop=2 
 set expandtab    
-set shiftwidth=4
+set shiftwidth=2
 set autoindent 
 set smartindent
 set cindent
 set wildmenu
 set undofile
 set nobackup
+set nowritebackup
+set cmdheight=2
+set shortmess+=c
 set updatetime=250
 set autowriteall
 set clipboard+=unnamedplus
 
 let mapleader="," 
-let maplocalleader="!"
-
 " Fyle types
-au BufRead,BufNewFile ~/.config/sway/config setfiletype sway
+au BufRead,BufNewFile ~/.config/sway/* setfiletype sway
 
-" Disable arrow keys and mouse scroll
+" Normal mode remap
+" WARNING : If you are using my dotfiles you probably want to delete this
+" it remap the <esc> key to jk
+inoremap jk <esc>
+vnoremap jk <esc>
+
+" WARNING : disable arrow keys and mouse scroll
 imap <esc> <nop>
 vmap <esc> <nop>
 map <ScrollWheelUp> <nop>
@@ -40,89 +47,118 @@ vnoremap <Up>    <nop>
 vnoremap <Down>  <nop>
 vnoremap <esc>   <nop>
 
-" Toggle hl
+" Handy shortcut to enable/disable search highliting
 noremap <F2> :set hlsearch! hlsearch?<CR>
 
 
-" Tab navigation
-nnoremap <left>     :tabprevious<CR>
-nnoremap <right>    :tabnext<CR>
-nnoremap <leader>t  :tabnew<CR>
+" Window and navigation
+  " Remap left and right arrow keys to tabprev and tabnext 
+  nnoremap <left>     :tabprevious<CR>
+  nnoremap <right>    :tabnext<CR>
+  "
+  " Alternatively use `<leader>j/k for tabnext/tabprev
+  nnoremap <leader>k  <esc>:tabprevious<CR>
+  nnoremap <leader>j  <esc>:tabnext<CR> 
+  nnoremap <leader>t  <esc>:tabnew<CR>
+  "
+  " use `<leader>t`h to create a new tab
+  nnoremap <leader>t  :tabnew<CR>
 
-nnoremap <leader>k  <esc>:tabprevious<CR>
-nnoremap <leader>j  <esc>:tabnext<CR>
-nnoremap <leader>t  <esc>:tabnew<CR>
 
-" Split window 
-nnoremap <leader>d :split<CR>
-nnoremap <leader>v :vsplit<CR>
+  " Split window 
+  " `<leader>d/v` to split horizontal/vertical
+  noremap <leader>h :split<CR>
+  nnoremap <leader>v :vsplit<CR>
 
-" Move window arround
-nnoremap <leader>J <C-W>J
-nnoremap <leader>K <C-W>K
-nnoremap <leader>H <C-W>H
-nnoremap <leader>L <C-W>L
+  " `Alt+j/k` to scroll down/up
+  nnoremap <A-j> <C-f>
+  nnoremap <A-k> <C-b>
 
-" Scroll
-nnoremap <A-j> <C-f>
-nnoremap <A-k> <C-b>
+  " Rearrange windows with `<leader>+H/J/K/L`
+  nnoremap <leader>J <C-W>J
+  nnoremap <leader>K <C-W>K
+  nnoremap <leader>H <C-W>H
+  nnoremap <leader>L <C-W>L
+  "
+  " Move focus with Ctrl+h/j/k/l
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-l> <C-\><C-N><C-w>l
 
-" Active window
-nnoremap <C-j>  <C-w><C-j>
-nnoremap <C-k>  <C-w><C-k>
-nnoremap <C-h>  <C-w><C-h>
-nnoremap <C-l>  <C-w><C-l>
+  inoremap <C-h> <C-\><C-N><C-w>h
+  inoremap <C-j> <C-\><C-N><C-w>j
+  inoremap <C-k> <C-\><C-N><C-w>k
+  inoremap <C-l> <C-\><C-N><C-w>l
 
-" Switch buffer
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-l> <C-w>l
+
+" Terminal
+" To exit insert mode in terminal escape is used instead of `jk`
+tnoremap <Esc> <C-\><C-n>
+" `<leader>+x` to open a terminal in insert mode
+noremap <leader>x :split<CR><C-W>J :res 15<CR> :terminal<CR> :startinsert<CR> 
+
+" Switch buffer with `Alt+h/l`
 nnoremap <A-h> :bp<Cr>
 nnoremap <A-l> :bn<Cr>
 
-" Quick edit and source 
+" Quick edit and source
 
     " .vimrc
-    nnoremap <leader>ev :tabnew $MYVIMRC<CR>
-    nnoremap <leader>sv :source $MYVIMRC<CR>
+    nnoremap <leader>ev :vsplit $NVIMRC<CR>
+    nnoremap <leader>sv :source $NVIMRC<CR>
+    
     " .zshrc
-    nnoremap <leader>ez :tabnew $MY_ZSHRC<CR>
-    nnoremap <leader>sz :!source $MY_ZSHRC<CR>
+    nnoremap <leader>ez :vsplit $SHELL_RC<CR>
+    nnoremap <leader>sz :!source $SHELL_RC<CR>
+    
     " sway
-    nnoremap <leader>es :tabnew ~/.config/sway/config<CR>
-    nnoremap <leader>ss :tabnew ~/.config/sway/status.toml<CR>
-
-" Normal mode remap
-inoremap jk <esc>
-vnoremap jk <esc>
+    nnoremap <leader>es :tabnew <CR>
 
 " Edition 
-nnoremap + ddp
-nnoremap - ddkkp
 
-noremap <leader>u viwU<esc> 
-noremap <leader>l viwu<esc> 
+  " Move a line down/up with `+/-`
+  nnoremap + ddp
+  nnoremap - ddkkp
 
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
 
-" Terminal
-noremap <leader>x :split<esc><CR><C-W>J :res 10<CR> :terminal<CR>
-tnoremap <Esc> <C-\><C-n>
+  " Lowecase/uppercase a word : `<leader>+l\u`
+  noremap <leader>u viwU<esc> 
+  noremap <leader>l viwu<esc> 
+  "
+  " quote/parenthesize a word with `<leader>+{quote_type}`
+  nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+  nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+  nnoremap <leader>è viw<esc>a`<esc>bi`<esc>lel
+  nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
+  nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
+  nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
 
-" Abbreviations
-ab @@ paul.defosse@protonmail.com
-autocmd FileType c iabbrev <buffer> iff if(x)<Left><Backspace>
+  " quote/parenthesize selection mode with `<leader>+{quote_type}` in visual
+  " mode
+  vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
+  vnoremap <leader>' <esc>`<i'<esc>`>a'<esc>lel
+  vnoremap <leader>è <esc>`<i`<esc>`>a`<esc>lel
+  vnoremap <leader>{ <esc>`<i{<esc>`>a}<esc>lel
+  vnoremap <leader>( <esc>`<i(<esc>`>a)<esc>lel
+  vnoremap <leader>[ <esc>`<i[<esc>`>a]<esc>lel
+
 
 " Plugin
 call plug#begin('~/.vim/plugged')
 
     " Ui 
-    Plug 'vim-airline/vim-airline'
     Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
     Plug 'scrooloose/nerdtree'
     Plug 'Raimondi/delimitMate'
     Plug 'airblade/vim-gitgutter'
+    Plug 'liuchengxu/eleline.vim'
 
     " Tools 
-    Plug 'RRethy/vim-illuminate'
     Plug 'airblade/vim-rooter'
     Plug 'tpope/vim-fugitive'
 
@@ -132,68 +168,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'aliou/bats.vim'
     Plug 'hashivim/vim-vagrant'
     Plug 'chr4/nginx.vim'
-    Plug 'racer-rust/vim-racer'
     Plug 'cespare/vim-toml'
-
+    "
     " Language integration
-    Plug 'w0rp/ale'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    " Experimental
-    Plug 'norcalli/nvim-terminal.lua'
+    
+    " Theme
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
-
-    """ COC 
-    noremap <leader>g :CocList files<CR> 
-    noremap <leader>G :CocList symbols<CR> 
-    noremap <leader>f :CocList grep<CR> 
-
-    "" Go to Actions 
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gy <Plug>(coc-type-definition)
-    nmap <silent> gi <Plug>(coc-implementation)
-    nmap <silent> gr <Plug>(coc-references)
-
-    "" Hint
-    highlight link CocErrorSign GruvboxRed
-
-    "" Documentation
-    nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-    function! s:show_documentation()
-      if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-      else
-        call CocAction('doHover')
-      endif
-    endfunction
-    """
-
-" Ale Lint 
-nnoremap <silent> <A-n> :ALEDetail<Cr>
-nmap <silent> <C-UP> <Plug>(ale_previous_wrap)
-nmap <silent> <C-DOWN> <Plug>(ale_next_wrap)
-let g:ale_completion_enabled = 1
-let g:ale_update_tagstack = 1
-
-let g:airline#extensions#ale#enabled = 1
-let g:ale_sign_error = '-'
-let g:ale_sign_warning = '-' 
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:airline_powerline_fonts = 1
-
-" Linters 
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'bats': ['shellcheck'],
-\   'rust': ['cargo clippy'],
-\   'python' : ['pylint'],
-\}
-
-" Yank highlight
-nnoremap <leader>y  :<C-u>CocList -A --normal yank<cr>
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -204,41 +187,30 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 map <C-n> :NERDTreeToggle<CR>
 
-" True color
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+" Colors and Themes 
+  " Enable true colors
+  if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+  endif
 
 
-filetype plugin indent on   
+  " onalflight configs
+  filetype plugin indent on   
+  set t_Co=256
+  set cursorline
+  colorscheme onehalflight
 
-set t_Co=256
-set cursorline
-colorscheme onehalflight
-
-"Illuminate 
-let g:Illuminate_ftblacklist = ['nerdtree']
-let g:Illuminate_ftHighlightGroups = {
-      \ 'vim': ['vimVar', 'vimString', 'vimLineComment',
-      \         'vimFuncName', 'vimFunction', 'vimUserFunc', 'vimFunc']
-      \ }
-
-" Airline 
-let g:airline_theme='onehalflight'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+ " Always display statusline.
+set laststatus=2
 
 " Gitgutter 
-
 let g:gitgutter_sign_added = ''
 let g:gitgutter_sign_removed = ''
 let g:gitgutter_sign_modified = ''
 
-
 " Delimite mate
 let delimitMate_expand_cr = 1
 
-highlight Pmenu guibg=SlateGrey gui=bold
+source ~/.config/nvim/coc-config.vim

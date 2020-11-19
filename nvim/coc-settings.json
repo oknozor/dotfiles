@@ -1,13 +1,19 @@
 {
-    "suggest.minTriggerInputLength": 2,
-    "t.triggerAfterInsertEnter": true,
+  "languageserver": {
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      // custom config path
+      // "args": ["-c", "/path/to/your/config.yaml"],
+      "filetypes": ["vim", "eruby", "markdown"]
+    }
+  }, 
 
-    "languageserver": {
-        "rust": {
-            "command": "ra_lsp_server",
-            "filetypes": ["rust"],
-            "rootPatterns": ["Cargo.toml"]
-        }
-    },
-    "java.errors.incompleteClasspath.severity": "ignore"
+  "languageserver": {
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    }
+  }
 }
