@@ -5,6 +5,8 @@
 This is not an exhaustive vim cheatsheet, common vim actions are not listed here. 
 My vim `<leader>` is `,` it's refered as capital L in the current document. 
 
+To open this on a webbrowser use the `:Cheatsheet` command. 
+
 ## Navigation
 
 | Modes   | Action                    |  Keymap                  |
@@ -33,7 +35,7 @@ My vim `<leader>` is `,` it's refered as capital L in the current document.
 
 | Modes   | Action                    |  Keymap                  |
 |:---     | :-----                    | -------:                 | 
-| Insert  | Terminal: Normal mode     |  `Esc`                   | 
+| Insert  | Enter normal mode         |  `Esc`                   | 
 | Normal  | Open terminal             |  `L+x`                   | 
 
 ##  Edition

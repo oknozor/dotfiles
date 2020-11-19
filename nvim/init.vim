@@ -19,11 +19,18 @@ set updatetime=250
 set autowriteall
 set clipboard+=unnamedplus
 
-let mapleader="," 
-" Fyle types
-au BufRead,BufNewFile ~/.config/sway/* setfiletype sway
+if !exists("rc_autocommands_loaded")
+    " Todo make a file type for sway config
+	  let rc_autocommands_loaded = 1
+    au BufRead,BufNewFile ~/.config/sway/* setfiletype sway
+    " Always enter terminal window in insertion mode
+    au TermEnter * startinsert
+endif
 
-" Normal mode remap
+command! Cheatsheet !xdg-open https://github.com/oknozor/dotfiles/blob/master/docs/nvim_cheatsheet.md<CR>
+
+let mapleader="," 
+
 " WARNING : If you are using my dotfiles you probably want to delete this
 " it remap the <esc> key to jk
 inoremap jk <esc>
@@ -53,6 +60,7 @@ noremap <F2> :set hlsearch! hlsearch?<CR>
 
 " Window and navigation
   " Remap left and right arrow keys to tabprev and tabnext 
+  " Todo make a file type for sway config
   nnoremap <left>     :tabprevious<CR>
   nnoremap <right>    :tabnext<CR>
   "
@@ -100,7 +108,7 @@ noremap <F2> :set hlsearch! hlsearch?<CR>
 " To exit insert mode in terminal escape is used instead of `jk`
 tnoremap <Esc> <C-\><C-n>
 " `<leader>+x` to open a terminal in insert mode
-noremap <leader>x :split<CR><C-W>J :res 15<CR> :terminal<CR> :startinsert<CR> 
+noremap <leader>x :split<CR><C-W>J :res 15<CR> :terminal<CR>
 
 " Switch buffer with `Alt+h/l`
 nnoremap <A-h> :bp<Cr>
