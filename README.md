@@ -54,7 +54,7 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
     - [cespare/vim-toml](https://github.com/cespare/vim-toml)
     - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
 
-**Note :** [here is a cheat sheet](docs/nvim_sheetcheat.md) for the nvim config 
+**Note :** [here is a cheatsheet](docs/nvim_cheatsheet.md) for the nvim config 
 
 ### Cli tools
 - Grep replacement : [ripgrep](https://github.com/BurntSushi/ripgrep)
