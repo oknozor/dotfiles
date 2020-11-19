@@ -7,7 +7,8 @@ export PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
-export MY_ZSHRC=~/.zshrc
+export SHELL_RC=~/dotfiles/zsh/zshrc
+export NVIMRC=~/dotfiles/nvim/init.vim
 export XKB_DEFAULT_LAYOUT=fr
 
 

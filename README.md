@@ -38,7 +38,7 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 ### Editor
 - Editor : [neovim](https://neovim.io/)
 - Plugin Manager : [plug](https://github.com/junegunn/vim-plug)
-    - 'vim-airline/vim-airline'(https://github.com/oknozor/illumination)
+    - [liuchengxu/eleline](https://github.com/liuchengxu/eleline.vim)
     - [oknozor/illumination](https://github.com/oknozor/illumination)
     - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
     - [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
@@ -51,12 +51,10 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
     - [aliou/bats.vim](https://github.com/aliou/bats.vim)
     - [hashivim/vim-vagrant](https://github.com/hashivim/vim-vagrant)
     - [chr4/nginx.vim](https://github.com/chr4/nginx.vim)
-    - [racer-rust/vim-racer](https://github.com/racer-rust/vim-racer)
     - [cespare/vim-toml](https://github.com/cespare/vim-toml)
-    - [w0rp/ale](https://github.com/w0rp/ale)
     - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
-    - [norcalli/nvim-terminal.lua](https://github.com/norcalli/nvim-terminal.lua)
-    - [norcalli/nvim-terminal.lua](https://github.com/norcalli/nvim-terminal.lua)
+
+**Note :** [here is a cheat sheet](docs/nvim_sheetcheat.md) for the nvim config 
 
 ### Cli tools
 - Grep replacement : [ripgrep](https://github.com/BurntSushi/ripgrep)
