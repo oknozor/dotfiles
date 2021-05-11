@@ -13,8 +13,9 @@ border_width = 0
 width = "shrink"
 height = "fill"
 padding = 0
+
 [rows.lines.default]
-background = "#00000000"
+background = "#ff0000"
 text_color = "#18405a"
 border_color = "#000000"
 border_radius = 0

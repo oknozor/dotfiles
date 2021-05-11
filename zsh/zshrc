@@ -30,7 +30,6 @@ antigen bundle zuxfoucault/colored-man-pages_mod
 antigen apply
 
 export EDITOR=nvim
-export PAGER=bat
 export BAT_THEME="Solarized (light)"
 
 eval "$(starship init zsh)"

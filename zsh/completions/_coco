@@ -15,174 +15,27 @@ _coco() {
 
     local context curcontext="$curcontext" state line
     _arguments "${_arguments_options[@]}" \
+'-B[BREAKING CHANGE commit]' \
+'--breaking-change[BREAKING CHANGE commit]' \
 '-h[Prints help information]' \
 '--help[Prints help information]' \
 '-V[Prints version information]' \
 '--version[Prints version information]' \
+':type -- The type of the commit message:(ci feat perf test chore revert refactor style fix docs build)' \
+':message -- The type of the commit message:_files' \
+'::scope -- The scope of the commit message:_files' \
+'::body -- The body of the commit message:_files' \
+'::footer -- The footer of the commit message:_files' \
 ":: :_coco_commands" \
 "*::: :->Coco" \
 && ret=0
     case $state in
     (Coco)
-        words=($line[1] "${words[@]}")
+        words=($line[6] "${words[@]}")
         (( CURRENT += 1 ))
-        curcontext="${curcontext%:*:*}:coco-command-$line[1]:"
-        case $line[1] in
-            (chore)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(ci)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(revert)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(style)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(docs)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(fix)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(feat)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(test)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(build)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(perf)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(refactor)
-_arguments "${_arguments_options[@]}" \
-'-B[BREAKING CHANGE commit]' \
-'--breaking-change[BREAKING CHANGE commit]' \
-'-h[Prints help information]' \
-'--help[Prints help information]' \
-'-V[Prints version information]' \
-'--version[Prints version information]' \
-'::message -- The commit message:_files' \
-'::scope -- The scope of the commit message:_files' \
-'::body -- The body of the commit message:_files' \
-'::footer -- The footer of the commit message:_files' \
-&& ret=0
-;;
-(generate-completions)
+        curcontext="${curcontext%:*:*}:coco-command-$line[6]:"
+        case $line[6] in
+            (generate-completions)
 _arguments "${_arguments_options[@]}" \
 '-h[Prints help information]' \
 '--help[Prints help information]' \
@@ -207,63 +60,10 @@ esac
 (( $+functions[_coco_commands] )) ||
 _coco_commands() {
     local commands; commands=(
-        "chore:create a `chore` commit" \
-"ci:create a `continuous integration` commit" \
-"revert:create a `revert` commit" \
-"style:create a `style` commit" \
-"docs:create a `documentation` commit" \
-"fix:create a `bug fix` commit" \
-"feat:create a `feature` commit" \
-"test:create a `test` commit" \
-"build:create a continuous `build` commit" \
-"perf:create a `performance` commit" \
-"refactor:create a `refactor` commit" \
-"generate-completions:Generate shell completions" \
+        "generate-completions:Generate shell completions" \
 "help:Prints this message or the help of the given subcommand(s)" \
     )
     _describe -t commands 'coco commands' commands "$@"
-}
-(( $+functions[_coco__build_commands] )) ||
-_coco__build_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco build commands' commands "$@"
-}
-(( $+functions[_coco__chore_commands] )) ||
-_coco__chore_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco chore commands' commands "$@"
-}
-(( $+functions[_coco__ci_commands] )) ||
-_coco__ci_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco ci commands' commands "$@"
-}
-(( $+functions[_coco__docs_commands] )) ||
-_coco__docs_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco docs commands' commands "$@"
-}
-(( $+functions[_coco__feat_commands] )) ||
-_coco__feat_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco feat commands' commands "$@"
-}
-(( $+functions[_coco__fix_commands] )) ||
-_coco__fix_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco fix commands' commands "$@"
 }
 (( $+functions[_coco__generate-completions_commands] )) ||
 _coco__generate-completions_commands() {
@@ -278,41 +78,6 @@ _coco__help_commands() {
         
     )
     _describe -t commands 'coco help commands' commands "$@"
-}
-(( $+functions[_coco__perf_commands] )) ||
-_coco__perf_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco perf commands' commands "$@"
-}
-(( $+functions[_coco__refactor_commands] )) ||
-_coco__refactor_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco refactor commands' commands "$@"
-}
-(( $+functions[_coco__revert_commands] )) ||
-_coco__revert_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco revert commands' commands "$@"
-}
-(( $+functions[_coco__style_commands] )) ||
-_coco__style_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco style commands' commands "$@"
-}
-(( $+functions[_coco__test_commands] )) ||
-_coco__test_commands() {
-    local commands; commands=(
-        
-    )
-    _describe -t commands 'coco test commands' commands "$@"
 }
 
 _coco "$@"
