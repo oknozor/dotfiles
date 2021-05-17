@@ -2,7 +2,6 @@ dotfiles_dir = "dotfiles"
 gpg_user_id = "paul.delafosse@protonmail.com"
 
 [settings]
-hooks = ["sway reload"]
 vars = [
     "bombadil/themes/sweay.toml",
     "bombadil/vars.toml",
@@ -10,14 +9,8 @@ vars = [
 
 [settings.dots]
 alacritty = { source = "alacritty", target = ".config/alacritty" }
-wofi = { source = "wofi", target = ".config/wofi" }
 onagre = { source = "onagre", target = ".config/onagre" }
 nwg = { source = "nwg-launchers", target = ".config/nwg-launchers" }
-sway = { source = "sway", target = ".config/sway" }
-sway_start = { source = "start.sh", target = "start.sh" }
-waybar = { source = "waybar", target = ".config/waybar" }
-kanshi = { source = "kanshi", target = ".config/kanshi" }
-mako = { source = "mako", target = ".config/mako" }
 zsh = { source = "zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
 starship = { source = "zsh/starship.toml", target = ".config/starhip.toml" }
@@ -37,46 +30,24 @@ neofetch = { source = "neofetch", target = ".config/neofetch" }
 efm-langserver = { source = "efm-langserver", target = ".config/efm-langserver" }
 
 
-## Work in progress 
-## Still need to templatize some dots
-[profiles.argonaut]
-vars = [ "bombadil/themes/argonaut.toml" ]
+[profiles.sway]
+hooks = ["sway reload"]
 
-[profiles.argonaut.dots]
-alacritty = { source="earzear"}
+[profiles.sway.dots]
+sway = { source = "sway/wm", target = ".config/sway" }
+sway_start = { source = "start.sh", target = "start.sh" }
+waybar = { source = "sway/waybar", target = ".config/waybar" }
+kanshi = { source = "sway/kanshi", target = ".config/kanshi" }
+mako = { source = "sway/mako", target = ".config/mako" }
+wofi = { source = "sway/wofi", target = ".config/wofi" }
 
-[profiles.ayu_dark]
-vars = [ "bombadil/themes/ayu_dark.toml" ]
 
-[profiles.base16_default_dark]
-vars = [ "bombadil/themes/base16_default_dark.toml" ]
+[profiles.i3]
+hooks = ["i3-msg reload"]
 
-[profiles.campbell]
-vars = [ "bombadil/themes/campbell.toml" ]
+[profiles.i3.dots]
+i3 =  { source = "i3/wm", target = ".config/i3" }
 
-[profiles.challenger_deep]
-vars = [ "bombadil/themes/challenger_deep.toml" ]
 
-[profiles.Cobalt2]
-vars = [ "bombadil/themes/Cobalt2.toml" ]
-
-[profiles.cyber_punk_neon]
-vars = [ "bombadil/themes/cyber_punk_neon.toml" ]
-
-[profiles.darcula]
-vars = [ "bombadil/themes/darcula.toml" ]
-
-[profiles.dracula]
-vars = [ "bombadil/themes/dracula.toml" ]
-
-[profiles.falcon]
-vars = [ "bombadil/themes/falcon.toml" ]
-
-[profiles.gotham]
-vars = [ "bombadil/themes/gotham.toml" ]
-
-[profiles.gruvbox_dark]
-vars = [ "bombadil/themes/gruvbox_dark.toml" ]
-
-[profiles.gruvbox_light]
-vars = [ "bombadil/themes/gruvbox_light.toml" ]
+[[import]]
+path = "themes.toml"
