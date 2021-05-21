@@ -28,6 +28,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+G exec rofi -show drun
+bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -65,8 +66,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout tabbed
+bindsym $mod+n layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
