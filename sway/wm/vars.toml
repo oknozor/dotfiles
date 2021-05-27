@@ -3,9 +3,7 @@ bar = "waybar"
 # notification = "deadd-notification-center"
 notification = "mako"
 
-# launcher = "nwggrid -o 0.9 -b 434c5e"
-# launcher = "wofi --show drun"
-launcher = "onagre"
+launcher = "wofi --show drun"
 
 client_focused_border = "%yellow"
 client_focused_background = "%background"    

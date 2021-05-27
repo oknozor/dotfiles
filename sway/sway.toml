@@ -1,0 +1,10 @@
+[profiles.sway]
+hooks = ["sway reload"]
+
+[profiles.sway.dots]
+sway = { source = "sway/wm", target = ".config/sway" }
+sway_start = { source = "sway/start.sh", target = "start.sh" }
+waybar = { source = "sway/waybar", target = ".config/waybar" }
+kanshi = { source = "sway/kanshi", target = ".config/kanshi" }
+mako = { source = "sway/mako", target = ".config/mako" }
+wofi = { source = "sway/wofi", target = ".config/wofi" }

@@ -28,27 +28,11 @@ gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
 neofetch = { source = "neofetch", target = ".config/neofetch" }
 efm-langserver = { source = "efm-langserver", target = ".config/efm-langserver" }
 
+[[import]]
+path = "sway/sway.toml"
 
-[profiles.sway]
-hooks = ["sway reload"]
-
-[profiles.sway.dots]
-sway = { source = "sway/wm", target = ".config/sway" }
-sway_start = { source = "sway/start.sh", target = "start.sh" }
-waybar = { source = "sway/waybar", target = ".config/waybar" }
-kanshi = { source = "sway/kanshi", target = ".config/kanshi" }
-mako = { source = "sway/mako", target = ".config/mako" }
-wofi = { source = "sway/wofi", target = ".config/wofi" }
-
-
-[profiles.i3]
-hooks = ["i3-msg reload"]
-
-[profiles.i3.dots]
-i3 =  { source = "i3/wm", target = ".config/i3" }
-polybar =  { source = "i3/polybar", target = ".config/polybar" }
-rofi =  { source = "i3/rofi", target = ".config/rofi" }
-
+[[import]]
+path = "i3/i3.toml"
 
 [[import]]
 path = "themes.toml"
