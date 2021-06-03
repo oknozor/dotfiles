@@ -5,3 +5,5 @@ hooks = ["i3-msg reload"]
 i3 =  { source = "i3/wm", target = ".config/i3" }
 polybar =  { source = "i3/polybar", target = ".config/polybar" }
 rofi =  { source = "i3/rofi", target = ".config/rofi" }
+picom =  { source = "i3/picom", target = ".config/picom" }
+
