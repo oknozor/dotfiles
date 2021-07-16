@@ -5,6 +5,7 @@
 [user]
 	email = paul.delafosse@protonmail.com
 	name = Paul Delafosse
+  signinkey = AF1A2FB32989D487
 
 [alias]
     graph = log --graph --abbrev-commit --decorate --date=relative --all
