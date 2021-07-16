@@ -18,6 +18,9 @@
     fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
     pushf = push --force-with-lease
 
+[commit]
+    gpgsign = true
+
 [pull]
     rebase = merges
 

@@ -32,7 +32,6 @@ antigen apply
 export EDITOR=nvim
 export BAT_THEME="Solarized (light)"
 
-eval "$(starship init zsh)"
 
 ####################
 ##### ALIASES ######
@@ -81,3 +80,5 @@ alias decatvpn="sudo unshare -f -m -p --mount-proc sudo -u okno sh -c '/usr/loca
 
 
 source /usr/share/autojump/autojump.zsh
+prompt off
+eval "$(starship init zsh)"

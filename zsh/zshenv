@@ -11,6 +11,16 @@ export SHELL_RC=~/dotfiles/zsh/zshrc
 export NVIMRC=~/dotfiles/nvim/init.vim
 export XKB_DEFAULT_LAYOUT=fr
 
+export IDEA_JDK=/usr/lib/jvm/jre-jetbrains
+export PHPSTORM_JDK=/usr/lib/jvm/jre-jetbrains
+export WEBIDE_JDK=/usr/lib/jvm/jre-jetbrains
+export PYCHARM_JDK=/usr/lib/jvm/jre-jetbrains
+export RUBYMINE_JDK=/usr/lib/jvm/jre-jetbrains
+export CL_JDK=/usr/lib/jvm/jre-jetbrains
+export DATAGRIP_JDK=/usr/lib/jvm/jre-jetbrains
+export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
+export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
+
 
 fullscreenshot() {
   date=$(date +%Y-%m-%dT%H:%M:%S%z)
