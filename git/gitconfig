@@ -8,7 +8,13 @@
   signinkey = AF1A2FB32989D487
 
 [alias]
+    st = status
+    rb = rebase
+    pushf = push --force-with-lease
+    ca = commit --amend
+    can = commit --amend --no-edit
     graph = log --graph --abbrev-commit --decorate --date=relative --all
+    rg = !sh -c 'git log -g --grep=$1'
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     fixup = !sh -c 'SHA=$(git rev-parse $1) \
       && git commit --fixup $SHA \
@@ -17,10 +23,9 @@
      && git fetch origin $BRANCH \
      && git reset --hard origin/$BRANCH
     fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
-    pushf = push --force-with-lease
 
 [commit]
-    gpgsign = true
+    gpgsign = false
 
 [pull]
     rebase = merges
