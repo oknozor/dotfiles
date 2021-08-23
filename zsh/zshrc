@@ -75,8 +75,9 @@ alias fzf='sk'
 alias du='dust'
 alias copy='wl-copy'
 
-# Work Alias
-alias decatvpn="sudo unshare -f -m -p --mount-proc sudo -u okno sh -c '/usr/local/pulse/pulseUi -S | /usr/local/bin/esets_daemon | /usr/local/bin/rtvscand'"
+# Monitor 
+alias monup="xrandr --output eDP --auto --primary --output HDMI-A-1-0  --auto --above eDP"
+alias mondown="xrandr --output HDMI-A-1-0 --off"
 
 
 source /usr/share/autojump/autojump.zsh

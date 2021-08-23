@@ -1,5 +1,6 @@
 [profiles.i3]
-hooks = ["i3-msg reload"]
+prehooks = ["echo installing i3 dotfiles"]
+posthooks = ["i3-msg reload"]
 
 [profiles.i3.dots]
 i3 =  { source = "i3/wm", target = ".config/i3" }
