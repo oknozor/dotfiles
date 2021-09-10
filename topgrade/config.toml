@@ -1,0 +1,2 @@
+assume_yes = true
+disable = ["vim", "neovim"]
