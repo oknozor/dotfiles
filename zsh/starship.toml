@@ -3,3 +3,6 @@ symbol = "⚙️ "
 
 [battery]
 disabled = true
+
+[gcloud]
+disabled = true
