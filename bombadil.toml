@@ -10,7 +10,6 @@ vars = [
 [settings.dots]
 alacritty = { source = "alacritty", target = ".config/alacritty" }
 onagre = { source = "onagre", target = ".config/onagre" }
-nwg = { source = "nwg-launchers", target = ".config/nwg-launchers" }
 zsh = { source = "zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
 starship = { source = "zsh/starship.toml", target = ".config/starhip.toml" }
@@ -34,6 +33,9 @@ path = "sway/sway.toml"
 
 [[import]]
 path = "i3/i3.toml"
+
+[[import]]
+path = "awesome/awesome.toml"
 
 [[import]]
 path = "themes.toml"

@@ -1,0 +1,6 @@
+displays:
+  - name: eDP
+    workspaces: [1,2,4,5,6,7,8,9,0]
+  - name: "HDMI-A-1-0"
+    workspaces: [3]
+    randr_extra_options: "--above eDP"
