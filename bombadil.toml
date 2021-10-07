@@ -35,7 +35,4 @@ path = "sway/sway.toml"
 path = "i3/i3.toml"
 
 [[import]]
-path = "awesome/awesome.toml"
-
-[[import]]
 path = "themes.toml"

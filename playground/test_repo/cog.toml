@@ -1,0 +1,9 @@
+changelog_path = "CHANGELOG.md"
+pre_bump_hooks = []
+post_bump_hooks = []
+authors = []
+tag_prefix = "v"
+
+[commit_types]
+
+[bump_profiles]
