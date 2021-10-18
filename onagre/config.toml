@@ -1,9 +1,7 @@
-icons = "Arc"
-
-[modes.xdg]
-source = "fd . /home/okno/"
-target = "xdg-open %"
-
 [modes.pass]
 source = "sh -c \"cd $HOME/.password-store && fd -t f . | sed s/\\.gpg//\"" 
 target = "sh -c \"pass -c %\""
+
+[modes.wifi]
+source = "sh -c \"nmcli device wifi list | awk '(NR>2)  { print  $2 }'\"" 
+target = "sh -c \"nmcli device wifi connect %\""

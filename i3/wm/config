@@ -29,7 +29,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-bindsym $mod+G exec rofi -show drun
+bindsym $mod+G exec onagre
 bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu
 
 # i3lock

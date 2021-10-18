@@ -1,101 +1,30 @@
-background = "#e8f1f9"
-foreground = "#e8f1f9"
-border_color = "#00000000"
-border_radius = 10
-border_width = 0
+font = "Iosevka,Iosevka Nerd Font"
+size = [550, 380]
+font_size = 18
+background = "#151515"
+border_width = 0.0
+border_color = "#5D5E72"
 
-[rows]
-background = "#e8f1f9"
-text_color = "#ffffff"
-border_color = "#000000"
-border_radius = 0
-border_width = 0
-width = "shrink"
-height = "fill"
-padding = 0
 [rows.lines.default]
-background = "#00000000"
-text_color = "#18405a"
-border_color = "#000000"
-border_radius = 0
-border_width = 0
-width = "fill"
-height = "shrink"
-padding = 4
+text_color = "#414141"
+padding = 5
 
 [rows.lines.selected]
-background = "#63b4fb"
-text_color = "#0000ff"
-border_color = "#00000000"
-border_radius = 5
-border_width = 0
-width = "fill"
-height = "shrink"
+text_color = "#ffffff"
 padding = 5
 
 [scrollable]
-background = "#00000000"
-border_color = "#000000"
-border_radius = 0
-border_width = 0
-height = "fill"
-width = "fill"
-padding = 0
-scrollbar_width = 10
-scroller_width = 10
+scrollbar_width = 5
+scroller_width = 5
 
 [scrollable.scroller]
-color = "#314c84"
-border_color = "#314c84"
-border_radius = 4
-border_width = 1
-
-[search]
-background = "#00000000"
-text_color = "#000000"
-width = 0
-height = 0
-padding = 4
-border_color = "#000000"
-border_radius = 0
-border_width = 0
+color = "#ffffff"
+border_color ="#ffffff"
 
 [search.bar]
-background = "#e8f1f9"
-value_color = "#000000"
-placeholder_color = "#fcfbfb"
-border_color = "#00ff00"
-selection_color = "#fcfbfb"
-border_radius = 0
-border_width = 0
-text_width = "fill"
+value_color = "#ffffff"
+placeholder_color = "#ffffff"
 
-[menu]
-background = "#63b4fb"
-text_color = "#ffffff"
-border_color = "#63b4fb"
-border_radius = 0
-border_width = 0
-width = 0
-height = 0
-padding = 0
-
-[menu.lines.default]
-background = "#00000000"
-text_color = "#000000"
-border_color = "#000000"
-border_radius = 0
-border_width = 0
-width = "fill"
-height = "shrink"
-padding = 0
-
-[menu.lines.selected]
-background = "#314c8400"
-text_color = "#000000"
-border_color = "#314c84"
-border_radius = 0
-border_width = 0
-width = 0
-height = 0
-padding = 0
+[search]
+height = 30
+padding = 2
