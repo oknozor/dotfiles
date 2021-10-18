@@ -1,61 +1,62 @@
 [core]
-    editor = nvim
-    pager = delta
+  editor = nvim
+  pager = delta
 
 [user]
-	email = paul.delafosse@protonmail.com
-	name = Paul Delafosse
+  email = paul.delafosse@protonmail.com
+  name = Paul Delafosse
   signinkey = AF1A2FB32989D487
 
 [alias]
-    st = status
-    rb = rebase
-    pushf = push --force-with-lease
-    ca = commit --amend
-    can = commit --amend --no-edit
-    graph = log --graph --abbrev-commit --decorate --date=relative --all
-    rg = !sh -c 'git log -g --grep=$1'
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    fixup = !sh -c 'SHA=$(git rev-parse $1) \
-      && git commit --fixup $SHA \
-      && git rebase -i --autosquash $SHA~' -
-    dammit = !BRANCH=$(git rev-parse --abbrev-ref HEAD) \
-     && git fetch origin $BRANCH \
-     && git reset --hard origin/$BRANCH
-    fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
+  st = status
+  rb = rebase
+  pushf = push --force-with-lease
+  ca = commit --amend
+  can = commit --amend --no-edit
+  canf = !sh -c 'git commit --amend --no-edit && git push --force-with-lease' 
+  graph = log --graph --abbrev-commit --decorate --date=relative --all
+  rg = !sh -c 'git log -g --grep=$1'
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  fixup = !sh -c 'SHA=$(git rev-parse $1) \
+    && git commit --fixup $SHA \
+    && git rebase -i --autosquash $SHA~' -
+  dammit = !BRANCH=$(git rev-parse --abbrev-ref HEAD) \
+    && git fetch origin $BRANCH \
+    && git reset --hard origin/$BRANCH
+  fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
 
 [commit]
-    gpgsign = false
+  gpgsign = false
 
 [pull]
-    rebase = merges
+  rebase = merges
 
 [merge]
-    tool = nvim
-	ff = only
+  tool = nvim
+  ff = only
 
 [mergetool "nvim"]
   cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
   keepBackup = false
 
 [difftool]
-    prompt = true
+  prompt = true
 
 [diff]
 
-    tool = nvimdiff
+  tool = nvimdiff
 [difftool "nvimdiff"]
-    cmd = "nvim -d "$LOCAL" "$REMOTE""
+  cmd = "nvim -d "$LOCAL" "$REMOTE""
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-    features = side-by-side line-numbers decorations
-    whitespace-error-style = 22 reverse
-	side-by-side = true
+  features = side-by-side line-numbers decorations
+  whitespace-error-style = 22 reverse
+  side-by-side = true
 
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
