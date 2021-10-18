@@ -182,9 +182,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
     " Theme
-    Plug 'sonph/onehalf', { 'rtp': 'vim' }
+    Plug 'overcache/NeoSolarized'
+    "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
+
+set background=dark
+colorscheme NeoSolarized
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -204,11 +208,8 @@ map <C-n> :NERDTreeToggle<CR>
   endif
 
 
-  " onalflight configs
   filetype plugin indent on   
-  set t_Co=256
   set cursorline
-  colorscheme onehalflight
 
  " Always display statusline.
 set laststatus=2

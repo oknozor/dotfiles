@@ -30,7 +30,7 @@ antigen bundle zuxfoucault/colored-man-pages_mod
 antigen apply
 
 export EDITOR=nvim
-export BAT_THEME="Solarized (light)"
+export BAT_THEME="Solarized (dark)"
 
 
 ####################
