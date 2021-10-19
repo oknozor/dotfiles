@@ -1,30 +1,34 @@
-font = "Iosevka,Iosevka Nerd Font"
-size = [550, 380]
+icon_theme = "Papyrus"
+font = "JetBrains Mono,JetBrains Mono Medium"
+size = [800, 280]
 font_size = 18
-background = "#151515"
+background = "#2E3440"
+border_color = "#00000000"
+border_radius = 0.0
 border_width = 0.0
-border_color = "#5D5E72"
 
 [rows.lines.default]
-text_color = "#414141"
+background = "#2E3440"
+text_color = "#81A1C1"
 padding = 5
 
 [rows.lines.selected]
-text_color = "#ffffff"
+background = "#2E3440"
+text_color = "#EBCB8B"
 padding = 5
 
 [scrollable]
-scrollbar_width = 5
-scroller_width = 5
-
-[scrollable.scroller]
-color = "#ffffff"
-border_color ="#ffffff"
+scrollbar_width = 0
+scroller_width = 0
 
 [search.bar]
-value_color = "#ffffff"
-placeholder_color = "#ffffff"
+background = "#3B4252"
+value_color = "#8FBCBB"
+placeholder_color = "#8FBCBB"
+border_color = "#00ff00ff"
+selection_color = "#fcfbfbff"
+text_width = "fill"
 
 [search]
+background = "#3B4252"
 height = 30
-padding = 2
