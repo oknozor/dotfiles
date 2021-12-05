@@ -20,7 +20,6 @@ export CL_JDK=/usr/lib/jvm/jre-jetbrains
 export DATAGRIP_JDK=/usr/lib/jvm/jre-jetbrains
 export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
 export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
-export CARGO_TARGET_DIR=$HOME/.cargo/target
 
 
 fullscreenshot() {
