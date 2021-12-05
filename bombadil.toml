@@ -15,7 +15,8 @@ onagre = { source = "onagre", target = ".config/onagre" }
 zsh = { source = "zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
 starship = { source = "zsh/starship.toml", target = ".config/starhip.toml" }
-git = { source = "git/gitconfig", target = ".gitconfig" }
+gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
+gitignore = { source = "git/gitignore", target = ".gitignore" }
 vim = { source = "nvim/init.vim", target = ".vimrc" }
 nvim = { source = "nvim", target = ".config/nvim" }
 illumination = { source = "illumination", target = ".config/illumination" }

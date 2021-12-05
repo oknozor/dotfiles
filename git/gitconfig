@@ -1,6 +1,7 @@
 [core]
   editor = nvim
   pager = delta
+  excludesfile = /home/okno/.gitignore
 
 [user]
   email = paul.delafosse@protonmail.com
