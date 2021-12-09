@@ -110,7 +110,6 @@ bindsym $mod+underscore workspace number $ws8
 bindsym $mod+ccedilla workspace number $ws9
 bindsym $mod+agrave workspace number $ws10
 
-# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+eacute move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3

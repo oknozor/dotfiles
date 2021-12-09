@@ -31,6 +31,7 @@ neofetch = { source = "neofetch", target = ".config/neofetch" }
 efm-langserver = { source = "efm-langserver", target = ".config/efm-langserver" }
 topgrade = { source = "topgrade", target = ".config/topgrade" }
 
+
 [[import]]
 path = "sway/sway.toml"
 
