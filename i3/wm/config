@@ -56,10 +56,10 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-bindsym Ctrl+Alt+Shift+H move workspace to output left
-bindsym Ctrl+Alt+Shift+J move workspace to output down
-bindsym Ctrl+Alt+Shift+K move workspace to output up
-bindsym Ctrl+Alt+Shift+L move workspace to output right
+bindsym $mod+Ctrl+Shift+h move workspace to output left
+bindsym $mod+Ctrl+Shift+j move workspace to output down
+bindsym $mod+Ctrl+Shift+k move workspace to output up
+bindsym $mod+Ctrl+Shift+l move workspace to output right
 
 # Split mod
 bindsym $mod+b splith
