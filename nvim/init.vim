@@ -180,6 +180,7 @@ call plug#begin('~/.vim/plugged')
     "
     " Language integration
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'elkowar/yuck.vim'
     
     " Theme
     Plug 'overcache/NeoSolarized'
