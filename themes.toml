@@ -1,6 +1,0 @@
-[profiles.darkside]
-vars = [ "bombadil/themes/darkside.toml" ]
-
-[profiles.solarized-dark]
-vars = [ "bombadil/themes/solarized-dark.toml" ]
-

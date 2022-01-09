@@ -1,45 +1,47 @@
 dotfiles_dir = "dotfiles"
 gpg_user_id = "paul.delafosse@protonmail.com"
+import = [
+  { path = "wm/sway/sway.toml" },
+  { path = "wm/i3/i3.toml" },
+  { path = "wm/leftwm/leftwm.toml" },
+  { path = "vars/themes.toml" }
+]
 
 [settings]
 vars = [
-    "bombadil/themes/sweay.toml",
-    "bombadil/vars.toml",
+    "vars/themes/sweay.toml",
+    "vars/vars.toml",
 ]
 
-posthooks = [ "nvim --headless +PlugInstall +qa" ]
+posthooks = [ 
+  "nvim --headless +PlugInstall +qa"
+]
 
 [settings.dots]
-alacritty = { source = "alacritty", target = ".config/alacritty" }
-onagre = { source = "onagre", target = ".config/onagre" }
-zsh = { source = "zsh/zshrc", target = ".zshrc" }
-zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
-starship = { source = "zsh/starship.toml", target = ".config/starhip.toml" }
-gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
-gitignore = { source = "git/gitignore", target = ".gitignore" }
-vim = { source = "nvim/init.vim", target = ".vimrc" }
-nvim = { source = "nvim", target = ".config/nvim" }
-illumination = { source = "illumination", target = ".config/illumination" }
-beets = { source = "beets", target = ".config/beets" }
-ncmpcpp = { source = "ncmpcpp", target = ".ncmpcpp" }
-mdp = { source = "mpd", target = ".config/mpd" }
-gpg_agent = { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
-xdg_dirs = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
-gtk2 = { source = "gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
-gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
-neofetch = { source = "neofetch", target = ".config/neofetch" }
-efm-langserver = { source = "efm-langserver", target = ".config/efm-langserver" }
-topgrade = { source = "topgrade", target = ".config/topgrade" }
+alacritty = { source = "common//term/alacritty", target = ".config/alacritty" }
+onagre = { source = "common/launcher/onagre", target = ".config/onagre" }
+zsh = { source = "common/shell/zsh/zshrc", target = ".zshrc" }
+zsh_env = { source = "common/shell/zsh/zshenv", target = ".zshenv" }
+starship = { source = "common/shell/zsh/starship.toml", target = ".config/starhip.toml" }
+gitconfig = { source = "common/git/gitconfig", target = ".gitconfig" }
+gitignore = { source = "common/git/gitignore", target = ".gitignore" }
+vim = { source = "common/editor/nvim/init.vim", target = ".vimrc" }
+nvim = { source = "common/editor/nvim", target = ".config/nvim" }
+illumination = { source = "common/editor/illumination", target = ".config/illumination" }
+beets = { source = "common/music/beets", target = ".config/beets" }
+ncmpcpp = { source = "common/music/ncmpcpp", target = ".ncmpcpp" }
+mdp = { source = "common/music/mpd", target = ".config/mpd" }
+gpg_agent = { source = "common/gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
+xdg_dirs = { source = "common/xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
+gtk2 = { source = "common/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
+gtk3 = { source = "common/gtk/gtk-3.0", target = ".config/gtk-3.0" }
+neofetch = { source = "common/neofetch", target = ".config/neofetch" }
+efm-langserver = { source = "common/editor/efm-langserver", target = ".config/efm-langserver" }
+topgrade = { source = "common/topgrade", target = ".config/topgrade" }
 
 [profiles.workstation]
 extra_profiles = [ "i3", "solarized-dark" ]
 
+[profiles.darkleft]
+extra_profiles = [ "leftwm", "solarized-dark" ]
 
-[[import]]
-path = "sway/sway.toml"
-
-[[import]]
-path = "i3/i3.toml"
-
-[[import]]
-path = "themes.toml"

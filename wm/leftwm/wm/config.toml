@@ -1,0 +1,29 @@
+modkey = "Mod4"
+mousekey = "Mod4"
+layout_mode = "Tag"
+tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
+disable_current_tag_swap = false
+keybind = [
+  # Launchers
+  { command = "Execute", value = "onagre", modifier = [ "modkey" ], key = "g"  },
+  { command = "Execute", value = "alacritty", modifier = [ "modkey" ], key = "Return" },
+  # General Wm commands
+  { command = "CloseWindow",  modifier = [ "modkey" , "Shift" ], key = "a" },
+  { command = "SoftReload",  modifier = [ "modkey" , "Shift" ], key = "r" },
+  { command = "Execute", value = "pkill leftwm",  modifier = [ "modkey" , "Shift" ], key = "e" },
+  # Switch Tags
+  { command = "GotoTag", value = "1",  modifier = [ "modkey" ], key = "ampersand" },
+  { command = "GotoTag", value = "2",  modifier = [ "modkey" ], key = "eacute" },
+  { command = "GotoTag", value = "3",  modifier = [ "modkey" ], key = "quotedbl" },
+  { command = "GotoTag", value = "4",  modifier = [ "modkey" ], key = "apostrophe" },
+  { command = "GotoTag", value = "5",  modifier = [ "modkey" ], key = "parenleft" },
+  { command = "GotoTag", value = "6",  modifier = [ "modkey" ], key = "minus" },
+  { command = "GotoTag", value = "7",  modifier = [ "modkey" ], key = "egrave" },
+  { command = "GotoTag", value = "8",  modifier = [ "modkey" ], key = "underscore" },
+  { command = "GotoTag", value = "9",  modifier = [ "modkey" ], key = "ccedilla" },
+  # Resize
+  { command = "IncreaseMainWidth",  modifier = [ "modkey" ], key = "Right" },
+  { command = "DecreaseMainWidth", modifier = [ "modkey" ], key = "Left" },
+]
+

@@ -181,6 +181,7 @@ call plug#begin('~/.vim/plugged')
     " Language integration
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'elkowar/yuck.vim'
+    Plug 'mboughaba/i3config.vim'
     
     " Theme
     Plug 'overcache/NeoSolarized'
@@ -222,5 +223,12 @@ let g:gitgutter_sign_modified = ''
 
 " Delimite mate
 let delimitMate_expand_cr = 1
+
+" Syntax
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+  au BufNewFile,BufRead ~/dotfiles/i3/wm/config set filetype=i3config
+aug end
 
 source ~/.config/nvim/coc-config.vim

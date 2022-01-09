@@ -1,0 +1,5 @@
+[profiles.leftwm]
+prehooks = ["echo installing leftwm dotfiles"]
+
+[profiles.leftwm.dots]
+wm = { source = "wm/leftwm/wm", target = ".config/leftwm" }

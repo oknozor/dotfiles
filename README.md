@@ -3,12 +3,12 @@
 These are my dotfiles I regularly update and tweak them.
 If you wan't to use them, feel free to fork, also you might need to adapt them. 
 
-![screenshot](screenshots/screenshot_01.png)
-![screenshot](screenshots/screenshot_02.png)
-![screenshot](screenshots/screenshot_03.png)
-![screenshot](screenshots/screenshot_04.png)
-![screenshot](screenshots/screenshot_05.png)
-![screenshot](screenshots/screenshot_06.png)
+![screenshot](docs/screenshots/sway/screenshot_01.png)
+![screenshot](docs/screenshots/sway/screenshot_02.png)
+![screenshot](docs/screenshots/sway/screenshot_03.png)
+![screenshot](docs/screenshots/sway/screenshot_04.png)
+![screenshot](docs/screenshots/sway/screenshot_05.png)
+![screenshot](docs/screenshots/sway/screenshot_06.png)
 
 ## Installation 
 
