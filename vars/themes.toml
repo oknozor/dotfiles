@@ -4,3 +4,8 @@ vars = [ "vars/themes/darkside.toml" ]
 [profiles.solarized-dark]
 vars = [ "vars/themes/solarized-dark.toml" ]
 
+[profiles.lenovo-yoga]
+vars = [ "vars/themes/yoga.toml", "vars/themes/nord.toml" ]
+
+
+

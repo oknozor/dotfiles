@@ -1,11 +1,11 @@
-icon_theme = "Papyrus"
+icon_theme = "ePapirus"
 font = "JetBrains Mono,JetBrains Mono Medium"
-size = [800, 280]
-font_size = 18
+size = [500, 280]
+font_size = 15
 background = "#2E3440"
-border_color = "#00000000"
-border_radius = 0.0
-border_width = 0.0
+border_color = "#2E3440"
+border_radius = 30.0
+border_width = 40.0
 
 [rows.lines.default]
 background = "#2E3440"
@@ -25,10 +25,12 @@ scroller_width = 0
 background = "#3B4252"
 value_color = "#8FBCBB"
 placeholder_color = "#8FBCBB"
-border_color = "#00ff00ff"
-selection_color = "#fcfbfbff"
+border_color = "#3B4252"
+selection_color = "#fcfbfb"
 text_width = "fill"
+border_radius = 30.0
+border_width = 45.0
 
 [search]
-background = "#3B4252"
+background = "#2E3440"
 height = 30

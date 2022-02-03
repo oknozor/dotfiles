@@ -45,3 +45,6 @@ extra_profiles = [ "i3", "solarized-dark" ]
 [profiles.darkleft]
 extra_profiles = [ "leftwm", "solarized-dark" ]
 
+[profiles.yoga]
+extra_profiles = [ "i3", "lenovo-yoga" ]
+
