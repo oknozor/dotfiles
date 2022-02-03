@@ -9,7 +9,6 @@ import = [
 
 [settings]
 vars = [
-    "vars/themes/sweay.toml",
     "vars/vars.toml",
 ]
 
