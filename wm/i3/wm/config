@@ -164,6 +164,7 @@ exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/wallpapers/nordsea.
 ## Floating windows
 
 for_window [class="jetbrains-idea" title="win0"] floating enable
+for_window [class="jetbrains-clion" title="win0"] floating enable
 for_window [class="Org.gnome.Nautilus"] floating enable
 for_window [class="onagre"] floating enable
 for_window [class="QtPass"] floating enable
