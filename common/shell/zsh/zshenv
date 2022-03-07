@@ -62,7 +62,7 @@ wob_volume() {
         volume=100
     fi
 
-    echo "$volume __[red]__ __[black]__ __[green]__"
+    echo "$volume {{red}} {{black}} {{green}}"
 }
 
 brightness_up() {

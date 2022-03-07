@@ -17,11 +17,11 @@ posthooks = [
 ]
 
 [settings.dots]
-alacritty = { source = "common//term/alacritty", target = ".config/alacritty" }
+alacritty = { source = "common/term/alacritty", target = ".config/alacritty" }
 onagre = { source = "common/launcher/onagre", target = ".config/onagre" }
 zsh = { source = "common/shell/zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "common/shell/zsh/zshenv", target = ".zshenv" }
-starship = { source = "common/shell/zsh/starship.toml", target = ".config/starhip.toml" }
+starship = { source = "common/shell/zsh/starship.toml", target = ".config/starship.toml" }
 gitconfig = { source = "common/git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "common/git/gitignore", target = ".gitignore" }
 vim = { source = "common/editor/nvim/init.vim", target = ".vimrc" }

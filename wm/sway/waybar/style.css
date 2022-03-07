@@ -29,7 +29,7 @@ window#waybar {
 }
 
 #mode {
-    background-color: __[bar_urgent]__;
+    background-color: {{bar_urgent}};
     margin-left: 150px;
     padding-left: 20px;
     padding-right: 20px;
@@ -47,8 +47,8 @@ window#waybar {
 }
 
 #workspaces button {
-    color: __[workspaces_fg]__;
-    background-color: __[worspace_bg]__;
+    color: {{workspaces_fg}};
+    background-color: {{worspace_bg}};
     margin-left: 5px;
     padding: 6px;
     border-radius: 100%;
@@ -62,12 +62,12 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    background-color: __[worspace_focused_bg]__;
+    background-color: {{worspace_focused_bg}};
     border-bottom: 3px solid #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: __[bar_urgent]__;
+    background-color: {{bar_urgent}};
 }
 
 #clock,
@@ -83,7 +83,7 @@ window#waybar {
 
 #clock {
     background: rgba(100, 100, 100, 0.5);
-    color: __[bar_clock_fg]__;
+    color: {{bar_clock_fg}};
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -103,14 +103,14 @@ window#waybar {
 
 @keyframes blink {
     to {
-        background-color: __[blink_bg]__;
-        color: __[blink_fg]__;
+        background-color: {{blink_bg}};
+        color: {{blink_fg}};
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: __[battery_critical_not_charging_bg]__;
-    color: __[battery_critical_not_charging_fg]__;
+    background-color: {{battery_critical_not_charging_bg}};
+    color: {{battery_critical_not_charging_fg}};
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -121,7 +121,7 @@ window#waybar {
 }
 
 label:focus {
-    background-color: __[label_focused]__;
+    background-color: {{label_focused}};
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -134,20 +134,20 @@ label:focus {
 }
 
 #network.disconnected {
-    color: __[bar_urgent]__;
+    color: {{bar_urgent}};
     padding-left: 16px;
     padding-right: 16px;
 }
 
 #pulseaudio {
     background: rgba(100, 100, 100, 0.5);
-    color: __[pulse_audio_fg]__;
+    color: {{pulse_audio_fg}};
     padding-left: 16px;
     padding-right: 16px;
 }
 
 #pulseaudio.muted {
-    background-color: __[pulse_audio_muted_bg]__;
+    background-color: {{pulse_audio_muted_bg}};
     color: #2a5c45;
     padding-left: 16px;
     padding-right: 16px;

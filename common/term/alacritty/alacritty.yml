@@ -37,29 +37,29 @@ debud.persistent_logging: false
 draw_bold_text_with_bright_colors: true
 colors:
   primary:
-    background: "__[background]__"
-    foreground: "__[foreground]__"
+    background: "{{background}}"
+    foreground: "{{foreground}}"
   cursor:
-    text: "__[text]__"
-    cursor: "__[cursor]__"
+    text: "{{text}}"
+    cursor: "{{cursor}}"
   normal:
-    black: "__[black]__"
-    red: "__[red]__"
-    green: "__[green]__"
-    yellow: "__[yellow]__"
-    blue: "__[blue]__"
-    magenta: "__[magenta]__"
-    cyan: "__[cyan]__"
-    white: "__[white]__"
+    black: "{{black}}"
+    red: "{{red}}"
+    green: "{{green}}"
+    yellow: "{{yellow}}"
+    blue: "{{blue}}"
+    magenta: "{{magenta}}"
+    cyan: "{{cyan}}"
+    white: "{{white}}"
   bright:
-    black: "__[light_black]__"
-    red: "__[light_red]__"
-    green: "__[light_green]__"
-    yellow: "__[light_yellow]__"
-    blue: "__[light_blue]__"
-    magenta: "__[light_magenta]__"
-    cyan: "__[light_cyan]__"
-    white: "__[light_white]__"
+    black: "{{light_black}}"
+    red: "{{light_red}}"
+    green: "{{light_green}}"
+    yellow: "{{light_yellow}}"
+    blue: "{{light_blue}}"
+    magenta: "{{light_magenta}}"
+    cyan: "{{light_cyan}}"
+    white: "{{light_white}}"
 bell:
   animation: EaseOutExpo
   duration: 0

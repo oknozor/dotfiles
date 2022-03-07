@@ -33,7 +33,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-bindsym $mod+G exec WGPU_BACKEND=vulkan onagre
+bindsym $mod+G exec DRI_PRIME=0 WGPU_BACKEND=vulkan onagre
 bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu
 
 # i3lock

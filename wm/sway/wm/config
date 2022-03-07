@@ -1,8 +1,8 @@
 # On start
 font "Fira Code 9"
-exec __[notification]__
+exec {{notification}}
 exec kanshi
-output * bg __[wallpaper]__ stretch
+output * bg {{wallpaper}} stretch
 
 ### Variables
 set $mod Mod4
@@ -11,9 +11,9 @@ set $down j
 set $up k
 set $right l
 
-set $term __[terminal]__
-set $bar __[bar]__
-set $launcher __[launcher]__
+set $term {{terminal}}
+set $bar {{bar}}
+set $launcher {{launcher}}
 set $pass wofipassmenu
 set $lock "swaylock -c 000000"
 

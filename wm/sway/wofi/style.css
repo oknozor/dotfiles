@@ -1,39 +1,39 @@
 .window {
     margin: 5px;
     padding: 5px;
-    background-color: __[bg]__;
+    background-color: {{bg}};
 }
 
 #input {
-    background-color: __[input_bg]__;
-    color: __[input_color]__;
-    border: 0px solid __[input_bg]__;
+    background-color: {{input_bg}};
+    color: {{input_color}};
+    border: 0px solid {{input_bg}};
 }
 
 #input:focus {
-    background-color: __[input_focused_bg]__;
-    color: __[input_focused_color]__;
-    border: 0px solid __[input_focused_border]__;
+    background-color: {{input_focused_bg}};
+    color: {{input_focused_color}};
+    border: 0px solid {{input_focused_border}};
 }
 
 #inner-box {
-    background-color: __[inner_box_bg]__;
+    background-color: {{inner_box_bg}};
 }
 
 #inner-box flowboxchild:focus {
-    background-color: __[inner_box_flowchild_focused_bg]__;
+    background-color: {{inner_box_flowchild_focused_bg}};
 }
 
 #outer-box {
-    background-color: __[outer_box_bg]__;
+    background-color: {{outer_box_bg}};
 }
 
 #text {
     margin: 2px;
-    background-color: __[text_bg]__;
-    color: __[text]__;
+    background-color: {{text_bg}};
+    color: {{text}};
 }
 
 #scroll {
-    background-color: __[scroll]__;
+    background-color: {{scroll}};
 }
