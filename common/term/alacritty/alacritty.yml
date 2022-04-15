@@ -64,7 +64,7 @@ bell:
   animation: EaseOutExpo
   duration: 0
   color: "0xffffff"
-mouse_bindings:
+mouse_bindings: 
   - mouse: Middle
     action: PasteSelection
 mouse:

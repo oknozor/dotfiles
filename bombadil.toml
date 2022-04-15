@@ -41,6 +41,9 @@ topgrade = { source = "common/topgrade", target = ".config/topgrade" }
 [profiles.workstation]
 extra_profiles = [ "i3", "solarized-dark" ]
 
+[profiles.swaystation]
+extra_profiles = [ "sway", "solarized-dark" ]
+
 [profiles.darkleft]
 extra_profiles = [ "leftwm", "solarized-dark" ]
 

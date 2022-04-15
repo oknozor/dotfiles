@@ -28,7 +28,7 @@
             "7": "",
             "8": "",
             "9": "",
-            "10": "",
+            "10": ""
         }
     },
 
@@ -40,7 +40,8 @@
     },
     "sway/language": {
         "format": "[{}]",
-        "max-length": 50
+        "max-length": 50,
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -101,5 +102,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
+    }
 }

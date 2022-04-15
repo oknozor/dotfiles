@@ -76,6 +76,7 @@ window#waybar {
 #pulseaudio,
 #tray,
 #mode,
+#language,
 #idle_inhibitor {
     margin-bottom: 7px;
     margin-top: 7px;
@@ -157,6 +158,10 @@ label:focus {
     background: rgba(100, 100, 100, 0.5);
     padding-left: 16px;
     padding-right: 24px;
+}
+
+#language {
+    background-color: rgba(100, 100, 100, 0.5);
 }
 
 #idle_inhibitor {

@@ -3,7 +3,8 @@ bar = "waybar"
 # notification = "deadd-notification-center"
 notification = "mako"
 
-launcher = "wofi --show drun"
+launcher = "onagre"
+wallpaper = "/home/okno/dotfiles/assets/wallpapers/nordsea.png"
 
 client_focused_border = "%yellow"
 client_focused_background = "%background"    
