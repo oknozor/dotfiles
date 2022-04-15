@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pactl get-sink-volume @DEFAULT_SINK@ | grep "Vol" | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'

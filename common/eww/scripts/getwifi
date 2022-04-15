@@ -1,0 +1,21 @@
+#!/bin/sh
+
+eww update ssids_loaded=false
+eww open wifi_list
+ssids="$(nmcli -f SSID,IN-USE device wifi list| sed -n '1!p' | uniq)"
+
+box=""
+while IFS= read -r ssid; do
+    if [[ $ssid == *'*'* ]]; then
+        ssid=$(echo "$ssid" | cut -d'*' -f1 | xargs)
+        box="$box (button :class \"ssid active\" :timeout \"15s\" :onclick \"nmcli connection up $ssid\" \"$ssid\")"
+    else
+        ssid=$(echo "$ssid" | xargs)
+        box="$box (button :class \"ssid\" :timeout \"15s\" :onclick \"nmcli connection up $ssid\" \"$ssid\")"
+    fi
+done <<< "$ssids"
+eww update ssids="$box"
+eww update ssids_loaded=true
+
+
+

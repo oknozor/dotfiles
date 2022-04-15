@@ -1,0 +1,5 @@
+#!/bin/sh
+
+value=$1
+value=$( printf "%.0f" $value )
+pactl set-sink-volume @DEFAULT_SINK@ "$value%"

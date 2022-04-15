@@ -1,0 +1,25 @@
+;; Workspace icons
+(defvar workspace_1 "{{workspace_1}}")
+(defvar workspace_2 "{{workspace_2}}")
+(defvar workspace_3 "{{workspace_3}}")
+(defvar workspace_4 "{{workspace_4}}")
+(defvar workspace_5 "{{workspace_5}}")
+(defvar workspace_6 "{{workspace_6}}")
+(defvar workspace_7 "{{workspace_7}}")
+(defvar workspace_8 "{{workspace_8}}")
+(defvar workspace_9 "{{workspace_9}}")
+(defvar workspace_10 "{{workspace_10}}")
+
+;; Listener
+(deflisten workspaces :initial "(box (workspace_icon :class 'workspace_focused' :icon workspace_1))" `ewwdot -w sway -e workspace`)
+
+
+(defwidget workspaces []
+    (literal :content workspaces)
+  )
+  
+  
+  (defwidget workspace_icon [class icon]
+    (button :class class {icon})
+  )
+  

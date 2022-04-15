@@ -8,7 +8,10 @@ import = [
 ]
 
 [settings]
-vars = [ "vars/vars.toml" ]
+vars = [ 
+  "vars/vars.toml",
+  "vars/fontawesome.toml"
+]
 
 posthooks = [ 
   "nvim --headless +PlugInstall +qa"

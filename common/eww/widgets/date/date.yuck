@@ -1,0 +1,33 @@
+(defpoll time :interval "10s" :initial "initial-value" `date +%H:%M`)
+(defpoll calendar_day :initial "date '+%d'" :interval "20h" "date '+%d'")
+(defpoll calendar_year :initial "date '+%Y'" :interval "20h" "date '+%Y'")
+
+(defwidget date []
+  (box
+    (button :class "icon"
+      :onclick "eww open calendar"
+    {time})
+  )
+)
+
+(defwindow calendar
+  :monitor 0
+  :geometry (geometry :x "-20px"
+    :y "3%"
+    :x "3%"
+    :anchor "top right"
+    :width "270px"
+  :height "60px")
+  (cal))
+
+(defwidget cal []
+  (eventbox :onhoverlost "eww close calendar"
+    (box :class "cal" :orientation "v"
+      (box :class "cal-in"
+        (calendar :class "cal"
+          :day calendar_day
+        :year calendar_year)
+      )
+    )
+  )
+)

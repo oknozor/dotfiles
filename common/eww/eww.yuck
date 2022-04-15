@@ -1,19 +1,72 @@
-(defvar battery-charging "{{battery_charging}}")
-(defvar battery-charging "{{battery_charging}}")
+(include "./widgets/workspace/workspace.yuck")
+(include "./widgets/battery/battery.yuck")
+(include "./widgets/date/date.yuck")
+(include "./widgets/net/netinterface.yuck")
+(include "./widgets/audio/pulseaudio.yuck")
+(include "./widgets/window/current_window.yuck")
+(include "./widgets/brightness/brightness.yuck")
 
-(defwindow example
-    :monitor 0
-    :geometry (geometry :x "0%"
-                        :y "20px"
-                        :width "90%"
-                        :height "30px"
-                        :anchor "top center")
-    :stacking "fg"
-    :reserve (struts :distance "40px" :side "top")
-    :windowtype "dock"
-    :wm-ignore false
-"example content")
-
-(defwidget battery[status value]
-    {status = "Charging" : {battery-charging} }
+(defwindow bar
+  :class "bar"
+  :monitor 0
+  :geometry (geometry :x "0%"
+    :y "0px"
+    :width "100%"
+    :height "45px"
+  :anchor "top center")
+  :stacking "fg"
+  :reserve (struts :distance "45px" :side "top")
+  :windowtype "dock"
+  :exclusive true
+  :wm-ignore false
+  (bar_container)
 )
+
+
+(defwidget bar_container []
+  (box
+    :orientation "h"
+    (bar_left)
+    (bar_center)
+    (bar_right)
+    
+  )
+)
+
+(defwidget bar_left []
+  (box
+    :halign "start"
+    :class "bar_left"
+    (current_window)
+  )
+)
+
+(defwidget bar_center []
+  (box
+    :class "bar_center"
+    :halign "center"
+    (workspaces)
+  )
+)
+
+(defwidget bar_right []
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    :class "bar_right"
+    (date)
+    (wifi)
+    (ethernet)
+    (volume)
+    (brightness)
+    (
+      battery
+      :status {EWW_BATTERY["BAT1"].status}
+      :value {EWW_BATTERY["BAT1"].capacity}
+    )
+  )
+)
+
+
+

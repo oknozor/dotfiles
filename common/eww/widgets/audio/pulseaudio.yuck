@@ -1,0 +1,43 @@
+(defpoll volume_percent :initial 0 :interval "1s" "scripts/getvol")
+(defvar vol_reveal false)
+
+;; Icons
+(defvar volume_zero "{{volume_zero}}")
+(defvar volume_low "{{volume_low}}")
+(defvar volume_high "{{volume_high}}")
+(defvar volume_muted "{{volume_muted}}")
+
+(defwidget volume []
+  (box
+    (eventbox
+      :onhover "eww update vol_reveal=true"
+      :onhoverlost "eww update vol_reveal=false"
+      (box
+        :space-evenly "false" :orientation "h" :spacing "3"
+        (
+          box
+          :class "volume icon"
+          {volume_percent == 0 ? volume_zero :
+            volume_percent <= 50 ? volume_low :
+            volume_high}
+        )
+        (
+          revealer
+          :transition "slideleft"
+          :reveal vol_reveal
+          :duration "350ms"
+          (
+            scale
+            :class "volbar"
+            :value volume_percent
+            :orientation "h"
+            :tooltip "${volume_percent}%"
+            :max 100.0
+            :min 0.0
+            :onchange "scripts/setvol {}"
+          )
+        )
+      )
+    )
+  )
+)

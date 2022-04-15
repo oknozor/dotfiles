@@ -1,4 +1,0 @@
-
-bar {
-    swaybar_command $bar
-}
