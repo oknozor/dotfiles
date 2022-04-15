@@ -8,9 +8,7 @@ import = [
 ]
 
 [settings]
-vars = [
-    "vars/vars.toml",
-]
+vars = [ "vars/vars.toml" ]
 
 posthooks = [ 
   "nvim --headless +PlugInstall +qa"
@@ -37,6 +35,7 @@ gtk3 = { source = "common/gtk/gtk-3.0", target = ".config/gtk-3.0" }
 neofetch = { source = "common/neofetch", target = ".config/neofetch" }
 efm-langserver = { source = "common/editor/efm-langserver", target = ".config/efm-langserver" }
 topgrade = { source = "common/topgrade", target = ".config/topgrade" }
+eww = { source = "common/eww", target = ".config/eww" }
 
 [profiles.workstation]
 extra_profiles = [ "i3", "solarized-dark" ]

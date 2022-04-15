@@ -1,5 +1,6 @@
 # On start
 font "Fira Code 9"
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec {{notification}}
 exec kanshi
 output * bg {{wallpaper}} stretch

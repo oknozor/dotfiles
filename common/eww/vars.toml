@@ -1,0 +1,6 @@
+battery_charging = ""
+battery-empty = ""
+battery-quarter = ""
+battery-half = ""
+battery-three-quarter = ""
+battery-full = ""
