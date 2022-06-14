@@ -54,21 +54,3 @@ switch_bombadil_profile() {
   fi
 
 }
-
-wob_volume() {
-    volume=$(pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g')
-    if [ "$volume" -gt 100 ]; 
-    then    
-        volume=100
-    fi
-
-    echo "$volume {{red}} {{black}} {{green}}"
-}
-
-brightness_up() {
-    brightnessctl set +10%
-    BRIGHTNESS=$(brightnessctl g)
-    NOTI_ID=$(notify-send.py "Brightness" "$BRIGHTNESS/100" \
-                         --hint string:image-path:video-display boolean:transient:true \
-                         --replaces-process "brightness-popup")
-}

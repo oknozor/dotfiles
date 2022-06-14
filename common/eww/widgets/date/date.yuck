@@ -4,30 +4,8 @@
 
 (defwidget date []
   (box
-    (button :class "icon"
-      :onclick "eww open calendar"
+    (button :valign "center"
+      :onclick "sh -c \"de-launch /usr/share/applications/org.gnome.Calendar.desktop\""
     {time})
-  )
-)
-
-(defwindow calendar
-  :monitor 0
-  :geometry (geometry :x "-20px"
-    :y "3%"
-    :x "3%"
-    :anchor "top right"
-    :width "270px"
-  :height "60px")
-  (cal))
-
-(defwidget cal []
-  (eventbox :onhoverlost "eww close calendar"
-    (box :class "cal" :orientation "v"
-      (box :class "cal-in"
-        (calendar :class "cal"
-          :day calendar_day
-        :year calendar_year)
-      )
-    )
   )
 )

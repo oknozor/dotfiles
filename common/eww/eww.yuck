@@ -1,24 +1,24 @@
 (include "./widgets/workspace/workspace.yuck")
-(include "./widgets/battery/battery.yuck")
 (include "./widgets/date/date.yuck")
 (include "./widgets/net/netinterface.yuck")
-(include "./widgets/audio/pulseaudio.yuck")
+(include "./widgets/control/control.yuck")
 (include "./widgets/window/current_window.yuck")
-(include "./widgets/brightness/brightness.yuck")
+(include "./widgets/screenshot/screenshot.yuck")
 
 (defwindow bar
   :class "bar"
   :monitor 0
   :geometry (geometry :x "0%"
-    :y "0px"
-    :width "100%"
-    :height "45px"
+    :y "8px"
+    :width "80%"
+    :height "30px"
   :anchor "top center")
   :stacking "fg"
-  :reserve (struts :distance "45px" :side "top")
+  :reserve (struts :distance "40px" :side "top")
   :windowtype "dock"
   :exclusive true
   :wm-ignore false
+  :hexpand false
   (bar_container)
 )
 
@@ -28,36 +28,34 @@
     :orientation "h"
     (bar_left)
     (bar_center)
+    (screenshot)
     (bar_right)
-    
   )
 )
 
 (defwidget bar_left []
   (box
     :halign "start"
-    :class "bar_left"
-    (current_window)
+    :class "container"
+    (workspaces)
   )
 )
 
 (defwidget bar_center []
   (box
-    :class "bar_center"
+    :class "container"
     :halign "center"
-    (workspaces)
+    (date)
   )
 )
 
 (defwidget bar_right []
   (box
     :orientation "h"
-    :space-evenly false
+    :spacing 8
     :halign "end"
-    :class "bar_right"
-    (date)
+    :class "container"
     (wifi)
-    (ethernet)
     (volume)
     (brightness)
     (

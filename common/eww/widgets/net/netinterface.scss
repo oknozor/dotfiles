@@ -1,11 +1,3 @@
-.ssid {
-    background-color: wheat;
-
-    &.active {
-        background-color: red;
-    }
-}
-
-.ssid:hover {
-    background-color: blue;
+.wifi {
+    background-color: {{green}};
 }

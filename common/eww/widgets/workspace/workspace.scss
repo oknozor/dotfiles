@@ -1,22 +1,12 @@
 .workspace {
-    margin-left: 5px;
     padding: 6px;
-    border-radius: 100%;
 
     &.focused {
-        background-color: {{worspace_focused_bg}};
-        border-bottom: 3px solid #ffffff;
-    }
-
-    &.normal {
-        background-color: {{worspace_bg}};
-
+        border-radius: 3px;
+        background-color: {{light_black}};
     }
 }
 
 .workspace:hover {
-    color: #18405a;
-    background: #fffc8b;
-    box-shadow: inherit;
-    border-bottom: 3px solid #ffffff;
+    background: {{light_red}};
 }

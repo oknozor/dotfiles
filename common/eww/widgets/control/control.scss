@@ -1,0 +1,57 @@
+.sound-icon {
+    background-color: {{blue}};
+}
+
+.brightness-icon {
+    background-color: {{yellow}};
+}
+
+.battery-icon {
+    background-color: {{cyan}};
+}
+
+.volbar trough highlight {
+    background-image: linear-gradient(to right, {{light_blue}} 30%, {{light_blue}} 50%, {{blue}} 100% *50);
+    border-radius: 10px;
+  }
+
+.volbar trough {
+    background-color: {{background}};
+    border-radius: 16px;
+    min-height: 10px;
+    min-width: 70px;
+    margin: 0px 10px 0px 0px;
+}
+
+.brightbar trough highlight {
+    background-image: linear-gradient(to right, {{light_yellow}} 30%, {{light_yellow}} 50%, {{yellow}} 100% *50);
+    border-radius: 10px;
+}
+  
+.brightbar trough {
+    background-color: {{background}};
+    border-radius: 16px;
+    min-height: 10px;
+    min-width: 70px;
+    margin: 0px 10px 0px 0px;
+}
+
+.batbar trough highlight {
+    background-image: linear-gradient(to right, {{light_green}} 30%, {{light_green}} 50%, {{green}} 100% *50);
+    border-radius: 10px;
+  }
+
+.batbar trough {
+    background-color: {{background}};
+    border-radius: 16px;
+    min-height: 10px;
+    min-width: 70px;
+    margin: 0px 10px 0px 0px;
+}
+
+.sliders {
+    background-color: {{background}};
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px;
+}

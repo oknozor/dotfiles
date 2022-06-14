@@ -1,58 +1,29 @@
-@import 'widgets/date/calendar.scss';
 @import 'widgets/workspace/workspace.scss';
-@import 'widgets/audio/pulseaudio.scss';
+@import 'widgets/control/control.scss';
 @import 'widgets/net/netinterface.scss';
-@import 'widgets/brightness/brightness.scss';
+@import 'widgets/screenshot/screenshot.scss';
 
 * {
     color: {{workspaces_fg}};
     border: none;
-    border-radius: 0;
-    font-family: "Fira Code Medium", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    background-color: transparent;
+    font-family: "Fira Code Medium", "Font Awesome 6 Brands Solid", "Font Awesome 6 Free Solid";
     min-height: 0;
+    background-color: transparent;
 }
 
 .bar {
     transition-property: background-color;
     transition-duration: .5s;
+    background-color: {{background}};
+    border-radius: 6;
+    font-size: 16px;
 }
 
-.bar_center {
-    background-color: rgba(100, 100, 100, 0.5);
-    margin-bottom: 7px;
-    margin-top: 7px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 40px 400px 40px 400px;
+.container {
+    padding: 10px;
 }
 
-.bar_right {
-    background-color: rgba(100, 100, 100, 0.5);
-    margin-bottom: 7px;
-    margin-top: 7px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 40px 0 0 400px;
-
-    .icon {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
-.bar_left {
-    background-color: rgba(100, 100, 100, 0.5);
-    margin-bottom: 7px;
-    margin-top: 7px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 0 400px 40px 0;
+.icon {
+    padding: 6px;
+    border-radius: 3;
 }

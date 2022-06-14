@@ -1,0 +1,14 @@
+.screenshot-mode {
+    background-color: {{background}};
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.screenshot-area:hover {
+    background: {{light_red}};
+}
+
+.screenshot-display:hover {
+    background: {{light_red}};
+}

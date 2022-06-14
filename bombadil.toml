@@ -40,15 +40,19 @@ efm-langserver = { source = "common/editor/efm-langserver", target = ".config/ef
 topgrade = { source = "common/topgrade", target = ".config/topgrade" }
 eww = { source = "common/eww", target = ".config/eww" }
 
-[profiles.workstation]
+[profiles.msi]
 extra_profiles = [ "i3", "solarized-dark" ]
 
-[profiles.swaystation]
+[profiles.msi-sway]
 extra_profiles = [ "sway", "solarized-dark" ]
 
-[profiles.darkleft]
+[profiles.leftwm]
 extra_profiles = [ "leftwm", "solarized-dark" ]
 
 [profiles.yoga]
 extra_profiles = [ "i3", "lenovo-yoga" ]
+
+[profiles.yoga-sway]
+extra_profiles = [ "sway", "lenovo-yoga" ]
+
 

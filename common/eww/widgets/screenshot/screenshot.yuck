@@ -1,0 +1,69 @@
+(defvar reveal false)
+(defvar camera "{{camera}}")
+(defvar display "{{display}}")
+(defvar select "{{select}}")
+
+(defwindow screenshot
+  :class "sliders"
+  :monitor 0
+  :geometry (geometry :x "0%"
+    :y "8px"
+    :x "560px"
+  :anchor "top right")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
+  :hexpand false
+  (screenshot_mode)
+)
+
+(defwidget screenshot_mode []
+  (eventbox
+    :onhoverlost "eww close screenshot"
+    (box
+      :class "screenshot-mode"
+      :spacing 20
+      :halign "center"
+      :valign "center"
+      :vexpand "false"
+      :hexpand "false"
+      :orientation "h"
+      (box
+        (box :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+          :valign "center"
+          :halign "center"
+          (
+            button
+            :class "icon screenshot-display"
+            :onclick "scripts/screenshot"
+            {display}
+          )
+        )
+        (box :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false"
+          :valign "center"
+          :halign "center"
+          (
+            button
+            :class "icon screenshot-area"
+            :onclick "scripts/screenshot_area"
+            {select}
+          )
+        )
+      )
+    )
+  )
+)
+
+(defwidget screenshot []
+  (box
+    :halign "end"
+    :class "container"
+    (button
+      :onclick "eww open screenshot"
+      (box
+        (label :text {camera})
+      )
+    )
+  )
+)

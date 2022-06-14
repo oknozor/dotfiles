@@ -10,7 +10,7 @@ volume_low = ""
 volume_high = ""
 volume_muted = ""
 
-brightness = "盛"
+brightness = ""
 
 workspace_1 = ""
 workspace_2 = ""
@@ -27,3 +27,7 @@ wifi_up = ""
 wifi_down = ""
 eth_up = ""
 eth_down = ""
+
+camera = ""
+display = ""
+select = ""

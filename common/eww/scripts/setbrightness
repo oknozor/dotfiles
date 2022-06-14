@@ -1,5 +1,6 @@
 #!/bin/sh
 
 value=$1
-value=$( printf "%.0f" $value )
+value=$(echo "scale=3; ($value / 100) * 255" | bc)
+value=${value%.*}
 brightnessctl set $value

@@ -1,0 +1,3 @@
+!#/bin/sh
+
+nmcli -f NAME -t connection show --active

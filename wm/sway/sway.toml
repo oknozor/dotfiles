@@ -3,7 +3,5 @@ hooks = ["sway reload"]
 
 [profiles.sway.dots]
 sway = { source = "wm/sway/wm", target = ".config/sway" }
-sway_start = { source = "wm/sway/start.sh", target = "start.sh" }
 kanshi = { source = "wm/sway/kanshi", target = ".config/kanshi" }
 mako = { source = "wm/sway/mako", target = ".config/mako" }
-wofi = { source = "wm/sway/wofi", target = ".config/wofi" }

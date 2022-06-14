@@ -159,7 +159,7 @@ focus_follows_mouse no
 for_window [class=".*"] border pixel 0
 
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
-exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/wallpapers/nordsea.png
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/assets/wallpapers/cyclobutane.png
 
 
 ## Floating windows
@@ -169,6 +169,7 @@ for_window [class="jetbrains-clion" title="win0"] floating enable
 for_window [class="Org.gnome.Nautilus"] floating enable
 for_window [class="onagre"] floating enable
 for_window [class="QtPass"] floating enable
+for_window [class="Gedit"] floating enable
 
 ## Window assignent
 

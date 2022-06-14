@@ -10,16 +10,14 @@
 (defvar workspace_9 "{{workspace_9}}")
 (defvar workspace_10 "{{workspace_10}}")
 
-;; Listener
 (deflisten workspaces :initial "(box (workspace_icon :class 'workspace_focused' :icon workspace_1))" `ewwdot -w sway -e workspace`)
 
 
 (defwidget workspaces []
-    (literal :content workspaces)
-  )
-  
-  
-  (defwidget workspace_icon [class icon]
-    (button :class class {icon})
-  )
-  
+  (box :valign "center" (literal :content workspaces))
+)
+
+
+(defwidget workspace_icon [class icon] 
+  (button :class class {icon})
+)

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M")"
+eww close screenshot
+grimshot save area $FILE && paplay "~/dotfiles/audio/screenshot.wav"

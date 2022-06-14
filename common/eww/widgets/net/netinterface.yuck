@@ -1,42 +1,13 @@
 (defvar wifi_up "{{wifi_up}}")
 (defvar wifi_down "{{wifi_down}}")
-(defvar eth_up "{{eth_up}}")
-(defvar eth_down "{{eth_down}}")
-(defvar ssids_loaded false)
-(defvar ssids "")
 
 (defwidget wifi []
-  (button
+  (button 
+    :width 30
+    :halign "center"
+    :valign "center"
     :onclick "scripts/getwifi &"
     :class "wifi icon"
     "${EWW_NET["wlp4s0"] == "up" ? wifi_up : wifi_down}"
-  )
-)
-
-(defwidget ethernet []
-  (box :class "ethernet icon" {EWW_NET["enp5s0"] == "up" ? eth_up : eth_down})
-)
-
-(defwindow wifi_list
-  :monitor 0
-  :geometry (geometry :x "-20px"
-    :y "3%"
-    :x "3%"
-    :anchor "top right"
-    :width "100px"
-    :height "60px"
-  )
-  (wifi_ssids))
-
-(defwidget wifi_ssids []
-  (box 
-    (box :class "spinner")
-    (eventbox :onhoverlost "eww close wifi_list"
-      (literal :content "(box 
-        :halign 'center'
-        :vexpand true
-        :orientation 'v'
-        ${ssids})")
-    )
   )
 )
