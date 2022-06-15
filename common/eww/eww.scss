@@ -27,3 +27,11 @@
     padding: 6px;
     border-radius: 3;
 }
+
+menu {
+    background-color: {{background}};
+}
+
+menuitem:hover {
+    background-color: {{light_black}};
+}

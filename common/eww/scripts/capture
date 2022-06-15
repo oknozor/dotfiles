@@ -1,0 +1,12 @@
+#!/bin/sh
+
+pid=$(pgrep wf-recorder)
+
+if [ $pid != "" ]
+then
+  echo "stopping recording $pid"
+  kill -s INT $pid
+else
+  FILE=~/Documents/Videos/"capture-$(date +"%Y-%m-%dT%H:%M:%S").mp4"
+  wf-recorder -f "$FILE" &
+fi

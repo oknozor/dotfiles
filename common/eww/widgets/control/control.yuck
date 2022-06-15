@@ -20,7 +20,7 @@
   :monitor 0
   :geometry (geometry :x "0%"
     :y "8px"
-    :x "230px"
+    :x "465px"
   :anchor "top right")
   :stacking "fg"
   :reserve (struts :distance "40px" :side "top")
@@ -69,6 +69,10 @@
       :max 100
       :min 0
     :onchange "scripts/setbrightness {}")
+    (label 
+      :halign "end"
+      :text "${brightness_percent}%"
+    )
   )
 )
 
@@ -87,10 +91,13 @@
       :class "volbar"
       :value volume_percent
       :orientation "h"
-      :tooltip "${volume_percent}%"
       :max 100.0
       :min 0.0
       :onchange "scripts/setvol {}"
+    )
+    (label 
+      :halign "end"
+      :text "${volume_percent}%"
     )
   )
 )
@@ -131,7 +138,8 @@
     :valign "center"
     :halign "center"
     :width 30
-    (box
+    (button
+      :onclick "eww open sliders"
       :class "icon battery-icon"
       :tooltip "${value}%"
       {status == "Charging" ? battery_charging :
@@ -167,6 +175,11 @@
       :max 100.0
       :min 0.0
     )
+    (label 
+      :halign "end"
+      :text "${EWW_BATTERY["BAT1"].capacity}%"
+    )
+    
   )
 )
 

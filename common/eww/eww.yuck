@@ -28,8 +28,9 @@
     :orientation "h"
     (bar_left)
     (bar_center)
-    (screenshot)
-    (bar_right)
+    (screen_capture)
+    (indicators)
+    (systray)
   )
 )
 
@@ -41,6 +42,15 @@
   )
 )
 
+(defwidget screen_capture []
+  (box
+    :halign "end"
+    :class "container"
+    (screenshot)
+    (record)
+  )
+)
+
 (defwidget bar_center []
   (box
     :class "container"
@@ -49,7 +59,7 @@
   )
 )
 
-(defwidget bar_right []
+(defwidget indicators []
   (box
     :orientation "h"
     :spacing 8
@@ -66,5 +76,12 @@
   )
 )
 
-
-
+(defwidget systray []
+  (box
+    :orientation "h"
+    :spacing 8
+    :halign "end"
+    :class "container"
+    (system-tray)
+  )
+)

@@ -1,32 +1,32 @@
 .onagre {
   --exit-unfocused: false;
-  height: 400px;
+  height: 375px;
   width: 600px;
-  --font-family: "Iosevka,Iosevka Nerd Font";
   --icon-theme: "Papirus";
-  --icon-size: 30px;
-  font-size: 24px;
-  background: #18181b;
-  color: #a0a0ab;
-  border-color: #5d5e72;
+  --icon-size: 28px;
+  --font-family: "Iosevka Nerd Font Mono";
+  background: #2E3440;
+  color: #81a1c1;
+  border-color: #2E3440;
   border-width: 4px;
   padding: 10px;
 
   .container {
     .search {
       --spacing: 1;
-      background: #d8dee9;
-      border-radius: 0;
-      color: #18181b;
+      background: #3b4252;
+      color: #d8dee9;
       padding: 4px;
       --height: fill-portion 1;
+
       .plugin-hint {
         font-size: 18px;
-        color: #d8dee9;
+        color: #bf616a;
         padding: 4px;
         border-width: 2px;
-        border-color: #5d5e72;
-        background: #18181b;
+        border-color: #bf616a;
+        border-radius: 5%;
+        background: #4c566a;
         --align-x: center;
         --align-y: center;
         --width: fill-portion 2;
@@ -34,46 +34,52 @@
       }
 
       .input {
+        font-size: 24px;
         --width: fill-portion 11;
       }
 
     }
 
     .rows {
-      --height: fill-portion 6;
+      --height: fill-portion 5;
 
-      .row {
+      .row-selected {
+        background: #2E3440;
+        color: #ebcb8b;
+        --spacing: 3px;
+        --align-y: center;
+
         .title {
-          font-size: 24px;
+          font-size: 22px;
         }
+
         .description {
-          font-size: 16px;
+          font-size: 20px;
         }
+
         .category-icon {
-          --icon-size: 20px;
+          --icon-size: 15px;
         }
       }
 
-      .row-selected {
+      .row {
         .title {
-          font-size: 24px;
+          font-size: 22px;
         }
+
         .description {
-          font-size: 16px;
+          font-size: 20px;
         }
+
         .category-icon {
-          --icon-size: 20px;
+          --icon-size: 15px;
         }
-        background: #20212c;
-        color: #5d5e72;
-        --spacing: 3px;
       }
     }
 
     .scrollable {
       .scroller {
-        color: #A0A0AB;
-        border-color: #18181b;
+        color: #4c566a;
       }
     }
   }

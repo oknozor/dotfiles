@@ -2,13 +2,14 @@
 (defvar camera "{{camera}}")
 (defvar display "{{display}}")
 (defvar select "{{select}}")
+(defvar record "{{record}}")
 
 (defwindow screenshot
   :class "sliders"
   :monitor 0
   :geometry (geometry :x "0%"
     :y "8px"
-    :x "560px"
+    :x "830px"
   :anchor "top right")
   :stacking "fg"
   :reserve (struts :distance "40px" :side "top")
@@ -57,12 +58,32 @@
 
 (defwidget screenshot []
   (box
-    :halign "end"
-    :class "container"
+    :width 30
+    :valign "center"
+    :halign "center"
+    :class "icon"
     (button
       :onclick "eww open screenshot"
       (box
         (label :text {camera})
+      )
+    )
+  )
+)
+
+(defvar recording false)
+
+(defwidget record []
+  (box
+    :width 30
+    :valign "center"
+    :halign "center"
+    :class "icon"
+    :style {recording ? "background-color: {{red}};" : "" }
+    (button
+      :onclick "eww update recording=${!recording} && ./scripts/capture"
+      (box
+        (label :text {record})
       )
     )
   )

@@ -5,7 +5,7 @@
 (defwidget date []
   (box
     (button :valign "center"
-      :onclick "sh -c \"de-launch /usr/share/applications/org.gnome.Calendar.desktop\""
+      :onclick "sh -c \"de-launch /usr/share/applications/org.gnome.Calendar.desktop\" &"
     {time})
   )
 )

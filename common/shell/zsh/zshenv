@@ -23,13 +23,13 @@ export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
 
 
 fullscreenshot() {
-  date=$(date +%Y-%m-%dT%H:%M:%S%z)
-  grim "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
+  FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M:%S").png"
+  grimshot save screen $FILE && paplay "~/dotfiles/assets/audio/screenshot.wav"
 }
 
 screenshot() {
-  date=$(date +%Y-%m-%dT%H:%M:%S%z)
-  grim -g "$(slurp)" "$HOME/Pictures/Screenshots/screenshot-$date.png" && paplay "$HOME/dotfiles/audio/screenshot.wav"
+  FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M:%S").png"
+  grimshot save area $FILE && paplay "~/dotfiles/assets/audio/screenshot.wav"
 }
 
 switch_bombadil_profile() {
