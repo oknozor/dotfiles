@@ -39,6 +39,7 @@ neofetch = { source = "common/neofetch", target = ".config/neofetch" }
 efm-langserver = { source = "common/editor/efm-langserver", target = ".config/efm-langserver" }
 topgrade = { source = "common/topgrade", target = ".config/topgrade" }
 eww = { source = "common/eww", target = ".config/eww" }
+lock = { source = "common/lockscreen", target = ".config/gtklock" }
 
 [profiles.msi]
 extra_profiles = [ "i3", "solarized-dark" ]

@@ -20,11 +20,11 @@ set autowriteall
 set clipboard+=unnamedplus
 
 if !exists("rc_autocommands_loaded")
-    " Todo make a file type for sway config
-	  let rc_autocommands_loaded = 1
-    au BufRead,BufNewFile ~/.config/sway/* setfiletype sway
-    " Always enter terminal window in insertion mode
-    au TermEnter * startinsert
+  " Todo make a file type for sway config
+  let rc_autocommands_loaded = 1
+  au BufRead,BufNewFile ~/.config/sway/* setfiletype sway
+  " Always enter terminal window in insertion mode
+  au TermEnter * startinsert
 endif
 
 command! Cheatsheet !xdg-open https://github.com/oknozor/dotfiles/blob/master/docs/nvim_cheatsheet.md<CR>
@@ -59,50 +59,50 @@ noremap <F2> :set hlsearch! hlsearch?<CR>
 
 
 " Window and navigation
-  " Remap left and right arrow keys to tabprev and tabnext 
-  " Todo make a file type for sway config
-  nnoremap <left>     :tabprevious<CR>
-  nnoremap <right>    :tabnext<CR>
-  "
-  " Alternatively use `<leader>j/k for tabnext/tabprev
-  nnoremap <leader>k  <esc>:tabprevious<CR>
-  nnoremap <leader>j  <esc>:tabnext<CR> 
-  nnoremap <leader>t  <esc>:tabnew<CR>
-  "
-  " use `<leader>t`h to create a new tab
-  nnoremap <leader>t  :tabnew<CR>
+" Remap left and right arrow keys to tabprev and tabnext 
+" Todo make a file type for sway config
+nnoremap <left>     :tabprevious<CR>
+nnoremap <right>    :tabnext<CR>
+"
+" Alternatively use `<leader>j/k for tabnext/tabprev
+nnoremap <leader>k  <esc>:tabprevious<CR>
+nnoremap <leader>j  <esc>:tabnext<CR> 
+nnoremap <leader>t  <esc>:tabnew<CR>
+"
+" use `<leader>t`h to create a new tab
+nnoremap <leader>t  :tabnew<CR>
 
 
-  " Split window 
-  " `<leader>d/v` to split horizontal/vertical
-  noremap <leader>h :split<CR>
-  nnoremap <leader>v :vsplit<CR>
+" Split window 
+" `<leader>d/v` to split horizontal/vertical
+noremap <leader>h :split<CR>
+nnoremap <leader>v :vsplit<CR>
 
-  " `Alt+j/k` to scroll down/up
-  nnoremap <A-j> <C-f>
-  nnoremap <A-k> <C-b>
+" `Alt+j/k` to scroll down/up
+nnoremap <A-j> <C-f>
+nnoremap <A-k> <C-b>
 
-  " Rearrange windows with `<leader>+H/J/K/L`
-  nnoremap <leader>J <C-W>J
-  nnoremap <leader>K <C-W>K
-  nnoremap <leader>H <C-W>H
-  nnoremap <leader>L <C-W>L
-  "
-  " Move focus with Ctrl+h/j/k/l
-  tnoremap <C-h> <C-\><C-N><C-w>h
-  tnoremap <C-j> <C-\><C-N><C-w>j
-  tnoremap <C-k> <C-\><C-N><C-w>k
-  tnoremap <C-l> <C-\><C-N><C-w>l
+" Rearrange windows with `<leader>+H/J/K/L`
+nnoremap <leader>J <C-W>J
+nnoremap <leader>K <C-W>K
+nnoremap <leader>H <C-W>H
+nnoremap <leader>L <C-W>L
+"
+" Move focus with Ctrl+h/j/k/l
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
 
-  inoremap <C-h> <C-\><C-N><C-w>h
-  inoremap <C-j> <C-\><C-N><C-w>j
-  inoremap <C-k> <C-\><C-N><C-w>k
-  inoremap <C-l> <C-\><C-N><C-w>l
+inoremap <C-h> <C-\><C-N><C-w>h
+inoremap <C-j> <C-\><C-N><C-w>j
+inoremap <C-k> <C-\><C-N><C-w>k
+inoremap <C-l> <C-\><C-N><C-w>l
 
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
-  nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Terminal
 " To exit insert mode in terminal escape is used instead of `jk`
@@ -116,81 +116,90 @@ nnoremap <A-l> :bn<Cr>
 
 " Quick edit and source
 
-    " .vimrc
-    nnoremap <leader>ev :vsplit $NVIMRC<CR>
-    nnoremap <leader>sv :source $NVIMRC<CR>
-    
-    " .zshrc
-    nnoremap <leader>ez :vsplit $SHELL_RC<CR>
-    nnoremap <leader>sz :!source $SHELL_RC<CR>
-    
-    " sway
-    nnoremap <leader>es :tabnew <CR>
+" .vimrc
+nnoremap <leader>ev :vsplit $NVIMRC<CR>
+nnoremap <leader>sv :source $NVIMRC<CR>
+
+" .zshrc
+nnoremap <leader>ez :vsplit $SHELL_RC<CR>
+nnoremap <leader>sz :!source $SHELL_RC<CR>
+
+" sway
+nnoremap <leader>es :tabnew <CR>
 
 " Edition 
 
-  " Move a line down/up with `+/-`
-  nnoremap + ddp
-  nnoremap - ddkkp
+" Move a line down/up with `+/-`
+nnoremap + ddp
+nnoremap - ddkkp
 
 
-  " Lowecase/uppercase a word : `<leader>+l\u`
-  noremap <leader>u viwU<esc> 
-  noremap <leader>l viwu<esc> 
-  "
-  " quote/parenthesize a word with `<leader>+{quote_type}`
-  nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-  nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
-  nnoremap <leader>è viw<esc>a`<esc>bi`<esc>lel
-  nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
-  nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
-  nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
+" Lowecase/uppercase a word : `<leader>+l\u`
+noremap <leader>u viwU<esc> 
+noremap <leader>l viwu<esc> 
+"
+" quote/parenthesize a word with `<leader>+{quote_type}`
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+nnoremap <leader>è viw<esc>a`<esc>bi`<esc>lel
+nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
+nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
+nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
 
-  " quote/parenthesize selection mode with `<leader>+{quote_type}` in visual
-  " mode
-  vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
-  vnoremap <leader>' <esc>`<i'<esc>`>a'<esc>lel
-  vnoremap <leader>è <esc>`<i`<esc>`>a`<esc>lel
-  vnoremap <leader>{ <esc>`<i{<esc>`>a}<esc>lel
-  vnoremap <leader>( <esc>`<i(<esc>`>a)<esc>lel
-  vnoremap <leader>[ <esc>`<i[<esc>`>a]<esc>lel
+" quote/parenthesize selection mode with `<leader>+{quote_type}` in visual
+" mode
+vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>lel
+vnoremap <leader>' <esc>`<i'<esc>`>a'<esc>lel
+vnoremap <leader>è <esc>`<i`<esc>`>a`<esc>lel
+vnoremap <leader>{ <esc>`<i{<esc>`>a}<esc>lel
+vnoremap <leader>( <esc>`<i(<esc>`>a)<esc>lel
+vnoremap <leader>[ <esc>`<i[<esc>`>a]<esc>lel
 
 
 " Plugin
 call plug#begin('~/.vim/plugged')
 
-    " Ui 
-    Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
-    Plug 'scrooloose/nerdtree'
-    Plug 'Raimondi/delimitMate'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'liuchengxu/eleline.vim'
+" Ui 
+Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
+Plug 'scrooloose/nerdtree'
+Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
-    " Tools 
-    Plug 'airblade/vim-rooter'
-    Plug 'tpope/vim-fugitive'
+" Tools 
+Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-fugitive'
 
-    " Linters 
-    Plug 'pearofducks/ansible-vim'
-    Plug 'rust-lang/rust.vim'
-    Plug 'aliou/bats.vim'
-    Plug 'hashivim/vim-vagrant'
-    Plug 'chr4/nginx.vim'
-    Plug 'cespare/vim-toml'
-    "
-    " Language integration
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'elkowar/yuck.vim'
-    Plug 'mboughaba/i3config.vim'
-    
-    " Theme
-    Plug 'overcache/NeoSolarized'
-    "Plug 'sonph/onehalf', { 'rtp': 'vim' }
+" Linters 
+Plug 'pearofducks/ansible-vim'
+Plug 'rust-lang/rust.vim'
+Plug 'aliou/bats.vim'
+Plug 'hashivim/vim-vagrant'
+Plug 'chr4/nginx.vim'
+Plug 'cespare/vim-toml'
+"
+" Language integration
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'elkowar/yuck.vim'
+Plug 'mboughaba/i3config.vim'
+
+" Theme
+Plug 'shaunsingh/nord.nvim'
 
 call plug#end()
 
 set background=dark
-colorscheme NeoSolarized
+colorscheme nord
+lua << END
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    theme = 'nord'
+    -- ... your lualine config
+  }
+}
+END
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -202,18 +211,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 
 " Colors and Themes 
-  " Enable true colors
-  if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-  endif
+" Enable true colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 
-  filetype plugin indent on   
-  set cursorline
+filetype plugin indent on   
+set cursorline
 
- " Always display statusline.
+" Always display statusline.
 set laststatus=2
 
 " Gitgutter 

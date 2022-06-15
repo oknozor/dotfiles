@@ -3,12 +3,12 @@
 These are my dotfiles I regularly update and tweak them.
 If you wan't to use them, feel free to fork, also you might need to adapt them. 
 
-![screenshot](docs/screenshots/sway/screenshot_01.png)
-![screenshot](docs/screenshots/sway/screenshot_02.png)
-![screenshot](docs/screenshots/sway/screenshot_03.png)
-![screenshot](docs/screenshots/sway/screenshot_04.png)
-![screenshot](docs/screenshots/sway/screenshot_05.png)
-![screenshot](docs/screenshots/sway/screenshot_06.png)
+![screenshot](docs/screenshots/sway/new/screenshot_06.png) 
+![screenshot](docs/screenshots/sway/new/screenshot_03.png) 
+![screenshot](docs/screenshots/sway/new/screenshot_01.png) 
+![screenshot](docs/screenshots/sway/new/screenshot_05.png) 
+![screenshot](docs/screenshots/sway/new/screenshot_02.png) 
+![screenshot](docs/screenshots/sway/new/screenshot_04.png) 
 
 ## Installation 
 
@@ -20,8 +20,8 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 
 ### DE
 - Window manager : [sway](https://swaywm.org/)
-- Screen locker : [swaylock](https://github.com/swaywm/swaylock)
-- Status bar : [waybar](https://github.com/Alexays/Waybar)
+- Screen locker : [gtklock](https://github.com/jovanlanik/gtklock)
+- Status bar : [eww](https://github.com/oknozor/eww)
 - App launcher : [onagre](https://github.com/oknozor/onagre) (not perfect yet but I am working on it!)
 - Notification : [mako](https://github.com/emersion/mako)
 
@@ -38,7 +38,7 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 ### Editor
 - Editor : [neovim](https://neovim.io/)
 - Plugin Manager : [plug](https://github.com/junegunn/vim-plug)
-    - [liuchengxu/eleline](https://github.com/liuchengxu/eleline.vim)
+    - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine)
     - [oknozor/illumination](https://github.com/oknozor/illumination)
     - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
     - [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
@@ -58,7 +58,7 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 
 ### Cli tools
 - Grep replacement : [ripgrep](https://github.com/BurntSushi/ripgrep)
-- Find replacement : [ripgrep](https://github.com/sharkdp/fd)
+- Find replacement : [fd](https://github.com/sharkdp/fd)
 - Cat replacement : [bat](https://github.com/sharkdp/bat) 
 - Hexdump replacement : [hexyl](https://github.com/sharkdp/hexyl) 
 - du replacement : [dust](https://github.com/bootandy/dust) 
@@ -68,11 +68,8 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 ### Media
 - Media library management : [beets](http://beets.io/)
 - Music player : [ncmpcpp](https://github.com/arybczak/ncmpcpp)
-- Screenshot : [grim](https://github.com/resurrecting-open-source-projects/scrot) + [slurp](https://github.com/emersion/slurp)
+- Screenshot : [grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot)
 
-## Wallpaper 
-
-[This one](https://wallup.net/preview/?wallpaper=drawing-landscape-sea-beach-sand-sky-rock).
 
 ## Contributions 
 
