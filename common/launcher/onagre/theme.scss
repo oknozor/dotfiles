@@ -2,50 +2,47 @@
   --exit-unfocused: false;
   height: 375px;
   width: 600px;
-  --icon-theme: "Papirus";
+  --icon-theme: "zafiro-icon-theme";
   --icon-size: 28px;
   --font-family: "Iosevka Nerd Font Mono";
-  background: #2E3440;
-  color: #81a1c1;
+  background: {{background}};
+  color: {{foreground}};
   border-color: #2E3440;
   border-width: 4px;
   padding: 10px;
 
   .container {
+    padding: 0px;
     .search {
       --spacing: 1;
-      background: #3b4252;
-      color: #d8dee9;
-      padding: 4px;
+      background: {{white}};
+      border-radius: 0.0%;
+      color: {{background}};
       --height: fill-portion 1;
 
       .plugin-hint {
         font-size: 18px;
-        color: #bf616a;
-        padding: 4px;
-        border-width: 2px;
-        border-color: #bf616a;
-        border-radius: 5%;
-        background: #4c566a;
+        background: {{white}};
+        color: {{red}};
+        border-color: {{red}};
         --align-x: center;
         --align-y: center;
-        --width: fill-portion 2;
+        --width: fill-portion 1;
         --height: fill;
       }
 
       .input {
-        font-size: 24px;
+        font-size: 20px;
         --width: fill-portion 11;
       }
-
     }
 
     .rows {
-      --height: fill-portion 5;
+      --height: fill-portion 8;
 
       .row-selected {
-        background: #2E3440;
-        color: #ebcb8b;
+        background: {{blue}};
+        color: {{light_white}};
         --spacing: 3px;
         --align-y: center;
 
@@ -78,8 +75,9 @@
     }
 
     .scrollable {
+      background: #00000000;
       .scroller {
-        color: #4c566a;
+        color: #4c566a00;
       }
     }
   }
