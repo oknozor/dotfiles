@@ -87,7 +87,7 @@ nnoremap <leader>J <C-W>J
 nnoremap <leader>K <C-W>K
 nnoremap <leader>H <C-W>H
 nnoremap <leader>L <C-W>L
-"
+
 " Move focus with Ctrl+h/j/k/l
 tnoremap <C-h> <C-\><C-N><C-w>h
 tnoremap <C-j> <C-\><C-N><C-w>j
@@ -155,9 +155,24 @@ vnoremap <leader>{ <esc>`<i{<esc>`>a}<esc>lel
 vnoremap <leader>( <esc>`<i(<esc>`>a)<esc>lel
 vnoremap <leader>[ <esc>`<i[<esc>`>a]<esc>lel
 
+"" Telescope
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Plugin
 call plug#begin('~/.vim/plugged')
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Ui 
 Plug 'oknozor/illumination', { 'dir': '~/.illumination', 'do': './install.sh' }
