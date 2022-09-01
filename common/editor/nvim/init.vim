@@ -73,36 +73,6 @@ nnoremap <leader>t  <esc>:tabnew<CR>
 nnoremap <leader>t  :tabnew<CR>
 
 
-" Split window 
-" `<leader>d/v` to split horizontal/vertical
-noremap <leader>h :split<CR>
-nnoremap <leader>v :vsplit<CR>
-
-" `Alt+j/k` to scroll down/up
-nnoremap <A-j> <C-f>
-nnoremap <A-k> <C-b>
-
-" Rearrange windows with `<leader>+H/J/K/L`
-nnoremap <leader>J <C-W>J
-nnoremap <leader>K <C-W>K
-nnoremap <leader>H <C-W>H
-nnoremap <leader>L <C-W>L
-
-" Move focus with Ctrl+h/j/k/l
-tnoremap <C-h> <C-\><C-N><C-w>h
-tnoremap <C-j> <C-\><C-N><C-w>j
-tnoremap <C-k> <C-\><C-N><C-w>k
-tnoremap <C-l> <C-\><C-N><C-w>l
-
-inoremap <C-h> <C-\><C-N><C-w>h
-inoremap <C-j> <C-\><C-N><C-w>j
-inoremap <C-k> <C-\><C-N><C-w>k
-inoremap <C-l> <C-\><C-N><C-w>l
-
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " Terminal
 " To exit insert mode in terminal escape is used instead of `jk`

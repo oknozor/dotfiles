@@ -26,7 +26,8 @@ starship = { source = "common/shell/zsh/starship.toml", target = ".config/starsh
 gitconfig = { source = "common/git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "common/git/gitignore", target = ".gitignore" }
 vim = { source = "common/editor/nvim/init.vim", target = ".vimrc" }
-nvim = { source = "common/editor/nvim", target = ".config/nvim" }
+# nvim = { source = "common/editor/nvim", target = ".config/nvim" }
+nvim = {source = "common/editor/neovim", target = ".config/nvim" }
 illumination = { source = "common/editor/illumination", target = ".config/illumination" }
 beets = { source = "common/music/beets", target = ".config/beets" }
 ncmpcpp = { source = "common/music/ncmpcpp", target = ".ncmpcpp" }
@@ -36,7 +37,6 @@ xdg_dirs = { source = "common/xdg/user-dirs.dirs", target = ".config/user-dirs.d
 gtk2 = { source = "common/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
 gtk3 = { source = "common/gtk/gtk-3.0", target = ".config/gtk-3.0" }
 neofetch = { source = "common/neofetch", target = ".config/neofetch" }
-efm-langserver = { source = "common/editor/efm-langserver", target = ".config/efm-langserver" }
 topgrade = { source = "common/topgrade", target = ".config/topgrade" }
 eww = { source = "common/eww", target = ".config/eww" }
 lock = { source = "common/lockscreen", target = ".config/gtklock" }
