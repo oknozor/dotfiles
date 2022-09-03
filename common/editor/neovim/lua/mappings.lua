@@ -13,6 +13,7 @@ local nmap = mappings.nmap
 local map = mappings.map
 local imap = mappings.imap
 local vmap = mappings.vmap
+local xmap = mappings.xmap
 
 
 g.mapleader = ","
@@ -68,23 +69,12 @@ nnoremap("<leader>n", ":NvimTreeFindFileToggle<CR>")
 map('<C-!>', '<cmd>Telescope projects<CR>')
 map('<C-n>', '<cmd>Telescope find_files<CR>')
 map('<C-,>', '<cmd>Telescope coc workspace_symbols<CR>')
-nnoremap('<leader>fgf', [[<cmd>lua require('telescope.builtin').git_files()<cr>]]) -- Find git files
-nnoremap('<leader>fb', [[<cmd>lua require('telescope.builtin').file_browser()<cr>]]) -- File Browser
-nnoremap('<leader>fw', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]]) -- Find word
-nnoremap('<leader>fvh', [[<cmd>lua require('telescope.builtin').help_tags()<cr>]]) -- search vim help
-nnoremap('<leader>fvc', [[<cmd>lua require('telescope.builtin').commands()<cr>]]) -- find vim command
-nnoremap('<leader>fmp', [[<cmd>lua require('telescope.builtin').man_pages()<cr>]]) -- search man pages
-nnoremap('<leader>qf', [[<cmd>lua require('telescope.builtin').quickfix()<cr>]]) -- list quick fixes
-nnoremap('<leader>ss', [[<cmd>lua require('telescope.builtin').spell_suggest()<cr>]]) -- suggest spelling
-nnoremap('<leader>fkm', [[<cmd>lua require('telescope.builtin').keymaps()<cr>]]) -- find keymaps
-nnoremap('<leader>fr', [[<cmd>lua require('telescope.builtin').lsp_references()<cr>]]) -- show references for obj under cursor
-nnoremap('<leader>fs', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>]]) -- show symbols in document
-nnoremap('<leader>fws', [[<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>]]) -- show symbols in workspace
-nnoremap('<leader>ca', [[<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>]]) -- code actions
-nnoremap('<leader>fi', [[<cmd>lua require('telescope.builtin').lsp_implementations()<cr>]])
-nnoremap('<leader>fd', [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]])
+map('<C-;>', '<cmd>Telescope  live_grep<CR>')
 
 -- COC
-nmap('<M-CR>', '<Plug>(coc-codeaction)')
+nmap('<leader>a', '<Plug>(coc-codeaction)')
+xmap('<leader>a', '<Plug>(coc-codeaction)')
+nmap('<M-CR>', '<Plug>(coc-codeaction-selected)')
+xmap('<M-CR>', '<Plug>(coc-codeaction-selected)')
 nmap('<leader><F6>', '<Plug>(coc-diagnostic-prev)')
 nmap('<leader><F5>', '<Plug>(coc-diagnostic-next)')

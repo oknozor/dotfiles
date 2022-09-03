@@ -7,7 +7,6 @@ o.relativenumber = true
 o.cursorline = true
 o.incsearch = true
 o.scrolloff = 8
-o.signcolumn = "yes"
 o.mouse = "a"
 o.tabstop = 2
 o.expandtab = true
@@ -17,6 +16,12 @@ o.smartindent = true
 o.cindent = true
 o.wildmenu = true
 o.clipboard = "unnamedplus"
+o.autowrite = true
+
+o.updatetime = 300
+o.backup = false
+o.writebackup = false
+o.signcolumn = "yes"
 
 g.gitgutter_sign_added = ''
 g.gitgutter_sign_removed = ''

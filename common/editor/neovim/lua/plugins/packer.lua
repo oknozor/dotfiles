@@ -42,6 +42,9 @@ return require('packer').startup(function(use)
 
   use {
     "ahmedkhalf/project.nvim",
+    config = function()
+      require("project_nvim").setup { }
+    end
   }
 
   if packer_bootstrap then
