@@ -5,5 +5,11 @@
       "args": [],
       "filetypes": ["vim", "eruby", "markdown"]
     }
-  } 
+  }, 
+
+  "rust-analyzer.inlayHints.closingBraceHints.enable" : false,
+  "rust-analyzer.completion.callable.snippets": "fill_arguments",
+  "rust-analyzer.inlayHints.refreshOnInsertMode": true,
+  "coc.preferences.formatOnType": true
 }
+

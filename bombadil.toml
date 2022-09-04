@@ -14,7 +14,7 @@ vars = [
 ]
 
 posthooks = [ 
-  "nvim --headless +PlugInstall +qa"
+  "nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'"
 ]
 
 [settings.dots]
@@ -26,7 +26,6 @@ starship = { source = "common/shell/zsh/starship.toml", target = ".config/starsh
 gitconfig = { source = "common/git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "common/git/gitignore", target = ".gitignore" }
 vim = { source = "common/editor/nvim/init.vim", target = ".vimrc" }
-# nvim = { source = "common/editor/nvim", target = ".config/nvim" }
 nvim = {source = "common/editor/neovim", target = ".config/nvim" }
 illumination = { source = "common/editor/illumination", target = ".config/illumination" }
 beets = { source = "common/music/beets", target = ".config/beets" }
