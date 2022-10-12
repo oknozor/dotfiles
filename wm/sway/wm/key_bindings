@@ -8,6 +8,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+G exec $launcher
 bindsym $mod+P exec $pass
 bindsym $mod+x exec $lock
+bindsym $mod+c exec sh -c "~/dotfiles/common/eww/scripts/togglebar"
 
 # Kill focused window
 bindsym $mod+Shift+a kill
