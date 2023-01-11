@@ -1,7 +1,8 @@
 [profiles.sway]
-hooks = ["sway reload"]
+posthooks = ["sway reload"]
 
 [profiles.sway.dots]
 sway = { source = "wm/sway/wm", target = ".config/sway" }
 kanshi = { source = "wm/sway/kanshi", target = ".config/kanshi" }
 mako = { source = "wm/sway/mako", target = ".config/mako" }
+

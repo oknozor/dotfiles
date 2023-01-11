@@ -1,9 +1,6 @@
-# Color                 border                                background                                 text                               indicator                               child_border
-client.focused          {{client_focused_border}}           {{client_focused_background}}            {{client_focused_text}}          {{client_focused_indicator}}          {{client_focused_child_border}}
-
-client.focused_inactive {{client_focused_inactive_border}}  {{client_focused_inactive_background}}   {{client_focused_inactive_text}} {{client_focused_inactive_indicator}} {{client_focused_inactive_child_border}}
-
-client.unfocused        {{client_unfocused_border}}         {{client_unfocused_background}}          {{client_unfocused_text}}        {{client_unfocused_indicator}}        {{client_unfocused_child_border}}
-
-client.urgent           {{client_urgent_border}}            {{client_urgent_background}}             {{client_urgent_text}}           {{client_urgent_indicator}}           {{client_urgent_child_border}}
+# Color                 border                background           text            indicator             child_border
+client.focused          {{theme.yellow}}      {{theme.background}} {{theme.white}} {{theme.blue}}        {{theme.magenta}}
+client.focused_inactive {{theme.light_white}} {{theme.background}} {{theme.white}} {{theme.light_black}} {{theme.light_white}}
+client.unfocused        {{theme.light_white}} {{theme.background}} {{theme.white}} {{theme.light_black}} {{theme.light_white}}
+client.urgent           {{theme.red}}         {{theme.background}} {{theme.white}} {{theme.light_black}} {{theme.light_white}}
 

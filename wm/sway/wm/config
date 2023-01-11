@@ -1,12 +1,10 @@
 # On start
-font "Fira Code 9"
+font {{theme.font}}
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec {{notification}}
+exec nm-applet --indicator
+exec {{apps.notification}}
 exec kanshi
-exec_always --no-startup-id "eww kill || true"
-exec_always --no-startup-id "eww daemon"
-exec_always --no-startup-id "eww open bar"
-output * bg {{wallpaper}} stretch
+exec_always swaybg --image {{desktop.wallpaper}}
 
 ### Variables
 set $mod Mod4
@@ -15,10 +13,15 @@ set $down j
 set $up k
 set $right l
 
-set $term {{terminal}}
-set $bar {{bar}}
-set $launcher {{launcher}}
+set $term {{apps.terminal}}
 set $pass wofipassmenu
+
+{% if "onagre" in profiles %}
+set $launcher "WGPU_BACKEND=vulkan onagre"
+{% elif "wofi" in profiles %}
+set $launcher "wofi --show drun"
+{% endif %}
+
 set $lock "swaylock -c 000000"
 
 include workspaces
@@ -28,3 +31,8 @@ include window_placement
 include key_bindings
 include inputs
 include gtk_config
+
+{% if "ironbar" in profiles %}
+exec_always ironbar
+{% endif %}
+

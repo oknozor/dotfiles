@@ -1,0 +1,37 @@
+@import 'widgets/workspace/workspace';
+@import 'widgets/control/control';
+@import 'widgets/net/netinterface';
+@import 'widgets/screenshot/screenshot';
+
+* {
+    color: {{workspaces_fg}};
+    border: none;
+    font-family: "Fira Code Medium", "Font Awesome 6 Brands Solid", "Font Awesome 6 Free Solid";
+    min-height: 0;
+    background-color: transparent;
+}
+
+.bar {
+    transition-property: background-color;
+    transition-duration: .5s;
+    background-color: {{background}};
+    border-radius: 6;
+    font-size: 16px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.icon {
+    padding: 6px;
+    border-radius: 3;
+}
+
+menu {
+    background-color: {{background}};
+}
+
+menuitem:hover {
+    background-color: {{light_black}};
+}

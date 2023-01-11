@@ -1,0 +1,5 @@
+[profiles.onagre.dots]
+onagre = { source = "launchers/onagre", target = ".config/onagre" }
+
+[profiles.wofi.dots]
+wofi = { source = "launchers/wofi", target = ".config/wofi" }

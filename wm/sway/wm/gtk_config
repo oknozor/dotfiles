@@ -1,8 +1,8 @@
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme '{{gtk}}'
-    gsettings set $gnome-schema icon-theme '{{gtk_icons}}'
-    gsettings set $gnome-schema cursor-theme '{{gtk_icons}}'
+    gsettings set $gnome-schema gtk-theme '{{gtk.theme}}'
+    gsettings set $gnome-schema icon-theme '{{gtk.icons}}'
+    gsettings set $gnome-schema cursor-theme '{{gtk.icons}}'
 }
 

@@ -1,0 +1,23 @@
+;; Workspace icons
+(defvar workspace_1 "{{theme.icons.workspace.1}}")
+(defvar workspace_2 "{{theme.icons.workspace.2}}")
+(defvar workspace_3 "{{theme.icons.workspace.3}}")
+(defvar workspace_4 "{{theme.icons.workspace.4}}")
+(defvar workspace_5 "{{theme.icons.workspace.5}}")
+(defvar workspace_6 "{{theme.icons.workspace.6}}")
+(defvar workspace_7 "{{theme.icons.workspace.7}}")
+(defvar workspace_8 "{{theme.icons.workspace.8}}")
+(defvar workspace_9 "{{theme.icons.workspace.9}}")
+(defvar workspace_10 "{{theme.icons.workspace.10}}")
+
+(deflisten workspaces :initial "(box (workspace_icon :class 'workspace_focused' :icon workspace_1))" `ewwdot -w sway -e workspace`)
+
+
+(defwidget workspaces []
+  (box :valign "center" (literal :content workspaces))
+)
+
+
+(defwidget workspace_icon [class icon] 
+  (button :class class {icon})
+)

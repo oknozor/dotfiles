@@ -1,58 +1,35 @@
 dotfiles_dir = "dotfiles"
 gpg_user_id = "paul.delafosse@protonmail.com"
+
 import = [
   { path = "wm/sway/sway.toml" },
-  { path = "wm/i3/i3.toml" },
   { path = "wm/leftwm/leftwm.toml" },
-  { path = "vars/themes.toml" }
+  { path = "wm/i3/i3.toml" },
+  { path = "bars/bars.toml" },
+  { path = "launchers/launchers.toml" },
 ]
 
 [settings]
-vars = [ 
-  "vars/vars.toml",
-  "vars/fontawesome.toml"
-]
-
-posthooks = [ 
-  "nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'"
-]
+vars = [ "vars.toml"]
 
 [settings.dots]
-alacritty = { source = "common/term/alacritty", target = ".config/alacritty" }
-onagre = { source = "common/launcher/onagre", target = ".config/onagre" }
-zsh = { source = "common/shell/zsh/zshrc", target = ".zshrc" }
-zsh_env = { source = "common/shell/zsh/zshenv", target = ".zshenv" }
-starship = { source = "common/shell/zsh/starship.toml", target = ".config/starship.toml" }
-gitconfig = { source = "common/git/gitconfig", target = ".gitconfig" }
-gitignore = { source = "common/git/gitignore", target = ".gitignore" }
-vim = { source = "common/editor/nvim/init.vim", target = ".vimrc" }
-nvim = {source = "common/editor/neovim", target = ".config/nvim" }
-illumination = { source = "common/editor/illumination", target = ".config/illumination" }
-beets = { source = "common/music/beets", target = ".config/beets" }
-ncmpcpp = { source = "common/music/ncmpcpp", target = ".ncmpcpp" }
-mdp = { source = "common/music/mpd", target = ".config/mpd" }
-gpg_agent = { source = "common/gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
-xdg_dirs = { source = "common/xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
-gtk2 = { source = "common/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
-gtk3 = { source = "common/gtk/gtk-3.0", target = ".config/gtk-3.0" }
-neofetch = { source = "common/neofetch", target = ".config/neofetch" }
-topgrade = { source = "common/topgrade", target = ".config/topgrade" }
-eww = { source = "common/eww", target = ".config/eww" }
-lock = { source = "common/lockscreen", target = ".config/gtklock" }
+alacritty = { source = "terminals/alacritty", target = ".config/alacritty" }
+zsh = { source = "zsh/zshrc", target = ".zshrc" }
+zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
+starship = { source = "zsh/starship.toml", target = ".config/starship.toml" }
+gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
+gitignore = { source = "git/gitignore", target = ".gitignore" }
+vim = { source = "editors/nvim/init.vim", target = ".vimrc" }
+nvim = {source = "editors/neovim", target = ".config/nvim" }
+helix = {source = "editors/helix", target = ".config/helix" }
+gpg_agent = { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
+xdg_dirs = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
+gtk2 = { source = "gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
+gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
+gtk4 = { source = "gtk/gtk-3.0", target = ".config/gtk-4.0" }
 
-[profiles.msi]
-extra_profiles = [ "i3", "solarized-dark" ]
+[profiles.hipster-sway]
+extra_profiles = [ "ironbar", "sway", "onagre" ]
 
-[profiles.msi-sway]
-extra_profiles = [ "sway", "solarized-dark" ]
-
-[profiles.leftwm]
-extra_profiles = [ "leftwm", "solarized-dark" ]
-
-[profiles.yoga]
-extra_profiles = [ "i3", "lenovo-yoga" ]
-
-[profiles.yoga-sway]
-extra_profiles = [ "sway", "lenovo-yoga" ]
-
-
+[profiles.oldtimer-sway]
+extra_profiles = [ "sway", "ironbar", "wofi"  ]
