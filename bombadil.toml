@@ -20,7 +20,6 @@ zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
 starship = { source = "zsh/starship.toml", target = ".config/starship.toml" }
 gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "git/gitignore", target = ".gitignore" }
-vim = { source = "editors/nvim/init.vim", target = ".vimrc" }
 nvim = {source = "editors/neovim", target = ".config/nvim" }
 helix = {source = "editors/helix", target = ".config/helix" }
 gpg_agent = { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }

@@ -1,3 +1,4 @@
+# /* vim: set filetype=gitconfig :/
 [core]
   editor = nvim
   pager = delta

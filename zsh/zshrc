@@ -1,5 +1,4 @@
 # History
-# changes
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -25,27 +24,15 @@ export EDITOR=nvim
 export BAT_THEME="Solarized (dark)"
 
 
-####################
-##### ALIASES ######
-####################
-
-## Systemctl 
+# Aliases
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias status='systemctl status'
 alias restart='sudo systemctl restart'
 alias jof='journalctl -u'
 alias fjof='journalctl -fu'
-
-# Nmcli
-alias vpnfacup='nmcli connection up ulille_vpn_etu_udp_v1 --ask'
-alias vpnfacdown='nmcli con down ulille_vpn_etu_udp_v1'
-
-## Multimedia 
 alias music='ncmpcpp -s media_library'
 alias impmus='beet import ~/Downloads/SoulSeek'
-
-## Commons
 alias vim="nvim"
 alias record="wf-recorder -f ${filename}"
 alias ll='ls -larth'
@@ -55,8 +42,6 @@ alias lt='ls -t'
 alias lr='ls -rt' 
 alias lr='ls -rt' 
 alias wa='watch --color -t' 
-
-# Muscle memory tricks
 alias k='kubectl'
 alias dc='docker-compose'
 alias ovim="vim"
@@ -67,11 +52,6 @@ alias ogrep='/usr/bin/grep'
 alias fzf='sk'
 alias du='dust'
 alias copy='wl-copy'
-
-# Monitor 
-alias monup="xrandr --output eDP --auto --primary --output HDMI-A-1-0  --auto --above eDP"
-alias mondown="xrandr --output HDMI-A-1-0 --off"
-
 
 source /usr/share/autojump/autojump.zsh
 prompt off
