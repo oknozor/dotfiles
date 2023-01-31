@@ -1,3 +1,4 @@
+
 local HOME = os.getenv( "HOME" )  
 local g, o, opt, api = vim.g, vim.o, vim.opt, vim.api
 
@@ -27,5 +28,15 @@ g.gitgutter_sign_added = ''
 g.gitgutter_sign_removed = ''
 g.gitgutter_sign_modified = ''
 
+-- Highlight on yank
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
 vim.cmd("colorscheme melange")
-vim.cmd(':source ' .. HOME .. '/.config/nvim/coc-config.vim')

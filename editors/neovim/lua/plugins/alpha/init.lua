@@ -1,3 +1,10 @@
 local theme = require('plugins.alpha.theme')
-require('alpha').setup(theme.config)
+local alpha_status, alpha = pcall(require, "alpha")
+if not alpha_status then
+  print("failed to load alpha")
+  return
+end
+
+alpha.setup(theme.config)
+
 

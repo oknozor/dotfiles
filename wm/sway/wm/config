@@ -33,6 +33,6 @@ include inputs
 include gtk_config
 
 {% if "ironbar" in profiles %}
-exec_always ironbar
+exec ironbar
 {% endif %}
 

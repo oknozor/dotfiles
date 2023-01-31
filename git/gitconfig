@@ -31,6 +31,8 @@
 
 [pull]
   rebase = merges
+[push]
+  autoSetupRemote = true
 
 [merge]
   tool = nvim

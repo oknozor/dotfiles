@@ -1,45 +1,102 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
+local is_boostrap = false
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  install_path = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   vim.cmd [[packadd packer.nvim]]
 end
 
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
+  -- Style
   use 'savq/melange'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
-  use 'airblade/vim-gitgutter'
+  use 'lewis6991/gitsigns.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-tree.lua'
   use 'romgrk/barbar.nvim'
-  use 'fannheyward/telescope-coc.nvim'
-  use 'neovim/nvim-lspconfig'
+
+  -- Lsp
+  use {
+    'neovim/nvim-lspconfig',
+    requires = {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'j-hui/fidget.nvim',
+      'folke/neodev.nvim',
+      'glepnir/lspsaga.nvim',
+      'camilledejoye/nvim-lsp-selection-range'
+    },
+  }
+
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+    requires = { {"nvim-tree/nvim-web-devicons"} }
+  })
+
+  use 'simrat39/rust-tools.nvim'
 
   use {
-    "akinsho/toggleterm.nvim", 
-    tag = 'v2.*', 
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
   }
 
-  use { 
-    'neoclide/coc.nvim', 
-    branch = 'release' 
-  }
-
+  -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = function()
+      require("nvim-treesitter.install").update({ with_sync = true })
+    end,
   }
 
-  use { 
-    'nvim-telescope/telescope.nvim', 
-    tag = '0.1.0' 
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
   }
 
+  use "IndianBoy42/tree-sitter-just"
+
+  --Autocompletion
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip'
+    },
+  }
+  use('onsails/lspkind.nvim')
+  use('hrsh7th/cmp-path')
+  use ('hrsh7th/cmp-buffer')
+
+  -- Telescope
+  use({
+    "nvim-telescope/telescope.nvim",
+    requires = { { "nvim-lua/plenary.nvim" }, { "nvim-lua/popup.nvim" } },
+  })
+
+  -- Greeter
   use {
     'goolord/alpha-nvim',
   }
+
+  -- Terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = '*',
+  }
+
+  -- Git
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   use {
     "ahmedkhalf/project.nvim",
@@ -48,9 +105,10 @@ return require('packer').startup(function(use)
     end
   }
 
-  if packer_bootstrap then
+
+
+  if is_boostrap then
     require('packer').sync()
   end
 
 end)
-

@@ -5,22 +5,14 @@ local mappings = require('lib.keymap')
 -- examples https://github.com/Th3Whit3Wolf/dots/blob/main/private_dot_config/private_nvim/private_lua/private_mapping.lua
 local nnoremap = mappings.nnoremap
 local inoremap = mappings.inoremap
-local vnoremap = mappings.vnoremap
-local xnoremap = mappings.xnoremap
-local cnoremap = mappings.cnoremap
 local tnoremap = mappings.tnoremap
-local nmap = mappings.nmap
 local map = mappings.map
-local imap = mappings.imap
-local vmap = mappings.vmap
-local xmap = mappings.xmap
-
 
 g.mapleader = ","
 
 -- tab navigation
-nnoremap('<leader>k', '<esc>:tabprevious<CR>')
-nnoremap('<leader>j', '<esc>:tabnext<CR>')
+nnoremap('<leader>k', '<esc>:bprevious<CR>')
+nnoremap('<leader>j', '<esc>:bnext<CR>')
 nnoremap('<leader>t', '<esc>:tabnew<CR>')
 
 -- split window <leader> h/v
@@ -49,12 +41,6 @@ nnoremap('<C-j>', '<C-w>j')
 nnoremap('<C-k>', '<C-w>k')
 nnoremap('<C-l>', '<C-w>l')
 
--- replace ESC with jk
-inoremap('jk', '<esc>')
-vnoremap('jk', '<esc>')
-imap('<esc>', '<nop>')
-vmap('<esc>', '<nop>')
-
 map('<F2>', ':set hlsearch! hlsearch?<CR>')
 
 -- ToogleTerm 
@@ -66,16 +52,7 @@ tnoremap('<F12>', '<cmd>ToggleTerm<CR>')
 nnoremap("<leader>n", ":NvimTreeFindFileToggle<CR>")
 
 -- Telescope
-map('<C-!>', '<cmd>Telescope projects<CR>')
-map('<C-n>', '<cmd>Telescope find_files<CR>')
-map('<C-,>', '<cmd>Telescope coc workspace_symbols<CR>')
-map('<C-;>', '<cmd>Telescope  live_grep<CR>')
-
--- COC
-nmap('<leader>a', '<Plug>(coc-codeaction)')
-xmap('<leader>a', '<Plug>(coc-codeaction)')
-nmap('<M-CR>', '<Plug>(coc-codeaction-selected)')
-xmap('<M-CR>', '<Plug>(coc-codeaction-selected)')
-nmap('<S-F6>', '<cmd>CocCommand document.renameCurrentWord<CR>')
-nmap('<leader><F6>', '<Plug>(coc-diagnostic-prev)')
-nmap('<leader><F5>', '<Plug>(coc-diagnostic-next)')
+map('<leader>p', '<cmd>Telescope projects<CR>')
+map('<leader>f', '<cmd>Telescope find_files<CR>')
+map('<leader>;', '<cmd>Telescope lsp_dynamic_workspace_symbols<CR>')
+map('<leader>!', '<cmd>Telescope  live_grep<CR>')

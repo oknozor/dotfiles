@@ -11,6 +11,7 @@ import = [
 
 [settings]
 vars = [ "vars.toml"]
+posthooks = [ "nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'" ]
 
 [settings.dots]
 alacritty = { source = "terminals/alacritty", target = ".config/alacritty" }
