@@ -11,12 +11,6 @@ if not cmp_nvim_lsp_status then
   return
 end
 
-local rust_tools_status, rust_tools = pcall(require, "rust-tools")
-if not rust_tools_status then
-  print("failed to load rust_tools")
-  return
-end
-
 local neodev_status, neodev = pcall(require, "neodev")
 if not neodev_status then
   print("failed to load neodev")
@@ -28,13 +22,6 @@ if not fidget_status then
   print("failed to load fidget")
   return
 end
-
-local lsp_selection_range_status, lsp_selection_range = pcall(require, "lsp-selection-range")
-if not lsp_selection_range_status then
-  print("failed to load lsp-selection-range")
-  return
-end
-
 
 neodev.setup({
   library = {
@@ -50,15 +37,21 @@ neodev.setup({
 
 local keymap = vim.keymap
 
--- Todo: extract to default function for rust_tools
 local on_attach = function(_, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
-  keymap.set('n', 'vv', [[<cmd>lua require('lsp-selection-range').trigger()<CR>]], opts)
-  keymap.set('v', 'vv', [[<cmd>lua require('lsp-selection-range').expand()<CR>]], opts)
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
+  keymap.set("n", "gs", "<cmd>Lspsaga outline<CR>", opts)
+  keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+  keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts)
+  keymap.set("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+  keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+  keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
+  keymap.set("n", "gq", "<cmd>Lspsaga hover_doc<CR>", opts)
+  keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", opts)
 end
 
-local capabilities = lsp_selection_range.update_capabilities({})
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 lsp_config["tailwindcss"].setup({
   capabilities = capabilities,
@@ -90,27 +83,6 @@ lsp_config["sumneko_lua"].setup({
     }
   }
 })
-
--- Rust tools
-rust_tools.setup({
-  server = {
-    on_attach = function(_, bufnr)
-      local opts = { noremap = true, silent = true, buffer = bufnr }
-      keymap.set('n', 'vv', [[<cmd>lua require('lsp-selection-range').trigger()<CR>]], opts)
-      keymap.set('v', 'vv', [[<cmd>lua require('lsp-selection-range').expand()<CR>]], opts)
-      keymap.set("n", "<C-b>", rust_tools.hover_actions.hover_actions, opts)
-      keymap.set("n", "<M-CR>", rust_tools.code_action_group.code_action_group, opts)
-      keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
-    end,
-  },
-  tools = {
-    hover_actions = {
-      auto_focus = true,
-    },
-  }
-})
-
-rust_tools.hover_actions.hover_actions()
 
 -- Fidget
 fidget.setup()

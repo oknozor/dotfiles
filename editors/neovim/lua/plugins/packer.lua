@@ -30,16 +30,12 @@ require('packer').startup(function(use)
       'j-hui/fidget.nvim',
       'folke/neodev.nvim',
       'glepnir/lspsaga.nvim',
-      'camilledejoye/nvim-lsp-selection-range'
     },
   }
 
   use({
     "glepnir/lspsaga.nvim",
     branch = "main",
-    config = function()
-      require("lspsaga").setup({})
-    end,
     requires = { {"nvim-tree/nvim-web-devicons"} }
   })
 

@@ -5,33 +5,38 @@ if not saga_status then
 end
 
 saga.setup({
-  config = {
-    scroll_preview = {
-      scroll_down = "<C-j>",
-      scroll_up = "<C-k>",
+  scroll_preview = {
+    scroll_down = "<C-j>",
+    scroll_up = "<C-k>",
+  },
+  finder = {
+    jump_to = 'p',
+    edit = { "o", "<CR>" },
+    vsplit = "v",
+    split = "h",
+    tabe = "t",
+    quit = { "q", "<ESC>" },
+  },
+  code_action = {
+    num_shortcut = true,
+    keys = {
+      quit = "<ESC>",
+      exec = "<CR>",
     },
-    finder = {
-      jump_to = 'p',
-      edit = { "o", "<CR>" },
-      vsplit = "<leader>v",
-      split = "<leader>h",
-      tabe = "t",
-      quit = { "q", "<ESC>" },
-    },
-    ui = {
-      theme = "round",
-      title = true,
-      border = "rounded",
-      winblend = 0,
-      expand = "",
-      collapse = "",
-      preview = " ",
-      code_action = "💡",
-      diagnostic = "🐞",
-      incoming = " ",
-      outgoing = " ",
-      hover = ' ',
-      kind = {},
-    },
-  }
+  },
+  ui = {
+    theme = "round",
+    title = true,
+    border = "rounded",
+    winblend = 0,
+    expand = "",
+    collapse = "",
+    preview = " ",
+    code_action = "💡",
+    diagnostic = "🐞",
+    incoming = " ",
+    outgoing = " ",
+    hover = ' ',
+    kind = {},
+  },
 })
