@@ -29,6 +29,7 @@ mason_lspconfig.setup {
     "html",
     "tailwindcss",
     "cssls",
+    "yamlls",
   }
 }
 

@@ -11,8 +11,8 @@ local map = mappings.map
 g.mapleader = ","
 
 -- tab navigation
-nnoremap('<leader>k', '<esc>:bprevious<CR>')
-nnoremap('<leader>j', '<esc>:bnext<CR>')
+nnoremap('<A-k>', '<esc>:bprevious<CR>')
+nnoremap('<A-j>', '<esc>:bnext<CR>')
 nnoremap('<leader>t', '<esc>:tabnew<CR>')
 
 -- split window <leader> h/v

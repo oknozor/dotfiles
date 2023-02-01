@@ -55,39 +55,22 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'path' },
-    formatting = {
-      format = lspkind.cmp_format({
-        mode = 'symbol',
-        maxwidth = 50,
-        ellipsis_char = '...',
-      })
-    },
-    symbol_map = {
-      Text = "",
-      Method = "",
-      Function = "",
-      Constructor = "",
-      Field = "ﰠ",
-      Variable = "",
-      Class = "ﴯ",
-      Interface = "",
-      Module = "",
-      Property = "ﰠ",
-      Unit = "塞",
-      Value = "",
-      Enum = "",
-      Keyword = "",
-      Snippet = "",
-      Color = "",
-      File = "",
-      Reference = "",
-      Folder = "",
-      EnumMember = "",
-      Constant = "",
-      Struct = "פּ",
-      Event = "",
-      Operator = "",
-      TypeParameter = ""
-    },
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  formatting = {
+    fields = {'menu', 'abbr', 'kind'},
+    format = function(entry, item)
+      local menu_icon ={
+        nvim_lsp = 'λ',
+        vsnip = '⋗',
+        buffer = 'Ω',
+        path = '🖫',
+      }
+      item.menu = menu_icon[entry.source.name]
+      return item
+    end,
   },
 }

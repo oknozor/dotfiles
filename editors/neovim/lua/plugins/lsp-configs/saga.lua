@@ -18,5 +18,20 @@ saga.setup({
       tabe = "t",
       quit = { "q", "<ESC>" },
     },
+    ui = {
+      theme = "round",
+      title = true,
+      border = "rounded",
+      winblend = 0,
+      expand = "",
+      collapse = "",
+      preview = " ",
+      code_action = "💡",
+      diagnostic = "🐞",
+      incoming = " ",
+      outgoing = " ",
+      hover = ' ',
+      kind = {},
+    },
   }
 })
