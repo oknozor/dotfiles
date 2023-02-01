@@ -34,5 +34,7 @@ include gtk_config
 
 {% if "ironbar" in profiles %}
 exec ironbar
+{% elif "waybar" in profiles %}
+exec waybar -c ~/config/waybar/config.json
 {% endif %}
 
