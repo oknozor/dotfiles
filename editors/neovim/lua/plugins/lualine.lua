@@ -6,6 +6,6 @@ end
 
 lualine.setup {
   options = {
-    theme = 'nord'
+    theme = 'gruvbox_dark'
   }
 }

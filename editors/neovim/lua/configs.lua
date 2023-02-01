@@ -23,7 +23,8 @@ o.updatetime = 300
 o.backup = false
 o.writebackup = false
 o.signcolumn = "yes"
-
+local prefix = vim.fn.expand("~/.local")
+opt.undodir = { prefix .. '/state/nvim/undo//'}
 g.gitgutter_sign_added = ''
 g.gitgutter_sign_removed = ''
 g.gitgutter_sign_modified = ''
