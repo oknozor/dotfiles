@@ -84,5 +84,31 @@ lsp_config["sumneko_lua"].setup({
   }
 })
 
+
+-- Rust 
+local rust_tools_status, rust_tools = pcall(require, "rust-tools")
+if not rust_tools_status then
+  print("failed to load rust-tools")
+  return
+end
+
+
+rust_tools.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      on_attach(_, bufnr)
+      local opts = { noremap = true, silent = true, buffer = bufnr }
+      keymap.set("n", "<F9>", "<cmd>RustRunnables<CR>", opts)
+    end,
+  },
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rs",
+  callback = function()
+    vim.lsp.buf.format({ timeout_ms = 200})
+  end
+})
+
 -- Fidget
 fidget.setup()

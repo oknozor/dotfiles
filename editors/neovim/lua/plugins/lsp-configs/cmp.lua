@@ -55,6 +55,7 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'path' },
+    { name = 'crates' },
   },
   window = {
     completion = cmp.config.window.bordered(),

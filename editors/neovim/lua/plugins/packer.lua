@@ -33,6 +33,15 @@ require('packer').startup(function(use)
     },
   }
 
+  use {
+    'saecki/crates.nvim',
+    tag = 'v0.3.0',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('crates').setup()
+    end,
+  }
+
   use({
     "glepnir/lspsaga.nvim",
     branch = "main",

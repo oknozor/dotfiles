@@ -34,10 +34,10 @@ treesitter.setup({
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "gn",
-      node_incremental = "gc",
-      scope_incremental = "gv",
-      node_decremental = "gr",
+      init_selection = "vv",
+      node_incremental = ")",
+      scope_incremental = "=",
+      node_decremental = "-",
     },
   },
 })
