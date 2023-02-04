@@ -153,7 +153,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 smart_gaps on
-default_border none
+smart_borders on
 gaps inner 8
 focus_follows_mouse no
 for_window [class=".*"] border pixel 0

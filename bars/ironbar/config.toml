@@ -1,14 +1,9 @@
 position = "top"
-height = 38
+height = 28
 
 [[start]]
-type = "launcher"
-show_names = false
-show_icons = true
-icon_theme = "Papirus"
-
-[[end]]
-type = "workspaces"
+all_monitors = false
+type = 'workspaces'
 
 [[center]]
 type = "clock"

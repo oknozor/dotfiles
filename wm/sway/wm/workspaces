@@ -27,6 +27,7 @@ workspace $ws10 output primary
 # Gaps and egdes
 
 smart_gaps on
-default_border pixel 3
+smart_borders on
+default_border pixel 2
 gaps inner 8
 focus_follows_mouse no

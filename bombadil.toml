@@ -37,3 +37,6 @@ extra_profiles = [ "waybar", "sway", "onagre" ]
 
 [profiles.oldtimer-sway]
 extra_profiles = [ "sway", "ironbar", "wofi"  ]
+
+[profiles.default-sway]
+extra_profiles = [ "sway", "onagre" ]

@@ -33,7 +33,7 @@ include inputs
 include gtk_config
 
 {% if "ironbar" in profiles %}
-exec ironbar
+exec_always pkill ironbar || true && ironbar
 {% elif "waybar" in profiles %}
 exec_always pkill waybar || true & waybar -c ~/config/waybar/config.json
 {% endif %}
