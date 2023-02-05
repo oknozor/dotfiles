@@ -57,6 +57,8 @@ require('packer').startup(function(use)
     end
   }
 
+  use('jose-elias-alvarez/null-ls.nvim')
+
   -- Treesitter
   use('nvim-treesitter/nvim-treesitter')
   use {

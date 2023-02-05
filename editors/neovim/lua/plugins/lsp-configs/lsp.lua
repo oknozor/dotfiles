@@ -37,7 +37,33 @@ neodev.setup({
 
 local keymap = vim.keymap
 
-local on_attach = function(_, bufnr)
+-- Null ls formatting
+local lsp_formatting = function(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client)
+            return client.name == "null-ls"
+        end,
+        bufnr = bufnr,
+    })
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+local on_attach_format = function(client, bufnr)
+    if client.supports_method("textDocument/formatting") then
+        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+                lsp_formatting(bufnr)
+            end,
+        })
+    end
+end
+
+local on_attach = function(client, bufnr)
+  on_attach_format(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
   keymap.set("n", "gs", "<cmd>Lspsaga outline<CR>", opts)
@@ -95,19 +121,14 @@ end
 
 rust_tools.setup({
   server = {
-    on_attach = function(_, bufnr)
-      on_attach(_, bufnr)
+    on_attach = function(client, bufnr)
+      on_attach(client, bufnr)
+      client.server_capabilities.document_formatting = false
+      client.server_capabilities.document_range_formatting = false
       local opts = { noremap = true, silent = true, buffer = bufnr }
       keymap.set("n", "<F9>", "<cmd>RustRunnables<CR>", opts)
     end,
   },
-})
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.rs",
-  callback = function()
-    vim.lsp.buf.format({ timeout_ms = 200})
-  end
 })
 
 -- Fidget
