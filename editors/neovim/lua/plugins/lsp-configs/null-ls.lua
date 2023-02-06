@@ -8,7 +8,9 @@ null_ls.setup({
   sources = {
     null_ls.builtins.diagnostics.vale,
     null_ls.builtins.diagnostics.actionlint,
-    null_ls.builtins.formatting.rustfmt
+    null_ls.builtins.formatting.rustfmt,
+    null_ls.builtins.diagnostics.curlylint,
+    null_ls.builtins.diagnostics.djlint
   },
   on_attach = function(client)
     if client.server_capabilities.document_formatting then
