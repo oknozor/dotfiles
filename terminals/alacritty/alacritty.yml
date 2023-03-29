@@ -84,7 +84,7 @@ cursor:
 live_config_reload: true
 shell:
   program: /bin/zsh
-alt_send_esc: true
+
 key_bindings:
   - key: Paste
     action: Paste

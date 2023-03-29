@@ -53,6 +53,9 @@ alias fzf='sk'
 alias du='dust'
 alias copy='wl-copy'
 
+export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+
 source /usr/share/autojump/autojump.zsh
 prompt off
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
