@@ -94,7 +94,7 @@ lsp_config["rust_analyzer"].setup({
   on_attach = on_attach
 })
 
-lsp_config["sumneko_lua"].setup({
+lsp_config["lua_ls"].setup({
   capabilities =capabilities,
   on_attach = on_attach,
   settings = {
