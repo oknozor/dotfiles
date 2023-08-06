@@ -3,8 +3,8 @@ font {{theme.font}}
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec nm-applet --indicator
 exec {{apps.notification}}
-exec kanshi
 exec_always swaybg --image {{desktop.wallpaper}}
+exec pkill xboxkbd || true && xboxkbd
 
 ### Variables
 set $mod Mod4
@@ -31,6 +31,8 @@ include window_placement
 include key_bindings
 include inputs
 include gtk_config
+
+output HDMI-A-1 disable
 
 {% if "ironbar" in profiles %}
 exec_always pkill ironbar || true && ironbar

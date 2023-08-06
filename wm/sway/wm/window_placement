@@ -9,7 +9,7 @@ assign [class="Zulip"] → $ws4
 assign [class="discord"] → $ws4
 assign [class="Element"] → $ws4
 assign [app_id="Gimp(.*)"] → $ws5
-assign [class="Steam"] → $ws8
+assign [class="steam"] → $ws8
 assign [app_id="lutris"] → $ws8
 
 # Borderless
@@ -30,6 +30,7 @@ for_window [app_id="pavucontrol"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
 for_window [title="Welcome to IntelliJ IDEA"] floating enable
 for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
-for_window [instance="Godot_Engine"] floating enable
+for_window [instance="Godot"] floating enable
+for_window [app_id="HomeTUI"] fullscreen enable
 
 

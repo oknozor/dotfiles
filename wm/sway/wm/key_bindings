@@ -106,6 +106,10 @@ bindsym $mod+Shift+Tab move scratchpad
 ## If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Tab scratchpad show
 
+## Media center (via keyboard emulation)
+bindsym $mod+Shift+Control+Return exec alacritty --config-file ~/.config/alacritty/alacritty_zoomed.yml --class HomeTUI -e home_tui
+
+
 # Resizing containers:
 mode "resize" {
     bindsym $up resize shrink height 10 px or 10 ppt
