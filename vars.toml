@@ -63,6 +63,7 @@ camera = ""
 display = ""
 select = ""
 record = ""
+
 [theme.icon.wifi]
 wifi_up = ""
 wifi_down = ""
