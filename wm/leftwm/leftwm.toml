@@ -1,6 +1,0 @@
-[profiles.leftwm]
-prehooks = ["echo installing leftwm dotfiles"]
-
-[profiles.leftwm.dots]
-xinit = { source = "wm/leftwm/xinitrc", target = ".xinitrc" }
-wm = { source = "wm/leftwm/wm", target = ".config/leftwm" }

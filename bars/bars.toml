@@ -1,8 +1,0 @@
-[profiles.ironbar.dots]
-ironbar = { source = "bars/ironbar", target = ".config/ironbar" }
-
-[profiles.eww.dots]
-eww = { source = "bars/eww", target = ".config/eww" }
-
-[profiles.waybar.dots]
-waybar = { source = "bars/waybar", target = ".config/waybar" }

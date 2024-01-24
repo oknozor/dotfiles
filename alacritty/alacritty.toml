@@ -1,0 +1,11 @@
+import = [
+  "~/.config/alacritty/theme.toml"
+]
+shell = "/bin/zsh"
+live_config_reload = true
+
+[font]
+normal = { family = "Fira Code" }
+
+[window]
+padding = { x = 15, y = 15 }

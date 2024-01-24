@@ -3,5 +3,4 @@ posthooks = ["sway reload"]
 
 [profiles.sway.dots]
 sway = { source = "wm/sway/wm", target = ".config/sway" }
-mako = { source = "wm/sway/mako", target = ".config/mako" }
 

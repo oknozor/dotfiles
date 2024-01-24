@@ -1,7 +1,0 @@
-(deflisten window :initial "" `ewwdot -w sway -e window`)
-
-(defwidget current_window []
-  (box :class "current_window"
-    (label :text "${window}")
-  )
-)

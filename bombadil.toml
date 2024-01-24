@@ -3,41 +3,31 @@ gpg_user_id = "paul.delafosse@protonmail.com"
 
 import = [
   { path = "wm/sway/sway.toml" },
-  { path = "wm/leftwm/leftwm.toml" },
-  { path = "wm/i3/i3.toml" },
-  { path = "bars/bars.toml" },
-  { path = "launchers/launchers.toml" },
+  { path = "wm/hypr/hypr.toml" }
 ]
+
 
 [settings]
 vars = [ "vars.toml"]
-posthooks = [ "nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'" ]
+
+posthooks = [
+  "sassc ~/.config/gBar/style.scss ~/.config/gBar/style.css"
+]
 
 [settings.dots]
-alacritty = { source = "terminals/alacritty", target = ".config/alacritty" }
+alacritty = { source = "alacritty", target = ".config/alacritty" }
 zsh = { source = "zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "zsh/zshenv", target = ".zshenv" }
 starship = { source = "zsh/starship.toml", target = ".config/starship.toml" }
 gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "git/gitignore", target = ".gitignore" }
-nvim = { source = "editors/neovim", target = ".config/nvim" }
-vale = { source = "editors/vale.ini", target = ".vale.ini" }
 helix = {source = "editors/helix", target = ".config/helix" }
 gpg_agent = { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
 xdg_dirs = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
 gtk2 = { source = "gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
 gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
 gtk4 = { source = "gtk/gtk-3.0", target = ".config/gtk-4.0" }
+onagre = { source = "onagre", target = ".config/onagre" }
+gBar = { source = "gBar", target = ".config/gBar" }
+mako = { source = "mako", target = ".config/mako" }
 
-
-[profiles.hipster-sway]
-extra_profiles = [ "ironbar", "sway", "onagre" ]
-
-[profiles.cool-sway]
-extra_profiles = [ "waybar", "sway", "onagre" ]
-
-[profiles.oldtimer-sway]
-extra_profiles = [ "sway", "ironbar", "wofi"  ]
-
-[profiles.default-sway]
-extra_profiles = [ "sway", "onagre" ]

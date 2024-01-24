@@ -1,6 +1,0 @@
-#!/bin/sh
-
-brightness=$(brightnessctl get)
-percentage=$(echo "scale=3; ($brightness / 255) * 100" | bc)
-percentage=${percentage%.*}
-echo $percentage 
