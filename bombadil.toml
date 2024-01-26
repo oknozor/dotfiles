@@ -3,7 +3,7 @@ gpg_user_id = "paul.delafosse@protonmail.com"
 
 import = [
   { path = "wm/sway/sway.toml" },
-  { path = "wm/hypr/hypr.toml" }
+  { path = "wm/hypr/hypr.toml" },
 ]
 
 
@@ -31,3 +31,8 @@ onagre = { source = "onagre", target = ".config/onagre" }
 gBar = { source = "gBar", target = ".config/gBar" }
 mako = { source = "mako", target = ".config/mako" }
 
+
+
+[profiles.laptop]
+vars = [ "profiles/laptop_vars.toml"]
+extra_profiles = ["hypr"]
