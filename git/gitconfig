@@ -26,9 +26,10 @@
     && git fetch origin $BRANCH \
     && git reset --hard origin/$BRANCH
   fast = !sh -c 'git checkout $1 && git pull && git checkout -  && git rebase $1 ' -
+  staash = stash --all
 
 [commit]
-  gpgsign = false
+  gpgsign = true
 
 [pull]
   rebase = merges
@@ -46,9 +47,12 @@
 [difftool]
   prompt = true
 
-[diff]
+[rerere]
+  enabled = true
 
+[diff]
   tool = nvimdiff
+
 [difftool "nvimdiff"]
   cmd = "nvim -d "$LOCAL" "$REMOTE""
 
