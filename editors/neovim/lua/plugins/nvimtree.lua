@@ -12,13 +12,7 @@ nvim_tree.setup {
     update_root = true
   },
   view = {
-    adaptive_size = false,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-        { key = "g", action = "cd" },
-      },
-    },
+    adaptive_size = true,
   },
 }
 
