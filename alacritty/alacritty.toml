@@ -5,7 +5,7 @@ shell = "/bin/zsh"
 live_config_reload = true
 
 [font]
-normal = { family = "Fira Code" }
+normal = { family = "JetBrainsMono Nerd Font" }
 
 [window]
 padding = { x = 15, y = 15 }

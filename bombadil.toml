@@ -22,7 +22,7 @@ starship = { source = "zsh/starship.toml", target = ".config/starship.toml" }
 gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "git/gitignore", target = ".gitignore" }
 helix = {source = "editors/helix", target = ".config/helix" }
-nvim = { source = "editors/neovim", target = ".config/nvim" }
+nvim = { source = "editors/neovim/", target = ".config/nvim" }
 gpg_agent = { source = "gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
 xdg_dirs = { source = "xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
 gtk2 = { source = "gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
