@@ -96,5 +96,18 @@
       "enter": "project_panel::Open",
       "shift-f6": "project_panel::Rename"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-n": "workspace::NewTerminal",
+      "alt-t": "workspace::ToggleBottomDock"
+    }
   }
 ]
