@@ -61,7 +61,9 @@
       "cmd-home": "editor::MoveToBeginning",
       "cmd-end": "editor::MoveToEnd",
       "cmd-shift-home": "editor::SelectToBeginning",
-      "cmd-shift-end": "editor::SelectToEnd"
+      "cmd-shift-end": "editor::SelectToEnd",
+      "tab": "editor::ContextMenuNext",
+      "alt-tab": "editor::ContextMenuPrev"
     }
   },
   {

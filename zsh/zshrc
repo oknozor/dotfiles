@@ -54,6 +54,8 @@ alias du='dust'
 alias copy='wl-copy'
 
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
+export PACKAGE_ACCESS_TOKEN={{secrets.gitlab_token}} 
+
 
 prompt off
 eval "$(starship init zsh)"
