@@ -15,13 +15,7 @@ set $right l
 
 set $term {{apps.terminal}}
 set $pass wofipassmenu
-
-{% if "onagre" in profiles %}
 set $launcher "WGPU_BACKEND=vulkan onagre"
-{% elif "wofi" in profiles %}
-set $launcher "wofi --show drun"
-{% endif %}
-
 set $lock "swaylock -c 000000"
 
 include workspaces

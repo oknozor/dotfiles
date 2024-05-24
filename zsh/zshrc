@@ -52,6 +52,7 @@ alias ogrep='/usr/bin/grep'
 alias fzf='sk'
 alias du='dust'
 alias copy='wl-copy'
+alias docker-stop-all='docker stop $(docker ps -a -q)'
 
 export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 export PACKAGE_ACCESS_TOKEN={{secrets.gitlab_token}} 
