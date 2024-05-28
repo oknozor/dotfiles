@@ -26,7 +26,6 @@ require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "numtostr/comment.nvim", opts = {} },
 	{ require("plugins.telescope") },
-	{ require("plugins.noice") },
 	{ "lvimuser/lsp-inlayhints.nvim" },
 	{ require("plugins.lsp-config") },
 	{ require("plugins.crates") },
@@ -35,7 +34,6 @@ require("lazy").setup({
 	{ require("plugins.conform") },
 	{ require("plugins.neotree") },
 	{ require("plugins.saga") },
-	{ "Pocco81/auto-save.nvim" },
 	{ require("plugins.autopair") },
 })
 
