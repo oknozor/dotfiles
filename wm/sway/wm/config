@@ -28,9 +28,12 @@ include gtk_config
 
 output HDMI-A-1 disable
 
-{% if "ironbar" in profiles %}
-exec_always pkill ironbar || true && ironbar
-{% elif "waybar" in profiles %}
-exec_always pkill waybar || true & waybar -c ~/config/waybar/config.json
-{% endif %}
-
+bar {
+    position top
+    status_command lua ~/dotfiles/scripts/bar.lua
+    colors {
+      statusline #ffffff
+      background #323232
+      inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}

@@ -61,3 +61,4 @@ export PACKAGE_ACCESS_TOKEN={{secrets.gitlab_token}}
 prompt off
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
+eval "$(fnm env --use-on-cd)"

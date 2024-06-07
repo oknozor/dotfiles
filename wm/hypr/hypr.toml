@@ -1,4 +1,0 @@
-[profiles.hypr.dots]
-hypr = { source = "wm/hypr", target = ".config/hypr", ignore = [ "hypr.toml" ] }
-
-

@@ -1,18 +1,13 @@
 dotfiles_dir = "dotfiles"
 gpg_user_id = "paul.delafosse@protonmail.com"
 
-import = [
-  { path = "wm/sway/sway.toml" },
-  { path = "wm/hypr/hypr.toml" },
-]
+import = [{ path = "wm/sway/sway.toml" }]
 
 
 [settings]
-vars = [ "vars.toml"]
+vars = ["vars.toml"]
 
-posthooks = [
-  "sassc ~/.config/gBar/style.scss ~/.config/gBar/style.css"
-]
+posthooks = ["sassc ~/.config/gBar/style.scss ~/.config/gBar/style.css"]
 
 [settings.dots]
 alacritty = { source = "alacritty", target = ".config/alacritty" }
@@ -28,15 +23,9 @@ gtk2 = { source = "gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
 gtk3 = { source = "gtk/gtk-3.0", target = ".config/gtk-3.0" }
 gtk4 = { source = "gtk/gtk-3.0", target = ".config/gtk-4.0" }
 onagre = { source = "onagre", target = ".config/onagre" }
-gBar = { source = "gBar", target = ".config/gBar" }
 mako = { source = "mako", target = ".config/mako" }
 
 
-
-[profiles.swaywm] 
-vars = [ "profiles/laptop_vars.toml"]
+[profiles.swaywm]
+vars = ["profiles/laptop_vars.toml"]
 extra_profiles = ["sway"]
-
-[profiles.laptop]
-vars = [ "profiles/laptop_vars.toml"]
-extra_profiles = ["hypr"]
