@@ -1,29 +1,27 @@
-# Okno's ⚫Files 
+# Okno's ⚫Files
 
 These are my dotfiles I regularly update and tweak them.
-If you wan't to use them, feel free to fork, also you might need to adapt them. 
+If you wan't to use them, feel free to fork, also you might need to adapt them.
 
-![screenshot](docs/screenshots/sway/new/screenshot_06.png) 
-![screenshot](docs/screenshots/sway/new/screenshot_03.png) 
-![screenshot](docs/screenshots/sway/new/screenshot_01.png) 
-![screenshot](docs/screenshots/sway/new/screenshot_05.png) 
-![screenshot](docs/screenshots/sway/new/screenshot_02.png) 
-![screenshot](docs/screenshots/sway/new/screenshot_04.png) 
+![screenshot](docs/screenshots/sway/new/screenshot_06.png)
+![screenshot](docs/screenshots/sway/new/screenshot_03.png)
+![screenshot](docs/screenshots/sway/new/screenshot_01.png)
+![screenshot](docs/screenshots/sway/new/screenshot_05.png)
+![screenshot](docs/screenshots/sway/new/screenshot_02.png)
+![screenshot](docs/screenshots/sway/new/screenshot_04.png)
 
-## Installation 
+## Installation
 
-To manage symlinks I use [toml-bombadil](https://github.com/oknozor/toml-bombadil), take a look :). 
+To manage symlinks I use [toml-bombadil](https://github.com/oknozor/toml-bombadil), take a look :).
 
-## A list of (cool) programs & tools I am currently using   
+## A list of (cool) programs & tools I am currently using
 
 This list is not exhaustive, these are the tools I use on a daily basis and could do without.
 
 ### DE
 - Window manager : [sway](https://swaywm.org/)
-- Screen locker : [gtklock](https://github.com/jovanlanik/gtklock)
-- Status bar : [eww](https://github.com/oknozor/eww)
 - App launcher : [onagre](https://github.com/oknozor/onagre) (not perfect yet but I am working on it!)
-- Notification : [mako](https://github.com/emersion/mako)
+- Notification : [swaync](https://github.com/ErikReider/SwayNotificationCenter)
 
 ### Package manager
 - Aur helper : [yay](https://github.com/Jguer/yay)
@@ -54,14 +52,14 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
     - [cespare/vim-toml](https://github.com/cespare/vim-toml)
     - [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
 
-**Note :** [here is a cheatsheet](docs/nvim_cheatsheet.md) for the nvim config 
+**Note :** [here is a cheatsheet](docs/nvim_cheatsheet.md) for the nvim config
 
 ### Cli tools
 - Grep replacement : [ripgrep](https://github.com/BurntSushi/ripgrep)
 - Find replacement : [fd](https://github.com/sharkdp/fd)
-- Cat replacement : [bat](https://github.com/sharkdp/bat) 
-- Hexdump replacement : [hexyl](https://github.com/sharkdp/hexyl) 
-- du replacement : [dust](https://github.com/bootandy/dust) 
+- Cat replacement : [bat](https://github.com/sharkdp/bat)
+- Hexdump replacement : [hexyl](https://github.com/sharkdp/hexyl)
+- du replacement : [dust](https://github.com/bootandy/dust)
 - Quick file navigation : [autojump-rs](https://github.com/xen0n/autojump-rs)
 - Password managment : [pass](https://www.passwordstore.org/)
 
@@ -71,6 +69,6 @@ This list is not exhaustive, these are the tools I use on a daily basis and coul
 - Screenshot : [grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot)
 
 
-## Contributions 
+## Contributions
 
-These are my personal dotfiles, it's very unlikely I accept any PRs unless it's supa dupa. Nevertheless, if you have any questions and need help to use these dotfiles, [issues are welcome!](https://github.com/oknozor/dotfiles/issues). 
+These are my personal dotfiles, it's very unlikely I accept any PRs unless it's supa dupa. Nevertheless, if you have any questions and need help to use these dotfiles, [issues are welcome!](https://github.com/oknozor/dotfiles/issues).

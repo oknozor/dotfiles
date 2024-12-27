@@ -2,8 +2,9 @@
 font {{theme.font}}
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec nm-applet --indicator
+exec swayosd-server
 exec {{apps.notification}}
-exec_always swaybg --image {{desktop.wallpaper}}
+exec_always swaybg --image {{desktop.wallpaper_wide}}
 exec pkill xboxkbd || true && xboxkbd
 
 ### Variables
@@ -14,7 +15,6 @@ set $up k
 set $right l
 
 set $term {{apps.terminal}}
-set $pass wofipassmenu
 set $launcher "WGPU_BACKEND=vulkan onagre"
 set $lock "swaylock -c 000000"
 
@@ -25,8 +25,6 @@ include window_placement
 include key_bindings
 include inputs
 include gtk_config
-
-output HDMI-A-1 disable
 
 bar {
     position top

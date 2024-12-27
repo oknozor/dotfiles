@@ -1,0 +1,78 @@
+
+anchor_to_edges = true
+position = "top"
+icon_theme = "Adwaita"
+
+[[start]]
+type = "focused"
+show_icon = true
+show_title = true
+icon_size = 32
+truncate = "end"
+
+[[center]]
+type = "music"
+player_type = "mpris"
+format = " {title} - {artist}"
+
+[center.truncate]
+mode = "end"
+max_length = 100
+
+[[center]]
+type = "clock"
+
+[[end]]
+type = "sys_info"
+format = [
+    " {cpu_percent}% | {temp_c:k10temp-Tccd1}°C",
+    " {memory_used} / {memory_total} GB ({memory_percent}%)",
+    "󰋊 {disk_used:/} / {disk_total:/} GB ({disk_percent:/}%)",
+    "󰓢 {net_down:enp10s0} / {net_up:enp10s0} Mbps",
+    "󰥔 {uptime}",
+]
+
+[end.interval]
+memory = 30
+cpu = 1
+temps = 5
+disks = 300
+networks = 3
+
+[[end]]
+type = "volume"
+format = "{icon} {percentage}%"
+max_volume = 100
+
+[end.icons]
+volume_high = "󰕾"
+volume_medium = "󰖀"
+volume_low = "󰕿"
+muted = "󰝟"
+
+[[end]]
+type = "clipboard"
+max_items = 3
+
+[end.truncate]
+mode = "end"
+length = 50
+
+
+[[end]]
+type = "tray"
+direction = "h"
+icon_size = 24
+prefer_theme_icons = true
+
+[[end]]
+type = "notifications"
+show_count = true
+
+[end.icons]
+closed_none = "󰍥"
+closed_some = "󱥂"
+closed_dnd = "󱅯"
+open_none = "󰍡"
+open_some = "󱥁"
+open_dnd = "󱅮"

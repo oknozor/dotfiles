@@ -1,0 +1,6 @@
+
+[profiles.niri]
+
+[profiles.niri.dots]
+niri = { source = "wm/niri", target = ".config/niri", ignore = ["*.toml"] }
+ironbar = { source = "ironbar", target = ".config/ironbar" }

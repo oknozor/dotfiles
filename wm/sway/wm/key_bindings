@@ -1,8 +1,5 @@
 # Key bindings
 
-# Bombadil profile
-bindsym $mod+o exec zsh -c switch_bombadil_profile
-
 # Quick launchers
 bindsym $mod+Return exec $term
 bindsym $mod+G exec $launcher
@@ -19,7 +16,7 @@ floating_modifier $mod
 # Reload the configuration file
 bindsym $mod+Shift+r reload
 
-# Exit sway/i3 
+# Exit sway/i3
 bindsym $mod+Shift+e exit
 
 # Move your focus around
@@ -64,12 +61,12 @@ bindsym $mod+Shift+underscore move container to workspace $ws8
 bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
-# Fn key 
-bindsym XF86AudioRaiseVolume exec swayosd --output-volume raise
-bindsym XF86AudioLowerVolume exec swayosd --output-volume lower
-bindsym XF86AudioMute exec swayosd --output-volume mute-toggle
-bindsym XF86MonBrightnessUp exec swayosd --brightness raise
-bindsym XF86MonBrightnessDown exec swayosd --brightness lower
+# Fn key
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
+bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
 
 
 bindsym --release Caps_Lock exec swayosd --caps-lock-led input19::capslock
@@ -77,6 +74,9 @@ bindsym --release Caps_Lock exec swayosd --caps-lock-led input19::capslock
 ## Screenshots
 bindsym --release Print exec zsh -c screenshot
 bindsym --release Shift+Print exec zsh -c fullscreenshot
+
+# Swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Split mod
 bindsym $mod+b splith
@@ -126,5 +126,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-

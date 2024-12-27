@@ -1,7 +1,5 @@
-import = [
-  "~/.config/alacritty/theme.toml"
-]
-shell = "/bin/zsh"
+[general]
+import = ["~/.config/alacritty/theme.toml"]
 live_config_reload = true
 
 [font]
@@ -9,3 +7,6 @@ normal = { family = "JetBrainsMono Nerd Font" }
 
 [window]
 padding = { x = 15, y = 15 }
+
+[terminal]
+shell = "/bin/zsh"

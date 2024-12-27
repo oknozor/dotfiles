@@ -6,6 +6,11 @@ theme = "Arc-Lighter"
 wallpaper = "$HOME/dotfiles/wallpapers/sea.jpg"
 monitor = "HDMI-A-1"
 
+[apps]
+term = "alacritty"
+launcher = "onagre"
+notifications = """"swaync-client" "-t""""
+
 [theme]
 font = "Fira Code 10"
 background = "#1c1e26"

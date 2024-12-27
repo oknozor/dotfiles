@@ -1,7 +1,7 @@
 [apps]
-notification = "mako"
+notification = "swaync"
 terminal = "alacritty"
 
 [desktop]
 wallpaper = "/home/okno/dotfiles/assets/wallpapers/hornet.jpg"
-
+wallpaper_wide = "/home/okno/dotfiles/assets/wallpapers/well.jpeg"
