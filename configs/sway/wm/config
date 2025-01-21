@@ -1,0 +1,37 @@
+# On start
+font {{theme.font}}
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec nm-applet --indicator
+exec swayosd-server
+exec {{apps.notification}}
+exec_always swaybg --image {{desktop.wallpaper_wide}}
+exec pkill xboxkbd || true && xboxkbd
+
+### Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term {{apps.terminal}}
+set $launcher "WGPU_BACKEND=vulkan onagre"
+set $lock "swaylock -c 000000"
+
+include workspaces
+include color_vars
+include colors
+include window_placement
+include key_bindings
+include inputs
+include gtk_config
+
+bar {
+    position top
+    status_command lua ~/dotfiles/scripts/bar.lua
+    colors {
+      statusline #ffffff
+      background #323232
+      inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}

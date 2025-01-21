@@ -4,7 +4,6 @@ theme = "Arc-Lighter"
 
 [desktop]
 wallpaper = "$HOME/dotfiles/wallpapers/sea.jpg"
-monitor = "HDMI-A-1"
 
 [apps]
 term = "alacritty"
@@ -76,16 +75,3 @@ wifi_down = ""
 [theme.icon.eth]
 eth_up = ""
 eth_down = ""
-
-[secrets]
-gitlab_token = """
-hQEMA6a3l9gLmfGAAQf8C/B6o60/CpBOYkDxCpNhYOJLaBHMHzbYzoRL+A20mtl4
-EJoX3tGrDZP3wTRPe9cwQJYYXnGv1reDHlcPqtb4IYGfX69wF7Es8I4kPNdwtrEq
-devIPtsFOI+XaN209zOItbJbmkeQ0Ky9krS9/XRSWqC8eUNzf2KJQNowk6YLHgbL
-Q/dgSN5/xMUx2X2QCft3VNNprwU2hxI1/Ioxrv0rMiIeHmUGI1S8KQp8cdhBgPan
-alxAi4gMvJMhzR61YMrMg1oKRW7CPyMrV/U1MxoCkJ+MGdIwAKcD7aapS4XxTaL7
-vcwqgOaA10X991Av221Ibrh3LxknLu3+k4Se8PD+PdJVAbMEOCTEaEklHELWF51D
-xFTxY7zeI4c96id2wUZGNmFB6FTlH18FM6z3z7h/H9esE+sTpkaigYrLS1byz7Xs
-3uF6o4SfU4gLwCGtFySfnG8kPyJAFg==
-=rF4G
-"""

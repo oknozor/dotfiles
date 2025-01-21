@@ -1,0 +1,128 @@
+# Key bindings
+
+# Quick launchers
+bindsym $mod+Return exec $term
+bindsym $mod+G exec $launcher
+bindsym $mod+P exec $pass
+bindsym $mod+x exec $lock
+bindsym $mod+c exec sh -c "~/dotfiles/common/eww/scripts/togglebar"
+
+# Kill focused window
+bindsym $mod+Shift+a kill
+
+# Drag modifier
+floating_modifier $mod
+
+# Reload the configuration file
+bindsym $mod+Shift+r reload
+
+# Exit sway/i3
+bindsym $mod+Shift+e exit
+
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym Ctrl+Alt+Shift+H move workspace to output left
+bindsym Ctrl+Alt+Shift+J move workspace to output down
+bindsym Ctrl+Alt+Shift+K move workspace to output up
+bindsym Ctrl+Alt+Shift+L move workspace to output right
+
+# Workspaces:
+# switch to wbindsym $mod+ampersand workspace $ws1
+bindsym $mod+ampersand workspace $ws1
+bindsym $mod+eacute workspace $ws2
+bindsym $mod+quotedbl workspace $ws3
+bindsym $mod+apostrophe workspace $ws4
+bindsym $mod+parenleft workspace $ws5
+bindsym $mod+minus workspace $ws6
+bindsym $mod+egrave workspace $ws7
+bindsym $mod+underscore workspace $ws8
+bindsym $mod+ccedilla workspace $ws9
+bindsym $mod+agrave workspace $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+ampersand move container to workspace $ws1
+bindsym $mod+Shift+eacute move container to workspace $ws2
+bindsym $mod+Shift+quotedbl move container to workspace $ws3
+bindsym $mod+Shift+apostrophe move container to workspace $ws4
+bindsym $mod+Shift+parenleft move container to workspace $ws5
+bindsym $mod+Shift+minus move container to workspace $ws6
+bindsym $mod+Shift+egrave move container to workspace $ws7
+bindsym $mod+Shift+underscore move container to workspace $ws8
+bindsym $mod+Shift+ccedilla move container to workspace $ws9
+bindsym $mod+Shift+agrave move container to workspace $ws10
+
+# Fn key
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
+bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
+
+
+bindsym --release Caps_Lock exec swayosd --caps-lock-led input19::capslock
+
+## Screenshots
+bindsym --release Print exec zsh -c screenshot
+bindsym --release Shift+Print exec zsh -c fullscreenshot
+
+# Swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
+# Split mod
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+n layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# move focus to the parent container
+bindsym $mod+a focus parent
+
+# Scratchpad:
+## Move the currently focused window to the scratchpad
+bindsym $mod+Shift+Tab move scratchpad
+
+## If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+Tab scratchpad show
+
+## Media center (via keyboard emulation)
+bindsym $mod+Shift+Control+Return exec alacritty --config-file ~/.config/alacritty/alacritty_zoomed.yml --class HomeTUI -e home_tui
+
+# Resizing containers:
+mode "resize" {
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
+    bindsym $left resize shrink width 10 px or 10 ppt
+
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"

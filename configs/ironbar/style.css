@@ -1,0 +1,122 @@
+@import "color.css";
+
+*:not(#bar) {
+    font-family: "JetbrainsMono Nerd Font";
+    font-size: 16px;
+    border: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 12px;
+}
+
+#bar {
+    border: 6px solid @base;
+}
+
+box,
+menubar,
+button {
+    background-image: none;
+    box-shadow: none;
+}
+
+box,
+menubar {
+    background-color: @base;
+}
+
+button {
+    background-color: @surface0;
+    padding: 0 5px;
+}
+
+button,
+label {
+    color: @text;
+}
+
+button:hover {
+    background-color: @surface2;
+}
+
+.popup {
+    padding: 1em;
+    border: 1px solid @surface0;
+}
+
+/* -- clock configuration -- */
+
+.clock {
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.popup-clock .calendar-clock {
+    color: @text;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: @surface0;
+}
+
+.popup-clock .calendar {
+    background-color: @surface0;
+    color: @text;
+}
+
+.popup-clock .calendar .header {
+    font-size: 1.5em;
+}
+
+.popup-clock .calendar:selected {
+    background-color: @rosewater;
+    color: @base;
+}
+
+/* -- notifications configuration -- */
+
+.notifications {
+    border-radius: 100%;
+}
+
+.notifications .count {
+    font-size: 0.6rem;
+    background-color: @text;
+    color: @crust;
+    border-radius: 100%;
+    margin-right: 3px;
+    margin-top: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    opacity: 0.7;
+}
+
+/* -- tray configuration -- */
+.tray {
+    background-color: @base;
+}
+
+.popup-tray {
+    background-color: rgba(0, 0, 1, 0.7);
+    padding: 8px 0;
+}
+
+/* Overrides the label text just for the tray */
+.tray label {
+    color: black;
+}
+
+/* -- volume configuration -- */
+.volume {
+    margin-left: 5px;
+}
+
+.popup-volume .device-box .device-selector {
+    background-color: @surface0;
+}
+
+.popup-volume .device-box .slider {
+    background-color: @surface0;
+}

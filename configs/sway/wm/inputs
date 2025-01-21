@@ -1,0 +1,11 @@
+input "1160:4618:DELL08B8:00_0488:120A_Touchpad" {
+    tap disabled
+    natural_scroll disabled
+    dwt disabled
+    middle_emulation disabled
+}
+
+input "type:keyboard" {          
+    xkb_layout fr,us
+}
+

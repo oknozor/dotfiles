@@ -1,0 +1,6 @@
+# Color                 border                background           text            indicator             child_border
+client.focused          {{theme.yellow}}      {{theme.background}} {{theme.white}} {{theme.blue}}        {{theme.magenta}}
+client.focused_inactive {{theme.light_white}} {{theme.background}} {{theme.white}} {{theme.light_black}} {{theme.light_white}}
+client.unfocused        {{theme.light_white}} {{theme.background}} {{theme.white}} {{theme.light_black}} {{theme.light_white}}
+client.urgent           {{theme.red}}         {{theme.background}} {{theme.white}} {{theme.light_black}} {{theme.light_white}}
+

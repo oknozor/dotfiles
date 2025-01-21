@@ -1,0 +1,55 @@
+#!/bin/sh
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/node_modules/.bin
+export BAT_STYLE=plain,snip,header
+export PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export SHELL_RC=~/dotfiles/zsh/zshrc
+export NVIMRC=~/dotfiles/nvim/init.vim
+export XKB_DEFAULT_LAYOUT=fr
+
+export IDEA_JDK=/usr/lib/jvm/jre-jetbrains
+export PHPSTORM_JDK=/usr/lib/jvm/jre-jetbrains
+export WEBIDE_JDK=/usr/lib/jvm/jre-jetbrains
+export PYCHARM_JDK=/usr/lib/jvm/jre-jetbrains
+export RUBYMINE_JDK=/usr/lib/jvm/jre-jetbrains
+export CL_JDK=/usr/lib/jvm/jre-jetbrains
+export DATAGRIP_JDK=/usr/lib/jvm/jre-jetbrains
+export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
+export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
+
+fullscreenshot() {
+  FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M:%S").png"
+  grimshot save screen $FILE && paplay "~/dotfiles/assets/audio/screenshot.wav"
+}
+
+screenshot() {
+  FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M:%S").png"
+  grimshot save area $FILE && paplay "~/dotfiles/assets/audio/screenshot.wav"
+}
+
+switch_bombadil_profile() {
+  # Allow switching profiles using the wofi launcher/menu program (https://hg.sr.ht/~scoopta/wofi).
+
+  if ! command -v bombadil &> /dev/null; then
+      echo "bombadil could not be found" >&2
+      exit 1
+  fi
+
+  if ! command -v wofi &> /dev/null; then
+      echo "wofi could not be found" >&2
+      exit 1
+  fi
+
+  SELECTED_PROFILE=$(bombadil get profiles | wofi -i -d -p "Switch Toml Bombadil Profile:")
+
+  if [ "$SELECTED_PROFILE" = "default" ]; then
+      bombadil link
+  else
+      bombadil link -p "$SELECTED_PROFILE"
+  fi
+
+}

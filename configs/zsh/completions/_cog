@@ -1,0 +1,83 @@
+#compdef coco
+
+autoload -U is-at-least
+
+_coco() {
+    typeset -A opt_args
+    typeset -a _arguments_options
+    local ret=1
+
+    if is-at-least 5.2; then
+        _arguments_options=(-s -S -C)
+    else
+        _arguments_options=(-s -C)
+    fi
+
+    local context curcontext="$curcontext" state line
+    _arguments "${_arguments_options[@]}" \
+'-B[BREAKING CHANGE commit]' \
+'--breaking-change[BREAKING CHANGE commit]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+':type -- The type of the commit message:(fix refactor build style ci perf docs revert chore test feat ex)' \
+':message -- The type of the commit message:_files' \
+'::scope -- The scope of the commit message:_files' \
+'::body -- The body of the commit message:_files' \
+'::footer -- The footer of the commit message:_files' \
+":: :_coco_commands" \
+"*::: :->Coco" \
+&& ret=0
+    case $state in
+    (Coco)
+        words=($line[6] "${words[@]}")
+        (( CURRENT += 1 ))
+        curcontext="${curcontext%:*:*}:coco-command-$line[6]:"
+        case $line[6] in
+            (generate-completions)
+_arguments "${_arguments_options[@]}" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+':type -- Type of completions to generate:(bash elvish fish zsh)' \
+&& ret=0
+;;
+(help)
+_arguments "${_arguments_options[@]}" \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+&& ret=0
+;;
+        esac
+    ;;
+esac
+}
+
+(( $+functions[_coco_commands] )) ||
+_coco_commands() {
+    local commands; commands=(
+        "generate-completions:Generate shell completions" \
+"help:Prints this message or the help of the given subcommand(s)" \
+    )
+    _describe -t commands 'coco commands' commands "$@"
+}
+(( $+functions[_coco__generate-completions_commands] )) ||
+_coco__generate-completions_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'coco generate-completions commands' commands "$@"
+}
+(( $+functions[_coco__help_commands] )) ||
+_coco__help_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'coco help commands' commands "$@"
+}
+
+_coco "$@"

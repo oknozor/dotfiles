@@ -1,0 +1,36 @@
+# Assignment
+
+assign [app_id="firefoxdeveloperedition"] → $ws2
+assign [class="sun-awt-X11-XFramePeer" class="jetbrains-idea"] → $ws3
+assign [class="jetbrains-idea" title="(.*)IntelliJ IDEA"] → $ws3
+assign [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] → $ws3
+assign [class="Slack"] → $ws4
+assign [class="Zulip"] → $ws4
+assign [class="discord"] → $ws4
+assign [class="Element"] → $ws4
+assign [app_id="Gimp(.*)"] → $ws5
+assign [class="steam"] → $ws8
+assign [app_id="lutris"] → $ws8
+
+# Borderless
+for_window [class="firefoxdeveloperedition"] border none
+for_window [app_id="pavucontrol"] border none
+for_window [app_id="deadd-notification-center"] border none
+
+
+# Floating
+for_window [app_id="zenity"] floating enable
+for_window [app_id="lutris"] floating enable
+for_window [class="vlc"] floating enable
+for_window [app_id="org.gnome(.*)"] floating enable
+for_window [app_id="evince"] floating enable
+for_window [app_id="gnome-todo"] floating enable
+for_window [app_id="eog"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+for_window [class="sun-awt-X11-XWindowPeer" class="java-lang-Thread"] floating enable
+for_window [title="Welcome to IntelliJ IDEA"] floating enable
+for_window [class="jetbrains-idea" title="(.*)Default Changelist"] fullscreen enable
+for_window [instance="Godot"] floating enable
+for_window [app_id="HomeTUI"] fullscreen enable
+
+
