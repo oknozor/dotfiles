@@ -27,6 +27,7 @@ require("lazy").setup({
     { "numtostr/comment.nvim",       opts = {} },
     { require("plugins.telescope") },
     { "lvimuser/lsp-inlayhints.nvim" },
+    { "elkowar/yuck.vim" },
     { require("plugins.lsp-config") },
     { require("plugins.crates") },
     { require("plugins.nvim-cmp") },

@@ -1,0 +1,79 @@
+(defpoll github_issues_assigned :interval "1m" `kip get issues-assigned`)
+(defpoll github_issues_created :interval "1m" `kip get issues-created`)
+(defpoll github_issues_mentioned :interval "1m" `kip get issues-mentioned`)
+
+(defwidget issue [number title url]
+  (eventbox
+    :onclick "xdg-open '${url}'"
+    :class "menu-item"
+    (box
+      :orientation "horizontal"
+      :space-evenly false
+      (iconbox
+        :icon-path "./icons/gh/issue_icon.svg"
+        :class "gh-icon")
+      (label
+        :class "gh-number"
+        :text "#${number}"
+        :limit-width 50)
+      (label
+        :class "gh-title"
+        :text title
+        :limit-width 50))))
+
+(defwidget issues_section [title issues]
+  (box
+    :orientation "vertical"
+    :space-evenly false
+    (box
+      :halign "start"
+      :class "section-header"
+      :orientation "horizontal"
+      (label :text title :class "section-text"))
+    (for issue in issues
+      (issue
+        :number "${issue.number}"
+        :title "${issue.title}"
+        :url "${issue.url}"))))
+
+(defwidget github_issues_list []
+  (box
+    :orientation "vertical"
+    :space-evenly false
+    :class "menu-container"
+    (box
+      :class "menu-header"
+      :orientation "horizontal"
+      (label :text "Issues" :class "header-text"))
+    (box
+      :orientation "vertical"
+      :space-evenly false
+      (issues_section
+        :title "Created"
+        :issues github_issues_created)
+      (issues_section
+        :title "Assigned"
+        :issues github_issues_assigned)
+      (issues_section
+        :title "Mentioned"
+        :issues github_issues_mentioned))))
+
+(defwindow github_issues
+  :monitor 0
+  :geometry (geometry
+    :x "1%"
+    :y "1%"
+    :width "400px"
+    :anchor "top right")
+  :windowtype "dock"
+  :wm-ignore false
+  :stacking "overlay"
+  (github_issues_list))
+
+(defwindow github_issues-closer
+  :monitor 0
+  :geometry (geometry :width "100%" :height "100%")
+  :stacking "fg"
+  :wm-ignore true
+  :focusable false
+  (closer :window "github_issues"))

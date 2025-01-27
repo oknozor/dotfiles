@@ -27,7 +27,8 @@ input {
 }
 
 layout {
-    gaps 16
+    gaps 8
+
     center-focused-column "never"
 
     preset-column-widths {
@@ -38,8 +39,8 @@ layout {
 
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 2
-        active-gradient from="{{theme.red}}" to="{{theme.white}}" angle=80
+        width 3
+        active-gradient from="{{base08}}" to="{{base06}}" angle=80
     }
 }
 

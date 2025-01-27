@@ -22,18 +22,28 @@ gtk2 = { source = "configs/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
 gtk3 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-3.0" }
 gtk4 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-4.0" }
 onagre = { source = "configs/onagre", target = ".config/onagre" }
+swaync = { source = "configs/swaync", target = ".config/swaync" }
+ironbar = { source = "configs/ironbar", target = ".config/ironbar" }
+eww = { source = "configs/eww", target = ".config/eww" }
+zed = { source = "configs/zed", target = ".config/zed" }
 
 [profiles.swaywm]
 extra_profiles = ["sway", "laptop"]
 
 [profiles.niri-desktop]
-extra_profiles = ["niri", "desktop", "rose-pine"]
+extra_profiles = ["niri", "desktop", "atelier-plateau"]
 
 [profiles.niri-laptop]
 extra_profiles = ["niri", "laptop", "rose-pine"]
 
 [profiles.rose-pine]
 vars = ["profiles/themes/rose-pine.toml"]
+
+[profiles.ayu-dark]
+vars = ["profiles/themes/ayu-dark.toml"]
+
+[profiles.atelier-plateau]
+vars = ["profiles/themes/atelier-plateau.toml"]
 
 [profiles.laptop]
 vars = ["profiles/laptop.toml"]

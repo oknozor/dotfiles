@@ -1,0 +1,98 @@
+{
+  "$schema": "https://f.jstanger.dev/github/ironbar/schema.json",
+  "anchor_to_edges": true,
+  "position": "top",
+  "icon_theme": "Papirus",
+  "start": [
+    {
+      "type": "launcher",
+      "show_names": false,
+      "show_icons": true
+    }
+  ],
+  "center": [
+    {
+      "type": "clock",
+      "disable_popup": true
+    }
+  ],
+  "end": [
+    {
+      "type": "music",
+      "player_type": "mpris",
+      "truncate": "start"
+    },
+    {
+      "type": "volume",
+      "format": "{icon} {percentage}%",
+      "max_volume": 100,
+      "icons": {
+        "volume_high": "󰕾",
+        "volume_medium": "󰖀",
+        "volume_low": "󰕿",
+        "muted": "󰝟"
+      }
+    },
+    {
+      "type": "custom",
+      "bar": [
+        {
+          "type": "box",
+          "name": "github",
+          "widgets": [
+            {
+              "type": "button",
+              "on_click": "!~/.config/ironbar/scripts/eww_open.sh github_issues github_issues-closer",
+              "tooltip": "GitHub Issues",
+              "widgets": [
+                {
+                  "type": "image",
+                  "src": "file:///home/okno/.config/eww/icons/gh/issue_icon.svg",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "type": "button",
+              "label": "",
+              "on_click": "!~/.config/ironbar/scripts/eww_open.sh github_prs github_prs-closer",
+              "tooltip": "GitHub PRs",
+              "widgets": [
+                {
+                  "type": "image",
+                  "src": "file:///home/okno/.config/eww/icons/gh/pr_icon.svg",
+                  "size": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "clipboard",
+      "max_items": 3,
+      "truncate": {
+        "mode": "end",
+        "length": 50
+      }
+    },
+    {
+      "type": "notifications",
+      "show_count": true,
+      "icons": {
+        "closed_none": "",
+        "closed_some": "",
+        "closed_dnd": "",
+        "open_none": "",
+        "open_some": "",
+        "open_dnd": ""
+      }
+    },
+    {
+      "type": "tray",
+      "direction": "horizontal",
+      "icon_size": 24
+    }
+  ]
+}

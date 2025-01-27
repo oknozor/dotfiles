@@ -1,0 +1,318 @@
+@define-color noti-border-color #{{base0B}};
+@define-color noti-bg #{{base02}};
+@define-color noti-bg-hover-alt #454545;
+@define-color noti-bg-alt #{{base00}};
+@define-color noti-fg #{{base05}};
+@define-color noti-bg-hover #{{base03}};
+@define-color noti-bg-focus rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg-hover #{{base03}};
+@define-color noti-urgent #{{base0D}};
+@define-color bg-selected #{{base08}};
+@define-color volume-slider #{{base01}};
+
+* {
+    font-family: FontAwesome, "Noto Sans";
+    color: @noti-fg;
+}
+
+.notification-row {
+    outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+    background: @noti-bg-focus;
+}
+
+.notification {
+    border: 1px solid @bg-selected;
+    border-radius: 4px;
+    margin: 6px 12px;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Uncomment to enable specific urgency colors */
+/* .low {
+  background: yellow;
+}
+.normal {
+  background: green;
+} */
+
+.critical {
+    border: 1px solid @noti-urgent;
+}
+
+.notification-content {
+    background: transparent;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.close-button {
+    background: @noti-close-bg;
+    color: white;
+    text-shadow: none;
+    padding: 0;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-right: 16px;
+    box-shadow: none;
+    border: none;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.close-button:hover {
+    box-shadow: none;
+    background: @noti-close-bg-hover;
+    transition: all 0.15s ease-in-out;
+    border: none;
+}
+
+.notification-default-action,
+.notification-action {
+    padding: 4px;
+    margin: 0;
+    box-shadow: none;
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    color: white;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+    -gtk-icon-effect: none;
+    background: @noti-bg-alt;
+}
+
+.notification-default-action {
+    border-radius: 4px;
+}
+
+/* When alternative actions are visible */
+.notification-default-action:not(:only-child) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+    border-radius: 0px;
+    border-top: none;
+    border-right: none;
+}
+
+/* add bottom border radius to eliminate clipping */
+.notification-action:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+.notification-action:last-child {
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid @noti-border-color;
+}
+
+.image {
+}
+
+.body-image {
+    margin-top: 6px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.summary {
+    font-size: 14px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    text-shadow: none;
+}
+
+.time {
+    font-size: 13px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    text-shadow: none;
+    margin-right: 18px;
+}
+
+.body {
+    font-size: 12px;
+    font-weight: normal;
+    background: transparent;
+    color: white;
+    text-shadow: none;
+}
+
+/* The "Notifications" and "Do Not Disturb" text widget */
+.top-action-title {
+    color: white;
+    text-shadow: none;
+}
+
+.control-center {
+    background-color: @noti-bg-alt;
+    border-radius: 6px;
+    border: 1px solid @bg-selected;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+    background: transparent;
+}
+
+/*** Widgets ***/
+
+/* Title widget */
+.widget-title {
+    margin: 8px;
+    font-size: 16px;
+}
+
+.widget-title > button {
+    font-size: initial;
+    color: white;
+    text-shadow: none;
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+.widget-title > button:hover {
+    background: @noti-bg-hover;
+}
+
+/* DND widget */
+.widget-dnd {
+    margin: 8px;
+    font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+    font-size: initial;
+    border-radius: 4px;
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+    background: @bg-selected;
+}
+
+.widget-dnd > switch slider {
+    background: @noti-bg-hover;
+    border-radius: 4px;
+}
+
+/* Label widget */
+.widget-label {
+    margin: 4px 8px 8px;
+}
+
+.widget-label > label {
+    font-size: 16px;
+}
+
+/* Mpris widget */
+.widget-mpris {
+    /* The parent to all players */
+}
+
+.widget-mpris-player {
+    padding: 8px;
+    margin: 8px;
+}
+
+.widget-mpris-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.widget-mpris-subtitle {
+    font-size: 1.1rem;
+}
+
+/* Volume and Brightness Widget*/
+
+.widget-volume {
+    background-color: @noti-bg;
+    padding: 4px 4px 4px 20px;
+    margin: 0px 8px 8px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.KB {
+    padding: 4px 8px 4px 8px;
+    margin: 0px 8px 0px 8px;
+    border-radius: 0;
+}
+
+.widget-menubar > box {
+    padding: 8px 0px 4px;
+    margin: 0px 8px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: @noti-bg;
+}
+
+.widget-menubar > box > .menu-button-bar > button {
+    border: 1px solid @noti-border-color;
+    background: @noti-bg;
+    border-radius: 4px;
+    margin: 4px 12px;
+}
+
+.widget-buttons-grid {
+    padding: 0px 8px 8px;
+    margin: 0px 8px 8px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: @noti-bg;
+    font-size: 14px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: @noti-bg;
+    border-radius: 4px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: @noti-bg-hover;
+}
+
+.screenshot-buttons,
+.screencast-buttons,
+.powermode-buttons,
+.power-buttons {
+    border-radius: 4px;
+}
+
+.screenshot-buttons > button,
+.screencast-buttons > button,
+.powermode-buttons > button,
+.power-buttons > button {
+    background: transparent;
+    padding: 2px 0px;
+    margin: 5px 70px 3px;
+    border: 1px solid @noti-border-color;
+}
+
+.screenshot-buttons > button:hover,
+.screencast-buttons > button:hover,
+.powermode-buttons > button:hover,
+.power-buttons > button:hover {
+    background: @noti-bg-hover;
+}

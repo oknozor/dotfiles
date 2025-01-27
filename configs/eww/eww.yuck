@@ -1,0 +1,14 @@
+(include "./windows/gh_pr.yuck")
+(include "./windows/gh_issues.yuck")
+(include "./windows/calendar.yuck")
+
+(defwidget closer [window]
+  (button
+    :onclick "eww close ${window} || true && eww close ${window}-closer || true"))
+
+(defwidget iconbox [icon-path class]
+  (box
+    :class "icon-box"
+    (image
+      :class "${class}"
+      :path "${icon-path}")))

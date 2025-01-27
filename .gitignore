@@ -4,3 +4,4 @@ mpd/database
 ncmpcpp/error.log
 .dots
 .idea
+target/
