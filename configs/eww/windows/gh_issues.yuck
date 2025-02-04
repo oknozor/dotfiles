@@ -17,7 +17,7 @@
         :text "#${number}"
         :limit-width 50)
       (label
-        :class "gh-title"
+        :class "item-title"
         :text title
         :limit-width 50))))
 

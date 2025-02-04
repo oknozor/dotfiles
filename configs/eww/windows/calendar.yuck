@@ -5,16 +5,16 @@
   (eventbox
     :onclick "xdg-open '${url}'"
     :cursor "pointer"
-    :class "event-item"
+    :class "menu-item"
     (box
       :orientation "vertical"
       :space-evenly false
       (box
         :orientation "horizontal"
         :space-evenly false
-        :class "event-header"
+        :class "section-header"
         (label
-          :class "event-title"
+          :class "item-title"
           :text title
           :limit-width 50)
         (label
@@ -32,9 +32,9 @@
   (box
     :orientation "vertical"
     :space-evenly false
-    :class "calendar-container"
+    :class "menu-container"
     (box
-      :class "header"
+      :class "menu-header"
       :orientation "horizontal"
       (label :text "Calendar Events" :class "header-text"))
     (scroll

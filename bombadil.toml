@@ -21,6 +21,8 @@ xdg_dirs = { source = "configs/xdg/user-dirs.dirs", target = ".config/user-dirs.
 gtk2 = { source = "configs/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
 gtk3 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-3.0" }
 gtk4 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-4.0" }
+qt5 = { source = "configs/qt/qt5ct", target = ".config/qt5ct" }
+qt6 = { source = "configs/qt/qt6ct", target = ".config/qt6ct" }
 onagre = { source = "configs/onagre", target = ".config/onagre" }
 swaync = { source = "configs/swaync", target = ".config/swaync" }
 ironbar = { source = "configs/ironbar", target = ".config/ironbar" }
@@ -31,16 +33,19 @@ zed = { source = "configs/zed", target = ".config/zed" }
 extra_profiles = ["sway", "laptop"]
 
 [profiles.niri-desktop]
-extra_profiles = ["niri", "desktop", "atelier-plateau"]
+extra_profiles = ["niri", "desktop"]
 
 [profiles.niri-laptop]
-extra_profiles = ["niri", "laptop", "rose-pine"]
+extra_profiles = ["niri", "laptop"]
 
 [profiles.rose-pine]
 vars = ["profiles/themes/rose-pine.toml"]
 
 [profiles.ayu-dark]
 vars = ["profiles/themes/ayu-dark.toml"]
+
+[profiles.ayu-light]
+vars = ["profiles/themes/ayu-light.toml"]
 
 [profiles.atelier-plateau]
 vars = ["profiles/themes/atelier-plateau.toml"]

@@ -1,4 +1,4 @@
-spawn-at-startup "nm-applet" "--indicator"
+spawn-at-startup "eww" "--force-wayland" "daemon"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "swaybg" "--image" "{{desktop.wallpaper}}" "-o" "*"
 spawn-at-startup "xwayland-satellite"
@@ -40,7 +40,7 @@ layout {
     default-column-width { proportion 0.5; }
     focus-ring {
         width 3
-        active-gradient from="{{base08}}" to="{{base06}}" angle=80
+        active-gradient from="{{base08}}" to="{{base0D}}" angle=80
     }
 }
 
@@ -56,6 +56,16 @@ window-rule {
 window-rule {
     geometry-corner-radius 15
     clip-to-geometry true
+}
+
+layer-rule {
+    match namespace="swaync"
+    match at-startup=true
+    opacity 0.8
+    shadow {
+        on
+        draw-behind-window true
+    }
 }
 
 binds {

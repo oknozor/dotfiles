@@ -25,6 +25,8 @@ enum Commands {
         /// Name of the theme (e.g., "rose-pine")
         theme: String,
     },
+    /// List available themes from base16 repository
+    List,
 }
 
 #[derive(Debug, serde::Deserialize)]
@@ -135,6 +137,28 @@ async fn download_theme(theme_name: &str) -> Result<Base16Theme, Box<dyn Error>>
     Ok(theme)
 }
 
+async fn list_themes() -> Result<Vec<String>, Box<dyn Error>> {
+    let url = "https://api.github.com/repos/base16-project/base16-schemes/contents/";
+    let client = reqwest::Client::new();
+    let response = client
+        .get(url)
+        .header("User-Agent", "base16-theme-generator")
+        .send()
+        .await?;
+
+    #[derive(serde::Deserialize)]
+    struct GithubFile {
+        name: String,
+    }
+
+    let files: Vec<GithubFile> = response.json().await?;
+    Ok(files
+        .into_iter()
+        .filter(|f| f.name.ends_with(".yaml"))
+        .map(|f| f.name.replace(".yaml", ""))
+        .collect())
+}
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     let cli = Cli::parse();
@@ -148,6 +172,12 @@ async fn main() -> Result<(), Box<dyn Error>> {
         Commands::FromRepo { theme } => {
             let theme = download_theme(theme).await?;
             println!("{}", generate_toml(&theme));
+        }
+        Commands::List => {
+            let themes = list_themes().await?;
+            for theme in themes {
+                println!("{}", theme);
+            }
         }
     }
 
