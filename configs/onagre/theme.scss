@@ -1,11 +1,11 @@
 .onagre {
-  --exit-unfocused: false;
+  --exit-unfocused: true;
   height: 475px;
   width: 800px;
   --icon-theme: "Papirus";
   --icon-size: 28px;
   --font-family: "Iosevka Nerd Font Mono";
-  background:  #{{base00}};
+  background:  #{{base01}};
   color: #{{base05}};
   border-color: #{{base08}};
   border-radius: 10%;
@@ -16,9 +16,8 @@
     padding: 8px;
     .search {
       --spacing: 1;
-      background: #{{base05}};
+      background: #{{base06}};
       border-radius: 10.0%;
-      color: #{{base00}};
       --height: fill-portion 1;
       --align-y: center;
       padding: 5px;
@@ -36,7 +35,8 @@
       }
 
       .input {
-        font-size: 20px;
+          color: #{{base01}};
+          font-size: 20px;
         --width: fill-portion 11;
       }
     }

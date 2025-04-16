@@ -2,7 +2,7 @@
 @define-color noti-bg #{{base02}};
 @define-color noti-bg-hover-alt #454545;
 @define-color noti-bg-alt #{{base00}};
-@define-color noti-fg #{{base05}};
+@define-color noti-fg #{{base07}};
 @define-color noti-bg-hover #{{base03}};
 @define-color noti-bg-focus rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
@@ -53,7 +53,7 @@
 
 .close-button {
     background: @noti-close-bg;
-    color: white;
+    color: @noti-fg;
     text-shadow: none;
     padding: 0;
     border-radius: 100%;
@@ -79,7 +79,7 @@
     box-shadow: none;
     background: @noti-bg;
     border: 1px solid @noti-border-color;
-    color: white;
+    color: @noti-fg;
 }
 
 .notification-default-action:hover,
@@ -119,7 +119,7 @@
 
 .body-image {
     margin-top: 6px;
-    background-color: white;
+    background-color: @noti-fg;
     border-radius: 6px;
 }
 
@@ -127,7 +127,7 @@
     font-size: 14px;
     font-weight: bold;
     background: transparent;
-    color: white;
+    color: @noti-fg;
     text-shadow: none;
 }
 
@@ -135,7 +135,7 @@
     font-size: 13px;
     font-weight: bold;
     background: transparent;
-    color: white;
+    color: @noti-fg;
     text-shadow: none;
     margin-right: 18px;
 }
@@ -144,13 +144,13 @@
     font-size: 12px;
     font-weight: normal;
     background: transparent;
-    color: white;
+    color: @noti-fg;
     text-shadow: none;
 }
 
 /* The "Notifications" and "Do Not Disturb" text widget */
 .top-action-title {
-    color: white;
+    color: @noti-fg;
     text-shadow: none;
 }
 
@@ -183,7 +183,7 @@
 
 .widget-title > button {
     font-size: initial;
-    color: white;
+    color: @noti-fg;
     text-shadow: none;
     background: @noti-bg;
     border: 1px solid @noti-border-color;

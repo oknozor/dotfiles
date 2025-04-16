@@ -18,6 +18,15 @@
     }
 }
 
+.calendar-closer {
+    background: transparent;
+    opacity: 0;
+    * {
+        background: transparent;
+        opacity: 0;
+    }
+}
+
 .background {
     background: transparent;
     border: none;
@@ -73,7 +82,7 @@
     font-family: monospace;
 }
 
-.gh-title {
+.item-title {
     color: $base05;
 }
 

@@ -21,35 +21,9 @@ export DATAGRIP_JDK=/usr/lib/jvm/jre-jetbrains
 export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
 export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
 
-fullscreenshot() {
-  FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M:%S").png"
-  grimshot save screen $FILE && paplay "~/dotfiles/assets/audio/screenshot.wav"
-}
-
-screenshot() {
-  FILE=~/Documents/Pictures/"screenshot-$(date +"%Y-%m-%dT%H:%M:%S").png"
-  grimshot save area $FILE && paplay "~/dotfiles/assets/audio/screenshot.wav"
-}
-
-switch_bombadil_profile() {
-  # Allow switching profiles using the wofi launcher/menu program (https://hg.sr.ht/~scoopta/wofi).
-
-  if ! command -v bombadil &> /dev/null; then
-      echo "bombadil could not be found" >&2
-      exit 1
-  fi
-
-  if ! command -v wofi &> /dev/null; then
-      echo "wofi could not be found" >&2
-      exit 1
-  fi
-
-  SELECTED_PROFILE=$(bombadil get profiles | wofi -i -d -p "Switch Toml Bombadil Profile:")
-
-  if [ "$SELECTED_PROFILE" = "default" ]; then
-      bombadil link
-  else
-      bombadil link -p "$SELECTED_PROFILE"
-  fi
-
-}
+{%- if "agicap" in profiles %}
+export GITHUB_PACKAGE_REGISTRY_USERNAME={{secrets.GITHUB_PACKAGE_REGISTRY_USERNAME}}
+export GITHUB_PACKAGE_REGISTRY_PASSWORD={{secrets.GITHUB_PACKAGE_REGISTRY_PASSWORD}}
+export GITLAB_HANGFIRE_REGISTRY_USERNAME={{secrets.GITLAB_HANGFIRE_REGISTRY_USERNAME}}
+export GITLAB_HANGFIRE_REGISTRY_PASSWORD={{secrets.GITLAB_HANGFIRE_REGISTRY_PASSWORD}}
+{% endif %}
