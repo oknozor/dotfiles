@@ -72,6 +72,7 @@ binds {
     Mod+Shift+Colon { show-hotkey-overlay; }
     Mod+Return { spawn "{{apps.term}}"; }
     Mod+G { spawn "{{apps.launcher}}"; }
+    Mod+S { spawn "/code/onagre/target/release/./onagre"; }
     Mod+D { spawn {{apps.notifications}}; }
 
     XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
@@ -86,6 +87,7 @@ binds {
     Mod+J     { focus-window-or-workspace-down; }
     Mod+K     { focus-window-or-workspace-up; }
     Mod+L     { focus-column-right; }
+    Mod+Shift+Space { toggle-window-floating; }
 
     Mod+Shift+H     { move-column-left; }
     Mod+Shift+J     { move-window-down; }

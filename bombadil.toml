@@ -3,6 +3,7 @@ gpg_user_id = "paul.delafosse@protonmail.com"
 import = [
     { path = "configs/sway/sway.toml" },
     { path = "configs/niri/niri.toml" },
+    { path = "profiles/agicap/agicap.toml" },
 ]
 
 [settings]
