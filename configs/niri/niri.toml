@@ -1,6 +1,6 @@
 [profiles.niri]
 prehooks = ["pkill swaync", "pkill ironbar"]
-posthooks = ["exec swaync", "exec ironbar"]
+posthooks = ["nohup swaync > /dev/null 2>&1 &", "nohup ironbar > /dev/null 2>&1 &"]
 
 [profiles.niri.dots]
 niri = { source = "configs/niri", target = ".config/niri", ignore = ["*.toml"] }
