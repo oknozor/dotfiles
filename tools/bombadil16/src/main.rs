@@ -80,8 +80,11 @@ fn generate_gtk(theme: &Base16Theme) -> String {
     for i in 0..16 {
         let base = format!("base{:02X}", i);
         let color = theme.get_color(&base);
-        output.push_str(&format!("@define-color {}  #{};
-", base, color));
+        output.push_str(&format!(
+            "@define-color {}  #{};
+",
+            base, color
+        ));
     }
 
     output
@@ -93,8 +96,11 @@ fn generate_scss(theme: &Base16Theme) -> String {
     for i in 0..16 {
         let base = format!("base{:02X}", i);
         let color = theme.get_color(&base);
-        output.push_str(&format!("${}: #{};
-", base, color));
+        output.push_str(&format!(
+            "${}: #{};
+",
+            base, color
+        ));
     }
 
     output

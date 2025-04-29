@@ -1,8 +1,5 @@
 ## Niri rice
 
-### Wallpaper
-- setup swww
-
 ### Term
 
 ### Dev

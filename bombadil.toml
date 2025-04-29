@@ -11,6 +11,8 @@ vars = ["vars.toml"]
 
 [settings.dots]
 alacritty = { source = "configs/alacritty", target = ".config/alacritty" }
+ghostty = { source = "configs/ghostty", target = ".config/ghostty" }
+fastfetch = { source = "configs/fastfetch", target = ".config/fastfetch", direct = true }
 zsh = { source = "configs/zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "configs/zsh/zshenv", target = ".zshenv" }
 starship = { source = "configs/zsh/starship.toml", target = ".config/starship.toml" }
@@ -50,6 +52,9 @@ vars = ["profiles/themes/ayu-light.toml"]
 
 [profiles.atelier-plateau]
 vars = ["profiles/themes/atelier-plateau.toml"]
+
+[profiles.pastel]
+vars = ["profiles/themes/pastel.toml"]
 
 [profiles.laptop]
 vars = ["profiles/laptop.toml"]

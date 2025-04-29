@@ -1,0 +1,18 @@
+(defwindow tray
+    :monitor 0
+    :geometry (
+        geometry
+        :x 0
+        :y 0
+        :width "40px"
+        :height "60px"
+        :anchor "center bottom"
+    )
+    :exclusive true
+    :stacking "fg"
+    (tray))
+
+
+(defwidget tray []
+    (box :class "tray"
+        (systray :orientation "horizontal")))

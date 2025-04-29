@@ -1,0 +1,100 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/home/okno/dotfiles/assets/fastfetch/logo.png",
+    "height": 13,
+    "padding": {
+      "top": 3,
+      "right": 0,
+    },
+  },
+  "display": {
+    "separator": "●  ",
+    "color": {
+      "separator": "1",
+    },
+    "constants": ["───────────────────────────"],
+    "key": {
+      "type": "both",
+      "paddingLeft": 4,
+    },
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "                             {user-name-colored}{at-symbol-colored}{host-name-colored}",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌{$1} {#1}System Information{#} {$1}┐",
+    },
+    "break",
+    {
+      "key": "OS           ",
+      "keyColor": "red",
+      "type": "os",
+    },
+    {
+      "key": "Kernel       ",
+      "keyColor": "magenta",
+      "type": "kernel",
+    },
+    {
+      "key": "Uptime       ",
+      "keyColor": "red",
+      "type": "uptime",
+    },
+    {
+      "key": "Resolution   ",
+      "keyColor": "yellow",
+      "type": "display",
+      "compactType": "original-with-refresh-rate",
+    },
+    {
+      "key": "WM           ",
+      "keyColor": "blue",
+      "type": "wm",
+    },
+    {
+      "key": "DE           ",
+      "keyColor": "green",
+      "type": "de",
+    },
+    {
+      "key": "Shell        ",
+      "keyColor": "cyan",
+      "type": "shell",
+    },
+    {
+      "key": "Terminal     ",
+      "keyColor": "red",
+      "type": "terminal",
+    },
+    {
+      "key": "CPU          ",
+      "keyColor": "yellow",
+      "type": "cpu",
+    },
+    {
+      "key": "GPU          ",
+      "keyColor": "blue",
+      "type": "gpu",
+    },
+    {
+      "key": "Memory       ",
+      "keyColor": "magenta",
+      "type": "memory",
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 34,
+      "symbol": "circle",
+    },
+    {
+      "type": "custom",
+      "format": "└{$1}────────────────────{$1}┘",
+    },
+  ],
+}

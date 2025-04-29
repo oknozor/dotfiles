@@ -1,0 +1,301 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
+  "name": "base16",
+  "author": "oknozor",
+  "themes": [
+    {
+      "name": "Base16",
+      "appearance": "dark",
+      "style": {
+        "border": "#{{base02}}",
+        "border.variant": "#{{base02}}",
+        "border.focused": null,
+        "border.selected": null,
+        "border.transparent": null,
+        "border.disabled": null,
+        "elevated_surface.background": "#{{base00}}",
+        "surface.background": "#{{base00}}",
+        "background": "#{{base00}}",
+        "element.background": "#{{base01}}",
+        "element.hover": "#{{base02}}",
+        "element.active": null,
+        "element.selected": "#{{base02}}",
+        "element.disabled": null,
+        "drop_target.background": "#{{base02}}",
+        "ghost_element.background": null,
+        "ghost_element.hover": "#{{base01}}",
+        "ghost_element.active": null,
+        "ghost_element.selected": "#{{base02}}",
+        "ghost_element.disabled": null,
+        "text": "#{{base05}}",
+        "text.muted": "#{{base04}}",
+        "text.placeholder": "#{{base07}}",
+        "text.disabled": "#{{base02}}",
+        "text.accent": "#{{base0C}}",
+        "icon": null,
+        "icon.muted": null,
+        "icon.disabled": null,
+        "icon.placeholder": null,
+        "icon.accent": null,
+        "status_bar.background": "#{{base00}}",
+        "title_bar.background": "#{{base00}}",
+        "toolbar.background": "#{{base00}}",
+        "tab_bar.background": "#{{base00}}",
+        "tab.inactive_background": "#{{base01}}",
+        "tab.active_background": "#{{base00}}",
+        "search.match_background": "#{{base02}}",
+        "panel.background": "#{{base00}}",
+        "panel.focused_border": "#{{base02}}",
+        "pane.focused_border": null,
+        "scrollbar.thumb.background": "#{{base02}}",
+        "scrollbar.thumb.hover_background": "#{{base03}}",
+        "scrollbar.thumb.border": "#{{base02}}6f",
+        "scrollbar.track.background": "#{{base00}}",
+        "scrollbar.track.border": null,
+        "editor.foreground": "#{{base05}}",
+        "editor.background": "#{{base00}}",
+        "editor.gutter.background": "#{{base00}}",
+        "editor.subheader.background": "#{{base00}}",
+        "editor.active_line.background": "#{{base01}}",
+        "editor.highlighted_line.background": null,
+        "editor.line_number": "#{{base03}}",
+        "editor.active_line_number": "#{{base06}}",
+        "editor.invisible": null,
+        "editor.wrap_guide": "#{{base01}}",
+        "editor.active_wrap_guide": "#{{base03}}",
+        "editor.document_highlight.read_background": "#{{base01}}",
+        "editor.document_highlight.write_background": "#{{base01}}",
+        "terminal.background": "#{{base00}}",
+        "terminal.foreground": null,
+        "terminal.bright_foreground": null,
+        "terminal.dim_foreground": null,
+        "terminal.ansi.black": "#{{base00}}",
+        "terminal.ansi.bright_black": "#{{base03}}",
+        "terminal.ansi.dim_black": null,
+        "terminal.ansi.red": "#{{base08}}",
+        "terminal.ansi.bright_red": "#{{base08}}",
+        "terminal.ansi.dim_red": null,
+        "terminal.ansi.green": "#{{base0B}}",
+        "terminal.ansi.bright_green": "#{{base0B}}",
+        "terminal.ansi.dim_green": null,
+        "terminal.ansi.yellow": "#{{base0A}}",
+        "terminal.ansi.bright_yellow": "#{{base0A}}",
+        "terminal.ansi.dim_yellow": null,
+        "terminal.ansi.blue": "#{{base0D}}",
+        "terminal.ansi.bright_blue": "#{{base0D}}",
+        "terminal.ansi.dim_blue": null,
+        "terminal.ansi.magenta": "#{{base0E}}",
+        "terminal.ansi.bright_magenta": "#{{base0E}}",
+        "terminal.ansi.dim_magenta": null,
+        "terminal.ansi.cyan": "#{{base0C}}",
+        "terminal.ansi.bright_cyan": "#{{base0C}}",
+        "terminal.ansi.dim_cyan": null,
+        "terminal.ansi.white": "#{{base05}}",
+        "terminal.ansi.bright_white": "#{{base07}}",
+        "terminal.ansi.dim_white": null,
+        "link_text.hover": "#{{base0C}}",
+        "conflict": "#{{base0A}}",
+        "conflict.background": "#{{base00}}",
+        "conflict.border": "#{{base0A}}",
+        "created": "#{{base0B}}",
+        "created.background": "#{{base00}}",
+        "created.border": "#{{base0B}}",
+        "deleted": "#{{base08}}",
+        "deleted.background": "#{{base00}}",
+        "deleted.border": "#{{base08}}",
+        "error": "#{{base08}}",
+        "error.background": "#{{base00}}",
+        "error.border": "#{{base08}}",
+        "hidden": "#{{base03}}",
+        "hidden.background": "#{{base00}}",
+        "hidden.border": "#{{base03}}",
+        "hint": "#{{base05}}",
+        "hint.background": "#{{base00}}",
+        "hint.border": "#{{base0C}}",
+        "ignored": "#{{base03}}",
+        "ignored.background": "#{{base00}}",
+        "ignored.border": "#{{base03}}",
+        "info": "#{{base0C}}",
+        "info.background": "#{{base00}}",
+        "info.border": "#{{base0C}}",
+        "modified": "#{{base0D}}",
+        "modified.background": "#{{base00}}",
+        "modified.border": "#{{base0D}}",
+        "predictive": "#{{base03}}",
+        "predictive.background": "#{{base01}}",
+        "predictive.border": "#{{base02}}",
+        "renamed": "#{{base0A}}",
+        "renamed.background": "#{{base00}}",
+        "renamed.border": "#{{base0A}}",
+        "success": "#{{base0B}}",
+        "success.background": "#{{base00}}",
+        "success.border": "#{{base0B}}",
+        "unreachable": "#{{base0A}}",
+        "unreachable.background": "#{{base00}}",
+        "unreachable.border": "#{{base0A}}",
+        "warning": "#{{base0A}}",
+        "warning.background": "#{{base00}}",
+        "warning.border": "#{{base0A}}",
+        "players": [
+          {
+            "cursor": "#{{base05}}",
+            "selection": "#{{base02}}",
+            "background": null
+          }
+        ],
+        "syntax": {
+          "attribute": {
+            "color": "#{{base0D}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "boolean": {
+            "color": "#{{base09}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "comment": {
+            "color": "#{{base03}}",
+            "font_style": "italic",
+            "font_weight": null
+          },
+          "comment.doc": {
+            "color": "#{{base03}}",
+            "font_style": "italic",
+            "font_weight": null
+          },
+          "constant": {
+            "color": "#{{base09}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "constructor": {
+            "color": "#{{base08}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "emphasis": {
+            "color": "#{{base08}}",
+            "font_style": "italic",
+            "font_weight": null
+          },
+          "emphasis.strong": {
+            "color": "#{{base08}}",
+            "font_style": null,
+            "font_weight": 700
+          },
+          "function": {
+            "color": "#{{base0D}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword": {
+            "color": "#{{base0E}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "label": {
+            "color": "#{{base0A}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "link_text": {
+            "color": "#{{base08}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "link_uri": {
+            "color": "#{{base08}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "number": {
+            "color": "#{{base09}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation": {
+            "color": "#{{base05}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.bracket": {
+            "color": "#{{base05}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.delimiter": {
+            "color": "#{{base05}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.list_marker": {
+            "color": "#{{base05}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.special": {
+            "color": "#{{base05}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "string": {
+            "color": "#{{base0B}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "string.escape": {
+            "color": "#{{base09}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "string.regex": {
+            "color": "#{{base0B}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "string.special": {
+            "color": "#{{base0B}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "string.special.symbol": {
+            "color": "#{{base0B}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "tag": {
+            "color": "#{{base08}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "text.literal": {
+            "color": "#{{base0B}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "title": {
+            "color": "#{{base0A}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "type": {
+            "color": "#{{base0A}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable": {
+            "color": "#{{base08}}",
+            "font_style": null,
+            "font_weight": null
+          },
+          "variable.special": {
+            "color": "#{{base08}}",
+            "font_style": "italic",
+            "font_weight": null
+          }
+        }
+      }
+    }
+  ]
+}

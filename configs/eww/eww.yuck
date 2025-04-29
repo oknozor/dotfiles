@@ -1,6 +1,7 @@
 (include "./windows/gh_pr.yuck")
 (include "./windows/gh_issues.yuck")
 (include "./windows/calendar.yuck")
+(include "./windows/tray.yuck")
 
 (defwidget closer [window]
   (button

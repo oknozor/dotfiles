@@ -1,0 +1,7 @@
+font-family = Iosevka
+config-file = colors
+
+shell-integration = zsh
+window-vsync = true
+window-padding-x = 8
+window-padding-y = 2
