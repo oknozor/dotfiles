@@ -8,4 +8,4 @@ disabled = true
 disabled = true
 
 [git_status]
-disabled = true
+disabled = false

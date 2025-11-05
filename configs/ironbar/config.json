@@ -7,7 +7,8 @@
     {
       "type": "launcher",
       "show_names": false,
-      "show_icons": true
+      "show_icons": true,
+      "icon_size": 32
     }
   ],
   "center": [
@@ -38,30 +39,21 @@
       "bar": [
         {
           "type": "box",
-          "name": "github",
+          "name": "archupdates",
           "widgets": [
             {
-              "type": "button",
-              "on_click": "!~/.config/ironbar/scripts/eww_open.sh github_issues github_issues-closer",
-              "tooltip": "GitHub Issues",
+              "type": "box",
+              "tooltip": "System updates",
               "widgets": [
                 {
-                  "type": "image",
-                  "src": "file:///home/okno/.config/eww/icons/gh/issue_icon.svg",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "type": "button",
-              "label": "",
-              "on_click": "!~/.config/ironbar/scripts/eww_open.sh github_prs github_prs-closer",
-              "tooltip": "GitHub PRs",
-              "widgets": [
+                  "label": " ",
+                  "type": "label"
+                },
                 {
-                  "type": "image",
-                  "src": "file:///home/okno/.config/eww/icons/gh/pr_icon.svg",
-                  "size": 20
+                  "type": "script",
+                  "cmd": "~/dotfiles/scripts/checkupdates.sh",
+                  "mode": "poll",
+                  "interval": 180000
                 }
               ]
             }
@@ -92,7 +84,7 @@
     {
       "type": "tray",
       "direction": "horizontal",
-      "icon_size": 24
+      "icon_size": 22
     }
   ]
 }

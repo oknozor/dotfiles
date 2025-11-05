@@ -1,0 +1,54 @@
+base00 = "000000"
+base01 = "1C1C1C"
+base02 = "383838"
+base03 = "545454"
+base04 = "a2a2a2"
+base05 = "c0c0c0"
+base06 = "dedede"
+base07 = "fcfcfc"
+base08 = "fc5454"
+base09 = "808000"
+base0A = "fcfc54"
+base0B = "54fc54"
+base0C = "54fcfc"
+base0D = "5454fc"
+base0E = "fc54fc"
+base0F = "008000"
+
+gtk_colors = """
+@define-color base00  #000000;
+@define-color base01  #1C1C1C;
+@define-color base02  #383838;
+@define-color base03  #545454;
+@define-color base04  #a2a2a2;
+@define-color base05  #c0c0c0;
+@define-color base06  #dedede;
+@define-color base07  #fcfcfc;
+@define-color base08  #fc5454;
+@define-color base09  #808000;
+@define-color base0A  #fcfc54;
+@define-color base0B  #54fc54;
+@define-color base0C  #54fcfc;
+@define-color base0D  #5454fc;
+@define-color base0E  #fc54fc;
+@define-color base0F  #008000;
+"""
+
+scss_colors = """
+$base00: #000000;
+$base01: #1C1C1C;
+$base02: #383838;
+$base03: #545454;
+$base04: #a2a2a2;
+$base05: #c0c0c0;
+$base06: #dedede;
+$base07: #fcfcfc;
+$base08: #fc5454;
+$base09: #808000;
+$base0A: #fcfc54;
+$base0B: #54fc54;
+$base0C: #54fcfc;
+$base0D: #5454fc;
+$base0E: #fc54fc;
+$base0F: #008000;
+"""

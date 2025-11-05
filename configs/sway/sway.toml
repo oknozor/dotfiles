@@ -1,6 +1,0 @@
-[profiles.sway]
-posthooks = ["sway reload"]
-
-[profiles.sway.dots]
-sway = { source = "wm/sway/wm", target = ".config/sway" }
-

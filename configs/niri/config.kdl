@@ -1,13 +1,14 @@
-spawn-at-startup "eww" "--force-wayland" "daemon"
 spawn-at-startup "swayosd-server"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "swww" "img" "{{desktop.wallpaper}}"
-spawn-at-startup "xwayland-satellite"
+spawn-at-startup "vicinae" "server"
+spawn-at-startup "swww-daemon" "--namespace" "background"
+spawn-at-startup "swww-daemon" "--namespace" "overview"
+spawn-at-startup "swww" "img" "--namespace" "background" "{{desktop.wallpaper}}"
+spawn-at-startup "swww" "img" "--namespace" "overview" "{{desktop.overview}}"
 spawn-at-startup "swaync"
 spawn-at-startup "ironbar"
 
 environment {
-    DISPLAY ":1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 input {
@@ -56,11 +57,22 @@ layout {
         color "#00000070"
         inactive-color "#00000054"
     }
+    background-color "transparent"
+}
+
+layer-rule {
+    match namespace="overview$"
+    place-within-backdrop true
+}
+
+overview {
+    workspace-shadow {
+        off
+    }
 }
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-animations {}
 
 window-rule {
     match app-id="onagre"
@@ -71,6 +83,11 @@ window-rule {
         off
     }
     draw-border-with-background false
+}
+
+window-rule {
+    match is-focused=false
+    opacity 0.85
 }
 
 window-rule {
@@ -91,7 +108,7 @@ layer-rule {
 binds {
     Mod+Shift+Colon { show-hotkey-overlay; }
     Mod+Return { spawn "{{apps.term}}"; }
-    Mod+G { spawn "{{apps.launcher}}"; }
+    Mod+G { spawn "vicinae" "toggle"; }
     Mod+S { spawn "/code/onagre/target/release/./onagre"; }
     Mod+D { spawn {{apps.notifications}}; }
 
@@ -189,4 +206,37 @@ binds {
     Alt+Print { screenshot-window; }
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
+}
+
+workspace "main" {
+    open-on-output "DP-1"
+}
+
+window-rule {
+    match at-startup=true app-id="^firefox$"
+    open-on-workspace "media"
+}
+
+window-rule {
+    match at-startup=true app-id="^dev.zed.Zed$"
+    open-on-workspace "media"
+}
+
+workspace "media" {
+    open-on-output "DP-1"
+}
+
+window-rule {
+    match at-startup=true app-id="^Element$"
+    open-on-workspace "media"
+}
+
+window-rule {
+    match at-startup=true app-id="^feishin$"
+    open-on-workspace "media"
+}
+
+window-rule {
+    match app-id=r#"^Element$"#
+    block-out-from "screencast"
 }

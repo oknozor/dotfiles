@@ -1,7 +1,6 @@
 use clap::{Parser, Subcommand};
 use reqwest;
 use serde_yaml;
-use std::collections::HashMap;
 use std::error::Error;
 use std::fs;
 use std::path::PathBuf;
@@ -27,6 +26,8 @@ enum Commands {
     },
     /// List available themes from base16 repository
     List,
+    /// Fetch all theme and write them to our dotfiles
+    All,
 }
 
 #[derive(Debug, serde::Deserialize)]
@@ -183,6 +184,17 @@ async fn main() -> Result<(), Box<dyn Error>> {
             let themes = list_themes().await?;
             for theme in themes {
                 println!("{}", theme);
+            }
+        }
+        Commands::All => {
+            let themes = list_themes().await?;
+            for theme in themes {
+                let base16 = download_theme(&theme).await?;
+                let content = generate_toml(&base16);
+                fs::write(
+                    format!("/home/okno/dotfiles/profiles/themes/{theme}.toml"),
+                    &content,
+                )?;
             }
         }
     }

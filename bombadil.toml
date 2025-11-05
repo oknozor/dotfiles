@@ -1,9 +1,8 @@
 dotfiles_dir = "dotfiles"
 gpg_user_id = "paul.delafosse@protonmail.com"
 import = [
-    { path = "configs/sway/sway.toml" },
     { path = "configs/niri/niri.toml" },
-    { path = "profiles/agicap/agicap.toml" },
+    { path = "profiles/profiles.toml" },
 ]
 
 [settings]
@@ -18,46 +17,13 @@ zsh_env = { source = "configs/zsh/zshenv", target = ".zshenv" }
 starship = { source = "configs/zsh/starship.toml", target = ".config/starship.toml" }
 gitconfig = { source = "configs/git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "configs/git/gitignore", target = ".gitignore" }
-nvim = { source = "configs/editors/neovim/", target = ".config/nvim" }
 gpg_agent = { source = "configs/gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
 xdg_dirs = { source = "configs/xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
 gtk2 = { source = "configs/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
 gtk3 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-3.0" }
 gtk4 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-4.0" }
-qt5 = { source = "configs/qt/qt5ct", target = ".config/qt5ct" }
-qt6 = { source = "configs/qt/qt6ct", target = ".config/qt6ct" }
 onagre = { source = "configs/onagre", target = ".config/onagre" }
 swaync = { source = "configs/swaync", target = ".config/swaync" }
 ironbar = { source = "configs/ironbar", target = ".config/ironbar" }
-eww = { source = "configs/eww", target = ".config/eww" }
 zed = { source = "configs/zed", target = ".config/zed" }
-
-[profiles.swaywm]
-extra_profiles = ["sway", "laptop"]
-
-[profiles.niri-desktop]
-extra_profiles = ["niri", "desktop"]
-
-[profiles.niri-laptop]
-extra_profiles = ["niri", "laptop"]
-
-[profiles.rose-pine]
-vars = ["profiles/themes/rose-pine.toml"]
-
-[profiles.ayu-dark]
-vars = ["profiles/themes/ayu-dark.toml"]
-
-[profiles.ayu-light]
-vars = ["profiles/themes/ayu-light.toml"]
-
-[profiles.atelier-plateau]
-vars = ["profiles/themes/atelier-plateau.toml"]
-
-[profiles.pastel]
-vars = ["profiles/themes/pastel.toml"]
-
-[profiles.laptop]
-vars = ["profiles/laptop.toml"]
-
-[profiles.desktop]
-vars = ["profiles/desktop.toml"]
+# firefox = { source = "configs/firefox/userChrome.css", target = "~/.mozilla/firefox/g5oya3kj.default-nightly/chrome/userChrome.css" }

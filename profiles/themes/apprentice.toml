@@ -1,0 +1,54 @@
+base00 = "262626"
+base01 = "AF5F5F"
+base02 = "5F875F"
+base03 = "87875F"
+base04 = "5F87AF"
+base05 = "5F5F87"
+base06 = "5F8787"
+base07 = "6C6C6C"
+base08 = "444444"
+base09 = "FF8700"
+base0A = "87AF87"
+base0B = "FFFFAF"
+base0C = "87AFD7"
+base0D = "8787AF"
+base0E = "5FAFAF"
+base0F = "BCBCBC"
+
+gtk_colors = """
+@define-color base00  #262626;
+@define-color base01  #AF5F5F;
+@define-color base02  #5F875F;
+@define-color base03  #87875F;
+@define-color base04  #5F87AF;
+@define-color base05  #5F5F87;
+@define-color base06  #5F8787;
+@define-color base07  #6C6C6C;
+@define-color base08  #444444;
+@define-color base09  #FF8700;
+@define-color base0A  #87AF87;
+@define-color base0B  #FFFFAF;
+@define-color base0C  #87AFD7;
+@define-color base0D  #8787AF;
+@define-color base0E  #5FAFAF;
+@define-color base0F  #BCBCBC;
+"""
+
+scss_colors = """
+$base00: #262626;
+$base01: #AF5F5F;
+$base02: #5F875F;
+$base03: #87875F;
+$base04: #5F87AF;
+$base05: #5F5F87;
+$base06: #5F8787;
+$base07: #6C6C6C;
+$base08: #444444;
+$base09: #FF8700;
+$base0A: #87AF87;
+$base0B: #FFFFAF;
+$base0C: #87AFD7;
+$base0D: #8787AF;
+$base0E: #5FAFAF;
+$base0F: #BCBCBC;
+"""

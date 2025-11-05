@@ -47,7 +47,7 @@ alias dc='docker-compose'
 alias ovim="nvim"
 alias cat="bat"
 alias ocat="/usr/bin/cat"
-alias grep='rg'
+# alias grep='rg'
 alias ogrep='/usr/bin/grep'
 alias fzf='sk'
 alias du='dust'
@@ -60,3 +60,14 @@ prompt off
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(fnm env --use-on-cd)"
+
+ source /home/okno/.support-tools/install/support-tools-rc.sh ## ADDED BY SUPPORT TOOLS
+export CHECKOUT_REPOSITORIES_PATH="/code/Sunday" ## ADDED BY SUPPORT TOOLS
+ source /home/okno/.support-tools/install/support-tools-rc.sh ## ADDED BY SUPPORT TOOLS
+export CHECKOUT_REPOSITORIES_PATH="/code/Sunday" ## ADDED BY SUPPORT TOOLS
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/okno/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/okno/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/okno/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/okno/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

@@ -21,6 +21,7 @@ button {
     background-color: @base01;
 }
 
+
 button,
 label {
     color: @base05;
@@ -36,8 +37,18 @@ button:hover {
     background-color: @base01;
 }
 
-.launcher .item {
-    margin-left: 6px;
+popover contents {
+    background-color: @base01;
+}
+
+.launcher picture {
+    padding-left: 4px;
+    padding-right: 1px;
+}
+
+.launcher .focused {
+    background-color: @base02;
+    border: 3px solid @base08;
 }
 
 .clock label {
@@ -45,21 +56,8 @@ button:hover {
     margin-right: 10px;
 }
 
-.clock > button {
-    background-color: red;
-}
-
 .clock {
     font-weight: bold;
-}
-
-.popup-clock .calendar-clock {
-    color: @text;
-    font-size: 2.5em;
-    margin-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: @surface0;
 }
 
 .volume label {
@@ -73,20 +71,33 @@ button:hover {
 }
 
 .notifications label {
-    margin-left: 8px;
-    margin-right: 10px;
+    padding-right: 6px;
 }
 
 .notifications .count {
-    font-size: 0.6rem;
-    background-color: @text;
-    color: @crust;
-    border-radius: 100%;
-    margin-right: 3px;
-    margin-top: 3px;
-    padding-left: 4px;
-    padding-right: 4px;
-    opacity: 0.7;
+    transform: translate(-6px, 4px);
+    opacity: 0.8;
+}
+
+#archupdates {
+    background-color: @base01;
+}
+
+#archupdates revealer {
+    background-color: @base01;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+#archupdates label {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#archupdates .script {
+    transform: translate(-10px, -8px);
+    opacity: 0.8;
+    margin-right: 0px;
+    padding-right: 0px;
 }
 
 .tray {
@@ -94,13 +105,12 @@ button:hover {
 }
 
 menu {
-    border: 0px;
-    background-color: @base01;
+    background-color: red;
+    margin-bottom: 40px;
 }
 
 check {
-    -gtk-icon-source: none;
-    border: 2px solid @base08;
+    color: red;
     border-radius: 3px;
     padding: 1px;
     min-height: 12px;
@@ -108,25 +118,12 @@ check {
     transition: all 200ms ease-in;
 }
 
-checkbutton {
-    -gtk-icon-source: none;
-    border: none;
-    background: none;
-}
 
 menu menuitem:hover {
-    background-color: #{{base0B}};
+    background-color: red;
 }
 
 menu checkmenuitem:checked check {
     background-color: #4CAF50; /* Green background for checked checkbox */
     border-color: #388E3C; /* Darker green border */
-}
-
-.popup-volume .device-box .device-selector {
-    background-color: @surface0;
-}
-
-.popup-volume .device-box .slider {
-    background-color: @surface0;
 }

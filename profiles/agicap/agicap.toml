@@ -1,2 +1,0 @@
-[profiles.agicap]
-vars = ["profiles/agicap/secrets.toml"]
