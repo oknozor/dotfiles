@@ -1,0 +1,31 @@
+layout {
+    gaps 8
+    struts {
+        top 20
+        bottom 20
+    }
+
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+    focus-ring {
+        width 2
+        active-gradient from="{{base08}}" to="{{base0D}}" angle=80
+    }
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000070"
+        inactive-color "#00000054"
+    }
+    background-color "transparent"
+}

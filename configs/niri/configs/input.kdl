@@ -1,0 +1,16 @@
+input {
+    keyboard {
+        xkb {
+            layout "fr"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        middle-emulation
+    }
+}

@@ -1,0 +1,7 @@
+workspace "main" {
+    open-on-output "DP-1"
+}
+
+workspace "media" {
+    open-on-output "DP-1"
+}
