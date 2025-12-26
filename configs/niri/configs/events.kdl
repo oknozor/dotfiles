@@ -1,0 +1,5 @@
+switch-events {
+    lid-close { spawn "systemclt" "suspend"; }
+    tablet-mode-on { spawn "sh" "-c" "/home/okno/dotfiles/scripts/tablet_mode_on.sh"; }
+    tablet-mode-off { spawn "sh" "-c" "/home/okno/dotfiles/scripts/tablet_mode_off.sh"; }
+}

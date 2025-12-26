@@ -1,7 +1,7 @@
 {
-  "ui_font_size": 18,
+  "ui_font_size": {{editor.fontsize}},
   "buffer_font_family": "JetBrains Mono",
-  "buffer_font_size": 19,
+  "buffer_font_size": {{editor.fontsize}},
   "vim_mode": true,
   "theme": "JetBrains New Dark",
   "inlay_hints": {

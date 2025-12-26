@@ -1,16 +1,10 @@
 layer-rule {
-    match namespace="swaync"
-    match at-startup=true
-    opacity 0.8
-    shadow {
-        on
-        draw-behind-window true
-    }
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
 }
 
-layer-rule {
-    match namespace="overview$"
-    place-within-backdrop true
+debug {
+  honor-xdg-activation-with-invalid-serial
 }
 
 window-rule {
@@ -50,4 +44,11 @@ window-rule {
     open-on-workspace "main"
     match at-startup=true app-id="^firefox$"
     match at-startup=true app-id="^dev.zed.Zed$"
+}
+
+window-rule {
+    match title="Kando Menu"
+    open-floating true
+    border { off; }
+    shadow { off; }
 }

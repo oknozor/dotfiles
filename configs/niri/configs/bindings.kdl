@@ -2,15 +2,15 @@ binds {
     Mod+Shift+Colon { show-hotkey-overlay; }
     Mod+Return { spawn "{{apps.term}}"; }
     Mod+G { spawn "vicinae" "toggle"; }
-    Mod+S { spawn "/code/onagre/target/release/./onagre"; }
-    Mod+D { spawn {{apps.notifications}}; }
+    Mod+D { spawn "echo" "Notification"; }
 
-    XF86AudioRaiseVolume { spawn "swayosd-client" "--output-volume" "raise"; }
-    XF86AudioLowerVolume { spawn "swayosd-client" "--output-volume" "lower"; }
-    XF86AudioMute { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    XF86MonBrightnessUp { spawn "swayosd-client" "--brightness" "raise"; }
-    XF86MonBrightnessDown { spawn "swayosd-client" "--brightness" "lower"; }
+    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness"  "decrease"; }
 
+    Mod+S { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Mod+Shift+A { close-window; }
 
     Mod+H     { focus-column-left; }

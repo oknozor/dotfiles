@@ -9,21 +9,13 @@ import = [
 vars = ["vars.toml"]
 
 [settings.dots]
-alacritty = { source = "configs/alacritty", target = ".config/alacritty" }
+# alacritty = { source = "configs/alacritty", target = ".config/alacritty" }
+# xdg_dirs = { source = "configs/xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
 ghostty = { source = "configs/ghostty", target = ".config/ghostty" }
-fastfetch = { source = "configs/fastfetch", target = ".config/fastfetch", direct = true }
 zsh = { source = "configs/zsh/zshrc", target = ".zshrc" }
 zsh_env = { source = "configs/zsh/zshenv", target = ".zshenv" }
 starship = { source = "configs/zsh/starship.toml", target = ".config/starship.toml" }
 gitconfig = { source = "configs/git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "configs/git/gitignore", target = ".gitignore" }
 gpg_agent = { source = "configs/gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
-xdg_dirs = { source = "configs/xdg/user-dirs.dirs", target = ".config/user-dirs.dirs" }
-gtk2 = { source = "configs/gtk/gtkrc-2.0", target = ".gtkrc-2.0" }
-gtk3 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-3.0" }
-gtk4 = { source = "configs/gtk/gtk-3.0", target = ".config/gtk-4.0" }
-onagre = { source = "configs/onagre", target = ".config/onagre" }
-swaync = { source = "configs/swaync", target = ".config/swaync" }
-ironbar = { source = "configs/ironbar", target = ".config/ironbar" }
 zed = { source = "configs/zed", target = ".config/zed" }
-# firefox = { source = "configs/firefox/userChrome.css", target = "~/.mozilla/firefox/g5oya3kj.default-nightly/chrome/userChrome.css" }

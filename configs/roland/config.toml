@@ -1,0 +1,39 @@
+# Keep in mind that the screen is rotated 90 degrees.
+[[gestures]]
+num_fingers = 3
+kind = "SwipeLeft"
+action = "niri msg action open-overview"
+min_duration = 50
+mix_distance = 100.0
+
+[[gestures]]
+num_fingers = 2
+kind = "SwipeUp"
+action = "niri msg action focus-column-left"
+min_duration = 50
+min_distance = 100.0
+on_edge = { Bottom = 300 }
+
+[[gestures]]
+num_fingers = 2
+kind = "SwipeDown"
+action = "niri msg action focus-column-right"
+min_duration = 50
+min_distance = 100.0
+on_edge = { Top = 300 }
+
+[[gestures]]
+num_fingers = 2
+kind = "SwipeLeft"
+action = "niri msg action focus-window-or-workspace-dow"
+min_duration = 50
+min_distance = 100.0
+on_edge = { Right = 300 }
+
+[[gestures]]
+num_fingers = 2
+kind = "SwipeRight"
+action = "niri msg action focus-window-or-workspace-up"
+min_duration = 50
+min_distance = 100.0
+on_edge = { Left = 300 }

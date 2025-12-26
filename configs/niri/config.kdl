@@ -1,24 +1,26 @@
-spawn-at-startup "swayosd-server"
 spawn-at-startup "vicinae" "server"
-spawn-at-startup "swww-daemon" "--namespace" "background"
-spawn-at-startup "swww-daemon" "--namespace" "overview"
-spawn-at-startup "swww" "img" "--namespace" "background" "{{desktop.wallpaper}}"
-spawn-at-startup "swww" "img" "--namespace" "overview" "{{desktop.overview}}"
-spawn-at-startup "swaync"
-spawn-at-startup "ironbar"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+      QT_QPA_PLATFORMTHEME "qt6ct"
 }
 
+include "configs/outputs.kdl"
 include "configs/workspaces.kdl"
 include "configs/layout.kdl"
 include "configs/rules.kdl"
 include "configs/input.kdl"
 include "configs/bindings.kdl"
+
+{% if "laptop" in profiles %}
+include "configs/events.kdl"
+{% endif %}
+
+
 
 overview {
     workspace-shadow {

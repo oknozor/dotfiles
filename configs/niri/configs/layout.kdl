@@ -1,8 +1,9 @@
 layout {
-    gaps 8
+    gaps {{niri.gaps}}
+
     struts {
-        top 20
-        bottom 20
+        top {{niri.struts.top}}
+        bottom {{niri.struts.bottom}}
     }
 
     center-focused-column "never"
@@ -15,7 +16,7 @@ layout {
 
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 2
+        width {{niri.focusring_width}}
         active-gradient from="{{base08}}" to="{{base0D}}" angle=80
     }
     shadow {

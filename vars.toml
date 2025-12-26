@@ -6,9 +6,8 @@ theme = "Arc-Lighter"
 wallpaper = "$HOME/dotfiles/wallpapers/sea.jpg"
 
 [apps]
-term = "alacritty"
-launcher = "onagre"
-notifications = """"swaync-client" "-t""""
+term = "ghostty"
+launcher = "vicinae"
 
 [theme]
 font = "Fira Code 10"
