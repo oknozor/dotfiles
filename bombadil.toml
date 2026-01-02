@@ -19,3 +19,4 @@ gitconfig = { source = "configs/git/gitconfig", target = ".gitconfig" }
 gitignore = { source = "configs/git/gitignore", target = ".gitignore" }
 gpg_agent = { source = "configs/gpg/gpg-agent.conf", target = ".gnupg/gpg-agent.conf" }
 zed = { source = "configs/zed", target = ".config/zed" }
+noctalia = { source = "configs/noctalia", target = ".config/noctalia" } 
