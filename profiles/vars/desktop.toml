@@ -1,4 +1,15 @@
-
 [desktop]
 overview = "/home/okno/dotfiles/assets/wallpapers/darkforest-ultrawide.jpg"
 wallpaper = "/home/okno/dotfiles/assets/wallpapers/stock-mountain.jpg"
+
+[niri]
+gaps = 12
+focusring_width = 2
+struts = { bottom = 12, top = 12 }
+
+[editor]
+fontsize = 18
+
+[bar]
+iconsize = 24
+tray_iconsize = 24

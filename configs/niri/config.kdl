@@ -6,10 +6,9 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
-      QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME "qt6ct"
 }
 
-include "configs/outputs.kdl"
 include "configs/workspaces.kdl"
 include "configs/layout.kdl"
 include "configs/rules.kdl"
