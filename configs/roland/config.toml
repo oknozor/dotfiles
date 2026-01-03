@@ -37,3 +37,10 @@ action = "niri msg action focus-window-or-workspace-up"
 min_duration = 50
 min_distance = 100.0
 on_edge = { Left = 300 }
+
+[[gestures]]
+num_fingers = 4
+kind = "Press"
+action = "kando --menu \"Example Menu\""
+min_duration = 500
+max_distance = 20.0
