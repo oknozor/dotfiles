@@ -1,57 +1,173 @@
 {
-  "appLauncher": {
-    "customLaunchPrefix": "",
-    "customLaunchPrefixEnabled": false,
-    "enableClipPreview": true,
-    "enableClipboardHistory": false,
-    "iconMode": "tabler",
-    "pinnedExecs": [],
-    "position": "center",
-    "showCategories": true,
-    "sortByMostUsed": true,
-    "terminalCommand": "xterm -e",
-    "useApp2Unit": false,
-    "viewMode": "list"
-  },
-  "audio": {
-    "cavaFrameRate": 30,
-    "externalMixer": "pwvucontrol || pavucontrol",
-    "mprisBlacklist": [],
-    "preferredPlayer": "",
-    "visualizerType": "linear",
-    "volumeOverdrive": false,
-    "volumeStep": 5
-  },
-  "bar": {
-    "capsuleOpacity": 1,
-    "density": "comfortable",
-    "exclusive": true,
-    "floating": true,
-    "marginHorizontal": 0.25,
-    "marginVertical": 0.25,
-    "monitors": [],
-    "outerCorners": true,
-    "position": "top",
-    "showCapsule": true,
-    "showOutline": false,
-    "transparent": false,
-    "widgets": {
-      "center": [
-        {
-          "customFont": "",
-          "formatHorizontal": "HH:mm ddd, MMM dd",
-          "formatVertical": "HH mm - dd MM",
-          "id": "Clock",
-          "useCustomFont": false,
-          "usePrimaryColor": true
-        },
-        {
-          "colorName": "primary",
-          "hideWhenIdle": true,
-          "id": "AudioVisualizer",
-          "width": 150
-        }
-      ],
+    "appLauncher": {
+        "customLaunchPrefix": "",
+        "customLaunchPrefixEnabled": false,
+        "enableClipPreview": true,
+        "enableClipboardHistory": false,
+        "iconMode": "tabler",
+        "pinnedExecs": [
+        ],
+        "position": "center",
+        "showCategories": true,
+        "sortByMostUsed": true,
+        "terminalCommand": "xterm -e",
+        "useApp2Unit": false,
+        "viewMode": "list"
+    },
+    "audio": {
+        "cavaFrameRate": 30,
+        "externalMixer": "pwvucontrol || pavucontrol",
+        "mprisBlacklist": [
+        ],
+        "preferredPlayer": "",
+        "visualizerType": "linear",
+        "volumeOverdrive": false,
+        "volumeStep": 5
+    },
+    "bar": {
+        "capsuleOpacity": 1,
+        "density": "comfortable",
+        "exclusive": true,
+        "floating": true,
+        "marginHorizontal": 0.25,
+        "marginVertical": 0.25,
+        "monitors": [
+        ],
+        "outerCorners": true,
+        "position": "top",
+        "showCapsule": true,
+        "showOutline": false,
+        "transparent": false,
+        "widgets": {
+            "center": [
+                {
+                    "customFont": "",
+                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatVertical": "HH mm - dd MM",
+                    "id": "Clock",
+                    "useCustomFont": false,
+                    "usePrimaryColor": true
+                },
+                {
+                    "colorName": "primary",
+                    "hideWhenIdle": true,
+                    "id": "AudioVisualizer",
+                    "width": 150
+                }
+            ],
+            "left": [
+                {
+                    "characterCount": 2,
+                    "colorizeIcons": false,
+                    "enableScrollWheel": true,
+                    "followFocusedScreen": false,
+                    "hideUnoccupied": false,
+                    "id": "Workspace",
+                    "labelMode": "index",
+                    "showApplications": false,
+                    "showLabelsOnlyWhenOccupied": true
+                }
+            ],
+            "right": [
+                {
+                    "id": "ScreenRecorder"
+                },
+                {
+                    "hideWhenZero": false,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "Volume"
+                },
+                {
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "none",
+                    "customIconPath": "",
+                    "enableColorization": false,
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
+                    "useDistroLogo": false
+                },
+                {
+                    "blacklist": [
+                    ],
+                    "colorizeIcons": false,
+                    "drawerEnabled": true,
+                    "hidePassive": false,
+                    "id": "Tray",
+                    "pinned": [
+                    ]
+                },
+                {
+                    "deviceNativePath": "",
+                    "displayMode": "onhover",
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false,
+                    "warningThreshold": 30
+                },
+                {% if "laptop" in profiles %},
+                {
+                    "hideMode": "alwaysExpanded",
+                    "icon": "keyboard",
+                    "id": "CustomButton",
+                    "leftClickExec": "~/dotfiles/scripts/toggle_sysboard.sh",
+                    "leftClickUpdateText": true,
+                    "maxTextLength": {
+                        "horizontal": 10,
+                        "vertical": 10
+                    },
+                    "middleClickExec": "",
+                    "middleClickUpdateText": false,
+                    "parseJson": false,
+                    "rightClickExec": "",
+                    "rightClickUpdateText": false,
+                    "showIcon": true,
+                    "textCollapse": "",
+                    "textCommand": "",
+                    "textIntervalMs": 3000,
+                    "textStream": false,
+                    "wheelDownExec": "",
+                    "wheelDownUpdateText": false,
+                    "wheelExec": "",
+                    "wheelMode": "unified",
+                    "wheelUpExec": "",
+                    "wheelUpUpdateText": false,
+                    "wheelUpdateText": false
+                },
+                {
+                    "hideMode": "alwaysExpanded",
+                    "icon": "rotate-rectangle",
+                    "id": "CustomButton",
+                    "leftClickExec": "~/dotfiles/scripts/rotate_screen.sh",
+                    "leftClickUpdateText": false,
+                    "maxTextLength": {
+                        "horizontal": 10,
+                        "vertical": 10
+                    },
+                    "middleClickExec": "",
+                    "middleClickUpdateText": false,
+                    "parseJson": false,
+                    "rightClickExec": "",
+                    "rightClickUpdateText": false,
+                    "showIcon": true,
+                    "textCollapse": "",
+                    "textCommand": "",
+                    "textIntervalMs": 3000,
+                    "textStream": false,
+                    "wheelDownExec": "",
+                    "wheelDownUpdateText": false,
+                    "wheelExec": "",
+                    "wheelMode": "unified",
+                    "wheelUpExec": "",
+                    "wheelUpUpdateText": false,
+                    "wheelUpdateText": false
+                }
+                {% endif %}
+        ],
       "left": [
         {
           "characterCount": 2,

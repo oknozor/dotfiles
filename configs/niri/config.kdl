@@ -14,7 +14,6 @@ include "configs/layout.kdl"
 include "configs/rules.kdl"
 include "configs/input.kdl"
 include "configs/bindings.kdl"
-
 {% if "laptop" in profiles %}
 include "configs/events.kdl"
 {% endif %}

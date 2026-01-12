@@ -2,4 +2,3 @@
 
 [profiles.niri.dots]
 niri = { source = "configs/niri", target = ".config/niri", ignore = ["*.toml"] }
-ironbar = { source = "configs/ironbar", target = ".config/ironbar" }
