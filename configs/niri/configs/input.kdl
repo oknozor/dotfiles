@@ -6,7 +6,6 @@ input {
     }
 
     touchpad {
-        tap
         natural-scroll
     }
 

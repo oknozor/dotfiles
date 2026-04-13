@@ -1,6 +1,6 @@
 # Todos
 - [x] Get tablet mode working on framework laptop
-    - [ ] Setup iio-sensor-proxy
+    - [x] Setup iio-sensor-proxy
 - [x] Wallpaper triage
 - [ ] Rustical integration
 - [ ] ghostty slow startup on framework laptop
